@@ -22,7 +22,7 @@ const themeConfig = {
                 ocean: "url('/images/background.png')",
             },
             fontFamily: {
-                bca: 'BCASans, sans-serif',
+                bca: 'BCASans',
             },
             colors: {
                 ocean: {
