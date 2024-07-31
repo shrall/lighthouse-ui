@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { ChevronRight, CircleCheck, XIcon } from "lucide-react";
+import { Icon } from "./icon";
 
 const alertVariants = cva(
   "relative w-full flex flex-col items-start text-sm rounded-[10px] border border-slate-200 p-4 [&>svg~*]:px-9 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute first:[&>svg]:left-4 [&>svg]:top-4",
@@ -39,24 +39,24 @@ const Alert = React.forwardRef<
       className={cn(alertVariants({ variant }), className)}
       {...props}
     >
-      {variant === "success" && <CircleCheck size={24} />}
-      {variant === "error" && <CircleCheck size={24} />}
-      {variant === "warning" && <CircleCheck size={24} />}
-      {variant === "info" && <CircleCheck size={24} />}
+      {variant === "success" && <Icon name="check-filled" />}
+      {variant === "error" && <Icon name="cross-filled" />}
+      {variant === "warning" && <Icon name="exclamation-filled" />}
+      {variant === "info" && <Icon name="info-filled" />}
       {children}
       {actionType === "close" && alertAction ? (
-        <XIcon
-          size={24}
-          className="right-4 cursor-pointer !px-0 text-ocean-dark-20"
+        <Icon
+          name="cross-large-outline"
+          className="right-4 cursor-pointer !px-0"
           onClick={() => {
             alertAction();
           }}
         />
       ) : (
         alertAction && (
-          <ChevronRight
-            size={24}
-            className="right-4 cursor-pointer !px-0 text-ocean-dark-20"
+          <Icon
+            name="chevron-right-outline"
+            className="right-4 cursor-pointer !px-0"
             onClick={() => {
               alertAction();
             }}

@@ -17,9 +17,9 @@ const buttonVariants = cva(
           "bg-transparent text-ocean-primary-10 hover:bg-ocean-light-20 active:bg-ocean-secondary-10 disabled:bg-transparent disabled:text-ocean-dark-10",
       },
       size: {
-        large: "text-base min-w-40 h-12 px-6 py-3",
-        medium: "text-sm min-w-[124px] h-10 px-5 py-[9.5px]",
-        small: "text-xs min-w-[110px] h-8 px-4 py-[6px]",
+        large: "text-base min-w-40 h-12 px-6 py-3 gap-2",
+        medium: "text-sm min-w-[124px] h-10 px-5 py-[9.5px] gap-2",
+        small: "text-xs min-w-[110px] h-8 px-4 py-[6px] gap-1",
       },
     },
     defaultVariants: {

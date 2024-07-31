@@ -1,6 +1,6 @@
 import { toast } from "sonner";
 import { Button } from "../../lib/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { Icon } from "@/index";
 
 function Toasts() {
   return (
@@ -48,11 +48,11 @@ function Toasts() {
         </Button>
         <Button
           onClick={() => {
-            toast.error("Error.", {
+            toast.error("Error", {
               action: {
                 label: (
-                  <ChevronRight
-                    size={24}
+                  <Icon
+                    name="chevron-right-outline"
                     onClick={() => {
                       console.log("Action!");
                     }}
@@ -72,8 +72,8 @@ function Toasts() {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
               action: {
                 label: (
-                  <ChevronRight
-                    size={24}
+                  <Icon
+                    name="chevron-right-outline"
                     onClick={() => {
                       console.log("Action!");
                     }}

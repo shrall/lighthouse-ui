@@ -2,6 +2,7 @@ import Buttons from "./pages/Buttons";
 import Badges from "./pages/Badges";
 import Toasts from "./pages/Toasts";
 import Alerts from "./pages/Alerts";
+import Icons from "./pages/Icons";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Alerts />
       <Buttons />
       <Badges />
+      <Icons />
       <Toasts />
     </div>
   );
