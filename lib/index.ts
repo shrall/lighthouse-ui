@@ -9,3 +9,10 @@ export { Button } from "./components/ui/button";
 export { Badge } from "./components/ui/badge";
 export { Icon } from "./components/ui/icon";
 export { Toaster } from "./components/ui/sonner";
+export {
+    Tooltip,
+    TooltipTitle,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "./components/ui/tooltip";

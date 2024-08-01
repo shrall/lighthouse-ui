@@ -3,6 +3,7 @@ import Badges from "./pages/Badges";
 import Toasts from "./pages/Toasts";
 import Alerts from "./pages/Alerts";
 import Icons from "./pages/Icons";
+import Tooltips from "./pages/Tooltips";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Badges />
       <Icons />
       <Toasts />
+      <Tooltips />
     </div>
   );
 }

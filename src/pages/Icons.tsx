@@ -101,6 +101,7 @@ function Icons() {
         <Icon name="transaction-dollar-outline" />
         <Icon name="transaction-outline" />
         <Icon name="transaction-pending-outline" />
+        <Icon name="triangle-left-filled" />
         <Icon name="upload-filled" />
         <Icon name="upload-outline" />
         <Icon name="user-dashed-filled" />
