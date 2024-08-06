@@ -16,3 +16,12 @@ export {
     TooltipProvider,
     TooltipTrigger,
 } from "./components/ui/tooltip";
+
+export {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./components/ui/card";
