@@ -1,113 +1,115 @@
 import { cn } from "@/lib/utils";
 
-export type IconType =
+export const IconTypeKeys = [
   // NOTE - v1.0
-  | "add-doc-outline"
-  | "add-filled"
-  | "add-outline"
-  | "arrow-left-outline"
-  | "arrow-right-outline"
-  | "bell-dashed-filled"
-  | "bell-filled"
-  | "building-filled"
-  | "buy-filled"
-  | "calendar-filled"
-  | "calendar-outline"
-  | "camera-filled"
-  | "camera-outline"
-  | "card-outline"
-  | "check-filled"
-  | "check-outline"
-  | "chevron-down-filled"
-  | "chevron-down-outline"
-  | "chevron-left-filled"
-  | "chevron-left-outline"
-  | "chevron-right-filled"
-  | "chevron-right-outline"
-  | "chevron-up-filled"
-  | "chevron-up-outline"
-  | "clock-filled"
-  | "coin-dollar-outline"
-  | "company-filled"
-  | "compare-filled"
-  | "crop-outline"
-  | "cross-filled"
-  | "cross-large-outline"
-  | "cross-small-outline"
-  | "dashboard-filled"
-  | "dashboard-outline"
-  | "delete-outline"
-  | "doc-csv-outline"
-  | "doc-download-filled"
-  | "doc-filled"
-  | "doc-outline"
-  | "doc-pdf-outline"
-  | "dot-filled"
-  | "download-doc-outline"
-  | "download-filled"
-  | "download-outline"
-  | "download-square-outline"
-  | "dropdown-filled"
-  | "edit-outline"
-  | "ellipsis-v-filled"
-  | "envelope-outline"
-  | "estatement-filled"
-  | "exclamation-filled"
-  | "eye-closed-outline"
-  | "eye-open-outline"
-  | "faq-outline"
-  | "file-outline"
-  | "file-txt-outline"
-  | "file-xlx-outline"
-  | "filter-filled"
-  | "filter-outline"
-  | "finance-outline"
-  | "flag-cross-outline"
-  | "flag-filled"
-  | "flag-outline"
-  | "flash-filled"
-  | "gallery-filled"
-  | "history-filled"
-  | "home-2-filled"
-  | "home-filled"
-  | "image-filled"
-  | "image-outline"
-  | "info-filled"
-  | "info-outline"
-  | "invoice-outline"
-  | "list-outline"
-  | "loading-filled"
-  | "lock-outline"
-  | "logout-filled"
-  | "logout-outline"
-  | "mark-all-as-read-outline"
-  | "mark-as-read-outline"
-  | "mark-as-unread-outline"
-  | "phone-filled"
-  | "placeholder-outline"
-  | "question-filled"
-  | "reload-outline"
-  | "rotate-outline"
-  | "search-outline"
-  | "secure-filled"
-  | "setting-1-filled"
-  | "setting-2-filled"
-  | "share-filled"
-  | "sort-outline"
-  | "transaction-cross-outline"
-  | "transaction-dollar-outline"
-  | "transaction-outline"
-  | "transaction-pending-outline"
-  | "triangle-left-filled"
-  | "upload-filled"
-  | "upload-outline"
-  | "user-dashed-filled"
-  | "user-filled"
-  | "user-group-filled"
-  | "user-setting-filled"
-  | "user-setting-outline"
-  | "zip-outline";
+  "add-doc-outline",
+  "add-filled",
+  "add-outline",
+  "arrow-left-outline",
+  "arrow-right-outline",
+  "bell-dashed-filled",
+  "bell-filled",
+  "building-filled",
+  "buy-filled",
+  "calendar-filled",
+  "calendar-outline",
+  "camera-filled",
+  "camera-outline",
+  "card-outline",
+  "check-filled",
+  "check-outline",
+  "chevron-down-filled",
+  "chevron-down-outline",
+  "chevron-left-filled",
+  "chevron-left-outline",
+  "chevron-right-filled",
+  "chevron-right-outline",
+  "chevron-up-filled",
+  "chevron-up-outline",
+  "clock-filled",
+  "coin-dollar-outline",
+  "company-filled",
+  "compare-filled",
+  "crop-outline",
+  "cross-filled",
+  "cross-large-outline",
+  "cross-small-outline",
+  "dashboard-filled",
+  "dashboard-outline",
+  "delete-outline",
+  "doc-csv-outline",
+  "doc-download-filled",
+  "doc-filled",
+  "doc-outline",
+  "doc-pdf-outline",
+  "dot-filled",
+  "download-doc-outline",
+  "download-filled",
+  "download-outline",
+  "download-square-outline",
+  "dropdown-filled",
+  "edit-outline",
+  "ellipsis-v-filled",
+  "envelope-outline",
+  "estatement-filled",
+  "exclamation-filled",
+  "eye-closed-outline",
+  "eye-open-outline",
+  "faq-outline",
+  "file-outline",
+  "file-txt-outline",
+  "file-xlx-outline",
+  "filter-filled",
+  "filter-outline",
+  "finance-outline",
+  "flag-cross-outline",
+  "flag-filled",
+  "flag-outline",
+  "flash-filled",
+  "gallery-filled",
+  "history-filled",
+  "home-2-filled",
+  "home-filled",
+  "image-filled",
+  "image-outline",
+  "info-filled",
+  "info-outline",
+  "invoice-outline",
+  "list-outline",
+  "loading-filled",
+  "lock-outline",
+  "logout-filled",
+  "logout-outline",
+  "mark-all-as-read-outline",
+  "mark-as-read-outline",
+  "mark-as-unread-outline",
+  "phone-filled",
+  "placeholder-outline",
+  "question-filled",
+  "reload-outline",
+  "rotate-outline",
+  "search-outline",
+  "secure-filled",
+  "setting-1-filled",
+  "setting-2-filled",
+  "share-filled",
+  "sort-outline",
+  "transaction-cross-outline",
+  "transaction-dollar-outline",
+  "transaction-outline",
+  "transaction-pending-outline",
+  "triangle-left-filled",
+  "upload-filled",
+  "upload-outline",
+  "user-dashed-filled",
+  "user-filled",
+  "user-group-filled",
+  "user-setting-filled",
+  "user-setting-outline",
+  "zip-outline",
+] as const;
 
+export type IconType = (typeof IconTypeKeys)[number];
 interface IconProps
   extends Omit<React.SVGProps<SVGSVGElement>, "viewBox" | "width" | "height"> {
   name: IconType;

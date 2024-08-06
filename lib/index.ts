@@ -16,7 +16,7 @@ export {
     CardTitle,
 } from "./components/ui/card";
 export type { IconType } from "./components/ui/icon";
-export { Icon } from "./components/ui/icon";
+export { Icon, IconTypeKeys } from "./components/ui/icon";
 export { Toaster } from "./components/ui/sonner";
 export {
     Tooltip,
