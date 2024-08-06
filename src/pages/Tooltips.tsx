@@ -1,3 +1,4 @@
+import { Icon } from "@/components/ui/icon";
 import {
   Tooltip,
   TooltipContent,
@@ -5,7 +6,6 @@ import {
   TooltipTitle,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Icon } from "@/components/ui/icon";
 
 function Tooltips() {
   return (

@@ -1,10 +1,10 @@
-import Buttons from "./pages/Buttons";
-import Badges from "./pages/Badges";
-import Toasts from "./pages/Toasts";
 import Alerts from "./pages/Alerts";
-import Icons from "./pages/Icons";
-import Tooltips from "./pages/Tooltips";
+import Badges from "./pages/Badges";
+import Buttons from "./pages/Buttons";
 import Cards from "./pages/Cards";
+import Icons from "./pages/Icons";
+import Toasts from "./pages/Toasts";
+import Tooltips from "./pages/Tooltips";
 
 function App() {
   return (

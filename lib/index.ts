@@ -5,18 +5,8 @@ export { default as stylesPlugin } from './stylesPlugin';
 
 //NOTE - Components
 export { Alert } from "./components/ui/alert";
-export { Button } from "./components/ui/button";
 export { Badge } from "./components/ui/badge";
-export { Icon } from "./components/ui/icon";
-export { Toaster } from "./components/ui/sonner";
-export {
-    Tooltip,
-    TooltipTitle,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "./components/ui/tooltip";
-
+export { Button } from "./components/ui/button";
 export {
     Card,
     CardContent,
@@ -25,3 +15,12 @@ export {
     CardHeader,
     CardTitle,
 } from "./components/ui/card";
+export { Icon } from "./components/ui/icon";
+export { Toaster } from "./components/ui/sonner";
+export {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTitle,
+    TooltipTrigger,
+} from "./components/ui/tooltip";

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+
 import { default as stylesPlugin } from './lib/stylesPlugin';
 
 const config = {

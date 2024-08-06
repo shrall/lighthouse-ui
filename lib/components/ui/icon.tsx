@@ -127,8 +127,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "add-doc-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.2 11.12V9.9H14C12.3984 9.9 11.1 8.60163 11.1 7V3.8H6C5.33726 3.8 4.8 4.33726 4.8 5V19C4.8 19.6627 5.33726 20.2 6 20.2H10.9236C11.3764 20.9168 11.9769 21.531 12.6822 22H6C4.34315 22 3 20.6569 3 19V5C3 3.34315 4.34315 2 6 2H12.1716C12.702 2 13.2107 2.21071 13.5858 2.58579L16 5L18.4142 7.41421C18.7893 7.78929 19 8.29799 19 8.82843V11.8027C18.4493 11.4842 17.8434 11.2506 17.2 11.12ZM14.7272 6.27279L16.5544 8.1H14C13.3925 8.1 12.9 7.60751 12.9 7V4.44558L14.7272 6.27279Z"
             fill="currentColor"
           />
@@ -137,19 +137,19 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="17"
             r="4.25"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
           <path
             d="M16 15L16 19"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
           <path
             d="M14 17H18"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
         </>
       )}
@@ -157,14 +157,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
         <>
           <mask id="path-1-inside-1_1309_1981" fill="white">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44771 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z"
             />
           </mask>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7C12.5523 7 13 7.44772 13 8V11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H13V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V13H8C7.44771 13 7 12.5523 7 12C7 11.4477 7.44771 11 8 11H11V8C11 7.44772 11.4477 7 12 7Z"
             fill="currentColor"
           />
@@ -177,32 +177,26 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       )}
       {name === "add-outline" && (
         <>
-          <circle
-            cx="12"
-            cy="12"
-            r="9"
-            stroke="currentColor"
-            stroke-width="2"
-          />
+          <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
           <path
             d="M12 8V16"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
           <path
             d="M16 12L8 12"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
+            strokeWidth="2"
+            strokeLinecap="round"
           />
         </>
       )}
       {name === "arrow-left-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M6.29289 7.29289C6.68342 6.90237 7.31658 6.90237 7.70711 7.29289C8.09763 7.68342 8.09763 8.31658 7.70711 8.70711L5.41421 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H5.41421L7.70711 15.2929C8.09763 15.6834 8.09763 16.3166 7.70711 16.7071C7.31658 17.0976 6.68342 17.0976 6.29289 16.7071L2.29289 12.7071C1.90237 12.3166 1.90237 11.6834 2.29289 11.2929L6.29289 7.29289Z"
             fill="currentColor"
           />
@@ -211,8 +205,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "arrow-right-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.7071 7.29289C17.3166 6.90237 16.6834 6.90237 16.2929 7.29289C15.9024 7.68342 15.9024 8.31658 16.2929 8.70711L18.5858 11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H18.5858L16.2929 15.2929C15.9024 15.6834 15.9024 16.3166 16.2929 16.7071C16.6834 17.0976 17.3166 17.0976 17.7071 16.7071L21.7071 12.7071C22.0976 12.3166 22.0976 11.6834 21.7071 11.2929L17.7071 7.29289Z"
             fill="currentColor"
           />
@@ -221,8 +215,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "bell-dashed-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 2C11.4477 2 11 2.44772 11 3V4.07089C7.60771 4.55612 5 7.47353 5 11V15.7895C5 15.8605 5.00335 15.9307 5.00989 16H5C4.44772 16 4 16.4477 4 17C4 17.5523 4.44772 18 5 18H7.21053H16.7895H19C19.5523 18 20 17.5523 20 17C20 16.4477 19.5523 16 19 16H18.9901C18.9967 15.9307 19 15.8605 19 15.7895V11C19 7.47353 16.3923 4.55612 13 4.07089V3C13 2.44772 12.5523 2 12 2ZM8.5 20C8.5 19.4477 8.94772 19 9.5 19H14.5C15.0523 19 15.5 19.4477 15.5 20C15.5 20.5523 15.0523 21 14.5 21H9.5C8.94772 21 8.5 20.5523 8.5 20ZM10 9C9.44772 9 9 9.44772 9 10C9 10.5523 9.44772 11 10 11H14C14.5523 11 15 10.5523 15 10C15 9.44772 14.5523 9 14 9H10Z"
             fill="currentColor"
           />
@@ -247,8 +241,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "buy-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M10.125 6.8V8H7L12 14L17 8H13.875C13.875 4.6862 11.0769 2 7.625 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6C2 3.79086 3.79086 2 6 2H7.61853C7.45174 2.00008 7.28502 2.00649 7.11875 2.0192C8.02615 2.47736 8.78584 3.16491 9.31569 4.00752C9.84554 4.85014 10.1254 5.81576 10.125 6.8Z"
             fill="currentColor"
           />
@@ -257,8 +251,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "calendar-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M15 4C15 3.44772 15.4477 3 16 3C16.5523 3 17 3.44772 17 4V6C17 6.55228 16.5523 7 16 7C15.4477 7 15 6.55228 15 6V4ZM6 5C4.34315 5 3 6.34315 3 8V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V8C21 6.34315 19.6569 5 18 5V6C18 7.10457 17.1046 8 16 8C14.8954 8 14 7.10457 14 6V5H10V6C10 7.10457 9.10457 8 8 8C6.89543 8 6 7.10457 6 6V5ZM6 10C5.44772 10 5 10.4477 5 11V19C5 19.5523 5.44772 20 6 20H18C18.5523 20 19 19.5523 19 19V11C19 10.4477 18.5523 10 18 10H6ZM8 3C7.44772 3 7 3.44772 7 4V6C7 6.55228 7.44772 7 8 7C8.55228 7 9 6.55228 9 6V4C9 3.44772 8.55228 3 8 3Z"
             fill="currentColor"
           />
@@ -273,7 +267,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="16.2"
             rx="2.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <rect x="6" y="2" width="2" height="3" rx="1" fill="currentColor" />
           <rect
@@ -292,14 +286,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
         <>
           <mask id="path-1-inside-1_1309_2015" fill="white">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M5 7C3.34315 7 2 8.34315 2 10V17C2 18.6569 3.34315 20 5 20H19C20.6569 20 22 18.6569 22 17V10C22 8.34315 20.6569 7 19 7H17.0535C17.0201 7 16.9889 6.98329 16.9703 6.95547L15.8906 5.3359C15.3342 4.5013 14.3975 4 13.3944 4H10.6056C9.60249 4 8.6658 4.5013 8.1094 5.3359L7.02969 6.95547C7.01114 6.98329 6.97992 7 6.94648 7H5ZM12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z"
             />
           </mask>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M5 7C3.34315 7 2 8.34315 2 10V17C2 18.6569 3.34315 20 5 20H19C20.6569 20 22 18.6569 22 17V10C22 8.34315 20.6569 7 19 7H17.0535C17.0201 7 16.9889 6.98329 16.9703 6.95547L15.8906 5.3359C15.3342 4.5013 14.3975 4 13.3944 4H10.6056C9.60249 4 8.6658 4.5013 8.1094 5.3359L7.02969 6.95547C7.01114 6.98329 6.97992 7 6.94648 7H5ZM12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z"
             fill="currentColor"
           />
@@ -315,14 +309,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M16.2215 7.4547L16.2215 7.45471C16.4069 7.7329 16.7192 7.9 17.0535 7.9H19C20.1598 7.9 21.1 8.8402 21.1 10V17C21.1 18.1598 20.1598 19.1 19 19.1H5C3.8402 19.1 2.9 18.1598 2.9 17V10C2.9 8.8402 3.8402 7.9 5 7.9H6.94648C7.28084 7.9 7.59307 7.7329 7.77853 7.4547L8.85825 5.83513C9.24772 5.25091 9.90341 4.9 10.6056 4.9H13.3944C14.0966 4.9 14.7523 5.25091 15.1418 5.83513L16.2215 7.4547Z"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <circle
             cx="12"
             cy="13"
             r="3"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
         </>
       )}
@@ -335,21 +329,21 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="13.2"
             rx="2.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M4 10H20.5"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7 15H11"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -361,9 +355,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
               <path
                 d="M8 12.5L11 15.5L16 9.5"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </mask>
           </defs>
@@ -379,9 +373,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M5 12.5L9.50001 17L19 7.5"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -398,9 +392,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M18 9L12 15L6 9"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -417,9 +411,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M15 18L9 12L15 6"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -436,9 +430,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M9 6L15 12L9 18"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -455,9 +449,9 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M6 15L12 9L18 15"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -468,8 +462,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12.0039 5C12.5562 5 13.0039 5.44772 13.0039 6V11.5445L16.1506 14.2406C16.57 14.6 16.6187 15.2313 16.2594 15.6506C15.9 16.07 15.2687 16.1187 14.8494 15.7594L11.3533 12.7639C11.1315 12.5739 11.0039 12.2965 11.0039 12.0045V6C11.0039 5.44772 11.4516 5 12.0039 5Z"
             fill="white"
           />
@@ -482,21 +476,21 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="12"
             r="10.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M9.7002 13.5556C9.7002 14.4178 10.3669 15.1111 11.1847 15.1111H12.8557C13.5669 15.1111 14.1446 14.5067 14.1446 13.7511C14.1446 12.9422 13.7891 12.6489 13.2646 12.4622L10.5891 11.5289C10.0646 11.3422 9.70909 11.0578 9.70909 10.24C9.70909 9.49334 10.2869 8.88 10.998 8.88H12.6691C13.4869 8.88 14.1535 9.57334 14.1535 10.4356"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11.9224 8V16"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -514,30 +508,30 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             <path
               d="M2 21H22"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M7 13H5C4.44772 13 4 13.4477 4 14V20C4 20.5523 4.44772 21 5 21H7C7.55228 21 8 20.5523 8 20V14C8 13.4477 7.55228 13 7 13Z"
               fill="white"
               stroke="white"
-              stroke-width="2"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinejoin="round"
             />
             <path
               d="M6 17H6.5"
               stroke="black"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="square"
+              strokeLinejoin="round"
             />
             <path
               d="M19 2H9C8.44772 2 8 2.44772 8 3V20C8 20.5523 8.44772 21 9 21H19C19.5523 21 20 20.5523 20 20V3C20 2.44772 19.5523 2 19 2Z"
               fill="white"
               stroke="white"
-              stroke-width="2"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinejoin="round"
             />
             <path
               d="M11 5H13V7H11V5ZM15 5H17V7H15V5ZM11 8.5H13V10.5H11V8.5ZM15 8.5H17V10.5H15V8.5ZM15 12H17V14H15V12ZM15 15.5H17V17.5H15V15.5Z"
@@ -552,8 +546,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "compare-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18 7H6C4.78497 7 3.8 7.98497 3.8 9.2V18C3.8 19.215 4.78497 20.2 6 20.2H18C19.215 20.2 20.2 19.215 20.2 18V9.2C20.2 7.98497 19.215 7 18 7ZM6 2C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V6C22 3.79086 20.2091 2 18 2H6ZM14.8 13V10.8H16.2V13H14.8ZM13 10C13 9.44772 13.4477 9 14 9H17C17.5523 9 18 9.44772 18 10V17C18 17.5523 17.5523 18 17 18H14C13.4477 18 13 17.5523 13 17V10ZM7.8 10.8V14H9.2V10.8H7.8ZM7 9C6.44772 9 6 9.44772 6 10V17C6 17.5523 6.44772 18 7 18H10C10.5523 18 11 17.5523 11 17V10C11 9.44772 10.5523 9 10 9H7Z"
             fill="currentColor"
           />
@@ -564,14 +558,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M6 3V16C6 17.1046 6.89543 18 8 18H21"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
           />
           <path
             d="M18 21L18 8C18 6.89543 17.1046 6 16 6L3 6"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
           />
         </>
       )}
@@ -583,14 +577,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
               <path
                 d="M8.46436 8.46448L15.5354 15.5355"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
               <path
                 d="M15.5356 8.46448L8.46458 15.5355"
                 stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </mask>
           </defs>
@@ -604,8 +598,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "cross-large-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L10.5857 11.9999L5.29318 17.2924C4.90266 17.6829 4.90266 18.3161 5.29318 18.7066C5.6837 19.0971 6.31687 19.0971 6.70739 18.7066L11.9999 13.4141L17.2924 18.7066C17.6829 19.0971 18.3161 19.0971 18.7066 18.7066C19.0971 18.3161 19.0971 17.6829 18.7066 17.2924L13.4141 11.9999L18.7069 6.70711C19.0974 6.31658 19.0974 5.68342 18.7069 5.29289C18.3164 4.90237 17.6832 4.90237 17.2927 5.29289L11.9999 10.5857L6.70711 5.29289Z"
             fill="currentColor"
           />
@@ -614,8 +608,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "cross-small-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M10.5857 12.0001L7.05024 15.5356C6.65972 15.9261 6.65972 16.5592 7.05024 16.9498C7.44077 17.3403 8.07393 17.3403 8.46446 16.9498L12 13.4143L15.5355 16.9498C15.926 17.3403 16.5592 17.3403 16.9497 16.9498C17.3402 16.5593 17.3402 15.9261 16.9497 15.5356L13.4142 12.0001L16.9497 8.46449C17.3403 8.07397 17.3403 7.4408 16.9497 7.05028C16.5592 6.65975 15.926 6.65975 15.5355 7.05028L12 10.5858L8.46443 7.05031C8.07391 6.65979 7.44074 6.65979 7.05022 7.05031C6.65969 7.44083 6.65969 8.074 7.05022 8.46452L10.5857 12.0001Z"
             fill="currentColor"
           />
@@ -632,8 +626,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "dashboard-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M5.5 4.3H8.5C9.16274 4.3 9.7 4.83726 9.7 5.5V8.5C9.7 9.16274 9.16274 9.7 8.5 9.7H5.5C4.83726 9.7 4.3 9.16274 4.3 8.5V5.5C4.3 4.83726 4.83726 4.3 5.5 4.3ZM2.5 5.5C2.5 3.84315 3.84315 2.5 5.5 2.5H8.5C10.1569 2.5 11.5 3.84315 11.5 5.5V8.5C11.5 10.1569 10.1569 11.5 8.5 11.5H5.5C3.84315 11.5 2.5 10.1569 2.5 8.5V5.5ZM5.5 14.3H8.5C9.16274 14.3 9.7 14.8373 9.7 15.5V18.5C9.7 19.1627 9.16274 19.7 8.5 19.7H5.5C4.83726 19.7 4.3 19.1627 4.3 18.5V15.5C4.3 14.8373 4.83726 14.3 5.5 14.3ZM2.5 15.5C2.5 13.8431 3.84315 12.5 5.5 12.5H8.5C10.1569 12.5 11.5 13.8431 11.5 15.5V18.5C11.5 20.1569 10.1569 21.5 8.5 21.5H5.5C3.84315 21.5 2.5 20.1569 2.5 18.5V15.5ZM18.5 4.3H15.5C14.8373 4.3 14.3 4.83726 14.3 5.5V8.5C14.3 9.16274 14.8373 9.7 15.5 9.7H18.5C19.1627 9.7 19.7 9.16274 19.7 8.5V5.5C19.7 4.83726 19.1627 4.3 18.5 4.3ZM15.5 2.5C13.8431 2.5 12.5 3.84315 12.5 5.5V8.5C12.5 10.1569 13.8431 11.5 15.5 11.5H18.5C20.1569 11.5 21.5 10.1569 21.5 8.5V5.5C21.5 3.84315 20.1569 2.5 18.5 2.5H15.5ZM15.5 14.3H18.5C19.1627 14.3 19.7 14.8373 19.7 15.5V18.5C19.7 19.1627 19.1627 19.7 18.5 19.7H15.5C14.8373 19.7 14.3 19.1627 14.3 18.5V15.5C14.3 14.8373 14.8373 14.3 15.5 14.3ZM12.5 15.5C12.5 13.8431 13.8431 12.5 15.5 12.5H18.5C20.1569 12.5 21.5 13.8431 21.5 15.5V18.5C21.5 20.1569 20.1569 21.5 18.5 21.5H15.5C13.8431 21.5 12.5 20.1569 12.5 18.5V15.5Z"
             fill="currentColor"
           />
@@ -642,8 +636,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "delete-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M10 2C8.89543 2 8 2.89543 8 4V5H5.5L3.85 5C3.38056 5 3 5.38056 3 5.85C3 6.31944 3.38056 6.7 3.85 6.7H4.5V19C4.5 20.6569 5.84315 22 7.5 22H16.5C18.1569 22 19.5 20.6569 19.5 19V6.7H20.15C20.6194 6.7 21 6.31944 21 5.85C21 5.38056 20.6194 5 20.15 5H18.5H16V4C16 2.89543 15.1046 2 14 2H10ZM14 5V4H10V5H14ZM6.5 19V7H17.5V19C17.5 19.5523 17.0523 20 16.5 20H7.5C6.94772 20 6.5 19.5523 6.5 19ZM9.2 10.85C9.2 10.3806 9.58055 10 10.05 10C10.5194 10 10.9 10.3806 10.9 10.85V16.15C10.9 16.6194 10.5194 17 10.05 17C9.58055 17 9.2 16.6194 9.2 16.15V10.85ZM13.2 10.85C13.2 10.3806 13.5806 10 14.05 10C14.5194 10 14.9 10.3806 14.9 10.85V16.15C14.9 16.6194 14.5194 17 14.05 17C13.5806 17 13.2 16.6194 13.2 16.15V10.85Z"
             fill="currentColor"
           />
@@ -652,8 +646,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "doc-csv-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44558V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5Z"
             fill="currentColor"
           />
@@ -666,8 +660,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "doc-download-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M2 5C2 3.34315 3.34315 2 5 2H15C16.6569 2 18 3.34315 18 5V11.5907C17.6757 11.5311 17.3415 11.5 17 11.5C13.9624 11.5 11.5 13.9624 11.5 17C11.5 19.2186 12.8136 21.1304 14.7055 22H5C3.34315 22 2 20.6569 2 19V5ZM6 6.15C5.53056 6.15 5.15 6.53056 5.15 7C5.15 7.46944 5.53056 7.85 6 7.85H14C14.4694 7.85 14.85 7.46944 14.85 7C14.85 6.53056 14.4694 6.15 14 6.15H6ZM5.15 10.5C5.15 10.0306 5.53056 9.65 6 9.65H11C11.4694 9.65 11.85 10.0306 11.85 10.5C11.85 10.9694 11.4694 11.35 11 11.35H6C5.53056 11.35 5.15 10.9694 5.15 10.5ZM21 17C21 19.2091 19.2091 21 17 21C14.7909 21 13 19.2091 13 17C13 14.7909 14.7909 13 17 13C19.2091 13 21 14.7909 21 17ZM17.1 14.4C17.4313 14.4 17.7 14.6686 17.7 15V17.5515L18.1757 17.0757C18.41 16.8414 18.7899 16.8414 19.0242 17.0757C19.2586 17.3101 19.2586 17.6899 19.0242 17.9243L17.5242 19.4243C17.2899 19.6586 16.91 19.6586 16.6757 19.4243L15.1757 17.9243C14.9414 17.6899 14.9414 17.3101 15.1757 17.0757C15.41 16.8414 15.7899 16.8414 16.0242 17.0757L16.5 17.5515V15C16.5 14.6686 16.7686 14.4 17.1 14.4Z"
             fill="currentColor"
           />
@@ -676,8 +670,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "doc-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M14.25 2.5C14.25 2.4337 14.2237 2.37011 14.1768 2.32322C14.1299 2.27634 14.0663 2.25 14 2.25H7C6.27065 2.25 5.57118 2.53973 5.05546 3.05546C4.53973 3.57118 4.25 4.27065 4.25 5V19C4.25 19.7293 4.53973 20.4288 5.05546 20.9445C5.57118 21.4603 6.27065 21.75 7 21.75H17C17.7293 21.75 18.4288 21.4603 18.9445 20.9445C19.4603 20.4288 19.75 19.7293 19.75 19V9.147C19.75 9.0807 19.7237 9.01711 19.6768 8.97022C19.6299 8.92334 19.5663 8.897 19.5 8.897H15C14.8011 8.897 14.6103 8.81798 14.4697 8.67733C14.329 8.53668 14.25 8.34591 14.25 8.147V2.5ZM15 12.25C15.1989 12.25 15.3897 12.329 15.5303 12.4697C15.671 12.6103 15.75 12.8011 15.75 13C15.75 13.1989 15.671 13.3897 15.5303 13.5303C15.3897 13.671 15.1989 13.75 15 13.75H9C8.80109 13.75 8.61032 13.671 8.46967 13.5303C8.32902 13.3897 8.25 13.1989 8.25 13C8.25 12.8011 8.32902 12.6103 8.46967 12.4697C8.61032 12.329 8.80109 12.25 9 12.25H15ZM15 16.25C15.1989 16.25 15.3897 16.329 15.5303 16.4697C15.671 16.6103 15.75 16.8011 15.75 17C15.75 17.1989 15.671 17.3897 15.5303 17.5303C15.3897 17.671 15.1989 17.75 15 17.75H9C8.80109 17.75 8.61032 17.671 8.46967 17.5303C8.32902 17.3897 8.25 17.1989 8.25 17C8.25 16.8011 8.32902 16.6103 8.46967 16.4697C8.61032 16.329 8.80109 16.25 9 16.25H15Z"
             fill="currentColor"
           />
@@ -690,8 +684,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "doc-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44559V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5ZM8.1 13C8.1 12.5029 8.50295 12.1 9 12.1H15C15.4971 12.1 15.9 12.5029 15.9 13C15.9 13.4971 15.4971 13.9 15 13.9H9C8.50295 13.9 8.1 13.4971 8.1 13ZM9 16.1C8.50295 16.1 8.1 16.5029 8.1 17C8.1 17.4971 8.50295 17.9 9 17.9H15C15.4971 17.9 15.9 17.4971 15.9 17C15.9 16.5029 15.4971 16.1 15 16.1H9Z"
             fill="currentColor"
           />
@@ -700,8 +694,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "doc-pdf-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44558V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5Z"
             fill="currentColor"
           />
@@ -719,8 +713,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "download-doc-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M16.2 12.0637V5C16.2 4.33726 15.6627 3.8 15 3.8H5C4.33726 3.8 3.8 4.33726 3.8 5V19C3.8 19.6627 4.33726 20.2 5 20.2H13.158C14.0751 21.3 15.4558 22 17 22H5C3.34315 22 2 20.6569 2 19V5C2 3.34315 3.34315 2 5 2H15C16.6569 2 18 3.34315 18 5V12.1C17.6769 12.0344 17.3425 12 17 12C16.7277 12 16.4605 12.0218 16.2 12.0637ZM7 6.1C6.50294 6.1 6.1 6.50294 6.1 7C6.1 7.49706 6.50294 7.9 7 7.9H13C13.4971 7.9 13.9 7.49706 13.9 7C13.9 6.50294 13.4971 6.1 13 6.1H7ZM6.1 10.5C6.1 10.0029 6.50294 9.6 7 9.6H11C11.4971 9.6 11.9 10.0029 11.9 10.5C11.9 10.9971 11.4971 11.4 11 11.4H7C6.50294 11.4 6.1 10.9971 6.1 10.5Z"
             fill="currentColor"
           />
@@ -729,14 +723,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="17"
             r="4.15"
             stroke="currentColor"
-            stroke-width="1.7"
+            strokeWidth="1.7"
           />
           <path
             d="M17.1001 15V19M17.1001 19L18.6001 17.5M17.1001 19L15.6001 17.5"
             stroke="currentColor"
-            stroke-width="1.2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -752,8 +746,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "download-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V14.5858L7.70711 11.2929C7.31658 10.9024 6.68342 10.9024 6.29289 11.2929C5.90237 11.6834 5.90237 12.3166 6.29289 12.7071L11.2929 17.7071C11.6834 18.0976 12.3166 18.0976 12.7071 17.7071L17.7071 12.7071C18.0976 12.3166 18.0976 11.6834 17.7071 11.2929C17.3166 10.9024 16.6834 10.9024 16.2929 11.2929L13 14.5858V3ZM3 20C2.44772 20 2 20.4477 2 21C2 21.5523 2.44772 22 3 22H21C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20H3Z"
             fill="currentColor"
           />
@@ -768,27 +762,27 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="18.4"
             rx="2.2"
             stroke="currentColor"
-            stroke-width="1.6"
+            strokeWidth="1.6"
           />
           <path
             d="M12 13.0355V5.96448"
             stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M9.35148 10.387L12 13.0355L14.6485 10.387"
             stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7 16L8.86214 16.3724C10.9335 16.7867 13.0665 16.7867 15.1379 16.3724L17 16"
             stroke="currentColor"
-            stroke-width="1.6"
-            stroke-linecap="round"
+            strokeWidth="1.6"
+            strokeLinecap="round"
           />
         </>
       )}
@@ -803,8 +797,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "edit-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4 6C4 4.89543 4.89543 4 6 4H12C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2H6C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V12C22 11.4477 21.5523 11 21 11C20.4477 11 20 11.4477 20 12V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6ZM16.8323 4.58341C17.227 4.18836 17.8687 4.19306 18.2575 4.59386L19.4113 5.78318C19.7916 6.1752 19.787 6.79984 19.401 7.18624L10.5855 16.0106H8V13.4246L16.8323 4.58341ZM19.693 3.20126C18.5265 1.99886 16.6014 1.98474 15.4174 3.16991L6.29254 12.3039C6.10522 12.4914 6 12.7456 6 13.0107V17.0106C6 17.5629 6.44772 18.0106 7 18.0106H11C11.2654 18.0106 11.5199 17.9051 11.7075 17.7174L20.8159 8.59974C21.974 7.44054 21.9877 5.56663 20.8468 4.39058L19.693 3.20126Z"
             fill="currentColor"
           />
@@ -813,8 +807,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "ellipsis-v-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4C13.1046 4 14 4.89543 14 6ZM14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12ZM12 20C13.1046 20 14 19.1046 14 18C14 16.8954 13.1046 16 12 16C10.8954 16 10 16.8954 10 18C10 19.1046 10.8954 20 12 20Z"
             fill="currentColor"
           />
@@ -829,26 +823,26 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="16.2"
             rx="2.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M21 5L12.606 11.3954C12.248 11.6682 11.752 11.6682 11.394 11.3954L3 5"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
         </>
       )}
       {name === "estatement-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18 22C20.2091 22 22 20.2091 22 18C22 15.7909 20.2091 14 18 14C15.7909 14 14 15.7909 14 18C14 20.2091 15.7909 22 18 22ZM16.7297 19.0984V18.1156H16.9144L17.4871 19.0984H18.3146L17.5277 17.9216C17.8331 17.7505 17.9858 17.5085 17.9858 17.1957C17.9858 16.6636 17.6188 16.3976 16.8848 16.3976H16V19.0984H16.7297ZM16.8664 17.567H16.7297V16.95H16.8738C17.1238 16.95 17.2488 17.043 17.2488 17.2289C17.2488 17.4543 17.1213 17.567 16.8664 17.567ZM19.4895 19.0836C19.5733 19.1181 19.6681 19.1353 19.774 19.1353C20.0092 19.1353 20.1952 19.0386 20.3319 18.8453C20.4698 18.6507 20.5388 18.3847 20.5388 18.0473C20.5388 17.7123 20.4729 17.4487 20.3411 17.2566C20.2093 17.0645 20.0277 16.9684 19.7962 16.9684C19.5597 16.9684 19.3744 17.0694 19.2401 17.2714H19.2069L19.1053 17.0054H18.5178V20.0072H19.2401V19.1667C19.2401 19.131 19.229 19.0399 19.2069 18.8933H19.2401C19.3226 18.9844 19.4058 19.0479 19.4895 19.0836ZM19.3085 17.6501C19.3516 17.5737 19.4261 17.5356 19.532 17.5356C19.6293 17.5356 19.6989 17.575 19.7407 17.6538C19.7826 17.7314 19.8036 17.8601 19.8036 18.0399C19.8036 18.2234 19.7826 18.3551 19.7407 18.4352C19.6989 18.514 19.6318 18.5534 19.5394 18.5534C19.4359 18.5534 19.3602 18.5134 19.3122 18.4333C19.2641 18.3533 19.2401 18.2234 19.2401 18.0436V17.9863C19.2438 17.8373 19.2666 17.7252 19.3085 17.6501Z"
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H13.3895C12.8269 20.1372 12.5 19.1068 12.5 18C12.5 14.9624 14.9624 12.5 18 12.5C18.7056 12.5 19.3801 12.6329 20 12.8749V6C20 4.34315 18.6569 3 17 3H6ZM6 6.75C6 6.33579 6.33579 6 6.75 6H16.25C16.6642 6 17 6.33579 17 6.75C17 7.16421 16.6642 7.5 16.25 7.5H6.75C6.33579 7.5 6 7.16421 6 6.75ZM6.75 9C6.33579 9 6 9.33579 6 9.75C6 10.1642 6.33579 10.5 6.75 10.5H14.25C14.6642 10.5 15 10.1642 15 9.75C15 9.33579 14.6642 9 14.25 9H6.75Z"
             fill="currentColor"
           />
@@ -875,8 +869,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "eye-closed-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18.58 4.97792C18.9437 4.63904 19.5132 4.65911 19.852 5.02274C20.1909 5.38637 20.1708 5.95587 19.8072 6.29474L17.9747 8.00248C19.0122 8.79898 20.2655 9.93741 21.727 11.3982C22.0617 11.7327 22.0801 12.2694 21.7691 12.6261C18.6621 16.1903 15.4056 18.1409 11.999 18.1409C10.6644 18.1409 9.34491 17.84 8.04677 17.2546L6.15025 19.022C5.78662 19.3609 5.21712 19.3408 4.87825 18.9772C4.53937 18.6136 4.55944 18.0441 4.92307 17.7052L18.58 4.97792ZM9.50012 15.9002L10.3373 15.12C10.8324 15.3774 11.3949 15.52 11.9859 15.52C13.9371 15.52 15.5414 13.9563 15.5414 11.9997C15.5414 11.4863 15.4295 10.9988 15.2306 10.5598L16.6375 9.24871C17.48 9.86903 18.5477 10.8036 19.8469 12.071C17.1096 15.0085 14.4939 16.3409 11.999 16.3409C11.1754 16.3409 10.3435 16.197 9.50012 15.9002ZM13.7407 11.9483C13.7412 11.9654 13.7414 11.9825 13.7414 11.9997C13.7414 12.9389 12.9664 13.72 11.9859 13.72C11.9385 13.72 11.8916 13.7182 11.8453 13.7147L13.7407 11.9483ZM12.0082 7.65949C12.5839 7.65949 13.1616 7.7309 13.7423 7.87597C14.2245 7.99646 14.7131 7.7032 14.8336 7.22097C14.9541 6.73874 14.6608 6.25014 14.1786 6.12965C13.4587 5.9498 12.7345 5.85949 12.0082 5.85949C8.60301 5.85949 5.34362 7.83706 2.22765 11.4464C1.91683 11.8065 1.93983 12.3462 2.28016 12.6785C3.6517 14.0177 4.62534 14.9338 5.1835 15.4048C5.56335 15.7254 6.13117 15.6774 6.45176 15.2975C6.77234 14.9176 6.72429 14.3498 6.34444 14.0292C5.92225 13.6729 5.19601 12.9979 4.15428 11.9901C6.90441 9.00764 9.52223 7.65949 12.0082 7.65949ZM12.8858 9.37965C12.8858 8.88259 12.4828 8.47965 11.9858 8.47965C10.0325 8.47965 8.43026 10.0446 8.43026 12C8.43026 12.497 8.8332 12.9 9.33026 12.9C9.82731 12.9 10.2303 12.497 10.2303 12C10.2303 11.061 11.0043 10.2796 11.9858 10.2796C12.4828 10.2796 12.8858 9.8767 12.8858 9.37965Z"
             fill="currentColor"
           />
@@ -885,8 +879,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "eye-open-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18.1008 10.0049L20.0959 12L18.1008 13.9952C17.3671 14.7288 16.52 15.3394 15.5919 15.8035C13.3308 16.934 10.6694 16.934 8.40827 15.8035C7.48023 15.3394 6.63307 14.7288 5.89939 13.9952L3.90426 12L5.89939 10.0049C6.63307 9.27121 7.48023 8.66062 8.40827 8.1966C10.6694 7.06604 13.3308 7.06604 15.5919 8.1966C16.52 8.66062 17.3671 9.27122 18.1008 10.0049ZM7.648 6.67607C10.3877 5.30622 13.6125 5.30622 16.3522 6.67607C17.4437 7.2218 18.44 7.93993 19.3029 8.80281L21.793 11.2929C22.1835 11.6834 22.1835 12.3166 21.793 12.7071L19.3029 15.1972C18.44 16.0601 17.4437 16.7782 16.3522 17.324C13.6125 18.6938 10.3877 18.6938 7.648 17.324C6.55654 16.7782 5.56019 16.0601 4.69731 15.1972L2.2072 12.7071C1.81668 12.3166 1.81668 11.6834 2.2072 11.2929L4.69731 8.80281C5.56019 7.93993 6.55654 7.2218 7.648 6.67607ZM12.0001 15.2C13.7674 15.2 15.2001 13.7673 15.2001 12C15.2001 10.2327 13.7674 8.8 12.0001 8.8C10.2328 8.8 8.80009 10.2327 8.80009 12C8.80009 13.7673 10.2328 15.2 12.0001 15.2ZM13.5001 12C13.5001 12.8284 12.8285 13.5 12.0001 13.5C11.1717 13.5 10.5001 12.8284 10.5001 12C10.5001 11.1716 11.1717 10.5 12.0001 10.5C12.8285 10.5 13.5001 11.1716 13.5001 12Z"
             fill="currentColor"
           />
@@ -897,7 +891,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M2.9 12C2.9 6.97421 6.97421 2.9 12 2.9C17.0258 2.9 21.1 6.97421 21.1 12C21.1 17.0258 17.0258 21.1 12 21.1H3.29032C3.07475 21.1 2.9 20.9252 2.9 20.7097V12Z"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M11.9599 7.16998C12.9999 7.16998 13.8349 7.45498 14.465 8.02498C15.1049 8.58498 15.425 9.35998 15.425 10.35C15.425 11.33 15.11 12.08 14.4799 12.6C13.8499 13.11 13.0149 13.365 11.9749 13.365L11.9396 14.0459C11.9258 14.3116 11.7063 14.52 11.4402 14.52H10.5555C10.285 14.52 10.0636 14.305 10.0557 14.0347L10.0101 12.4847C10.0018 12.2029 10.228 11.97 10.5099 11.97H10.6699C11.5399 11.97 12.21 11.855 12.68 11.625C13.15 11.395 13.385 10.975 13.385 10.365C13.385 9.92498 13.255 9.57498 12.9949 9.31498C12.745 9.05498 12.4 8.92498 11.9599 8.92498C11.4999 8.92498 11.1399 9.04998 10.8799 9.29998C10.7327 9.44723 10.6288 9.62743 10.5683 9.84059C10.4929 10.1062 10.2811 10.335 10.0049 10.335H9.01682C8.74387 10.335 8.51692 10.1151 8.54875 9.84403C8.59752 9.42865 8.71958 9.0473 8.91495 8.69998C9.18495 8.21998 9.57995 7.84498 10.0999 7.57498C10.6299 7.30498 11.2499 7.16998 11.9599 7.16998ZM10.9849 18.105C10.6049 18.105 10.29 17.99 10.04 17.76C9.79995 17.52 9.67995 17.225 9.67995 16.875C9.67995 16.525 9.79995 16.235 10.04 16.005C10.29 15.765 10.6049 15.645 10.9849 15.645C11.3549 15.645 11.66 15.765 11.9 16.005C12.1399 16.235 12.2599 16.525 12.2599 16.875C12.2599 17.225 12.1399 17.52 11.9 17.76C11.66 17.99 11.3549 18.105 10.9849 18.105Z"
@@ -910,7 +904,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M11.2512 7.49923L11.5183 7.9H12H19C20.1598 7.9 21.1 8.8402 21.1 10V18C21.1 19.1598 20.1598 20.1 19 20.1H5C3.8402 20.1 2.9 19.1598 2.9 18V7C2.9 5.8402 3.8402 4.9 5 4.9H8.92963C9.29742 4.9 9.64088 5.08381 9.84489 5.38983L11.2512 7.49923Z"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <rect
             x="13"
@@ -925,8 +919,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "file-txt-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44558V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5Z"
             fill="currentColor"
           />
@@ -939,8 +933,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "file-xlx-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44558V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5Z"
             fill="currentColor"
           />
@@ -971,7 +965,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M14.3636 15.3636L14.1 15.6272V16V18.4648C14.1 18.4983 14.0833 18.5295 14.0555 18.548L10.0555 21.2147C10.0321 21.2303 10.0162 21.2328 10.0052 21.2331C9.99092 21.2335 9.97222 21.23 9.95281 21.2197C9.93341 21.2093 9.92012 21.1957 9.91255 21.1836C9.90669 21.1742 9.9 21.1596 9.9 21.1315V16V15.6272L9.6364 15.3636L3.19705 8.92426C2.81908 8.54629 3.08677 7.9 3.62132 7.9H20.3787C20.9132 7.9 21.1809 8.54629 20.8029 8.92426L14.3636 15.3636Z"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <rect x="2" y="3" width="20" height="2" rx="1" fill="currentColor" />
         </>
@@ -979,8 +973,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "finance-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12.158 20.2H6C5.33726 20.2 4.8 19.6627 4.8 19V5C4.8 4.33726 5.33726 3.8 6 3.8H11.1V7C11.1 8.60163 12.3984 9.9 14 9.9H17.2V12.1449C17.8616 12.3079 18.4714 12.6026 19 12.9996V8.82843C19 8.29799 18.7893 7.78929 18.4142 7.41421L16 5L13.5858 2.58579C13.2107 2.21071 12.702 2 12.1716 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H16C14.4558 22 13.0751 21.3 12.158 20.2ZM14.7272 6.27279L16.5544 8.1H14C13.3925 8.1 12.9 7.60751 12.9 7V4.44558L14.7272 6.27279Z"
             fill="currentColor"
           />
@@ -989,11 +983,11 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="17"
             r="4.25"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M16.4591 14.8947C16.4591 14.6767 16.2823 14.5 16.0643 14.5C15.8463 14.5 15.6696 14.6767 15.6696 14.8947V14.9632H15.5778C14.9651 14.9632 14.5047 15.4837 14.5047 16.0737C14.5047 16.3455 14.5643 16.5867 14.717 16.7812C14.866 16.971 15.0645 17.065 15.2302 17.124L15.2302 17.124L15.2326 17.1248L15.6696 17.2772V18.2427C15.4758 18.2389 15.2895 18.0685 15.2895 17.8187C15.2895 17.6007 15.1127 17.424 14.8947 17.424C14.6767 17.424 14.5 17.6007 14.5 17.8187C14.5 18.4717 15.008 19.0286 15.6696 19.0322V19.1053C15.6696 19.3233 15.8463 19.5 16.0643 19.5C16.2823 19.5 16.4591 19.3233 16.4591 19.1053V19.0322H16.5555C17.1666 19.0322 17.6287 18.5181 17.6287 17.9217C17.6287 17.6513 17.5686 17.4109 17.417 17.2167C17.2688 17.027 17.0714 16.9313 16.9031 16.8714L16.9031 16.8714L16.9008 16.8706L16.4591 16.7165V15.7527C16.6545 15.7537 16.8439 15.9249 16.8439 16.1766C16.8439 16.3946 17.0206 16.5714 17.2386 16.5714C17.4566 16.5714 17.6333 16.3946 17.6333 16.1766C17.6333 15.5221 17.123 14.9642 16.4591 14.9632V14.8947ZM15.6696 15.7527H15.5778C15.4419 15.7527 15.2942 15.8778 15.2942 16.0737C15.2942 16.2324 15.3281 16.2812 15.3379 16.2937C15.3515 16.3109 15.3844 16.3407 15.4939 16.3798L15.6696 16.4411V15.7527ZM16.4591 17.5526V18.2427H16.5555C16.6931 18.2427 16.8392 18.1205 16.8392 17.9217C16.8392 17.7663 16.8057 17.7166 16.7947 17.7026C16.7804 17.6842 16.7464 17.6538 16.6395 17.6156L16.4591 17.5526Z"
             fill="currentColor"
           />
@@ -1002,24 +996,24 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "flag-cross-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4 3.75C4 3.33579 4.33579 3 4.75 3H19.75C20.0403 3 20.3045 3.16753 20.4283 3.43009C20.5522 3.69265 20.5134 4.0031 20.3287 4.22709L16.1766 9.26351L20.3287 14.2999C20.5134 14.5239 20.5522 14.8344 20.4283 15.0969C20.3045 15.3595 20.0403 15.527 19.75 15.527H5.5V20.75C5.5 21.1642 5.16421 21.5 4.75 21.5C4.33579 21.5 4 21.1642 4 20.75V3.75ZM5.5 14.027H18.1597L14.6259 9.7406C14.3974 9.46355 14.3974 9.06348 14.6259 8.78643L18.1597 4.5H5.5V14.027Z"
             fill="currentColor"
           />
           <path
             d="M8.49996 10.9249L12.4248 7"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M12.4248 10.9249L8.5 7"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -1030,8 +1024,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4.25 4C4.25 3.58579 4.58579 3.25 5 3.25H20C20.2903 3.25 20.5545 3.41753 20.6783 3.68009C20.8022 3.94265 20.7634 4.2531 20.5787 4.47709L16.4266 9.51351L20.5787 14.5499C20.7634 14.7739 20.8022 15.0844 20.6783 15.3469C20.5545 15.6095 20.2903 15.777 20 15.777H5.75V21C5.75 21.4142 5.41421 21.75 5 21.75C4.58579 21.75 4.25 21.4142 4.25 21V4ZM5.75 14.277H18.4097L14.8759 9.9906C14.6474 9.71355 14.6474 9.31348 14.8759 9.03643L18.4097 4.75H5.75V14.277Z"
             fill="currentColor"
           />
@@ -1044,8 +1038,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "flag-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4 3.75C4 3.33579 4.33579 3 4.75 3H19.75C20.0403 3 20.3045 3.16753 20.4283 3.43009C20.5522 3.69265 20.5134 4.0031 20.3287 4.22709L16.1766 9.26351L20.3287 14.2999C20.5134 14.5239 20.5522 14.8344 20.4283 15.0969C20.3045 15.3595 20.0403 15.527 19.75 15.527H5.5V20.75C5.5 21.1642 5.16421 21.5 4.75 21.5C4.33579 21.5 4 21.1642 4 20.75V3.75ZM5.5 14.027H18.1597L14.6259 9.7406C14.3974 9.46355 14.3974 9.06348 14.6259 8.78643L18.1597 4.5H5.5V14.027Z"
             fill="currentColor"
           />
@@ -1054,8 +1048,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "flash-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M14.4746 1.97719C14.837 1.56139 15.5069 1.95259 15.3228 2.47256L12.7737 9.67436H19.3748C19.7967 9.67436 20.029 10.1647 19.7617 10.4911L10.1614 22.2164C9.82084 22.6323 9.15356 22.2913 9.29118 21.7717L11.351 13.994H5.09912C4.66999 13.994 4.44023 13.4889 4.72221 13.1654L14.4746 1.97719Z"
             fill="currentColor"
           />
@@ -1072,8 +1066,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "history-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M4.5 5C4.5 3.34315 5.84315 2 7.5 2H16.5C18.1569 2 19.5 3.34315 19.5 5V19C19.5 20.6569 18.1569 22 16.5 22H7.5C5.84315 22 4.5 20.6569 4.5 19V5ZM7.5 17C7.5 16.4477 7.94772 16 8.5 16H15.5C16.0523 16 16.5 16.4477 16.5 17C16.5 17.5523 16.0523 18 15.5 18H8.5C7.94772 18 7.5 17.5523 7.5 17ZM8.5 12C7.94772 12 7.5 12.4477 7.5 13C7.5 13.5523 7.94772 14 8.5 14H15.5C16.0523 14 16.5 13.5523 16.5 13C16.5 12.4477 16.0523 12 15.5 12H8.5ZM12 8V6C12 5.44772 11.5523 5 11 5C10.4477 5 10 5.44772 10 6V9C10 9.55228 10.4477 10 11 10H14C14.5523 10 15 9.55228 15 9C15 8.44772 14.5523 8 14 8H12Z"
             fill="currentColor"
           />
@@ -1082,8 +1076,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "home-2-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M2.50695 9.03319C2.18653 9.28953 2 9.67762 2 10.088C2 10.834 2.60477 11.4388 3.35078 11.4388H4.5V19H3.5C2.94772 19 2.5 19.4477 2.5 20L2.5 21C2.5 21.5523 2.94771 22 3.5 22H20.5C21.0523 22 21.5 21.5523 21.5 21V20C21.5 19.4477 21.0523 19 20.5 19H19.5V11.4388H20.6492C21.3952 11.4388 22 10.834 22 10.088C22 9.67762 21.8135 9.28953 21.493 9.03319L13.2494 2.43826C12.519 1.85391 11.481 1.85391 10.7506 2.43826L2.50695 9.03319ZM16.5 11.9388C16.5 11.6626 16.2761 11.4388 16 11.4388H14C13.7239 11.4388 13.5 11.6626 13.5 11.9388V18.5C13.5 18.7761 13.7239 19 14 19H16C16.2761 19 16.5 18.7761 16.5 18.5V11.9388ZM10.5 11.9388C10.5 11.6626 10.2761 11.4388 10 11.4388H8C7.72386 11.4388 7.5 11.6626 7.5 11.9388V18.5C7.5 18.7761 7.72386 19 8 19H10C10.2761 19 10.5 18.7761 10.5 18.5V11.9388Z"
             fill="currentColor"
           />
@@ -1106,7 +1100,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="14.5"
             rx="2.25"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
           <path
             d="M3 17.5L8.91123 10.6794C9.24604 10.293 9.81832 10.2214 10.238 10.5134L14.801 13.6877L16.4175 11.7119C16.7468 11.3095 17.3295 11.2265 17.758 11.5211L21 13.75V18C20.6936 18.6129 20.0672 19 19.382 19H4.5C3.67157 19 3 18.3284 3 17.5Z"
@@ -1115,16 +1109,16 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M21 18L10.238 10.5134C9.81832 10.2214 9.24604 10.293 8.91123 10.6794L3 17.5V17.5C3 18.3284 3.67157 19 4.5 19H19.382C20.0672 19 20.6936 18.6129 21 18V18ZM21 18V13.75L17.758 11.5211C17.3295 11.2265 16.7468 11.3095 16.4175 11.7119L14.75 13.75"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <circle
             cx="14.5"
             cy="8.5"
             r="0.75"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
         </>
       )}
@@ -1137,21 +1131,21 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="14.2"
             rx="2.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M3 17.5L8.89868 10.6938C9.23876 10.3014 9.82259 10.2346 10.2425 10.54L20.5 18M21 13.75L17.758 11.5211C17.3295 11.2265 16.7468 11.3095 16.4175 11.7119L14.75 13.75"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <circle
             cx="14.5"
             cy="8.5"
             r="0.9"
             stroke="currentColor"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
         </>
       )}
@@ -1161,22 +1155,22 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             <mask id="mask-info">
               <rect width="100%" height="100%" fill="white" />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M10.8447 16.3164V11.7382C10.8447 11.1007 11.3619 10.5828 12.0002 10.5828C12.6385 10.5828 13.1556 11.1007 13.1556 11.7382V16.3164C13.1556 16.9547 12.6385 17.4719 12.0002 17.4719C11.3619 17.4719 10.8447 16.9547 10.8447 16.3164Z"
                 fill="black"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M11.9999 9.32175C11.4382 9.32175 10.9319 8.98347 10.7171 8.46471C10.5014 7.94595 10.6202 7.34831 11.0178 6.95143C11.4147 6.55377 12.0124 6.43503 12.5311 6.64987C13.0507 6.86471 13.3889 7.37175 13.3889 7.93347C13.3889 8.30143 13.2421 8.65457 12.9819 8.91551C12.7217 9.17567 12.3678 9.32175 11.9999 9.32175H11.9999Z"
                 fill="black"
               />
             </mask>
           </defs>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 2C6.4774 2 2 6.4774 2 12C2 17.5226 6.4774 22 12 22C17.5226 22 22 17.5226 22 12C22 6.4774 17.5226 2 12 2Z"
             fill="currentColor"
             mask="url(#mask-info)"
@@ -1186,8 +1180,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "info-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M23 12C23 18.0749 18.0749 23 12 23C5.92512 23 1 18.0749 1 12C1 5.92511 5.92512 0.999999 12 0.999999C18.0749 1 23 5.92512 23 12ZM12 21C16.9703 21 21 16.9703 21 12C21 7.02968 16.9703 3 12 3C7.02969 3 3 7.02968 3 12C3 16.9703 7.02968 21 12 21ZM10.8445 16.3003L10.8445 11.7221C10.8445 11.0846 11.3617 10.5667 12 10.5667C12.6383 10.5667 13.1555 11.0846 13.1555 11.7221L13.1555 16.3003C13.1555 16.9386 12.6383 17.4558 12 17.4558C11.3617 17.4558 10.8445 16.9386 10.8445 16.3003ZM12 9.30563C11.4383 9.30563 10.932 8.96735 10.7172 8.44859C10.5015 7.92983 10.6203 7.33219 11.0179 6.93531C11.4148 6.53765 12.0125 6.41891 12.5312 6.63375C13.0508 6.84859 13.389 7.35563 13.389 7.91735C13.389 8.28531 13.2422 8.63845 12.982 8.89939C12.7218 9.15955 12.3679 9.30563 12 9.30563L12 9.30563Z"
             fill="currentColor"
           />
@@ -1196,24 +1190,24 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "invoice-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M5.8 19.6544L7.34541 18.109C8.29278 17.1616 9.84614 17.2213 10.718 18.2385L12 19.7341L13.282 18.2385C14.1539 17.2213 15.7072 17.1616 16.6546 18.109L18.2 19.6544V5C18.2 4.33726 17.6627 3.8 17 3.8H7C6.33726 3.8 5.8 4.33726 5.8 5V19.6544ZM7 2C5.34315 2 4 3.34315 4 5V20.3787C4 21.715 5.61571 22.3843 6.56066 21.4393L8.61821 19.3818C8.82415 19.1758 9.16184 19.1888 9.35139 19.41L10.8611 21.1713C11.4598 21.8697 12.5402 21.8697 13.1389 21.1713L14.6486 19.41C14.8382 19.1888 15.1758 19.1758 15.3818 19.3818L17.4393 21.4393C18.3843 22.3843 20 21.715 20 20.3787V5C20 3.34315 18.6569 2 17 2H7Z"
             fill="currentColor"
           />
           <path
             d="M9.69995 12.5556C9.69995 13.4178 10.3666 14.1111 11.1844 14.1111H12.8555C13.5666 14.1111 14.1444 13.5067 14.1444 12.7511C14.1444 11.9422 13.7888 11.6489 13.2644 11.4622L10.5888 10.5289C10.0644 10.3422 9.70885 10.0578 9.70885 9.24C9.70885 8.49334 10.2866 7.88 10.9977 7.88H12.6688C13.4866 7.88 14.1533 8.57334 14.1533 9.43556"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M11.9221 7V15"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
@@ -1275,8 +1269,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "lock-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M11 4H13C14.1046 4 15 4.89543 15 6V8H9V6C9 4.89543 9.89543 4 11 4ZM7 8V6C7 3.79086 8.79086 2 11 2H13C15.2091 2 17 3.79086 17 6V8C19.2091 8 21 9.79086 21 12V18C21 20.2091 19.2091 22 17 22H7C4.79086 22 3 20.2091 3 18V12C3 9.79086 4.79086 8 7 8ZM17 10H15H9H7C5.89543 10 5 10.8954 5 12V18C5 19.1046 5.89543 20 7 20H17C18.1046 20 19 19.1046 19 18V12C19 10.8954 18.1046 10 17 10ZM13 14.6181C13.3069 14.3434 13.5 13.9443 13.5 13.5C13.5 12.6716 12.8284 12 12 12C11.1716 12 10.5 12.6716 10.5 13.5C10.5 13.9443 10.6931 14.3434 11 14.6181V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V14.6181Z"
             fill="currentColor"
           />
@@ -1285,8 +1279,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "logout-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12.5975 2H4.4787H3.89819L6.6938 4.122L11.9024 4.1222C12.1242 4.1222 12.3037 4.30041 12.3037 4.52007V6.85644C12.3037 7.0763 12.4834 7.25451 12.7051 7.25451H14.0425C14.2643 7.25451 14.444 7.0763 14.444 6.85644V3.99886C14.444 2.92699 13.6257 2.05202 12.5975 2ZM7.8869 7.17471C7.8869 7.17471 9.11637 8.3939 9.11637 10.0595V20.5498C9.11637 21.4323 8.22603 22.0661 7.28139 21.9946C6.9691 21.9708 6.6771 21.8304 6.44166 21.6254C5.7382 21.0125 3.86019 19.3747 3.00898 18.616C2.69813 18.339 2.43298 18.0099 2.26516 17.6301C2.09487 17.2452 2 16.8181 2 16.3674V5.06205C2 3.92353 2.71227 3.0768 2.71227 3.0768L7.8869 7.17471ZM12.6527 13.5369H14.0309C14.2592 13.5369 14.4444 13.7204 14.4444 13.9469V17.3702C14.4444 18.4744 13.6014 19.3758 12.542 19.4296H10.2337V17.243H11.8258C12.0543 17.243 12.2394 17.0593 12.2394 16.8329V13.9469C12.2394 13.7204 12.4244 13.5369 12.6527 13.5369ZM18.9594 6.96692L21.7332 9.71823C22.0888 10.071 22.0888 10.5924 21.7332 10.9451L18.9594 13.6964C18.6038 14.049 18.0625 14.0636 17.7069 13.7109C17.366 13.3719 17.4082 12.8079 17.7354 12.4689L18.9878 11.242H12.5739C12.3323 11.242 12.0903 11.1428 11.9333 10.9596C11.5354 10.5367 11.6348 9.78853 12.1475 9.5067C12.2751 9.43578 12.4315 9.39372 12.5739 9.39372H18.9878C18.9878 9.39372 17.75 8.1662 17.7354 8.1662C17.4082 7.84169 17.366 7.26318 17.7069 6.93867C18.0487 6.60055 18.6038 6.61417 18.9594 6.96692Z"
             fill="currentColor"
           />
@@ -1297,42 +1291,42 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M15 6.5V5.5C15 4.11929 13.8807 3 12.5 3H5.5C4.11929 3 3 4.11929 3 5.5V18.5C3 19.8807 4.11929 21 5.5 21H12.5C13.8807 21 15 19.8807 15 18.5V17.5"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
           />
           <path
             d="M9 12H21M21 12L18 15M21 12L18 9"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
       {name === "mark-all-as-read-outline" && (
         <>
-          <g clip-path="url(#clip0_3790_18605)">
+          <g clipPath="url(#clip0_3790_18605)">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M17.5 6.93335H6.5C5.67157 6.93335 5 7.60492 5 8.43335V16.4333C5 16.5177 5.09396 16.5679 5.1641 16.5212C5.73904 16.1379 6.41457 15.9333 7.10555 15.9333H17.5C18.3284 15.9333 19 15.2618 19 14.4333V8.43335C19 7.60492 18.3284 6.93335 17.5 6.93335ZM5.99615 17.7692C6.32469 17.5502 6.7107 17.4333 7.10555 17.4333H17.5C19.1569 17.4333 20.5 16.0902 20.5 14.4333V8.43335C20.5 6.7765 19.1569 5.43335 17.5 5.43335H6.5C4.84315 5.43335 3.5 6.7765 3.5 8.43335V17.5648C3.5 18.3635 4.39015 18.8399 5.0547 18.3969L5.99615 17.7692Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M7.25 9.43335C7.25 9.01914 7.58579 8.68335 8 8.68335H16.5C16.9142 8.68335 17.25 9.01914 17.25 9.43335C17.25 9.84756 16.9142 10.1833 16.5 10.1833H8C7.58579 10.1833 7.25 9.84756 7.25 9.43335ZM7.25 12.9333C7.25 12.5191 7.58579 12.1833 8 12.1833H14.5C14.9142 12.1833 15.25 12.5191 15.25 12.9333C15.25 13.3476 14.9142 13.6833 14.5 13.6833H8C7.58579 13.6833 7.25 13.3476 7.25 12.9333Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M18.7804 12.5303C19.0733 12.2374 19.0733 11.7626 18.7804 11.4697C18.4875 11.1768 18.0126 11.1768 17.7197 11.4697L11.25 17.9394L8.78034 15.4697C8.48745 15.1768 8.01258 15.1768 7.71968 15.4696C7.42678 15.7625 7.42677 16.2374 7.71966 16.5303L10.7197 19.5304C10.8603 19.6711 11.0511 19.7501 11.25 19.7501C11.4489 19.7501 11.6397 19.6711 11.7803 19.5304L18.7804 12.5303ZM22.841 12.5909C23.1339 12.2981 23.1339 11.8232 22.841 11.5303C22.5481 11.2374 22.0733 11.2374 21.7804 11.5303L14.7803 18.5304C14.4874 18.8233 14.4874 19.2981 14.7803 19.591C15.0732 19.8839 15.5481 19.8839 15.841 19.591L22.841 12.5909Z"
               fill="currentColor"
             />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M10.1893 19.0001C10.1892 18.9999 10.1894 19.0002 10.1893 19.0001L7.71966 16.5303C7.42677 16.2374 7.42678 15.7625 7.71968 15.4696C8.01258 15.1768 8.48745 15.1768 8.78034 15.4697L11.25 17.9394L17.7189 11.4705C17.7188 11.4706 17.7191 11.4703 17.7189 11.4705C17.7191 11.4704 17.7196 11.4698 17.7197 11.4697C18.0126 11.1768 18.4875 11.1768 18.7804 11.4697C18.9843 11.6735 19.0462 11.9656 18.9663 12.2231C18.9314 12.3355 18.8694 12.4413 18.7804 12.5303L11.7803 19.5304C11.6397 19.6711 11.4489 19.7501 11.25 19.7501C11.0511 19.7501 10.8603 19.6711 10.7197 19.5304L10.1893 19.0001ZM13.3205 20.1116L12.841 20.5911C12.419 21.013 11.8467 21.2501 11.25 21.2501C10.6532 21.2501 10.0809 21.013 9.65898 20.5911L6.65898 17.591C5.78032 16.7123 5.78034 15.2876 6.65904 14.409C7.53773 13.5303 8.96235 13.5303 9.84102 14.409L11.25 15.8181L16.6591 10.409C17.5378 9.53033 18.9624 9.53033 19.8411 10.409C20.0045 10.5725 20.1376 10.7549 20.2402 10.9491L20.7197 10.4696C21.5984 9.59095 23.023 9.59095 23.9017 10.4696C24.7804 11.3483 24.7804 12.7729 23.9017 13.6516L16.9016 20.6517C16.0229 21.5304 14.5983 21.5304 13.7196 20.6517C13.5562 20.4882 13.4231 20.3059 13.3205 20.1116ZM14.5944 18.8377C14.5145 19.0951 14.5764 19.3872 14.7803 19.591C15.0732 19.8839 15.5481 19.8839 15.841 19.591L22.8404 12.5916C23.1333 12.2987 23.1339 11.8232 22.841 11.5303C22.5481 11.2374 22.0733 11.2374 21.7804 11.5303L14.7803 18.5304C14.6913 18.6194 14.6293 18.7252 14.5944 18.8377Z"
               fill="white"
             />
@@ -1347,20 +1341,20 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "mark-as-read-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M6 7.5H17C17.8284 7.5 18.5 8.17157 18.5 9V11.8181L19.6591 10.659C19.7654 10.5527 19.8797 10.4593 20 10.3787V9C20 7.34315 18.6569 6 17 6H6C4.34315 6 3 7.34315 3 9V18.1315C3 18.9302 3.89015 19.4066 4.5547 18.9635L5.49615 18.3359C5.82469 18.1169 6.2107 18 6.60555 18H9.81802L9.65898 17.841C9.28335 17.4653 9.0683 16.9899 9.01385 16.5H6.60555C5.91457 16.5 5.23904 16.7045 4.6641 17.0878C4.59396 17.1346 4.5 17.0843 4.5 17V9C4.5 8.17157 5.17157 7.5 6 7.5ZM10.5429 16.5C10.5791 16.6025 10.6381 16.6988 10.7201 16.7807L11.9393 18H14.0606L12.5606 16.5H10.5429ZM15.9394 16.5L14.4394 18H16.5607L20 14.5607V12.4394L18.5 13.9394V15C18.5 15.8284 17.8284 16.5 17 16.5H15.9394Z"
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M6.75 10C6.75 9.58579 7.08579 9.25 7.5 9.25H16C16.4142 9.25 16.75 9.58579 16.75 10C16.75 10.4142 16.4142 10.75 16 10.75H7.5C7.08579 10.75 6.75 10.4142 6.75 10ZM6.75 13.5C6.75 13.0858 7.08579 12.75 7.5 12.75H14C14.4142 12.75 14.75 13.0858 14.75 13.5C14.75 13.9142 14.4142 14.25 14 14.25H7.5C7.08579 14.25 6.75 13.9142 6.75 13.5Z"
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M21.7804 11.7197C22.0733 12.0126 22.0733 12.4874 21.7804 12.7803L14.7803 19.7804C14.6397 19.9211 14.4489 20.0001 14.25 20.0001C14.0511 20.0001 13.8603 19.9211 13.7197 19.7804L10.7197 16.7803C10.4268 16.4874 10.4268 16.0125 10.7197 15.7196C11.0126 15.4268 11.4875 15.4268 11.7803 15.7197L14.25 18.1894L20.7197 11.7197C21.0126 11.4268 21.4875 11.4268 21.7804 11.7197Z"
             fill="currentColor"
           />
@@ -1369,14 +1363,14 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "mark-as-unread-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M18 7.5H7C6.17157 7.5 5.5 8.17157 5.5 9V17C5.5 17.0843 5.59396 17.1346 5.6641 17.0878C6.23904 16.7045 6.91457 16.5 7.60555 16.5H18C18.8284 16.5 19.5 15.8284 19.5 15V9C19.5 8.17157 18.8284 7.5 18 7.5ZM6.49615 18.3359C6.82469 18.1169 7.2107 18 7.60555 18H18C19.6569 18 21 16.6569 21 15V9C21 7.34315 19.6569 6 18 6H7C5.34315 6 4 7.34315 4 9V18.1315C4 18.9302 4.89015 19.4066 5.5547 18.9635L6.49615 18.3359Z"
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7.75 10C7.75 9.58579 8.08579 9.25 8.5 9.25H17C17.4142 9.25 17.75 9.58579 17.75 10C17.75 10.4142 17.4142 10.75 17 10.75H8.5C8.08579 10.75 7.75 10.4142 7.75 10ZM7.75 13.5C7.75 13.0858 8.08579 12.75 8.5 12.75H15C15.4142 12.75 15.75 13.0858 15.75 13.5C15.75 13.9142 15.4142 14.25 15 14.25H8.5C8.08579 14.25 7.75 13.9142 7.75 13.5Z"
             fill="currentColor"
           />
@@ -1385,8 +1379,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M23 6.5C23 8.433 21.433 10 19.5 10C17.567 10 16 8.433 16 6.5C16 4.567 17.567 3 19.5 3C21.433 3 23 4.567 23 6.5ZM19.5 8.5C20.6046 8.5 21.5 7.60457 21.5 6.5C21.5 5.39543 20.6046 4.5 19.5 4.5C18.3954 4.5 17.5 5.39543 17.5 6.5C17.5 7.60457 18.3954 8.5 19.5 8.5Z"
             fill="white"
           />
@@ -1395,8 +1389,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "phone-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7 3.8H17C17.1105 3.8 17.2 3.88954 17.2 4V17.8C17.2 17.9105 17.1105 18 17 18H7C6.88954 18 6.8 17.9105 6.8 17.8L6.8 4C6.8 3.88954 6.88954 3.8 7 3.8ZM5 4C5 2.89543 5.89543 2 7 2H17C18.1046 2 19 2.89543 19 4V20C19 21.1046 18.1046 22 17 22H7C5.89543 22 5 21.1046 5 20V4ZM12 21C12.5523 21 13 20.5523 13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20C11 20.5523 11.4477 21 12 21Z"
             fill="currentColor"
           />
@@ -1405,8 +1399,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "placeholder-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.9272 4.8H6.07279L12 10.7272L17.9272 4.8ZM19.2 6.07279L13.2728 12L19.2 17.9272V6.07279ZM10.7272 12L4.8 6.07279V17.9272L10.7272 12ZM6.07279 19.2L12 13.2728L17.9272 19.2H6.07279ZM5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5Z"
             fill="currentColor"
           />
@@ -1415,8 +1409,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "question-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM10.6457 13.6165V14.1223H12.4572V13.7122C12.4572 13.4387 12.5142 13.2177 12.6281 13.0491C12.7466 12.8805 13.0246 12.6344 13.4621 12.3108C14.1001 11.8551 14.5331 11.4449 14.7609 11.0803C14.9888 10.7157 15.1027 10.2828 15.1027 9.78149C15.1027 9.02954 14.8247 8.42798 14.2688 7.97681C13.7173 7.52563 12.9722 7.30005 12.0334 7.30005C10.8941 7.30005 9.81628 7.58488 8.8 8.15454L9.54512 9.65161C10.4201 9.205 11.1994 8.98169 11.883 8.98169C12.2749 8.98169 12.5803 9.05916 12.799 9.21411C13.0178 9.36906 13.1272 9.59465 13.1272 9.89087C13.1272 10.1552 13.0497 10.3945 12.8947 10.6086C12.7443 10.8228 12.4299 11.1008 11.9514 11.4426C11.4546 11.8072 11.1128 12.1513 10.926 12.4749C10.7391 12.7984 10.6457 13.179 10.6457 13.6165ZM10.7346 15.592C10.5295 15.788 10.427 16.0774 10.427 16.4602C10.427 16.8293 10.5318 17.1165 10.7414 17.3215C10.951 17.5221 11.2473 17.6223 11.6301 17.6223C12.0038 17.6223 12.2954 17.5198 12.5051 17.3147C12.7147 17.1051 12.8195 16.8202 12.8195 16.4602C12.8195 16.0865 12.7147 15.7994 12.5051 15.5989C12.3 15.3984 12.0083 15.2981 11.6301 15.2981C11.2382 15.2981 10.9397 15.3961 10.7346 15.592Z"
             fill="currentColor"
           />
@@ -1427,8 +1421,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M19.1458 11.7539C19.1944 13.1672 18.8229 14.5632 18.0782 15.7653C17.3335 16.9675 16.249 17.9218 14.962 18.5076C13.6749 19.0935 12.243 19.2845 10.8473 19.0565C9.45168 18.8285 8.15499 18.1918 7.12122 17.2269"
             stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
+            strokeWidth="1.7"
+            strokeLinecap="round"
           />
           <path
             d="M21.073 12H16.927C16.7574 12 16.6648 11.8022 16.7734 11.672L18.8464 9.18437C18.9263 9.08842 19.0737 9.08842 19.1536 9.18437L21.2266 11.672C21.3352 11.8022 21.2426 12 21.073 12Z"
@@ -1443,8 +1437,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M4.95718 13.2333C4.68568 11.683 4.93333 10.0863 5.66174 8.69107C6.39015 7.29581 7.5586 6.17988 8.98587 5.51637C10.4131 4.85285 12.0195 4.67883 13.5557 5.0213C15.092 5.36377 16.4723 6.20358 17.4826 7.41049"
             stroke="currentColor"
-            stroke-width="1.7"
-            stroke-linecap="round"
+            strokeWidth="1.7"
+            strokeLinecap="round"
           />
         </>
       )}
@@ -1457,26 +1451,26 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             height="13.2"
             rx="2.1"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
           <path
             d="M15 4H18C19.6569 4 21 5.34315 21 7V10"
             stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
+            strokeWidth="1.8"
+            strokeLinecap="round"
           />
           <path
             d="M13.2728 4L14.1 3.17279V4.82721L13.2728 4Z"
             stroke="currentColor"
-            stroke-width="1.8"
+            strokeWidth="1.8"
           />
         </>
       )}
       {name === "search-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 10.5C17 14.0899 14.0899 17 10.5 17C6.91015 17 4 14.0899 4 10.5C4 6.91015 6.91015 4 10.5 4C14.0899 4 17 6.91015 17 10.5ZM15.7618 17.176C14.3145 18.3183 12.4869 19 10.5 19C5.80558 19 2 15.1944 2 10.5C2 5.80558 5.80558 2 10.5 2C15.1944 2 19 5.80558 19 10.5C19 12.4869 18.3183 14.3145 17.176 15.7618L21.7071 20.2929C22.0976 20.6834 22.0976 21.3166 21.7071 21.7071C21.3166 22.0976 20.6834 22.0976 20.2929 21.7071L15.7618 17.176Z"
             fill="currentColor"
           />
@@ -1485,25 +1479,25 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "secure-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM8.89528 6.74755L8.89525 6.74757C8.27589 7.06191 7.66739 7.37075 7.11612 7.63927C6.7036 7.84021 6.43152 8.27645 6.44491 8.75631C6.61072 14.6992 8.66748 16.9375 11.4951 18.5332C11.8105 18.7112 12.1895 18.7112 12.5049 18.5332C15.3325 16.9375 17.3893 14.6992 17.5551 8.75631C17.5685 8.27644 17.2964 7.84021 16.8839 7.63927C16.3326 7.37075 15.7241 7.06191 15.1047 6.74757L15.1047 6.74754C14.1895 6.28304 13.2505 5.80649 12.4374 5.43018C12.1585 5.30107 11.8415 5.30107 11.5625 5.43018C10.7495 5.80649 9.81051 6.28304 8.89528 6.74755Z"
             fill="currentColor"
           />
           <path
             d="M9.93262 12.2949L11.0966 13.4854L14.0675 10.5145"
             stroke="currentColor"
-            stroke-width="1.90476"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.90476"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
       {name === "setting-1-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12.0007 16.3744C9.58407 16.3744 7.62499 14.4154 7.62499 11.9989C7.62499 9.5823 9.58407 7.62329 12.0007 7.62329C14.4174 7.62329 16.3765 9.5823 16.3765 11.9989C16.3765 14.4154 14.4174 16.3744 12.0007 16.3744ZM22.0008 13.0009V10.9991C22.0008 10.7429 21.8277 10.5189 21.5797 10.4544L20.005 10.0445C19.8165 9.99546 19.6645 9.85359 19.6075 9.66731C19.4591 9.18264 19.2656 8.71768 19.0319 8.27728C18.9398 8.10357 18.9422 7.89509 19.0418 7.72552L19.867 6.31964C19.9967 6.09862 19.9608 5.81786 19.7795 5.63667L18.3641 4.22122C18.1828 4.04 17.902 4.00407 17.681 4.13381L16.2751 4.95896C16.1055 5.0585 15.897 5.06096 15.7233 4.96879C15.2829 4.73514 14.8179 4.54168 14.3332 4.39326C14.1469 4.33621 14.0051 4.1843 13.956 3.9958L13.5461 2.42113C13.4816 2.17313 13.2576 2 13.0013 2H10.9995C10.7432 2 10.5193 2.17313 10.4547 2.42113L10.0449 3.9958C9.99578 4.1843 9.85392 4.33621 9.66765 4.39326C9.18295 4.54168 8.71797 4.73514 8.27753 4.96879C8.10382 5.06096 7.89535 5.0585 7.72572 4.95896L6.31982 4.13381C6.0988 4.00407 5.81804 4.04 5.63678 4.22122L4.22129 5.63667C4.04007 5.81786 4.00413 6.09862 4.13385 6.31964L4.95906 7.72552C5.05861 7.89509 5.06106 8.10357 4.96892 8.27728C4.73525 8.71768 4.54179 9.18264 4.39334 9.66731C4.33629 9.85359 4.18439 9.99546 3.99588 10.0445L2.42116 10.4544C2.1731 10.5189 2 10.7429 2 10.9991V13.0009C2 13.2571 2.1731 13.4811 2.42116 13.5456L3.99588 13.9555C4.18439 14.0045 4.33629 14.1464 4.39334 14.3327C4.54179 14.8174 4.73525 15.2823 4.96892 15.7227C5.06106 15.8964 5.05861 16.1049 4.95906 16.2745L4.13389 17.6803C4.00413 17.9014 4.04007 18.1821 4.22129 18.3633L5.63678 19.7788C5.81804 19.96 6.0988 19.9959 6.31982 19.8662L7.72572 19.041C7.89535 18.9415 8.10382 18.939 8.27757 19.0312C8.71797 19.2649 9.18295 19.4583 9.66765 19.6067C9.85392 19.6638 9.99578 19.8157 10.0449 20.0042L10.4547 21.5789C10.5193 21.8269 10.7432 22 10.9995 22H13.0013C13.2576 22 13.4816 21.8269 13.5461 21.5789L13.956 20.0042C14.0051 19.8157 14.1469 19.6638 14.3332 19.6067C14.8179 19.4583 15.2829 19.2649 15.7233 19.0312C15.897 18.939 16.1055 18.9415 16.2751 19.041L17.681 19.8662C17.902 19.9959 18.1828 19.96 18.3641 19.7788L19.7795 18.3633C19.9608 18.1821 19.9967 17.9014 19.867 17.6803L19.0418 16.2745C18.9422 16.1049 18.9398 15.8964 19.0319 15.7227C19.2656 15.2823 19.4591 14.8174 19.6075 14.3327C19.6645 14.1464 19.8165 14.0045 20.005 13.9555L21.5797 13.5456C21.8277 13.4811 22.0008 13.2571 22.0008 13.0009Z"
             fill="currentColor"
           />
@@ -1511,7 +1505,7 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       )}
       {name === "setting-2-filled" && (
         <>
-          <g clip-path="url(#clip0_1309_2029)">
+          <g clipPath="url(#clip0_1309_2029)">
             <path
               d="M9.95405 2.20997C11.303 1.9271 12.6958 1.92642 14.045 2.20797C14.1349 2.80126 14.3574 3.36666 14.6958 3.86215C15.0343 4.35764 15.4801 4.77048 16 5.06997C16.5196 5.3705 17.1002 5.55004 17.6987 5.59522C18.2973 5.64041 18.8983 5.55009 19.457 5.33097C20.3753 6.35903 21.0709 7.56601 21.5 8.87597C21.0314 9.25055 20.6532 9.72592 20.3935 10.2668C20.1338 10.8076 19.9993 11.4 20 12C20 13.264 20.586 14.391 21.502 15.124C21.0704 16.4328 20.3739 17.6389 19.456 18.667C18.8974 18.448 18.2966 18.3578 17.6983 18.403C17.0999 18.4481 16.5195 18.6276 16 18.928C15.4805 19.2274 15.0351 19.6399 14.6968 20.1351C14.3585 20.6302 14.1361 21.1951 14.046 21.788C12.6973 22.0715 11.3044 22.0729 9.95505 21.792C9.86559 21.1982 9.64335 20.6322 9.30487 20.1361C8.96639 19.6401 8.52038 19.2268 8.00005 18.927C7.48041 18.6266 6.89975 18.4472 6.30124 18.4022C5.70272 18.3572 5.10176 18.4477 4.54305 18.667C3.62465 17.6386 2.92905 16.4313 2.50005 15.121C2.96844 14.7466 3.34651 14.2716 3.60618 13.7311C3.86586 13.1906 4.00048 12.5986 4.00005 11.999C4.00054 11.3989 3.86575 10.8063 3.60571 10.2655C3.34568 9.72463 2.96707 9.24935 2.49805 8.87497C2.92972 7.56609 3.62616 6.36007 4.54405 5.33197C5.1027 5.55093 5.70352 5.64117 6.30184 5.59598C6.90017 5.5508 7.48062 5.37135 8.00005 5.07097C8.51959 4.77157 8.96503 4.35899 9.30331 3.86388C9.64158 3.36876 9.864 2.80381 9.95405 2.21097V2.20997ZM12 15C12.7957 15 13.5588 14.6839 14.1214 14.1213C14.684 13.5587 15 12.7956 15 12C15 11.2043 14.684 10.4413 14.1214 9.87865C13.5588 9.31604 12.7957 8.99997 12 8.99997C11.2044 8.99997 10.4413 9.31604 9.87873 9.87865C9.31612 10.4413 9.00005 11.2043 9.00005 12C9.00005 12.7956 9.31612 13.5587 9.87873 14.1213C10.4413 14.6839 11.2044 15 12 15Z"
               fill="currentColor"
@@ -1527,8 +1521,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "share-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20 6C20 7.65685 18.6569 9 17 9C16.281 9 15.621 8.74703 15.1043 8.32523L8.99639 11.8516C8.99879 11.9008 9 11.9502 9 12C9 12.0332 8.99946 12.0662 8.99839 12.0991L15.1408 15.6454C15.6519 15.2413 16.2978 15 17 15C18.6569 15 20 16.3431 20 18C20 19.6569 18.6569 21 17 21C15.3431 21 14 19.6569 14 18C14 17.7727 14.0253 17.5513 14.0732 17.3384L8.25466 13.9791C7.70484 14.605 6.89855 15 6 15C4.34315 15 3 13.6569 3 12C3 10.3431 4.34315 9 6 9C6.8825 9 7.676 9.38105 8.22495 9.9876L14.0635 6.61674C14.0219 6.41769 14 6.2114 14 6C14 4.34315 15.3431 3 17 3C18.6569 3 20 4.34315 20 6Z"
             fill="currentColor"
           />
@@ -1539,24 +1533,24 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M16.5 4.5L16.5 18M16.5 4.5L21 9M16.5 4.5L12 9"
             stroke="currentColor"
-            stroke-width="2.25"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7.5 19.5L7.5 6M7.5 19.5L3 15M7.5 19.5L12 15"
             stroke="currentColor"
-            stroke-width="2.25"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2.25"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
       {name === "transaction-cross-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12.158 20.2H6C5.33726 20.2 4.8 19.6627 4.8 19V5C4.8 4.33726 5.33726 3.8 6 3.8H11.1V7C11.1 8.60163 12.3984 9.9 14 9.9H17.2V12.1449C17.8616 12.3079 18.4714 12.6026 19 12.9996V8.82843C19 8.29799 18.7893 7.78929 18.4142 7.41421L16 5L13.5858 2.58579C13.2107 2.21071 12.702 2 12.1716 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H16C14.4558 22 13.0751 21.3 12.158 20.2ZM14.7272 6.27279L16.5544 8.1H14C13.3925 8.1 12.9 7.60751 12.9 7V4.44558L14.7272 6.27279Z"
             fill="currentColor"
           />
@@ -1565,27 +1559,27 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="17"
             r="4.25"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
           <path
             d="M17.4141 15.5858L14.5856 18.4142"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
           <path
             d="M14.5859 15.5858L17.4144 18.4142"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
         </>
       )}
       {name === "transaction-dollar-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7 20.2H17C17.6627 20.2 18.2 19.6627 18.2 19V8.9H16C14.3984 8.9 13.1 7.60163 13.1 6V3.8H7C6.33726 3.8 5.8 4.33726 5.8 5V19C5.8 19.6627 6.33726 20.2 7 20.2ZM14.9 4.44558L17.5544 7.1H16C15.3925 7.1 14.9 6.60751 14.9 6V4.44558ZM7 2C5.34315 2 4 3.34315 4 5V19C4 20.6569 5.34315 22 7 22H17C18.6569 22 20 20.6569 20 19V7.82843C20 7.29799 19.7893 6.78929 19.4142 6.41421L15.5858 2.58579C15.2107 2.21071 14.702 2 14.1716 2H7ZM12.0222 8.25C12.4364 8.25 12.7722 8.58579 12.7722 9V9.12989C14.0336 9.13176 15.0033 10.1919 15.0033 11.4354C15.0033 11.8497 14.6675 12.1854 14.2533 12.1854C13.8391 12.1854 13.5033 11.8497 13.5033 11.4354C13.5033 10.9571 13.1435 10.6318 12.7722 10.6299V12.4612L13.6115 12.754L13.6159 12.7555C13.9356 12.8693 14.3107 13.0512 14.5922 13.4116C14.8804 13.7806 14.9944 14.2372 14.9944 14.751C14.9944 15.8842 14.1165 16.861 12.9555 16.861H12.7722V17C12.7722 17.4142 12.4364 17.75 12.0222 17.75C11.608 17.75 11.2722 17.4142 11.2722 17V16.861C10.0151 16.8541 9.04999 15.7961 9.04999 14.5554C9.04999 14.1412 9.38577 13.8054 9.79999 13.8054C10.2142 13.8054 10.55 14.1412 10.55 14.5554C10.55 15.03 10.9041 15.3538 11.2722 15.3609V13.5266L10.4418 13.2369L10.4374 13.2353C10.1225 13.1233 9.74542 12.9447 9.46236 12.5842C9.17211 12.2146 9.05889 11.7562 9.05889 11.2399C9.05889 10.1188 9.9337 9.12988 11.0978 9.12988H11.2722V9C11.2722 8.58579 11.608 8.25 12.0222 8.25ZM11.0978 10.6299H11.2722V11.9379L10.9383 11.8215C10.7304 11.7472 10.6678 11.6906 10.6421 11.6578C10.6234 11.634 10.5589 11.5413 10.5589 11.2399C10.5589 10.8676 10.8396 10.6299 11.0978 10.6299ZM12.7722 15.361V14.0498L13.115 14.1694C13.3182 14.242 13.3827 14.2998 13.41 14.3348C13.4307 14.3614 13.4944 14.4559 13.4944 14.751C13.4944 15.1289 13.2168 15.361 12.9555 15.361H12.7722Z"
             fill="currentColor"
           />
@@ -1594,8 +1588,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "transaction-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17 20.2H7C6.33726 20.2 5.8 19.6627 5.8 19V5C5.8 4.33726 6.33726 3.8 7 3.8H12.1V7C12.1 8.60163 13.3984 9.9 15 9.9H18.2V19C18.2 19.6627 17.6627 20.2 17 20.2ZM17.5544 8.1L15.7272 6.27279L13.9 4.44559V7C13.9 7.60751 14.3925 8.1 15 8.1H17.5544ZM4 5C4 3.34315 5.34315 2 7 2H13.1716C13.702 2 14.2107 2.21071 14.5858 2.58579L17 5L19.4142 7.41421C19.7893 7.78929 20 8.29799 20 8.82843V19C20 20.6569 18.6569 22 17 22H7C5.34315 22 4 20.6569 4 19V5Z"
             fill="currentColor"
           />
@@ -1622,8 +1616,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "transaction-pending-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M10.9236 20.2H6C5.33726 20.2 4.8 19.6627 4.8 19V5C4.8 4.33726 5.33726 3.8 6 3.8H11.1V7C11.1 8.60163 12.3984 9.9 14 9.9H17.2V11.12C17.8434 11.2506 18.4493 11.4842 19 11.8027V8.82843C19 8.29799 18.7893 7.78929 18.4142 7.41421L16 5L13.5858 2.58579C13.2107 2.21071 12.702 2 12.1716 2H6C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H12.6822C11.9769 21.531 11.3764 20.9168 10.9236 20.2ZM14.7272 6.27279L16.5544 8.1H14C13.3925 8.1 12.9 7.60751 12.9 7V4.44558L14.7272 6.27279Z"
             fill="currentColor"
           />
@@ -1632,26 +1626,26 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
             cy="17"
             r="4.25"
             stroke="currentColor"
-            stroke-width="1.5"
+            strokeWidth="1.5"
           />
           <path
             d="M17.8 17.5H15.8"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
           <path
             d="M15.8 15.5L15.8 17.5"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           />
         </>
       )}
       {name === "triangle-left-filled" && (
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12 21.9998C17.5228 21.9998 22 17.5226 22 11.9998C22 6.47691 17.5228 1.99976 12 1.99976C6.47715 1.99976 2 6.47691 2 11.9998C2 17.5226 6.47715 21.9998 12 21.9998ZM7.74995 11.5668C7.41662 11.7593 7.41662 12.2404 7.74995 12.4328L13.75 15.8969C14.0833 16.0894 14.5 15.8488 14.5 15.4639V8.53573C14.5 8.15083 14.0833 7.91026 13.7499 8.10271L7.74995 11.5668Z"
           fill="currentColor"
         />
@@ -1679,17 +1673,17 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
           <path
             d="M12 17L12 3M12 3L7 8M12 3L17 8"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}
       {name === "user-dashed-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M8 6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6C16 8.20914 14.2091 10 12 10C9.79086 10 8 8.20914 8 6ZM3.5 19C3.5 14.5817 7.08172 11 11.5 11H12.5C16.9183 11 20.5 14.5817 20.5 19C20.5 20.1046 19.6046 21 18.5 21H5.5C4.39543 21 3.5 20.1046 3.5 19ZM10.5 14C9.94772 14 9.5 14.4477 9.5 15C9.5 15.5523 9.94772 16 10.5 16H13.5C14.0523 16 14.5 15.5523 14.5 15C14.5 14.4477 14.0523 14 13.5 14H10.5Z"
             fill="currentColor"
           />
@@ -1698,8 +1692,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "user-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2ZM11.5 11C7.08172 11 3.5 14.5817 3.5 19C3.5 20.1046 4.39543 21 5.5 21H18.5C19.6046 21 20.5 20.1046 20.5 19C20.5 14.5817 16.9183 11 12.5 11H11.5Z"
             fill="currentColor"
           />
@@ -1708,8 +1702,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "user-group-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M8.25 6.75C8.25 5.75544 8.64509 4.80161 9.34835 4.09835C10.0516 3.39509 11.0054 3 12 3C12.9946 3 13.9484 3.39509 14.6517 4.09835C15.3549 4.80161 15.75 5.75544 15.75 6.75C15.75 7.74456 15.3549 8.69839 14.6517 9.40165C13.9484 10.1049 12.9946 10.5 12 10.5C11.0054 10.5 10.0516 10.1049 9.34835 9.40165C8.64509 8.69839 8.25 7.74456 8.25 6.75ZM15.75 9.75C15.75 8.95435 16.0661 8.19129 16.6287 7.62868C17.1913 7.06607 17.9544 6.75 18.75 6.75C19.5456 6.75 20.3087 7.06607 20.8713 7.62868C21.4339 8.19129 21.75 8.95435 21.75 9.75C21.75 10.5456 21.4339 11.3087 20.8713 11.8713C20.3087 12.4339 19.5456 12.75 18.75 12.75C17.9544 12.75 17.1913 12.4339 16.6287 11.8713C16.0661 11.3087 15.75 10.5456 15.75 9.75ZM2.25 9.75C2.25 8.95435 2.56607 8.19129 3.12868 7.62868C3.69129 7.06607 4.45435 6.75 5.25 6.75C6.04565 6.75 6.80871 7.06607 7.37132 7.62868C7.93393 8.19129 8.25 8.95435 8.25 9.75C8.25 10.5456 7.93393 11.3087 7.37132 11.8713C6.80871 12.4339 6.04565 12.75 5.25 12.75C4.45435 12.75 3.69129 12.4339 3.12868 11.8713C2.56607 11.3087 2.25 10.5456 2.25 9.75ZM6.31 15.117C6.91995 14.161 7.76108 13.3743 8.75562 12.8294C9.75016 12.2846 10.866 11.9994 12 12C12.9498 11.9991 13.8891 12.1989 14.7564 12.5862C15.6237 12.9734 16.3994 13.5395 17.0327 14.2474C17.6661 14.9552 18.1428 15.7888 18.4317 16.6936C18.7205 17.5985 18.815 18.5541 18.709 19.498C18.696 19.6153 18.6556 19.7278 18.591 19.8265C18.5263 19.9252 18.4393 20.0073 18.337 20.066C16.4086 21.1725 14.2233 21.7532 12 21.75C9.77662 21.7535 7.59133 21.1728 5.663 20.066C5.56069 20.0073 5.47368 19.9252 5.40904 19.8265C5.34441 19.7278 5.30396 19.6153 5.291 19.498C5.12305 17.9646 5.48246 16.4198 6.31 15.118V15.117Z"
             fill="currentColor"
           />
@@ -1722,8 +1716,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "user-setting-filled" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2ZM11.5 11C7.08172 11 3.5 14.5817 3.5 19C3.5 20.1046 4.39543 21 5.5 21H13.9996C13.3719 20.1643 13 19.1256 13 18C13 15.3068 15.1293 13.111 17.7963 13.0041C16.3854 11.7569 14.5311 11 12.5 11H11.5ZM18.9786 14.0842C18.4319 13.9717 17.8675 13.9719 17.321 14.085C17.2845 14.3221 17.1944 14.5485 17.0573 14.7465C16.9203 14.9445 16.7398 15.1095 16.5293 15.2292C16.3188 15.3493 16.0836 15.4211 15.8412 15.4392C15.5988 15.4572 15.3553 15.4211 15.129 15.3336C14.7571 15.7447 14.4749 16.227 14.3 16.7505C14.49 16.9002 14.6434 17.0903 14.7488 17.3066C14.8542 17.5229 14.9088 17.7598 14.9086 17.9998C14.9087 18.2396 14.8542 18.4764 14.749 18.6925C14.6438 18.9086 14.4906 19.0986 14.3008 19.2483C14.4746 19.7723 14.7565 20.2552 15.1286 20.6664C15.355 20.5787 15.5985 20.5425 15.841 20.5605C16.0835 20.5786 16.3187 20.6503 16.5293 20.7704C16.7401 20.8903 16.9208 21.0556 17.058 21.254C17.1951 21.4523 17.2852 21.6787 17.3214 21.9162C17.8681 22.0285 18.4325 22.0279 18.979 21.9146C19.0155 21.6775 19.1056 21.4515 19.2426 21.2535C19.3797 21.0555 19.5602 20.8905 19.7707 20.7708C19.9812 20.6507 20.2163 20.5789 20.4588 20.5608C20.7012 20.5428 20.9446 20.5789 21.171 20.6664C21.5429 20.2553 21.8251 19.773 22 19.2495C21.6288 18.9564 21.3914 18.5057 21.3914 18.0002C21.3911 17.7603 21.4456 17.5234 21.5508 17.3071C21.656 17.0908 21.8093 16.9007 21.9992 16.7509C21.8253 16.227 21.5435 15.7443 21.1714 15.3332C20.945 15.4208 20.7015 15.4569 20.459 15.4389C20.2165 15.4208 19.9812 15.349 19.7707 15.2288C19.56 15.109 19.3794 14.9439 19.2423 14.7458C19.1051 14.5476 19.015 14.3215 18.9786 14.0842ZM19.0095 18.8485C18.7815 19.0735 18.4724 19.1999 18.15 19.1999C17.8276 19.1999 17.5184 19.0735 17.2905 18.8485C17.0625 18.6235 16.9345 18.3184 16.9345 18.0002C16.9345 17.682 17.0625 17.3768 17.2905 17.1519C17.5184 16.9269 17.8276 16.8005 18.15 16.8005C18.4724 16.8005 18.7815 16.9269 19.0095 17.1519C19.2375 17.3768 19.3655 17.682 19.3655 18.0002C19.3655 18.3184 19.2375 18.6235 19.0095 18.8485Z"
             fill="currentColor"
           />
@@ -1731,10 +1725,10 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       )}
       {name === "user-setting-outline" && (
         <>
-          <g clip-path="url(#clip0_1309_1731)">
+          <g clipPath="url(#clip0_1309_1731)">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M9.8 6C9.8 7.21503 10.785 8.2 12 8.2C13.215 8.2 14.2 7.21503 14.2 6C14.2 4.78497 13.215 3.8 12 3.8C10.785 3.8 9.8 4.78497 9.8 6ZM12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2ZM11.5 12.8C8.07583 12.8 5.3 15.5758 5.3 19C5.3 19.1105 5.38954 19.2 5.5 19.2H14.1449C14.3079 19.8616 14.6026 20.4714 14.9996 21H5.5C4.39543 21 3.5 20.1046 3.5 19C3.5 14.5817 7.08172 11 11.5 11H12.5C14.5916 11 16.4956 11.8026 17.921 13.1167C17.2471 13.265 16.6241 13.5491 16.0824 13.9391C15.0707 13.2217 13.8346 12.8 12.5 12.8H11.5Z"
               fill="currentColor"
             />
@@ -1753,8 +1747,8 @@ function Icon({ name, className, size = 24, ...props }: IconProps) {
       {name === "zip-outline" && (
         <>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M20 9V17C20 17.5523 19.5523 18 19 18H14.5C14.7761 18 15 17.7761 15 17.5V16.5C15 16.2239 14.7761 16 14.5 16H13.5C13.2239 16 13 16.2239 13 16.5V17.5C13 17.7761 13.2239 18 13.5 18H5C4.44772 18 4 17.5523 4 17V7C4 6.44772 4.44772 6 5 6H8.09167C8.2891 6 8.48211 6.05844 8.64637 6.16795L10.7646 7.58013C11.1753 7.8539 11.6578 8 12.1514 8H13.5C13.2239 8 13 8.22386 13 8.5V9.5C13 9.77614 13.2239 10 13.5 10H14.5C14.7761 10 15 9.77614 15 9.5V8.5C15 8.22386 14.7761 8 14.5 8H19C19.5523 8 20 8.44772 20 9ZM2 7C2 5.34315 3.34315 4 5 4H8.09167C8.68395 4 9.26297 4.17531 9.75577 4.50385L11.874 5.91603C11.9562 5.97078 12.0527 6 12.1514 6H19C20.6569 6 22 7.34315 22 9V17C22 18.6569 20.6569 20 19 20H5C3.34315 20 2 18.6569 2 17V7ZM15 10.5C15 10.2239 15.2239 10 15.5 10H16.5C16.7761 10 17 10.2239 17 10.5V11.5C17 11.7761 16.7761 12 16.5 12H15.5C15.2239 12 15 11.7761 15 11.5V10.5ZM13.5 12C13.2239 12 13 12.2239 13 12.5V13.5C13 13.7761 13.2239 14 13.5 14H14.5C14.7761 14 15 13.7761 15 13.5V12.5C15 12.2239 14.7761 12 14.5 12H13.5ZM15 14.5C15 14.2239 15.2239 14 15.5 14H16.5C16.7761 14 17 14.2239 17 14.5V15.5C17 15.7761 16.7761 16 16.5 16H15.5C15.2239 16 15 15.7761 15 15.5V14.5Z"
             fill="currentColor"
           />

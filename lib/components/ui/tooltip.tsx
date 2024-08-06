@@ -53,8 +53,8 @@ TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 
 export {
   Tooltip,
-  TooltipTitle,
   TooltipContent,
   TooltipProvider,
+  TooltipTitle,
   TooltipTrigger,
 };
