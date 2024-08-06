@@ -35,6 +35,8 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   leftIcon?: IconType;
   rightIcon?: IconType;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "small" | "large" | "medium";
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
