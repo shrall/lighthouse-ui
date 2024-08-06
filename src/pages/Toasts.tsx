@@ -1,6 +1,6 @@
 import { toast } from "sonner";
-import { Button } from "../../lib/components/ui/button";
-import { Icon } from "@/index";
+import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 
 function Toasts() {
   return (

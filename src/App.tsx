@@ -4,6 +4,7 @@ import Toasts from "./pages/Toasts";
 import Alerts from "./pages/Alerts";
 import Icons from "./pages/Icons";
 import Tooltips from "./pages/Tooltips";
+import Cards from "./pages/Cards";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Alerts />
       <Buttons />
       <Badges />
+      <Cards />
       <Icons />
       <Toasts />
       <Tooltips />
