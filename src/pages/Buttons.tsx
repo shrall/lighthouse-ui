@@ -49,6 +49,11 @@ function Buttons() {
         <Button variant="ghost" size="small" disabled>
           Ghost
         </Button>
+        <Button leftIcon="placeholder-outline">Primary</Button>
+        <Button rightIcon="placeholder-outline">Primary</Button>
+        <Button leftIcon="placeholder-outline" rightIcon="placeholder-outline">
+          Primary
+        </Button>
       </div>
     </div>
   );
