@@ -4,13 +4,9 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full w-fit font-semibold",
+  "inline-flex items-center rounded-full w-fit font-semibold px-3 py-[3px] text-xs md:px-4 md:py-[5.5px] md:text-sm",
   {
     variants: {
-      size: {
-        desktop: "px-4 py-[5.5px] text-sm",
-        mobile: "px-3 py-[3px] text-xs",
-      },
       variant: {
         success: "text-ocean-success-20 bg-ocean-success-10",
         danger: "text-ocean-danger-20 bg-ocean-danger-10",
@@ -20,7 +16,6 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
-      size: "desktop",
       variant: "success",
     },
   },
@@ -32,17 +27,11 @@ export interface BadgeProps
   textOnly?: boolean;
 }
 
-function Badge({
-  className,
-  size,
-  variant,
-  textOnly = false,
-  ...props
-}: BadgeProps) {
+function Badge({ className, variant, textOnly = false, ...props }: BadgeProps) {
   return (
     <div
       className={cn(
-        badgeVariants({ size, variant }),
+        badgeVariants({ variant }),
         className,
         textOnly && "bg-transparent",
       )}

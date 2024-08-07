@@ -10,34 +10,54 @@ function Badges() {
         <Badge variant="warning">Warning</Badge>
         <Badge variant="info">Info</Badge>
         <Badge variant="inactive">Inactive</Badge>
-        <Badge variant="success" size="mobile">
+        <Badge variant="success" className="md:px-3 md:py-[3px] md:text-xs">
           Success
         </Badge>
-        <Badge variant="danger" size="mobile">
+        <Badge variant="danger" className="md:px-3 md:py-[3px] md:text-xs">
           Danger
         </Badge>
-        <Badge variant="warning" size="mobile">
+        <Badge variant="warning" className="md:px-3 md:py-[3px] md:text-xs">
           Warning
         </Badge>
-        <Badge variant="info" size="mobile">
+        <Badge variant="info" className="md:px-3 md:py-[3px] md:text-xs">
           Info
         </Badge>
-        <Badge variant="inactive" size="mobile">
+        <Badge variant="inactive" className="md:px-3 md:py-[3px] md:text-xs">
           Inactive
         </Badge>
-        <Badge variant="success" size="mobile" textOnly>
+        <Badge
+          variant="success"
+          className="md:px-3 md:py-[3px] md:text-xs"
+          textOnly
+        >
           Success
         </Badge>
-        <Badge variant="danger" size="mobile" textOnly>
+        <Badge
+          variant="danger"
+          className="md:px-3 md:py-[3px] md:text-xs"
+          textOnly
+        >
           Danger
         </Badge>
-        <Badge variant="warning" size="mobile" textOnly>
+        <Badge
+          variant="warning"
+          className="md:px-3 md:py-[3px] md:text-xs"
+          textOnly
+        >
           Warning
         </Badge>
-        <Badge variant="info" size="mobile" textOnly>
+        <Badge
+          variant="info"
+          className="md:px-3 md:py-[3px] md:text-xs"
+          textOnly
+        >
           Info
         </Badge>
-        <Badge variant="inactive" size="mobile" textOnly>
+        <Badge
+          variant="inactive"
+          className="md:px-3 md:py-[3px] md:text-xs"
+          textOnly
+        >
           Inactive
         </Badge>
       </div>
