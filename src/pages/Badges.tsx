@@ -5,39 +5,39 @@ function Badges() {
     <div className="flex flex-col gap-y-4 px-4 py-2">
       <h3>Badges</h3>
       <div className="grid grid-cols-5 items-center justify-center gap-2 text-center">
-        <Badge theme="success">Success</Badge>
-        <Badge theme="danger">Danger</Badge>
-        <Badge theme="warning">Warning</Badge>
-        <Badge theme="info">Info</Badge>
-        <Badge theme="inactive">Inactive</Badge>
-        <Badge theme="success" variant="mobile">
+        <Badge variant="success">Success</Badge>
+        <Badge variant="danger">Danger</Badge>
+        <Badge variant="warning">Warning</Badge>
+        <Badge variant="info">Info</Badge>
+        <Badge variant="inactive">Inactive</Badge>
+        <Badge variant="success" size="mobile">
           Success
         </Badge>
-        <Badge theme="danger" variant="mobile">
+        <Badge variant="danger" size="mobile">
           Danger
         </Badge>
-        <Badge theme="warning" variant="mobile">
+        <Badge variant="warning" size="mobile">
           Warning
         </Badge>
-        <Badge theme="info" variant="mobile">
+        <Badge variant="info" size="mobile">
           Info
         </Badge>
-        <Badge theme="inactive" variant="mobile">
+        <Badge variant="inactive" size="mobile">
           Inactive
         </Badge>
-        <Badge theme="success" variant="mobile" textOnly>
+        <Badge variant="success" size="mobile" textOnly>
           Success
         </Badge>
-        <Badge theme="danger" variant="mobile" textOnly>
+        <Badge variant="danger" size="mobile" textOnly>
           Danger
         </Badge>
-        <Badge theme="warning" variant="mobile" textOnly>
+        <Badge variant="warning" size="mobile" textOnly>
           Warning
         </Badge>
-        <Badge theme="info" variant="mobile" textOnly>
+        <Badge variant="info" size="mobile" textOnly>
           Info
         </Badge>
-        <Badge theme="inactive" variant="mobile" textOnly>
+        <Badge variant="inactive" size="mobile" textOnly>
           Inactive
         </Badge>
       </div>

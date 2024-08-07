@@ -7,11 +7,11 @@ const badgeVariants = cva(
   "inline-flex items-center rounded-full w-fit font-semibold",
   {
     variants: {
-      variant: {
+      size: {
         desktop: "px-4 py-[5.5px] text-sm",
         mobile: "px-3 py-[3px] text-xs",
       },
-      theme: {
+      variant: {
         success: "text-ocean-success-20 bg-ocean-success-10",
         danger: "text-ocean-danger-20 bg-ocean-danger-10",
         warning: "text-ocean-warning-20 bg-ocean-warning-10",
@@ -20,8 +20,8 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "desktop",
-      theme: "success",
+      size: "desktop",
+      variant: "success",
     },
   },
 );
@@ -34,7 +34,7 @@ export interface BadgeProps
 
 function Badge({
   className,
-  theme,
+  size,
   variant,
   textOnly = false,
   ...props
@@ -42,7 +42,7 @@ function Badge({
   return (
     <div
       className={cn(
-        badgeVariants({ theme, variant }),
+        badgeVariants({ size, variant }),
         className,
         textOnly && "bg-transparent",
       )}
