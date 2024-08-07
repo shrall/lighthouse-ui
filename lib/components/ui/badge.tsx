@@ -13,7 +13,7 @@ const badgeVariants = cva(
       },
       theme: {
         success: "text-ocean-success-20 bg-ocean-success-10",
-        destructive: "text-ocean-danger-20 bg-ocean-danger-10",
+        danger: "text-ocean-danger-20 bg-ocean-danger-10",
         warning: "text-ocean-warning-20 bg-ocean-warning-10",
         info: "text-ocean-primary-20 bg-ocean-secondary-10",
         inactive: "text-ocean-dark-20 bg-ocean-light-40",

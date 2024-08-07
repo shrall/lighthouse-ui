@@ -6,15 +6,15 @@ function Badges() {
       <h3>Badges</h3>
       <div className="grid grid-cols-5 items-center justify-center gap-2 text-center">
         <Badge theme="success">Success</Badge>
-        <Badge theme="destructive">Destructive</Badge>
+        <Badge theme="danger">Danger</Badge>
         <Badge theme="warning">Warning</Badge>
         <Badge theme="info">Info</Badge>
         <Badge theme="inactive">Inactive</Badge>
         <Badge theme="success" variant="mobile">
           Success
         </Badge>
-        <Badge theme="destructive" variant="mobile">
-          Destructive
+        <Badge theme="danger" variant="mobile">
+          Danger
         </Badge>
         <Badge theme="warning" variant="mobile">
           Warning
@@ -28,8 +28,8 @@ function Badges() {
         <Badge theme="success" variant="mobile" textOnly>
           Success
         </Badge>
-        <Badge theme="destructive" variant="mobile" textOnly>
-          Destructive
+        <Badge theme="danger" variant="mobile" textOnly>
+          Danger
         </Badge>
         <Badge theme="warning" variant="mobile" textOnly>
           Warning

@@ -11,7 +11,7 @@ const alertVariants = cva(
     variants: {
       variant: {
         success: "bg-ocean-success-10 text-ocean-success-20",
-        error: "bg-ocean-danger-10 text-ocean-danger-20",
+        danger: "bg-ocean-danger-10 text-ocean-danger-20",
         warning: "bg-ocean-warning-10 text-ocean-warning-20",
         info: "bg-ocean-secondary-10 text-ocean-primary-20",
       },
@@ -41,7 +41,7 @@ const Alert = React.forwardRef<
       {...props}
     >
       {variant === "success" && <Icon name="check-filled" />}
-      {variant === "error" && <Icon name="cross-filled" />}
+      {variant === "danger" && <Icon name="cross-filled" />}
       {variant === "warning" && <Icon name="exclamation-filled" />}
       {variant === "info" && <Icon name="info-filled" />}
       {children}

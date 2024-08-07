@@ -12,7 +12,7 @@ function Alerts() {
           </AlertDescription>
         </Alert>
         <Alert
-          variant="error"
+          variant="danger"
           actionType="close"
           alertAction={() => {
             console.log("error");
