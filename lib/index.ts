@@ -4,7 +4,7 @@ import "./index.css";
 export { default as stylesPlugin } from './stylesPlugin';
 
 //NOTE - Components
-export { Alert } from "./components/ui/alert";
+export { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 export { Badge } from "./components/ui/badge";
 export { Button } from "./components/ui/button";
 export {

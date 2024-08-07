@@ -18,9 +18,6 @@ const themeConfig = {
                 xl: '1048px',
                 '2xl': '1440px',
             },
-            backgroundImage: {
-                ocean: "url('/images/background.png')",
-            },
             fontFamily: {
                 bca: 'BCASans',
             },
