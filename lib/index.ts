@@ -18,10 +18,4 @@ export {
 export type { IconType } from "./components/ui/icon";
 export { Icon, IconTypeKeys } from "./components/ui/icon";
 export { Toaster } from "./components/ui/sonner";
-export {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTitle,
-    TooltipTrigger,
-} from "./components/ui/tooltip";
+export { Tooltip } from "./components/ui/tooltip";
