@@ -6,21 +6,24 @@ import { cn } from "@/lib/utils";
 import { Icon, IconType } from "./icon";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full transition-colors w-fit",
+  "lui-inline-flex lui-items-center lui-justify-center lui-whitespace-nowrap lui-rounded-full lui-transition-colors lui-w-fit",
   {
     variants: {
       variant: {
         primary:
-          "bg-ocean-primary-10 text-ocean-light-10 hover:bg-ocean-primary-20 active:bg-ocean-primary-30 disabled:bg-ocean-light-40",
+          "lui-bg-ocean-primary-10 lui-text-ocean-light-10 hover:lui-bg-ocean-primary-20 active:lui-bg-ocean-primary-30 disabled:lui-bg-ocean-light-40",
         secondary:
-          "bg-transparent border border-ocean-primary-10 text-ocean-primary-10 hover:bg-ocean-light-20 active:bg-ocean-secondary-10 disabled:bg-transparent disabled:border-ocean-light-40 disabled:text-ocean-dark-10",
+          "lui-bg-transparent lui-border lui-border-ocean-primary-10 lui-text-ocean-primary-10 hover:lui-bg-ocean-light-20 active:lui-bg-ocean-secondary-10 disabled:lui-bg-transparent disabled:lui-border-ocean-light-40 disabled:lui-text-ocean-dark-10",
         ghost:
-          "bg-transparent text-ocean-primary-10 hover:bg-ocean-light-20 active:bg-ocean-secondary-10 disabled:bg-transparent disabled:text-ocean-dark-10",
+          "lui-bg-transparent lui-text-ocean-primary-10 hover:lui-bg-ocean-light-20 active:lui-bg-ocean-secondary-10 disabled:lui-bg-transparent disabled:lui-text-ocean-dark-10",
       },
       size: {
-        large: "text-base min-w-40 h-12 px-6 py-3 gap-2",
-        medium: "text-sm min-w-[124px] h-10 px-5 py-[9.5px] gap-2",
-        small: "text-xs min-w-[110px] h-8 px-4 py-[6px] gap-1",
+        large:
+          "lui-text-base lui-min-w-40 lui-h-12 lui-px-6 lui-py-3 lui-gap-2",
+        medium:
+          "lui-text-sm lui-min-w-[124px] lui-h-10 lui-px-5 lui-py-[9.5px] lui-gap-2",
+        small:
+          "lui-text-xs lui-min-w-[110px] lui-h-8 lui-px-4 lui-py-[6px] lui-gap-1",
       },
     },
     defaultVariants: {

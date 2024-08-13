@@ -19,7 +19,7 @@ const TooltipContent = React.forwardRef<
     ref={ref}
     sideOffset={sideOffset}
     className={cn(
-      "z-50 box-content overflow-hidden rounded-[10px] bg-ocean-dark-20 px-5 py-4 text-start text-xs text-ocean-light-20 shadow-md",
+      "lui-z-50 lui-box-content lui-overflow-hidden lui-rounded-[10px] lui-bg-ocean-dark-20 lui-px-5 lui-py-4 lui-text-start lui-text-xs lui-text-ocean-light-20 lui-shadow-md",
       className,
     )}
     {...props}
@@ -84,25 +84,30 @@ const Tooltip = React.forwardRef<
             <TooltipContent
               ref={ref}
               sideOffset={sideOffset}
-              className={cn("px-4 py-[10px] md:px-5 md:py-4", className)}
+              className={cn(
+                "lui-px-4 lui-py-[10px] md:lui-px-5 md:lui-py-4",
+                className,
+              )}
               {...props}
             >
-              <div className="hidden flex-col gap-y-6 md:flex">
-                {title && <h3 className="text-sm font-semibold">{title}</h3>}
-                <div className="flex gap-x-6">
+              <div className="lui-hidden lui-flex-col lui-gap-y-6 md:lui-flex">
+                {title && (
+                  <h3 className="lui-text-sm lui-font-semibold">{title}</h3>
+                )}
+                <div className="lui-flex lui-gap-x-6">
                   {image}
-                  <div className="max-w-[228px]">{children}</div>
+                  <div className="lui-max-w-[228px]">{children}</div>
                 </div>
               </div>
-              <div className="flex flex-col items-center gap-y-4 md:hidden">
+              <div className="lui-flex lui-flex-col lui-items-center lui-gap-y-4 md:lui-hidden">
                 {image}
-                <div className="flex flex-col gap-y-3">
+                <div className="lui-flex lui-flex-col lui-gap-y-3">
                   {title && (
-                    <h3 className="text-center text-sm font-semibold">
+                    <h3 className="lui-text-center lui-text-sm lui-font-semibold">
                       {title}
                     </h3>
                   )}
-                  <div className="max-w-[228px]">{children}</div>
+                  <div className="lui-max-w-[228px]">{children}</div>
                 </div>
               </div>
             </TooltipContent>
@@ -110,10 +115,14 @@ const Tooltip = React.forwardRef<
             <TooltipContent
               ref={ref}
               sideOffset={sideOffset}
-              className={cn("max-w-[228px]", className)}
+              className={cn("lui-max-w-[228px]", className)}
               {...props}
             >
-              {title && <h3 className="mb-2 text-sm font-semibold">{title}</h3>}
+              {title && (
+                <h3 className="lui-mb-2 lui-text-sm lui-font-semibold">
+                  {title}
+                </h3>
+              )}
               {children}
             </TooltipContent>
           )}

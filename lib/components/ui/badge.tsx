@@ -4,15 +4,15 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-full w-fit font-semibold px-3 py-[3px] text-xs md:px-4 md:py-[5.5px] md:text-sm",
+  "lui-inline-flex lui-items-center lui-rounded-full lui-w-fit lui-font-semibold lui-px-3 lui-py-[3px] lui-text-xs md:lui-px-4 md:lui-py-[5.5px] md:lui-text-sm",
   {
     variants: {
       variant: {
-        success: "text-ocean-success-20 bg-ocean-success-10",
-        danger: "text-ocean-danger-20 bg-ocean-danger-10",
-        warning: "text-ocean-warning-20 bg-ocean-warning-10",
-        info: "text-ocean-primary-20 bg-ocean-secondary-10",
-        inactive: "text-ocean-dark-20 bg-ocean-light-40",
+        success: "lui-text-ocean-success-20 lui-bg-ocean-success-10",
+        danger: "lui-text-ocean-danger-20 lui-bg-ocean-danger-10",
+        warning: "lui-text-ocean-warning-20 lui-bg-ocean-warning-10",
+        info: "lui-text-ocean-primary-20 lui-bg-ocean-secondary-10",
+        inactive: "lui-text-ocean-dark-20 lui-bg-ocean-light-40",
       },
     },
     defaultVariants: {
@@ -33,7 +33,7 @@ function Badge({ className, variant, textOnly = false, ...props }: BadgeProps) {
       className={cn(
         badgeVariants({ variant }),
         className,
-        textOnly && "bg-transparent",
+        textOnly && "lui-bg-transparent",
       )}
       {...props}
     />

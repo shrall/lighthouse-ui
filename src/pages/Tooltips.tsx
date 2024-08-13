@@ -3,9 +3,9 @@ import { Tooltip } from "@/components/ui/tooltip";
 
 function Tooltips() {
   return (
-    <div className="flex flex-col gap-y-4 px-4 py-2">
+    <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Tooltips</h3>
-      <div className="flex items-center gap-2 text-center">
+      <div className="lui-flex lui-items-center lui-gap-2 lui-text-center">
         <Tooltip
           trigger={<Icon name="question-filled" />}
           side="top"
@@ -21,16 +21,15 @@ function Tooltips() {
           side="right"
           title="Tooltip Title"
           image={
-            <div className="size-16 min-w-16 rounded-lg bg-ocean-dark-10 md:size-44 md:min-w-44" />
+            <div className="lui-size-16 lui-min-w-16 lui-rounded-lg lui-bg-ocean-dark-10 md:lui-size-44 md:lui-min-w-44" />
           }
-          forceOpen={true}
         >
-          <ol className="list-decimal space-y-1 pl-4 font-normal">
+          <ol className="lui-list-decimal lui-space-y-1 lui-pl-4 lui-font-normal">
             <li>
               <div>Silakan aktifkan KeyBCA dengan</div>
-              <div className="flex items-center gap-x-1">
+              <div className="lui-flex lui-items-center lui-gap-x-1">
                 menekan tombol
-                <Icon name="triangle-left-filled" className="size-5" />
+                <Icon name="triangle-left-filled" className="lui-size-5" />
               </div>
             </li>
             <li>Masukkan PIN KeyBCA pada saat muncul pesan “PIN”</li>

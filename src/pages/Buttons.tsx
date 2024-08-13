@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 function Buttons() {
   return (
-    <div className="flex flex-col gap-y-4 px-4 py-2">
+    <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Buttons</h3>
-      <div className="grid grid-cols-6 items-center justify-center gap-2 text-center">
+      <div className="lui-grid lui-grid-cols-6 lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Button>Primary</Button>
         <Button size="medium">Primary</Button>
         <Button size="small">Primary</Button>

@@ -2,9 +2,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 function Alerts() {
   return (
-    <div className="flex flex-col gap-y-4 px-4 py-2">
+    <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Alerts</h3>
-      <div className="flex flex-col items-center justify-center gap-2 text-center">
+      <div className="lui-flex lui-flex-col lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Alert variant="success">
           <AlertTitle>Success</AlertTitle>
           <AlertDescription>

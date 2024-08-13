@@ -11,18 +11,18 @@ const Toaster = ({ ...props }: ToasterProps) => {
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
-      className="toaster group font-bca lg:min-w-[800px]"
+      className="toaster group lui-font-bca lg:lui-min-w-[800px]"
       toastOptions={{
         classNames: {
-          toast: "group toast items-start text-sm w-full",
-          title: "font-bold",
-          actionButton: "!bg-transparent !pr-0 !text-current",
-          icon: "m-0 min-w-6 min-h-6",
+          toast: "group toast lui-items-start lui-text-sm lui-w-full",
+          title: "lui-font-bold",
+          actionButton: "!lui-bg-transparent !lui-pr-0 !lui-text-current",
+          icon: "lui-m-0 lui-min-w-6 lui-min-h-6",
           //NOTE - Variants
-          success: "bg-ocean-success-10 text-ocean-success-20",
-          error: "bg-ocean-danger-10 text-ocean-danger-20",
-          warning: "bg-ocean-warning-10 text-ocean-warning-20",
-          info: "bg-ocean-secondary-10 text-ocean-primary-10",
+          success: "lui-bg-ocean-success-10 lui-text-ocean-success-20",
+          error: "lui-bg-ocean-danger-10 lui-text-ocean-danger-20",
+          warning: "lui-bg-ocean-warning-10 lui-text-ocean-warning-20",
+          info: "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
         },
       }}
       icons={{

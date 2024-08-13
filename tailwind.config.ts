@@ -11,7 +11,7 @@ const config = {
     "./src/**/*.{ts,tsx}",
     "./lib/components/**/*.{ts,tsx}",
   ],
-  prefix: "",
+  prefix: "lui-",
   plugins: [stylesPlugin],
 } satisfies Config;
 

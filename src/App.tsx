@@ -8,7 +8,7 @@ import Tooltips from "./pages/Tooltips";
 
 function App() {
   return (
-    <div className="min-h-screen divide-y-2 divide-dashed divide-ocean-primary-30 font-bca">
+    <div className="lui-min-h-screen lui-divide-y-2 lui-divide-dashed lui-divide-ocean-primary-30 lui-font-bca">
       <Alerts />
       <Buttons />
       <Badges />

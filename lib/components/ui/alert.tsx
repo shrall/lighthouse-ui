@@ -6,14 +6,14 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const alertVariants = cva(
-  "relative w-full flex flex-col items-start text-sm rounded-[10px] border border-slate-200 p-4 [&>svg~*]:px-9 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute first:[&>svg]:left-4 [&>svg]:top-4",
+  "lui-relative lui-w-full lui-flex lui-flex-col lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-4 [&>svg~*]:lui-px-9 [&>svg+div]:lui-translate-y-[-3px] [&>svg]:lui-absolute first:[&>svg]:lui-left-4 [&>svg]:lui-top-4",
   {
     variants: {
       variant: {
-        success: "bg-ocean-success-10 text-ocean-success-20",
-        danger: "bg-ocean-danger-10 text-ocean-danger-20",
-        warning: "bg-ocean-warning-10 text-ocean-warning-20",
-        info: "bg-ocean-secondary-10 text-ocean-primary-20",
+        success: "lui-bg-ocean-success-10 lui-text-ocean-success-20",
+        danger: "lui-bg-ocean-danger-10 lui-text-ocean-danger-20",
+        warning: "lui-bg-ocean-warning-10 lui-text-ocean-warning-20",
+        info: "lui-bg-ocean-secondary-10 lui-text-ocean-primary-20",
       },
     },
     defaultVariants: {
@@ -48,7 +48,7 @@ const Alert = React.forwardRef<
       {actionType === "close" && alertAction ? (
         <Icon
           name="cross-large-outline"
-          className="right-4 cursor-pointer !px-0"
+          className="lui-right-4 lui-cursor-pointer !lui-px-0"
           onClick={() => {
             alertAction();
           }}
@@ -57,7 +57,7 @@ const Alert = React.forwardRef<
         alertAction && (
           <Icon
             name="chevron-right-outline"
-            className="right-4 cursor-pointer !px-0"
+            className="lui-right-4 lui-cursor-pointer !lui-px-0"
             onClick={() => {
               alertAction();
             }}
@@ -73,7 +73,7 @@ const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h5 ref={ref} className={cn("font-bold", className)} {...props} />
+  <h5 ref={ref} className={cn("lui-font-bold", className)} {...props} />
 ));
 AlertTitle.displayName = "AlertTitle";
 
@@ -81,7 +81,7 @@ const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("text-start", className)} {...props} />
+  <div ref={ref} className={cn("lui-text-start", className)} {...props} />
 ));
 AlertDescription.displayName = "AlertDescription";
 

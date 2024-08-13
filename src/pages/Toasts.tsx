@@ -5,9 +5,9 @@ import { Icon } from "@/components/ui/icon";
 
 function Toasts() {
   return (
-    <div className="flex flex-col gap-y-4 px-4 py-2">
+    <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Toasts</h3>
-      <div className="grid grid-cols-4 items-center justify-center gap-2 text-center">
+      <div className="lui-grid lui-grid-cols-4 lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Button
           onClick={() => {
             toast.success("Event has been created.");
