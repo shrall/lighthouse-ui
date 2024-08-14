@@ -8,7 +8,7 @@
     "css": "lib/index.css",
     "baseColor": "slate",
     "cssVariables": false,
-    "prefix": ""
+    "prefix": "lui-"
   },
   "aliases": {
     "components": "@/components",
