@@ -3,6 +3,7 @@ import Badges from "./pages/Badges";
 import Buttons from "./pages/Buttons";
 import Cards from "./pages/Cards";
 import Icons from "./pages/Icons";
+import Tables from "./pages/tables/page";
 import Toasts from "./pages/Toasts";
 import Tooltips from "./pages/Tooltips";
 
@@ -14,6 +15,7 @@ function App() {
       <Badges />
       <Cards />
       <Icons />
+      <Tables />
       <Toasts />
       <Tooltips />
     </div>
