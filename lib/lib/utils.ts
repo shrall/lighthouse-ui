@@ -1,6 +1,10 @@
 import { type ClassValue, clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
+import { extendTailwindMerge } from "tailwind-merge"
+
+const luiTwMerge = extendTailwindMerge({
+  prefix: "lui-",
+})
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return luiTwMerge(clsx(inputs))
 }
