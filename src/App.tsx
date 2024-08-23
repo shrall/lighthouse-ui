@@ -7,6 +7,7 @@ import Calendars from "./pages/Calendars";
 import Tables from "./pages/tables/page";
 import Toasts from "./pages/Toasts";
 import Tooltips from "./pages/Tooltips";
+import Inputs from "./pages/Inputs";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Calendars />
       <Cards />
       <Icons />
+      <Inputs />
       <Tables />
       <Toasts />
       <Tooltips />

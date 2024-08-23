@@ -1,0 +1,98 @@
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+type InputStyle = "default" | "underline";
+
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  input?: { className?: string };
+  error?: boolean;
+  inputStyle?: InputStyle;
+  leftNode?: React.ReactNode;
+  rightNode?: React.ReactNode;
+  regex?: "text" | "number";
+}
+
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      className,
+      type,
+      input,
+      error = false,
+      leftNode,
+      inputStyle = "default",
+      rightNode,
+      disabled,
+      onChange,
+      maxLength,
+      regex,
+      value,
+      ...props
+    },
+    ref,
+  ) => {
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+      if (regex) {
+        e.target.value = e.target.value.replace(
+          regex === "text"
+            ? /[^a-zA-Z0-9@#$%&*()_+=!{};:,./<>?|\-\]]/g
+            : /[^0-9]/g,
+          "",
+        );
+      }
+      if (maxLength) {
+        e.target.value = e.target.value.slice(0, maxLength);
+      }
+      if (onChange) {
+        onChange(e);
+      }
+    }
+    return (
+      <div
+        className={cn(
+          "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10",
+          inputStyle === "default" &&
+            "lui-rounded-lg lui-bg-ocean-light-20 lui-px-3 lui-py-2 lui-text-ocean-dark-30",
+          inputStyle === "underline" &&
+            "lui-border-b lui-border-ocean-dark-10 lui-pb-1.5 has-[svg]:lui-text-ocean-dark-10",
+          inputStyle === "underline" &&
+            type === "password" &&
+            value &&
+            "lui-text-xl lui-tracking-[10px]",
+          inputStyle === "default" &&
+            disabled &&
+            "lui-bg-ocean-light-20 lui-text-ocean-light-40",
+          inputStyle === "underline" &&
+            disabled &&
+            "lui-border-ocean-light-40 lui-text-ocean-light-40 has-[svg]:lui-text-ocean-light-40",
+          error && "lui-border-ocean-danger-20",
+          className,
+        )}
+      >
+        {leftNode}
+        <input
+          type={type}
+          className={cn(
+            "lui-w-full lui-outline-none disabled:placeholder:lui-text-ocean-light-40",
+            inputStyle === "default" &&
+              "lui-bg-ocean-light-20 focus:placeholder:lui-text-ocean-light-40",
+            inputStyle === "underline" &&
+              "lui-h-6 lui-text-ocean-dark-30 disabled:lui-bg-white",
+            input && input.className,
+          )}
+          ref={ref}
+          disabled={disabled}
+          {...props}
+          onChange={handleChange}
+          maxLength={Infinity}
+        />
+        {rightNode}
+      </div>
+    );
+  },
+);
+Input.displayName = "Input";
+
+export { Input };
