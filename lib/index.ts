@@ -15,7 +15,7 @@ export {
     CardHeader,
     CardTitle,
 } from "./components/ui/card";
-export type { Checkbox } from "./components/ui/checkbox";
+export { Checkbox } from "./components/ui/checkbox";
 export type { IconType } from "./components/ui/icon";
 export { Input } from "./components/ui/input";
 export { Icon, IconTypeKeys } from "./components/ui/icon";
