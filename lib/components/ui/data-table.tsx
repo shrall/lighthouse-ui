@@ -18,8 +18,10 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import React, { Dispatch, SetStateAction, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface DataTableProps<TData, TValue> {
+  className?: string;
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   isLoading?: boolean;
@@ -33,6 +35,7 @@ interface DataTableProps<TData, TValue> {
 }
 
 export function DataTable<TData, TValue>({
+  className,
   columns,
   data,
   isLoading,
@@ -63,7 +66,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-md border">
+    <div className={cn("lui-rounded-md lui-border", className)}>
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
