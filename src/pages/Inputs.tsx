@@ -9,7 +9,7 @@ function Inputs() {
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Inputs</h3>
-      <div className="lui-grid lui-grid-cols-6 lui-items-center lui-gap-2">
+      <div className="lui-grid lui-grid-cols-3 lui-items-center lui-gap-2">
         <Input
           placeholder="Placeholder"
           value={value}
@@ -50,12 +50,30 @@ function Inputs() {
           onChange={(e) => setValue(e.target.value)}
           disabled
         />
+      </div>
+      <div className="lui-grid lui-grid-cols-6 lui-items-center lui-gap-2">
         <Input
           inputStyle="underline"
           placeholder="Placeholder"
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+        />
+        <Input
+          inputStyle="underline"
+          placeholder="Placeholder"
+          type="text"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          helperText="Optional helper text"
+        />
+        <Input
+          inputStyle="underline"
+          placeholder="Placeholder"
+          type="text"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          errorMessage="Error"
         />
         <Input
           inputStyle="underline"
