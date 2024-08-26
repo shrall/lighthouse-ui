@@ -87,6 +87,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
           onChange={handleChange}
           maxLength={Infinity}
+          value={value}
         />
         {rightNode}
       </div>
