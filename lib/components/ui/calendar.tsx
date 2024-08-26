@@ -69,7 +69,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("lui-select-none lui-p-4", className)}
+      className={cn("lui-select-none", className)}
       classNames={{
         months:
           "lui-flex lui-flex-col sm:lui-flex-row lui-space-y-4 sm:lui-space-x-4 sm:lui-space-y-0",

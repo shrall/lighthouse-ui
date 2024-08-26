@@ -50,7 +50,7 @@ function Calendars() {
               )}
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="lui-w-auto lui-p-0" align="center">
+          <PopoverContent align="center">
             <Calendar
               initialFocus
               mode="range"
