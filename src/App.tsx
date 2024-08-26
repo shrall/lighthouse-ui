@@ -8,6 +8,7 @@ import Tables from "./pages/tables/page";
 import Toasts from "./pages/Toasts";
 import Tooltips from "./pages/Tooltips";
 import Inputs from "./pages/Inputs";
+import Paginations from "./pages/Paginations";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Cards />
       <Icons />
       <Inputs />
+      <Paginations />
       <Tables />
       <Toasts />
       <Tooltips />
