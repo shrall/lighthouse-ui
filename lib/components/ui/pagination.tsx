@@ -120,7 +120,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
             !isEmpty && (
               <>
                 <Button
-                  className="lui-min-w-10 lui-max-w-10 lui-rounded-full lui-bg-ocean-secondary-10 lui-p-0 lui-text-ocean-primary-10 disabled:lui-bg-ocean-light-20 disabled:lui-text-ocean-light-40"
+                  className="lui-min-w-10 lui-max-w-10 lui-rounded-full lui-bg-ocean-secondary-10 lui-p-0 lui-text-ocean-primary-10 hover:lui-text-white disabled:lui-bg-ocean-light-20 disabled:lui-text-ocean-light-40"
                   onClick={() => setPageNumber(pageNumber - 1)}
                   disabled={pageNumber === 1}
                 >
@@ -168,7 +168,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button
-                  className="lui-min-w-10 lui-max-w-10 lui-rounded-full lui-bg-ocean-secondary-10 lui-p-0 lui-text-ocean-primary-10 disabled:lui-bg-ocean-light-20 disabled:lui-text-ocean-light-40"
+                  className="lui-min-w-10 lui-max-w-10 lui-rounded-full lui-bg-ocean-secondary-10 lui-p-0 lui-text-ocean-primary-10 hover:lui-text-white disabled:lui-bg-ocean-light-20 disabled:lui-text-ocean-light-40"
                   onClick={() => setPageNumber(pageNumber + 1)}
                   disabled={pageNumber === totalPage}
                 >
