@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const alertVariants = cva(
-  "lui-relative lui-w-full lui-flex lui-flex-col lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 [&>svg~*]:lui-px-9 [&>svg+div]:lui-translate-y-[-3px] [&>svg]:lui-absolute first:[&>svg]:lui-left-4 [&>svg]:lui-top-4",
+  "lui-relative lui-w-full lui-flex lui-flex-col lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 [&>svg+div]:lui-translate-y-[-3px] [&>svg]:lui-absolute first:[&>svg]:lui-left-4 [&>svg]:lui-top-4",
   {
     variants: {
       variant: {
@@ -37,7 +37,11 @@ const Alert = React.forwardRef<
     <div
       ref={ref}
       role="alert"
-      className={cn(alertVariants({ variant }), className)}
+      className={cn(
+        alertVariants({ variant }),
+        alertAction ? "[&>svg~*]:lui-px-9" : "[&>svg~*]:lui-pl-9",
+        className,
+      )}
       {...props}
     >
       {variant === "success" && <Icon name="check-filled" />}
