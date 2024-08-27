@@ -73,7 +73,11 @@ const AlertTitle = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-  <h5 ref={ref} className={cn("lui-font-bold", className)} {...props} />
+  <h5
+    ref={ref}
+    className={cn("lui-break-anywhere lui-text-start lui-font-bold", className)}
+    {...props}
+  />
 ));
 AlertTitle.displayName = "AlertTitle";
 
