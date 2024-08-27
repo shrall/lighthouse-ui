@@ -83,5 +83,11 @@ const themeConfig = {
     },
 }
 
-export default plugin(() => {
-}, themeConfig);
+export default
+    plugin(({ addUtilities }) => {
+        addUtilities({
+            '.break-anywhere': {
+                'overflow-wrap': 'anywhere',
+            },
+        });
+    }, themeConfig);
