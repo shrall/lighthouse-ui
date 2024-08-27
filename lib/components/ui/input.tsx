@@ -72,7 +72,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <div className="lui-flex lui-min-w-[156px] lui-max-w-[156px] lui-items-start lui-gap-x-2">
             <label
               htmlFor={props.name}
-              className="lui-text-sm lui-font-semibold lui-text-ocean-primary-10"
+              className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10"
             >
               {label}
             </label>
