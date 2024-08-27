@@ -157,7 +157,7 @@ function Inputs() {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          label="Label w/Tooltip"
+          label="Long Label w/Tooltip"
           alignment="horizontal"
           tooltip={
             <Tooltip

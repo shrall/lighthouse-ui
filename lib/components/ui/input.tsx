@@ -62,14 +62,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div
         className={cn(
-          "lui-flex lui-items-start",
+          "lui-flex lui-w-full lui-items-start",
           alignment === "vertical" && "lui-flex-col lui-gap-y-2",
           alignment === "horizontal" && "lui-flex-row lui-gap-x-6",
           container && container.className,
         )}
       >
         {label && (
-          <div className="lui-flex lui-w-[156px] lui-max-w-[156px] lui-items-center lui-gap-x-2">
+          <div className="lui-flex lui-min-w-[156px] lui-max-w-[156px] lui-items-start lui-gap-x-2">
             <label
               htmlFor={props.name}
               className="lui-text-sm lui-font-semibold lui-text-ocean-primary-10"
@@ -79,7 +79,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             {tooltip && tooltip}
           </div>
         )}
-        <div className="lui-flex lui-flex-col lui-gap-y-2">
+        <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
           <div
             className={cn(
               "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10",
