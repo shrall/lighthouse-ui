@@ -21,7 +21,6 @@ interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
     goToPage?: string;
   };
   isLoading?: boolean;
-  isEmpty?: boolean;
   pageSize: number;
   setPageSize: (size: number) => void;
   pageSizes?: number[];
@@ -45,7 +44,6 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
         goToPage: "Go to page",
       },
       isLoading,
-      isEmpty = false,
       pageSize,
       setPageSize,
       pageSizes = [10, 25, 50, 100],
@@ -67,7 +65,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       <div
         className={cn(
           "lui-flex lui-items-center lui-p-4 lui-text-sm md:lui-text-base",
-          (isLoading || isEmpty) && "lui-pt-5",
+          (isLoading || totalData < 1) && "lui-pt-5",
           className,
         )}
         ref={ref}
@@ -77,7 +75,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
           {isLoading ? (
             <Skeleton className="lui-h-4 lui-w-[72px] lui-rounded-full" />
           ) : (
-            !isEmpty && (
+            !(totalData < 1) && (
               <DropdownMenu>
                 <DropdownMenuTrigger className="lui-group lui-flex lui-items-center lui-gap-x-1 lui-rounded-xl lui-border lui-border-ocean-light-40 lui-p-3 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
                   <span className="lui-hidden xl:lui-block">
@@ -117,7 +115,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
           {isLoading ? (
             <Skeleton className="lui-mr-auto lui-h-4 lui-w-[180px] lui-rounded-full" />
           ) : (
-            !isEmpty && (
+            !(totalData < 1) && (
               <span className="lui-mr-auto md:lui-mr-0">
                 {texts.data}: {(pageNumber - 1) * pageSize + 1}-
                 {pageSize * pageNumber > totalData
@@ -133,7 +131,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
               <Skeleton className="size-6 lui-rounded-sm" />
             </div>
           ) : (
-            !isEmpty && (
+            !(totalData < 1) && (
               <>
                 <Button
                   className="lui-min-w-10 lui-max-w-10 lui-rounded-full lui-bg-ocean-secondary-10 lui-p-0 lui-text-ocean-primary-10 hover:lui-text-white disabled:lui-bg-ocean-light-20 disabled:lui-text-ocean-light-40"
