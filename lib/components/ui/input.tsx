@@ -69,7 +69,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       >
         {label && (
-          <div className="lui-flex lui-min-w-[156px] lui-max-w-[156px] lui-items-start lui-gap-x-2">
+          <div
+            className={cn(
+              "lui-flex lui-items-start lui-gap-x-2",
+              alignment === "horizontal" &&
+                "lui-min-w-[156px] lui-max-w-[156px]",
+            )}
+          >
             <label
               htmlFor={props.name}
               className="lui-break-anywhere lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10"
