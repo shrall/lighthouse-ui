@@ -9,6 +9,7 @@ import Toasts from "./pages/Toasts";
 import Tooltips from "./pages/Tooltips";
 import Inputs from "./pages/Inputs";
 import Paginations from "./pages/Paginations";
+import Checkboxes from "./pages/Checkboxes";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Badges />
       <Calendars />
       <Cards />
+      <Checkboxes />
       <Icons />
       <Inputs />
       <Paginations />
