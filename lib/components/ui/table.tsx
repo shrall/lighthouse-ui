@@ -9,7 +9,10 @@ const Table = React.forwardRef<
   <div className="lui-relative lui-w-full lui-overflow-auto">
     <table
       ref={ref}
-      className={cn("lui-w-full lui-caption-bottom lui-text-sm", className)}
+      className={cn(
+        "lui-w-full lui-caption-bottom lui-text-sm lui-text-ocean-dark-20",
+        className,
+      )}
       {...props}
     />
   </div>
@@ -23,7 +26,7 @@ const TableHeader = React.forwardRef<
   <thead
     ref={ref}
     className={cn(
-      "lui-group lui-border-ocean-light-30 *:!lui-bg-ocean-secondary-10 [&_tr]:lui-border-b",
+      "lui-group lui-border-ocean-light-30 *:lui-bg-ocean-secondary-10 [&_tr]:lui-border-b",
       className,
     )}
     {...props}
@@ -62,7 +65,7 @@ const TableRow = React.forwardRef<
     ref={ref}
     className={cn(
       "lui-border-b lui-border-ocean-light-30 lui-transition-colors hover:lui-bg-ocean-light-20 [&:has([data-state=checked])]:lui-bg-ocean-light-30",
-      "group-hover:!lui-bg-ocean-secondary-10",
+      "group-hover:lui-bg-ocean-secondary-10",
       className,
     )}
     {...props}
