@@ -64,7 +64,7 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "lui-border-b lui-border-ocean-light-30 lui-transition-colors hover:lui-bg-ocean-light-20 [&:has([data-state=checked])]:lui-bg-ocean-light-30",
+      "lui-border-b lui-border-ocean-light-30 lui-transition-colors hover:lui-bg-ocean-light-20 [&:has([data-state=checked])]:has-[td]:lui-bg-ocean-light-30",
       "group-hover:lui-bg-ocean-secondary-10",
       className,
     )}
