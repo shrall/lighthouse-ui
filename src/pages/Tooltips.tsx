@@ -19,7 +19,7 @@ function Tooltips() {
         <Tooltip
           trigger={<Icon name="question-filled" />}
           side="right"
-          title="Tooltip Title"
+          title="lorem ipsumasdaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaaasdaaaaaaaaaaaaaaaaa"
           image={
             <div className="lui-size-16 lui-min-w-16 lui-rounded-lg lui-bg-ocean-dark-10 md:lui-size-44 md:lui-min-w-44" />
           }

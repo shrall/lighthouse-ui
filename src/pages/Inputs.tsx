@@ -52,7 +52,7 @@ function Inputs() {
           disabled
         />
       </div>
-      <div className="lui-grid lui-grid-cols-6 lui-items-center lui-gap-2">
+      <div className="lui-grid lui-grid-cols-2 lui-items-center lui-gap-2 md:lui-grid-cols-6">
         <Input
           inputStyle="underline"
           placeholder="Placeholder"
