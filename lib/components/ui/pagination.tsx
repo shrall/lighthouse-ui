@@ -75,7 +75,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       >
         <div className="lui-hidden lui-flex-1 lui-text-sm md:lui-block">
           {isLoading ? (
-            <Skeleton className="lui-h-4 lui-w-16 lui-rounded-full" />
+            <Skeleton className="lui-h-4 lui-w-[72px] lui-rounded-full" />
           ) : (
             !isEmpty && (
               <DropdownMenu>
@@ -115,7 +115,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
 
         <div className="lui-flex lui-w-full lui-items-center lui-gap-x-3 md:lui-w-auto">
           {isLoading ? (
-            <Skeleton className="lui-mr-auto lui-h-4 lui-w-48 lui-rounded-full" />
+            <Skeleton className="lui-mr-auto lui-h-4 lui-w-[180px] lui-rounded-full" />
           ) : (
             !isEmpty && (
               <span className="lui-mr-auto md:lui-mr-0">
@@ -129,8 +129,8 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
           )}
           {isLoading ? (
             <div className="lui-flex lui-items-center lui-gap-2">
-              <Skeleton className="size-4 lui-rounded-sm" />
-              <Skeleton className="size-4 lui-rounded-sm" />
+              <Skeleton className="size-6 lui-rounded-sm" />
+              <Skeleton className="size-6 lui-rounded-sm" />
             </div>
           ) : (
             !isEmpty && (
