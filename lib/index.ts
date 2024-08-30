@@ -31,16 +31,16 @@ export {
     DropdownMenuTrigger,
 } from "./components/ui/dropdown-menu";
 export { Input } from "./components/ui/input";
-// export { Pagination } from "./components/ui/pagination";
-// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
-// export { Calendar } from "./components/ui/calendar";
-// export { DataTable } from "./components/ui/data-table";
-// export { Skeleton } from "./components/ui/skeleton";
-// export {
-//     Table,
-//     TableBody,
-//     TableCell,
-//     TableHead,
-//     TableHeader,
-//     TableRow,
-// } from "./components/ui/table";
+export { Pagination } from "./components/ui/pagination";
+export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Calendar } from "./components/ui/calendar";
+export { DataTable } from "./components/ui/data-table";
+export { Skeleton } from "./components/ui/skeleton";
+export {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "./components/ui/table";
