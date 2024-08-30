@@ -13,23 +13,24 @@ export { Icon, IconTypeKeys } from "./components/ui/icon";
 export { Toaster } from "./components/ui/sonner";
 export { Tooltip } from "./components/ui/tooltip";
 
-// export {
-//     Card,
-//     CardContent,
-//     CardDescription,
-//     CardFooter,
-//     CardHeader,
-//     CardTitle,
-// } from "./components/ui/card";
-// export { Checkbox } from "./components/ui/checkbox";
-// export { Chip } from "./components/ui/chip";
-// export {
-//     DropdownMenu,
-//     DropdownMenuContent,
-//     DropdownMenuItem,
-//     DropdownMenuTrigger,
-// } from "./components/ui/dropdown-menu";
-// export { Input } from "./components/ui/input";
+//NOTE - Beta
+export {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./components/ui/card";
+export { Checkbox } from "./components/ui/checkbox";
+export { Chip } from "./components/ui/chip";
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
+export { Input } from "./components/ui/input";
 // export { Pagination } from "./components/ui/pagination";
 // export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
 // export { Calendar } from "./components/ui/calendar";
