@@ -14,9 +14,10 @@ const Toaster = ({ ...props }: ToasterProps) => {
       className="toaster group lui-font-bca lg:lui-min-w-[800px]"
       toastOptions={{
         classNames: {
-          toast: "group toast lui-items-start lui-text-sm lui-w-full lui-p-3",
+          toast:
+            "group toast lui-items-start lui-text-sm lui-w-full lui-p-3 lui-gap-3",
           title: "lui-font-bold",
-          actionButton: "!lui-bg-transparent !lui-pr-0 !lui-text-current",
+          actionButton: "!lui-bg-transparent !lui-px-0 !lui-text-current",
           icon: "lui-m-0 lui-min-w-6 lui-min-h-6",
           //NOTE - Variants
           success: "lui-bg-ocean-success-10 lui-text-ocean-success-20",

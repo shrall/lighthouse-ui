@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const alertVariants = cva(
-  "lui-relative lui-w-full lui-flex lui-flex-col lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 [&>svg+div]:lui-translate-y-[-3px] [&>svg]:lui-absolute first:[&>svg]:lui-left-4 [&>svg]:lui-top-4",
+  "lui-relative lui-w-full lui-flex lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 lui-gap-3",
   {
     variants: {
       variant: {
@@ -37,22 +37,26 @@ const Alert = React.forwardRef<
     <div
       ref={ref}
       role="alert"
-      className={cn(
-        alertVariants({ variant }),
-        alertAction ? "[&>svg~*]:lui-px-9" : "[&>svg~*]:lui-pl-9",
-        className,
-      )}
+      className={cn(alertVariants({ variant }), className)}
       {...props}
     >
-      {variant === "success" && <Icon name="check-filled" />}
-      {variant === "danger" && <Icon name="cross-filled" />}
-      {variant === "warning" && <Icon name="exclamation-filled" />}
-      {variant === "info" && <Icon name="info-filled" />}
-      {children}
+      {variant === "success" && (
+        <Icon name="check-filled" className="lui-min-w-6" />
+      )}
+      {variant === "danger" && (
+        <Icon name="cross-filled" className="lui-min-w-6" />
+      )}
+      {variant === "warning" && (
+        <Icon name="exclamation-filled" className="lui-min-w-6" />
+      )}
+      {variant === "info" && (
+        <Icon name="info-filled" className="lui-min-w-6" />
+      )}
+      <div className="lui-flex lui-w-full lui-flex-col">{children}</div>
       {actionType === "close" && alertAction ? (
         <Icon
           name="cross-large-outline"
-          className="lui-right-4 lui-cursor-pointer !lui-px-0"
+          className="lui-min-w-6 lui-cursor-pointer"
           onClick={() => {
             alertAction();
           }}
@@ -61,7 +65,7 @@ const Alert = React.forwardRef<
         alertAction && (
           <Icon
             name="chevron-right-outline"
-            className="lui-right-4 lui-cursor-pointer !lui-px-0"
+            className="lui-min-w-6 lui-cursor-pointer"
             onClick={() => {
               alertAction();
             }}

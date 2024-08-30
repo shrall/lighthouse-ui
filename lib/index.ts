@@ -16,6 +16,7 @@ export {
     CardTitle,
 } from "./components/ui/card";
 export { Checkbox } from "./components/ui/checkbox";
+export { Chip } from "./components/ui/chip";
 export {
     DropdownMenu,
     DropdownMenuContent,
