@@ -1,5 +1,12 @@
 
 
+## [0.1.2](https://github.com/shrall/lighthouse-ui/compare/v0.1.1...v0.1.2) (2024-09-02)
+
+
+### Features
+
+* update danger-20 hex color value to #CD1923 ([06c071f](https://github.com/shrall/lighthouse-ui/commit/06c071f36e034979e2cdb30b81536792c5307710)), closes [#CD1923](https://github.com/shrall/lighthouse-ui/issues/CD1923)
+
 ## 0.1.1 (2024-08-30)
 
 
