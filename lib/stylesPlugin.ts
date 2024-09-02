@@ -46,7 +46,7 @@ const themeConfig = {
                     },
                     danger: {
                         10: '#FFD9D3',
-                        20: '#E25757',
+                        20: '#CD1923',
                     },
                     warning: {
                         10: '#FFE592',
