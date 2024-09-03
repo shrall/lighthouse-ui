@@ -1,5 +1,12 @@
 
 
+## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.5...v0.2.0-beta.6) (2024-09-03)
+
+
+### Bug Fixes
+
+* **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
+
 ## [0.2.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.4...v0.2.0-beta.5) (2024-09-03)
 
 
