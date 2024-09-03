@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const chipVariants = cva(
-  "lui-inline-flex lui-items-center lui-gap-x-[10px] lui-rounded-lg lui-w-fit lui-px-3 lui-text-xs lui-font-semibold lui-transition-colors focus:lui-outline-none lui-leading-3",
+  "lui-inline-flex lui-items-center lui-gap-x-[10px] lui-py-2 lui-rounded-lg lui-w-fit lui-px-3 lui-text-xs lui-font-semibold lui-transition-colors focus:lui-outline-none lui-leading-3 lui-max-w-[316px] lui-break-anywhere",
   {
     variants: {
       variant: {
@@ -19,8 +19,8 @@ const chipVariants = cva(
           "lui-bg-ocean-light-30 lui-text-ocean-dark-20 aria-disabled:lui-bg-ocean-light-40 aria-disabled:lui-text-ocean-dark-10",
       },
       size: {
-        small: "lui-h-6",
-        medium: "lui-h-8",
+        small: "lui-min-h-2",
+        medium: "lui-min-h-4",
       },
     },
     defaultVariants: {
