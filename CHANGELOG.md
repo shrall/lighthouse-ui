@@ -1,3 +1,26 @@
+
+
+## [0.2.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.2.0-beta.3) (2024-09-03)
+
+
+### Bug Fixes
+
+* **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
+* **chip:** small & medium size have the same height ([368cb90](https://github.com/shrall/lighthouse-ui/commit/368cb90cb4ab4e168b66c1c205e79bb35a267b0a))
+
+
+### Styles
+
+* **chip:** update sizing with padding instead of fixed height ([3957173](https://github.com/shrall/lighthouse-ui/commit/395717368dd480e6de8af115429d58a0d79302bd))
+
+## [0.2.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.2.0-beta.3) (2024-08-30)
+
+
+### Features
+
+* beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
+* beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
+
 ## [0.1.4](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.1.4) (2024-09-03)
 
 ### Bug Fixes
