@@ -1,5 +1,17 @@
 
 
+## [0.2.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.4...v0.2.0-beta.5) (2024-09-03)
+
+
+### Features
+
+* **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
+
+
+### Styles
+
+* **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
+
 ## [0.2.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.3...v0.2.0-beta.4) (2024-09-03)
 
 
