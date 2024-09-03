@@ -1,5 +1,12 @@
 
 
+## [0.2.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.3...v0.2.0-beta.4) (2024-09-03)
+
+
+### Bug Fixes
+
+* disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
+
 ## [0.2.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.2.0-beta.3) (2024-09-03)
 
 
