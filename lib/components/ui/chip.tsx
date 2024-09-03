@@ -56,7 +56,7 @@ function Chip({
       aria-disabled={disabled}
       {...props}
     >
-      <p className="lui-truncate">{children}</p>
+      <div className="lui-truncate">{children}</div>
       {removeOnClick && (
         <Icon
           name="cross-large-outline"
