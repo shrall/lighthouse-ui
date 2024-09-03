@@ -87,6 +87,43 @@ function Chips() {
           Inactive
         </Chip>
       </div>
+      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+        <Chip
+          size="small"
+          removeOnClick={() => {
+            console.log("close");
+          }}
+        >
+          Primary
+        </Chip>
+        <Chip
+          size="small"
+          variant="secondary"
+          removeOnClick={() => {
+            console.log("close");
+          }}
+        >
+          Secondary
+        </Chip>
+        <Chip
+          size="small"
+          variant="outline"
+          removeOnClick={() => {
+            console.log("close");
+          }}
+        >
+          Outline
+        </Chip>
+        <Chip
+          size="small"
+          variant="inactive"
+          removeOnClick={() => {
+            console.log("close");
+          }}
+        >
+          Inactive
+        </Chip>
+      </div>
     </div>
   );
 }
