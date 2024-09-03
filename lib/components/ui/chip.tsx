@@ -14,7 +14,7 @@ const chipVariants = cva(
         secondary:
           "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10 aria-disabled:lui-bg-ocean-light-40 aria-disabled:lui-text-ocean-dark-10",
         outline:
-          "lui-border-ocean-primary-10 lui-text-ocean-primary-10 aria-disabled:lui-border-0 aria-disabled:lui-bg-ocean-light-40 aria-disabled:lui-text-ocean-dark-10",
+          "lui-border-ocean-primary-10 lui-text-ocean-primary-10 aria-disabled:lui-bg-ocean-light-40 aria-disabled:lui-text-ocean-dark-10",
         inactive:
           "lui-bg-ocean-light-30 lui-text-ocean-dark-20 aria-disabled:lui-bg-ocean-light-40 aria-disabled:lui-text-ocean-dark-10",
       },
