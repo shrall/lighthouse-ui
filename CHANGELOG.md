@@ -1,5 +1,12 @@
 
 
+## [0.1.3](https://github.com/shrall/lighthouse-ui/compare/v0.1.2...v0.1.3) (2024-09-03)
+
+
+### Styles
+
+* **chip:** update sizing with padding instead of fixed height ([15ab708](https://github.com/shrall/lighthouse-ui/commit/15ab708af0b6d95f9016e6bfed73a5b09a163caa))
+
 ## [0.1.2](https://github.com/shrall/lighthouse-ui/compare/v0.1.1...v0.1.2) (2024-09-02)
 
 
