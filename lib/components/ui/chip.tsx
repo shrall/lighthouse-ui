@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const chipVariants = cva(
-  "lui-inline-flex lui-items-center lui-border lui-gap-x-[10px] lui-rounded-lg lui-w-fit lui-px-3 lui-text-xs lui-font-semibold lui-transition-colors focus:lui-outline-none lui-leading-3 lui-max-w-[316px] lui-break-anywhere",
+  "lui-inline-flex lui-items-center lui-border lui-gap-x-[10px] lui-rounded-lg lui-border-transparent lui-w-fit lui-px-3 lui-text-xs lui-font-semibold lui-transition-colors focus:lui-outline-none lui-leading-3 lui-max-w-[316px]",
   {
     variants: {
       variant: {
@@ -56,7 +56,7 @@ function Chip({
       aria-disabled={disabled}
       {...props}
     >
-      {children}
+      <p className="lui-truncate">{children}</p>
       {removeOnClick && (
         <Icon
           name="cross-large-outline"
