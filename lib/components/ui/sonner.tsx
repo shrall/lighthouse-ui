@@ -1,16 +1,13 @@
-import { useTheme } from "next-themes";
 import { Toaster as Sonner } from "sonner";
 
 import { Icon } from "./icon";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
-const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "light" } = useTheme();
-
+function Toaster({ ...props }: ToasterProps) {
   return (
     <Sonner
-      theme={theme as ToasterProps["theme"]}
+      theme="light"
       className="toaster group lui-font-bca lg:lui-min-w-[800px]"
       toastOptions={{
         classNames: {
@@ -36,6 +33,6 @@ const Toaster = ({ ...props }: ToasterProps) => {
       {...props}
     />
   );
-};
+}
 
 export { Toaster };
