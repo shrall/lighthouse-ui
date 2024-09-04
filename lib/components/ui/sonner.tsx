@@ -1,4 +1,4 @@
-import { Toaster as Sonner } from "sonner";
+import { Toaster as Sonner, toast } from "sonner";
 
 import { Icon } from "./icon";
 
@@ -35,4 +35,4 @@ function Toaster({ ...props }: ToasterProps) {
   );
 }
 
-export { Toaster };
+export { Toaster, toast };

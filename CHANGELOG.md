@@ -38,6 +38,12 @@
 - beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
 - beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
 
+## [0.1.6](https://github.com/shrall/lighthouse-ui/compare/v0.1.5...v0.1.6) (2024-09-04)
+
+### Features
+
+- **toast:** export toast function from sonner ([cbf0581](https://github.com/shrall/lighthouse-ui/commit/cbf0581c88a39ccdf84e260c528476b0bac0989a))
+
 ## [0.1.5](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.1.5) (2024-09-04)
 
 ### Code Refactoring
