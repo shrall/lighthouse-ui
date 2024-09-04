@@ -1,51 +1,48 @@
-
-
 ## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.5...v0.2.0-beta.6) (2024-09-03)
-
 
 ### Bug Fixes
 
-* **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
+- **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
 
 ## [0.2.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.4...v0.2.0-beta.5) (2024-09-03)
 
-
 ### Features
 
-* **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
-
+- **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
 
 ### Styles
 
-* **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
+- **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
 
 ## [0.2.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.3...v0.2.0-beta.4) (2024-09-03)
 
-
 ### Bug Fixes
 
-* disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
+- disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
 
 ## [0.2.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.2.0-beta.3) (2024-09-03)
 
-
 ### Bug Fixes
 
-* **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
-* **chip:** small & medium size have the same height ([368cb90](https://github.com/shrall/lighthouse-ui/commit/368cb90cb4ab4e168b66c1c205e79bb35a267b0a))
-
+- **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
+- **chip:** small & medium size have the same height ([368cb90](https://github.com/shrall/lighthouse-ui/commit/368cb90cb4ab4e168b66c1c205e79bb35a267b0a))
 
 ### Styles
 
-* **chip:** update sizing with padding instead of fixed height ([3957173](https://github.com/shrall/lighthouse-ui/commit/395717368dd480e6de8af115429d58a0d79302bd))
+- **chip:** update sizing with padding instead of fixed height ([3957173](https://github.com/shrall/lighthouse-ui/commit/395717368dd480e6de8af115429d58a0d79302bd))
 
 ## [0.2.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.2.0-beta.3) (2024-08-30)
 
-
 ### Features
 
-* beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
-* beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
+- beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
+- beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
+
+## [0.1.5](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.1.5) (2024-09-04)
+
+### Code Refactoring
+
+- **toast:** convert const declaration to function ([8ae6dd0](https://github.com/shrall/lighthouse-ui/commit/8ae6dd0af3436f8a2a84510e8bfd25074478e1c8))
 
 ## [0.1.4](https://github.com/shrall/lighthouse-ui/compare/v0.1.3...v0.1.4) (2024-09-03)
 
