@@ -10,7 +10,7 @@ export { Badge } from "./components/ui/badge";
 export { Button } from "./components/ui/button";
 export type { IconType } from "./components/ui/icon";
 export { Icon, IconTypeKeys } from "./components/ui/icon";
-export { Toaster } from "./components/ui/sonner";
+export { Toaster, toast } from "./components/ui/sonner";
 export { Tooltip } from "./components/ui/tooltip";
 
 // export {
