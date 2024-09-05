@@ -1,5 +1,12 @@
 
 
+## [0.1.7](https://github.com/shrall/lighthouse-ui/compare/v0.1.6...v0.1.7) (2024-09-05)
+
+
+### Styles
+
+* **toast:** remove white border ([643c2d8](https://github.com/shrall/lighthouse-ui/commit/643c2d8a6e597cf98b9509ff02ba39fe2cd5a062))
+
 ## [0.1.6](https://github.com/shrall/lighthouse-ui/compare/v0.1.5...v0.1.6) (2024-09-04)
 
 
