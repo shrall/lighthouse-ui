@@ -38,6 +38,12 @@
 - beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
 - beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
 
+## [0.1.7](https://github.com/shrall/lighthouse-ui/compare/v0.1.6...v0.1.7) (2024-09-05)
+
+### Styles
+
+- **toast:** remove white border ([643c2d8](https://github.com/shrall/lighthouse-ui/commit/643c2d8a6e597cf98b9509ff02ba39fe2cd5a062))
+
 ## [0.1.6](https://github.com/shrall/lighthouse-ui/compare/v0.1.5...v0.1.6) (2024-09-04)
 
 ### Features
