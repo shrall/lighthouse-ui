@@ -63,7 +63,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        "data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2 lui-z-50 lui-min-w-[8rem] lui-overflow-hidden lui-rounded-md lui-border lui-border-slate-200 lui-bg-white lui-p-1 lui-text-slate-950 lui-shadow-md",
+        "data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2 lui-z-50 lui-min-w-[var(--radix-dropdown-menu-trigger-width)] lui-overflow-hidden lui-rounded-md lui-border lui-border-slate-200 lui-bg-white lui-p-1 lui-text-slate-950 lui-shadow-md",
         className,
       )}
       {...props}
