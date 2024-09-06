@@ -47,7 +47,7 @@ const SelectContent = React.forwardRef<
       position={position}
       {...props}
     >
-      <div className="lui-h-[252px] lui-min-w-[var(--radix-select-trigger-width)] lui-divide-y lui-divide-ocean-light-30 lui-overflow-y-scroll">
+      <div className="lui-h-[268px] lui-min-w-[var(--radix-select-trigger-width)] lui-divide-y lui-divide-ocean-light-30 lui-overflow-y-scroll">
         {children}
       </div>
     </SelectPrimitive.Content>
@@ -120,10 +120,7 @@ const SelectGroup = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Group
     ref={ref}
-    className={cn(
-      "lui-h-[252px] lui-min-w-[var(--radix-select-trigger-width)] lui-divide-y lui-divide-ocean-light-30 lui-overflow-y-scroll",
-      className,
-    )}
+    className={cn("lui-divide-y lui-divide-ocean-light-30", className)}
     {...props}
   />
 ));
