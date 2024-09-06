@@ -92,7 +92,7 @@ const Tooltip = React.forwardRef<
             >
               <div className="lui-hidden lui-flex-col lui-gap-y-6 md:lui-flex">
                 {title && (
-                  <h3 className="lui-break-anywhere lui-max-w-[228px] lui-text-sm lui-font-semibold">
+                  <h3 className="lui-max-w-[228px] lui-text-sm lui-font-semibold lui-break-anywhere">
                     {title}
                   </h3>
                 )}
@@ -105,7 +105,7 @@ const Tooltip = React.forwardRef<
                 {image}
                 <div className="lui-flex lui-max-w-[228px] lui-flex-col lui-gap-y-3">
                   {title && (
-                    <h3 className="lui-break-anywhere lui-text-center lui-text-sm lui-font-semibold">
+                    <h3 className="lui-text-center lui-text-sm lui-font-semibold lui-break-anywhere">
                       {title}
                     </h3>
                   )}

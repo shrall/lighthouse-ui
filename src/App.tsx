@@ -11,6 +11,7 @@ import Inputs from "./pages/Inputs";
 import Paginations from "./pages/Paginations";
 import Checkboxes from "./pages/Checkboxes";
 import Chips from "./pages/Chips";
+import Selects from "./pages/Selects";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Icons />
       <Inputs />
       <Paginations />
+      <Selects />
       <Tables />
       <Toasts />
       <Tooltips />

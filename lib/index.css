@@ -71,3 +71,22 @@
   font-weight: 800;
   font-style: italic;
 }
+
+div::-webkit-scrollbar-button {
+  display: none !important;
+}
+div::-webkit-scrollbar {
+  width: 24px !important;
+}
+div::-webkit-scrollbar-track {
+  background: #ffffff !important;
+  border-radius: 10px !important;
+}
+div::-webkit-scrollbar-thumb {
+  background: #7aaad3 !important;
+  border-radius: 9999px !important;
+  border: 8px solid #fff !important;
+}
+div::-webkit-scrollbar-thumb:hover {
+  background: #7aaad3 !important;
+}

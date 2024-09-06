@@ -44,3 +44,12 @@ export {
     TableHeader,
     TableRow,
 } from "./components/ui/table";
+export {
+    Select,
+    SelectGroup,
+    SelectValue,
+    SelectTrigger,
+    SelectContent,
+    SelectLabel,
+    SelectItem,
+} from "./components/ui/select";
