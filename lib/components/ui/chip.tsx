@@ -34,7 +34,7 @@ export interface ChipProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof chipVariants> {
   disabled?: boolean;
-  removeOnClick?: () => void;
+  removeOnClick?: (e: React.MouseEvent) => void;
 }
 
 function Chip({
