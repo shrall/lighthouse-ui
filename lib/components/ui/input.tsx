@@ -88,18 +88,18 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
           <div
             className={cn(
-              "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10",
+              "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10 has-[svg]:lui-text-ocean-dark-10",
               inputStyle === "default" &&
-                "lui-rounded-lg lui-bg-ocean-light-20 lui-px-3 lui-py-2 lui-text-ocean-dark-30",
+                "lui-rounded-lg lui-bg-ocean-light-20 lui-px-3 lui-py-2",
               inputStyle === "underline" &&
-                "lui-border-b lui-border-ocean-dark-10 lui-pb-1.5 has-[svg]:lui-text-ocean-dark-10",
+                "lui-border-b lui-border-ocean-dark-10 lui-pb-1.5",
               inputStyle === "underline" &&
                 type === "password" &&
                 value &&
                 "lui-text-xl lui-tracking-[10px]",
               inputStyle === "default" &&
                 disabled &&
-                "lui-bg-ocean-light-20 lui-text-ocean-light-40",
+                "lui-bg-ocean-light-20 lui-text-ocean-light-40 has-[svg]:lui-text-ocean-light-40",
               inputStyle === "underline" &&
                 disabled &&
                 "lui-border-ocean-light-40 lui-text-ocean-light-40 has-[svg]:lui-text-ocean-light-40",
@@ -111,11 +111,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <input
               type={type}
               className={cn(
-                "lui-w-full lui-outline-none disabled:placeholder:lui-text-ocean-light-40",
+                "lui-w-full lui-text-ocean-dark-30 lui-outline-none disabled:placeholder:lui-text-ocean-light-40",
                 inputStyle === "default" &&
                   "lui-bg-ocean-light-20 focus:placeholder:lui-text-ocean-light-40",
-                inputStyle === "underline" &&
-                  "lui-h-6 lui-text-ocean-dark-30 disabled:lui-bg-white",
+                inputStyle === "underline" && "lui-h-6 disabled:lui-bg-white",
                 input && input.className,
               )}
               ref={ref}
