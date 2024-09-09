@@ -1,5 +1,24 @@
 
 
+## [0.2.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.11...v0.2.0-beta.12) (2024-09-09)
+
+
+### Features
+
+* **select:** add disabled state ([e7e7a91](https://github.com/shrall/lighthouse-ui/commit/e7e7a91184163a888173a9f3376e0014d376fd7d))
+
+
+### Bug Fixes
+
+* **tooltip:** align offset position incorrect when alignment is not center ([0ad64e7](https://github.com/shrall/lighthouse-ui/commit/0ad64e771a1163a26ebc618bf1a8ca315ca3a242))
+
+
+### Styles
+
+* **chip:** set font weight to regular ([528dd5d](https://github.com/shrall/lighthouse-ui/commit/528dd5d45da4ffb1b53995ed9dde26b56eba8704))
+* **input:** adjust colors for search input's icons & field ([cc88ad4](https://github.com/shrall/lighthouse-ui/commit/cc88ad40e65fd710cb91148962dc64405e415c7a))
+* **pagination:** remove hover and active color change on arrows ([5bd836d](https://github.com/shrall/lighthouse-ui/commit/5bd836de30bb4ad5ae38f847f7dbf640e8623f24))
+
 ## [0.2.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.10...v0.2.0-beta.11) (2024-09-09)
 
 
