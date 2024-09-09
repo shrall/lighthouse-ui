@@ -89,6 +89,7 @@ const Tooltip = React.forwardRef<
                 className,
               )}
               {...props}
+              alignOffset={props.align === "center" ? props.alignOffset : -16}
             >
               <div className="lui-hidden lui-flex-col lui-gap-y-6 md:lui-flex">
                 {title && (
@@ -119,6 +120,7 @@ const Tooltip = React.forwardRef<
               sideOffset={sideOffset}
               className={cn("lui-max-w-[228px]", className)}
               {...props}
+              alignOffset={props.align === "center" ? props.alignOffset : -16}
             >
               {title && (
                 <h3 className="lui-mb-2 lui-text-sm lui-font-semibold">
