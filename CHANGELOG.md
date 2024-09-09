@@ -1,5 +1,13 @@
 
 
+## [0.2.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.10...v0.2.0-beta.11) (2024-09-09)
+
+
+### Features
+
+* **multi-select:** add label, helper text & error message ([1bae28f](https://github.com/shrall/lighthouse-ui/commit/1bae28f0147c9b41583fe17f9028682bdcc3e5d8))
+* **select:** add label, helper text & error message ([6a6d53c](https://github.com/shrall/lighthouse-ui/commit/6a6d53c576dc245e028e9d7015d5386939e3e393))
+
 ## [0.2.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-09)
 
 
