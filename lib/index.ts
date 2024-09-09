@@ -44,12 +44,6 @@ export {
     TableHeader,
     TableRow,
 } from "./components/ui/table";
-export {
-    Select,
-    SelectGroup,
-    SelectValue,
-    SelectTrigger,
-    SelectContent,
-    SelectLabel,
-    SelectItem,
-} from "./components/ui/select";
+export { Select } from "./components/ui/select";
+export { MultiSelect } from "./components/ui/multi-select";
+export { Textarea } from "./components/ui/textarea";
