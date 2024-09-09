@@ -1,5 +1,17 @@
 
 
+## [0.2.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.12...v0.2.0-beta.13) (2024-09-09)
+
+
+### Features
+
+* **pagination:** close go to page popover when go button is clicked ([007c5c4](https://github.com/shrall/lighthouse-ui/commit/007c5c4de537851d245a0b332a55fb1edc15fc67))
+
+
+### Bug Fixes
+
+* **chip:** x icon gets smaller when text gets longer ([48400dc](https://github.com/shrall/lighthouse-ui/commit/48400dc7d3227069f6a1d9cb4f6dd3a0531d2e79))
+
 ## [0.2.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.11...v0.2.0-beta.12) (2024-09-09)
 
 
