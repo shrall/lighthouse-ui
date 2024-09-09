@@ -33,6 +33,12 @@ interface MultiSelectProps
   asChild?: boolean;
   className?: string;
   showSelectAll?: boolean;
+  container?: { className?: string };
+  errorMessage?: string;
+  helperText?: string;
+  alignment?: "vertical" | "horizontal";
+  label?: string;
+  tooltip?: React.ReactNode;
 }
 
 export const MultiSelect = React.forwardRef<
@@ -50,6 +56,12 @@ export const MultiSelect = React.forwardRef<
       asChild = false,
       className,
       showSelectAll = true,
+      container,
+      errorMessage,
+      helperText,
+      alignment = "vertical",
+      label,
+      tooltip,
       ...props
     },
     ref,
@@ -88,163 +100,204 @@ export const MultiSelect = React.forwardRef<
     };
 
     return (
-      <Popover
-        open={isPopoverOpen}
-        onOpenChange={setIsPopoverOpen}
-        modal={modalPopover}
+      <div
+        className={cn(
+          "lui-flex lui-w-full lui-items-start",
+          alignment === "vertical" && "lui-flex-col lui-gap-y-2",
+          alignment === "horizontal" && "lui-flex-row lui-gap-x-6",
+          container && container.className,
+        )}
       >
-        <PopoverTrigger
-          asChild
-          onClick={(e) => {
-            e.preventDefault();
-            if (inputRef.current) {
-              inputRef.current.focus();
-            }
-            setIsPopoverOpen(true);
-          }}
-        >
-          <button
-            ref={ref}
-            {...props}
+        {label && (
+          <div
             className={cn(
-              "lui-group lui-flex lui-w-full lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
-              className,
+              "lui-flex lui-items-start lui-gap-x-2",
+              alignment === "horizontal" &&
+                "lui-min-w-[156px] lui-max-w-[156px]",
             )}
           >
-            {selectedValues.length > 0 ? (
-              <div className="lui-flex lui-w-full lui-items-center lui-justify-between">
-                <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
-                  <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
-                    {selectedValues.slice(0, maxCount).map((value) => {
-                      const option = options.find((o) => o.value === value);
-                      return (
-                        <Chip
-                          key={value}
-                          removeOnClick={(e) => {
-                            e.stopPropagation();
-                            toggleOption(value);
-                          }}
-                          variant="secondary"
-                          size="small"
-                        >
-                          {option?.label}
-                        </Chip>
-                      );
-                    })}
-                    {selectedValues.length > maxCount && (
-                      <Chip
-                        variant="inactive"
-                        size="small"
-                        className="lui-border lui-border-ocean-dark-20"
-                      >
-                        {`${selectedValues.length - maxCount} more`}
-                      </Chip>
-                    )}
-                  </div>
-                  <input
-                    type="text"
-                    placeholder={placeholder}
-                    value={inputFilter}
-                    onChange={(e) => {
-                      setInputFilter(e.target.value);
-                    }}
-                    className="focus:lui-outline-none"
-                    ref={inputRef}
-                  />
-                </div>
-                <Icon
-                  name="chevron-down-outline"
-                  className="lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
-                />
-              </div>
-            ) : (
-              <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
-                <input
-                  type="text"
-                  placeholder={placeholder}
-                  value={inputFilter}
-                  onChange={(e) => {
-                    setInputFilter(e.target.value);
-                  }}
-                  className="lui-h-full lui-w-full focus:lui-outline-none"
-                  ref={inputRef}
-                />
-                <Icon
-                  name="chevron-down-outline"
-                  className="lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
-                />
-              </div>
-            )}
-          </button>
-        </PopoverTrigger>
-        <PopoverContent
-          className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
-          align="start"
-          onEscapeKeyDown={() => setIsPopoverOpen(false)}
-          onOpenAutoFocus={(e) => e.preventDefault()}
-        >
-          <Command>
-            <CommandList className="lui-max-h-[282px]">
-              <CommandEmpty>No results found.</CommandEmpty>
-              <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                {showSelectAll && (
-                  <CommandItem
-                    key="all"
-                    onSelect={toggleAll}
-                    className={cn(
-                      "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                      selectedValues.length === options.length &&
-                        "!lui-bg-ocean-secondary-10",
-                    )}
-                  >
-                    <Checkbox
-                      checked={
-                        selectedValues.length === options.length
-                          ? true
-                          : selectedValues.length === 0
-                            ? false
-                            : "indeterminate"
-                      }
-                    />
-                    <span>(Select All)</span>
-                  </CommandItem>
+            <label
+              htmlFor={props.name}
+              className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
+            >
+              {label}
+            </label>
+            {tooltip && tooltip}
+          </div>
+        )}
+        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
+          <Popover
+            open={isPopoverOpen}
+            onOpenChange={setIsPopoverOpen}
+            modal={modalPopover}
+          >
+            <PopoverTrigger
+              asChild
+              onClick={(e) => {
+                e.preventDefault();
+                if (inputRef.current) {
+                  inputRef.current.focus();
+                }
+                setIsPopoverOpen(true);
+              }}
+            >
+              <button
+                ref={ref}
+                {...props}
+                className={cn(
+                  "lui-group lui-flex lui-w-full lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
+                  className,
                 )}
-                {options
-                  .filter((option) =>
-                    option.label
-                      .toLowerCase()
-                      .includes(inputFilter.toLowerCase()),
-                  )
-                  .map((option) => {
-                    const isSelected = selectedValues.includes(option.value);
-                    return (
+              >
+                {selectedValues.length > 0 ? (
+                  <div className="lui-flex lui-w-full lui-items-center lui-justify-between">
+                    <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
+                      <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
+                        {selectedValues.slice(0, maxCount).map((value) => {
+                          const option = options.find((o) => o.value === value);
+                          return (
+                            <Chip
+                              key={value}
+                              removeOnClick={(e) => {
+                                e.stopPropagation();
+                                toggleOption(value);
+                              }}
+                              variant="secondary"
+                              size="small"
+                            >
+                              {option?.label}
+                            </Chip>
+                          );
+                        })}
+                        {selectedValues.length > maxCount && (
+                          <Chip
+                            variant="inactive"
+                            size="small"
+                            className="lui-border lui-border-ocean-dark-20"
+                          >
+                            {`${selectedValues.length - maxCount} more`}
+                          </Chip>
+                        )}
+                      </div>
+                      <input
+                        type="text"
+                        placeholder={placeholder}
+                        value={inputFilter}
+                        onChange={(e) => {
+                          setInputFilter(e.target.value);
+                        }}
+                        className="focus:lui-outline-none"
+                        ref={inputRef}
+                      />
+                    </div>
+                    <Icon
+                      name="chevron-down-outline"
+                      className="lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
+                    />
+                  </div>
+                ) : (
+                  <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
+                    <input
+                      type="text"
+                      placeholder={placeholder}
+                      value={inputFilter}
+                      onChange={(e) => {
+                        setInputFilter(e.target.value);
+                      }}
+                      className="lui-h-full lui-w-full focus:lui-outline-none"
+                      ref={inputRef}
+                    />
+                    <Icon
+                      name="chevron-down-outline"
+                      className="lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
+                    />
+                  </div>
+                )}
+              </button>
+            </PopoverTrigger>
+            <PopoverContent
+              className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
+              align="start"
+              onEscapeKeyDown={() => setIsPopoverOpen(false)}
+              onOpenAutoFocus={(e) => e.preventDefault()}
+            >
+              <Command>
+                <CommandList className="lui-max-h-[282px]">
+                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
+                    {showSelectAll && (
                       <CommandItem
-                        key={option.value}
-                        onSelect={() => toggleOption(option.value)}
+                        key="all"
+                        onSelect={toggleAll}
                         className={cn(
                           "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                          isSelected && "!lui-bg-ocean-secondary-10",
+                          selectedValues.length === options.length &&
+                            "!lui-bg-ocean-secondary-10",
                         )}
                       >
-                        <Checkbox checked={isSelected ? true : false} />
-                        <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
-                          <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
-                            {option.label}
-                          </span>
-                          {option.description && (
-                            <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
-                              {option.description}
-                            </p>
-                          )}
-                        </div>
+                        <Checkbox
+                          checked={
+                            selectedValues.length === options.length
+                              ? true
+                              : selectedValues.length === 0
+                                ? false
+                                : "indeterminate"
+                          }
+                        />
+                        <span>(Select All)</span>
                       </CommandItem>
-                    );
-                  })}
-              </CommandGroup>
-            </CommandList>
-          </Command>
-        </PopoverContent>
-      </Popover>
+                    )}
+                    {options
+                      .filter((option) =>
+                        option.label
+                          .toLowerCase()
+                          .includes(inputFilter.toLowerCase()),
+                      )
+                      .map((option) => {
+                        const isSelected = selectedValues.includes(
+                          option.value,
+                        );
+                        return (
+                          <CommandItem
+                            key={option.value}
+                            onSelect={() => toggleOption(option.value)}
+                            className={cn(
+                              "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                              isSelected && "!lui-bg-ocean-secondary-10",
+                            )}
+                          >
+                            <Checkbox checked={isSelected ? true : false} />
+                            <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
+                              <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
+                                {option.label}
+                              </span>
+                              {option.description && (
+                                <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
+                                  {option.description}
+                                </p>
+                              )}
+                            </div>
+                          </CommandItem>
+                        );
+                      })}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
+          {(errorMessage || helperText) && (
+            <span
+              className={cn(
+                "lui-text-xs lui-text-ocean-dark-10",
+                props.disabled && "lui-text-ocean-light-40",
+                errorMessage && "lui-text-ocean-danger-20",
+              )}
+            >
+              {errorMessage ? errorMessage : helperText}
+            </span>
+          )}
+        </div>
+      </div>
     );
   },
 );

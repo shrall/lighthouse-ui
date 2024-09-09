@@ -1,5 +1,7 @@
 import { MultiSelect } from "@/components/ui/multi-select";
 import { Select } from "@/components/ui/select";
+import { Icon } from "@/components/ui/icon";
+import { Tooltip } from "@/components/ui/tooltip";
 
 import { useState } from "react";
 
@@ -57,12 +59,73 @@ function Selects() {
           alignment="horizontal"
           errorMessage="This is an error message"
         />
+        <Select
+          options={frameworksList}
+          value={selectedValue}
+          onValueChange={setSelectedValue}
+          placeholder="Select framework"
+          label="Label w/Tooltip"
+          tooltip={
+            <Tooltip
+              trigger={
+                <Icon
+                  name="question-filled"
+                  className="lui-text-ocean-primary-10"
+                />
+              }
+              side="top"
+              title="Tooltip Title"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </Tooltip>
+          }
+        />
         <MultiSelect
           options={frameworksList}
           onValueChange={setSelectedValues}
           defaultValue={selectedValues}
           placeholder="Select frameworks"
           maxCount={4}
+          label="Framework"
+          helperText="Select your favorite framework"
+        />
+        <MultiSelect
+          options={frameworksList}
+          onValueChange={setSelectedValues}
+          defaultValue={selectedValues}
+          placeholder="Select frameworks"
+          maxCount={4}
+          label="Framework"
+          alignment="horizontal"
+          errorMessage="This is an error message"
+        />
+        <MultiSelect
+          options={frameworksList}
+          onValueChange={setSelectedValues}
+          defaultValue={selectedValues}
+          placeholder="Select frameworks"
+          maxCount={4}
+          label="Label w/Tooltip"
+          tooltip={
+            <Tooltip
+              trigger={
+                <Icon
+                  name="question-filled"
+                  className="lui-text-ocean-primary-10"
+                />
+              }
+              side="top"
+              title="Tooltip Title"
+            >
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </Tooltip>
+          }
         />
       </div>
     </div>
