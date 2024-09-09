@@ -127,6 +127,25 @@ function Selects() {
             </Tooltip>
           }
         />
+        <Select
+          options={frameworksList}
+          value={selectedValue}
+          onValueChange={setSelectedValue}
+          placeholder="Select framework"
+          label="Framework"
+          helperText="Select your favorite framework"
+          disabled
+        />
+        <MultiSelect
+          options={frameworksList}
+          onValueChange={setSelectedValues}
+          defaultValue={selectedValues}
+          placeholder="Select frameworks"
+          maxCount={4}
+          label="Framework"
+          helperText="Select your favorite framework"
+          disabled
+        />
       </div>
     </div>
   );

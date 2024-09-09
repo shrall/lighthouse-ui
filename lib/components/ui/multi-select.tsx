@@ -186,13 +186,17 @@ export const MultiSelect = React.forwardRef<
                         onChange={(e) => {
                           setInputFilter(e.target.value);
                         }}
-                        className="focus:lui-outline-none"
+                        className="focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                         ref={inputRef}
+                        disabled={props.disabled}
                       />
                     </div>
                     <Icon
                       name="chevron-down-outline"
-                      className="lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
+                      className={cn(
+                        "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                        props.disabled && "lui-text-ocean-light-40",
+                      )}
                     />
                   </div>
                 ) : (
@@ -204,12 +208,16 @@ export const MultiSelect = React.forwardRef<
                       onChange={(e) => {
                         setInputFilter(e.target.value);
                       }}
-                      className="lui-h-full lui-w-full focus:lui-outline-none"
+                      className="lui-h-full lui-w-full focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                       ref={inputRef}
+                      disabled={props.disabled}
                     />
                     <Icon
                       name="chevron-down-outline"
-                      className="lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10"
+                      className={cn(
+                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                        props.disabled && "lui-text-ocean-light-40",
+                      )}
                     />
                   </div>
                 )}
