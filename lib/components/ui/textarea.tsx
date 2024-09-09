@@ -53,9 +53,9 @@ type AutosizeTextAreaProps = {
   helperText?: string;
   alignment?: "vertical" | "horizontal";
   label?: string;
+  tooltip?: React.ReactNode;
   maxHeight?: number;
   minHeight?: number;
-  tooltip?: React.ReactNode;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = React.forwardRef<
@@ -127,34 +127,36 @@ export const Textarea = React.forwardRef<
             {tooltip && tooltip}
           </div>
         )}
-        <textarea
-          {...props}
-          value={value}
-          ref={textAreaRef}
-          className={cn(
-            "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
-            "lui-border-b lui-border-ocean-dark-10 focus:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-40",
-            "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
-            "focus-visible:lui-outline-none",
-            className,
-          )}
-          onChange={(e) => {
-            setTriggerAutoSize(e.target.value);
-            onChange?.(e);
-          }}
-          disabled={disabled}
-        />
-        {(errorMessage || helperText) && (
-          <span
+        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
+          <textarea
+            {...props}
+            value={value}
+            ref={textAreaRef}
             className={cn(
-              "lui-text-xs lui-text-ocean-dark-10",
-              disabled && "lui-text-ocean-light-40",
-              errorMessage && "lui-text-ocean-danger-20",
+              "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
+              "lui-border-b lui-border-ocean-dark-10 focus:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-40",
+              "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
+              "focus-visible:lui-outline-none",
+              className,
             )}
-          >
-            {errorMessage ? errorMessage : helperText}
-          </span>
-        )}
+            onChange={(e) => {
+              setTriggerAutoSize(e.target.value);
+              onChange?.(e);
+            }}
+            disabled={disabled}
+          />
+          {(errorMessage || helperText) && (
+            <span
+              className={cn(
+                "lui-text-xs lui-text-ocean-dark-10",
+                disabled && "lui-text-ocean-light-40",
+                errorMessage && "lui-text-ocean-danger-20",
+              )}
+            >
+              {errorMessage ? errorMessage : helperText}
+            </span>
+          )}
+        </div>
       </div>
     );
   },

@@ -78,14 +78,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           >
             <label
               htmlFor={props.name}
-              className="lui-break-anywhere lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10"
+              className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
             >
               {label}
             </label>
             {tooltip && tooltip}
           </div>
         )}
-        <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
+        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
           <div
             className={cn(
               "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10",

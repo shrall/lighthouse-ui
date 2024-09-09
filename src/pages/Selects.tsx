@@ -45,6 +45,17 @@ function Selects() {
           value={selectedValue}
           onValueChange={setSelectedValue}
           placeholder="Select framework"
+          label="Framework"
+          helperText="Select your favorite framework"
+        />
+        <Select
+          options={frameworksList}
+          value={selectedValue}
+          onValueChange={setSelectedValue}
+          placeholder="Select framework"
+          label="Framework"
+          alignment="horizontal"
+          errorMessage="This is an error message"
         />
         <MultiSelect
           options={frameworksList}
