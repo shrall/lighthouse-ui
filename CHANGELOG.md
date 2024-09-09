@@ -1,3 +1,83 @@
+
+
+## [0.2.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-09)
+
+
+### Features
+
+* add multi option select ([032f630](https://github.com/shrall/lighthouse-ui/commit/032f630629ec2bb436538c387f81d9e3bbc65b0c))
+* add single option select ([33d7d7d](https://github.com/shrall/lighthouse-ui/commit/33d7d7de9af4be90c58a8e670c2b431ab0e9dfb1))
+* add textarea ([e4a31ac](https://github.com/shrall/lighthouse-ui/commit/e4a31ac2fcea67bbf373b39242c84f663e1bddda))
+* **select:** add search input on selects ([38c55ad](https://github.com/shrall/lighthouse-ui/commit/38c55ad29a27241084686c625e841e2c87b1fce3))
+
+
+### Styles
+
+* **pagination:** set show items dropdown width to follow trigger ([06ac0fe](https://github.com/shrall/lighthouse-ui/commit/06ac0fea5007563043f81849e72d677b60dae6a0))
+* **select:** update content height ([e2552b1](https://github.com/shrall/lighthouse-ui/commit/e2552b1bfab144d4702c0638118f29300d0b9df7))
+
+## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
+
+
+### Bug Fixes
+
+* **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
+
+## [0.2.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
+
+
+### Features
+
+* **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
+
+
+### Styles
+
+* **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
+
+## [0.2.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
+
+
+### Bug Fixes
+
+* disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
+
+## [0.2.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
+
+
+### Bug Fixes
+
+* **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
+
+## [0.2.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-08-30)
+
+
+### Features
+
+* beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
+* beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
+
+## [0.1.7](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-05)
+
+
+### Styles
+
+* **toast:** remove white border ([643c2d8](https://github.com/shrall/lighthouse-ui/commit/643c2d8a6e597cf98b9509ff02ba39fe2cd5a062))
+
+## [0.1.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-04)
+
+
+### Features
+
+* **toast:** export toast function from sonner ([cbf0581](https://github.com/shrall/lighthouse-ui/commit/cbf0581c88a39ccdf84e260c528476b0bac0989a))
+
+## [0.1.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-04)
+
+
+### Code Refactoring
+
+* **toast:** convert const declaration to function ([8ae6dd0](https://github.com/shrall/lighthouse-ui/commit/8ae6dd0af3436f8a2a84510e8bfd25074478e1c8))
+
 ## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.5...v0.2.0-beta.6) (2024-09-03)
 
 ### Bug Fixes
