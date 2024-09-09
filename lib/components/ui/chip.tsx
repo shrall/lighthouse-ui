@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./icon";
 
 const chipVariants = cva(
-  "lui-inline-flex lui-items-center lui-border lui-gap-x-[10px] lui-rounded-lg lui-border-transparent lui-w-fit lui-px-3 lui-text-xs lui-font-semibold lui-transition-colors focus:lui-outline-none lui-max-w-[316px]",
+  "lui-inline-flex lui-items-center lui-border lui-gap-x-[10px] lui-rounded-lg lui-border-transparent lui-w-fit lui-px-3 lui-text-xs lui-transition-colors focus:lui-outline-none lui-max-w-[316px]",
   {
     variants: {
       variant: {
