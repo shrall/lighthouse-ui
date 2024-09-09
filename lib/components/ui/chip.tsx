@@ -62,7 +62,7 @@ function Chip({
           name="cross-large-outline"
           size={16}
           onClick={removeOnClick}
-          className="lui-cursor-pointer"
+          className="lui-min-h-4 lui-min-w-4 lui-cursor-pointer"
         />
       )}
     </div>
