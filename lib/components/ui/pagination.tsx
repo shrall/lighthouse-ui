@@ -57,6 +57,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     },
     ref,
   ) => {
+    const [showGoToPage, setShowGoToPage] = React.useState(false);
     React.useEffect(() => {
       setPageNumber(1);
     }, [pageSize]);
@@ -140,7 +141,10 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                 >
                   <Icon name="chevron-left-outline" />
                 </Button>
-                <DropdownMenu>
+                <DropdownMenu
+                  open={showGoToPage}
+                  onOpenChange={setShowGoToPage}
+                >
                   <DropdownMenuTrigger className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-px-3 lui-py-2 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
                     {pageNumber}/{totalPage}
                   </DropdownMenuTrigger>
@@ -165,12 +169,13 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                     </div>
                     <Button
                       className="lui-min-w-0"
-                      onClick={() =>
+                      onClick={() => {
                         searchPageNumber !== undefined &&
-                        searchPageNumber >= 1 &&
-                        searchPageNumber <= totalPage &&
-                        setPageNumber(searchPageNumber)
-                      }
+                          searchPageNumber >= 1 &&
+                          searchPageNumber <= totalPage &&
+                          setPageNumber(searchPageNumber);
+                        setShowGoToPage(false);
+                      }}
                       disabled={
                         searchPageNumber === undefined ||
                         searchPageNumber < 1 ||
