@@ -80,3 +80,105 @@ export const columns: ColumnDef<Payment>[] = [
     header: "Amount",
   },
 ];
+
+export const mobileColumns: ColumnDef<Payment>[] = [
+  {
+    id: "select",
+    header: ({ table }) => (
+      <Checkbox
+        checked={
+          table.getIsAllPageRowsSelected() ||
+          (table.getIsSomePageRowsSelected() && "indeterminate")
+        }
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    accessorKey: "user_id",
+    header: "Select All",
+    cell: ({ row }) => {
+      const data = row.original;
+      return (
+        <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-2 lui-text-xs">
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              Status
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.status}
+            </div>
+          </div>
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              E-Mail
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.email}
+            </div>
+          </div>
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              Amount
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.amount}
+            </div>
+            <div className="lui-text-ocean-dark-10">USD</div>
+          </div>
+        </div>
+      );
+    },
+  },
+];
+
+export const mobileColumnsWithoutCheckbox: ColumnDef<Payment>[] = [
+  {
+    accessorKey: "user_id",
+    header: () => {
+      return null;
+    },
+    cell: ({ row }) => {
+      const data = row.original;
+      return (
+        <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-2 lui-text-xs">
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              Status
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.status}
+            </div>
+          </div>
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              E-Mail
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.email}
+            </div>
+          </div>
+          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+            <div className="lui-font-semibold lui-text-ocean-primary-20">
+              Amount
+            </div>
+            <div className="lui-font-semibold lui-text-ocean-dark-30">
+              {data.amount}
+            </div>
+            <div className="lui-text-ocean-dark-10">USD</div>
+          </div>
+        </div>
+      );
+    },
+  },
+];

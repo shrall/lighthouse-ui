@@ -1,6 +1,11 @@
 import { DataTable } from "@/components/ui/data-table";
-import { columns, Payment } from "./columns";
-import { useEffect, useState } from "react";
+import {
+  columns,
+  mobileColumns,
+  mobileColumnsWithoutCheckbox,
+  Payment,
+} from "./columns";
+import { useState } from "react";
 import { SortingState } from "@tanstack/react-table";
 import { TableCell } from "@/components/ui/table";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -35,14 +40,6 @@ const data: Payment[] = [
 function Tables() {
   const [rowSelection, setRowSelection] = useState({});
   const [sorting, setSorting] = useState<SortingState>([]);
-
-  useEffect(() => {
-    console.log("select", rowSelection);
-  }, [rowSelection]);
-
-  useEffect(() => {
-    console.log("sort", sorting);
-  }, [sorting]);
 
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
@@ -107,6 +104,120 @@ function Tables() {
           setRowSelection={setRowSelection}
           sorting={sorting}
           setSorting={setSorting}
+        />
+      </div>
+      <div className="lui-grid lui-grid-cols-1 lui-gap-2 lui-text-center md:lui-grid-cols-3">
+        <DataTable
+          columns={mobileColumns}
+          data={data}
+          isLoading={true}
+          loadingRow={
+            <>
+              <TableCell>
+                <Skeleton className="lui-size-4" />
+              </TableCell>
+              <TableCell>
+                <Skeleton className="lui-h-4" />
+                <Skeleton className="lui-h-4" />
+                <Skeleton className="lui-h-4" />
+              </TableCell>
+            </>
+          }
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+        />
+        <DataTable
+          columns={mobileColumns}
+          data={data}
+          isError={true}
+          errorRow={
+            <TableCell
+              colSpan={columns.length}
+              className="lui-h-36 lui-gap-2 lui-text-center"
+            >
+              <div className="lui-flex lui-flex-col">
+                <span>Failed to Load Data</span>
+                <span
+                  onClick={() => {
+                    console.log("reload");
+                  }}
+                  className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
+                >
+                  Reload
+                </span>
+              </div>
+            </TableCell>
+          }
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+        />
+        <DataTable
+          columns={mobileColumns}
+          data={data}
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+        />
+      </div>
+      <div className="lui-grid lui-grid-cols-1 lui-gap-2 lui-text-center md:lui-grid-cols-3">
+        <DataTable
+          columns={mobileColumnsWithoutCheckbox}
+          data={data}
+          isLoading={true}
+          loadingRow={
+            <TableCell>
+              <Skeleton className="lui-h-4" />
+              <Skeleton className="lui-h-4" />
+              <Skeleton className="lui-h-4" />
+            </TableCell>
+          }
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+          hideHeaderOnMobile
+        />
+        <DataTable
+          columns={mobileColumnsWithoutCheckbox}
+          data={data}
+          isError={true}
+          errorRow={
+            <TableCell
+              colSpan={columns.length}
+              className="lui-h-36 lui-gap-2 lui-text-center"
+            >
+              <div className="lui-flex lui-flex-col">
+                <span>Failed to Load Data</span>
+                <span
+                  onClick={() => {
+                    console.log("reload");
+                  }}
+                  className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
+                >
+                  Reload
+                </span>
+              </div>
+            </TableCell>
+          }
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+          hideHeaderOnMobile
+        />
+        <DataTable
+          columns={mobileColumnsWithoutCheckbox}
+          data={data}
+          rowSelection={rowSelection}
+          setRowSelection={setRowSelection}
+          sorting={sorting}
+          setSorting={setSorting}
+          hideHeaderOnMobile
         />
       </div>
     </div>

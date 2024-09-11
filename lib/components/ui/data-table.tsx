@@ -32,6 +32,7 @@ interface DataTableProps<TData, TValue> {
   setRowSelection?: Dispatch<SetStateAction<Record<number, boolean>>>;
   sorting?: SortingState;
   setSorting?: Dispatch<SetStateAction<SortingState>>;
+  hideHeaderOnMobile?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -46,6 +47,7 @@ export function DataTable<TData, TValue>({
   setRowSelection,
   sorting,
   setSorting,
+  hideHeaderOnMobile = false,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
   const [defaultsorting, setDefaultSorting] = useState<SortingState>([]);
@@ -68,10 +70,16 @@ export function DataTable<TData, TValue>({
   return (
     <div className={cn("lui-rounded-md lui-border", className)}>
       <Table>
-        <TableHeader>
+        <TableHeader
+          className={cn(
+            hideHeaderOnMobile && "lui-hidden md:lui-table-header-group",
+          )}
+        >
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
+                console.log("head", header);
+                console.log("log", header.column.getCanHide());
                 return (
                   <TableHead key={header.id}>
                     {header.isPlaceholder
