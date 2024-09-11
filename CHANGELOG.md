@@ -1,5 +1,12 @@
 
 
+## [0.2.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.13...v0.2.0-beta.14) (2024-09-11)
+
+
+### Features
+
+* **table:** added compatibility for mobile styling ([f11ad8e](https://github.com/shrall/lighthouse-ui/commit/f11ad8e4bcce79cff41058ebde466ff11e35a527))
+
 ## [0.2.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.12...v0.2.0-beta.13) (2024-09-09)
 
 
