@@ -5,7 +5,7 @@ export { default as stylesPlugin } from './stylesPlugin';
 
 //NOTE - Components
 //NOTE - v0.1.0
-export { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
+export { Alert } from "./components/ui/alert";
 export { Badge } from "./components/ui/badge";
 export { Button } from "./components/ui/button";
 export type { IconType } from "./components/ui/icon";

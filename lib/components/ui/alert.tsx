@@ -26,12 +26,22 @@ const Alert = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof alertVariants> & {
+      description?: string;
       actionType?: "close";
       alertAction?: () => void;
     }
 >(
   (
-    { className, variant, children, actionType, alertAction, ...props },
+    {
+      className,
+      variant,
+      children,
+      actionType,
+      alertAction,
+      title,
+      description,
+      ...props
+    },
     ref,
   ) => (
     <div
@@ -52,7 +62,10 @@ const Alert = React.forwardRef<
       {variant === "info" && (
         <Icon name="info-filled" className="lui-min-w-6" />
       )}
-      <div className="lui-flex lui-w-full lui-flex-col">{children}</div>
+      <div className="lui-flex lui-w-full lui-flex-col">
+        <AlertTitle>{title}</AlertTitle>
+        {description && <AlertDescription>{description}</AlertDescription>}
+      </div>
       {actionType === "close" && alertAction ? (
         <Icon
           name="cross-large-outline"
@@ -101,4 +114,4 @@ const AlertDescription = React.forwardRef<
 ));
 AlertDescription.displayName = "AlertDescription";
 
-export { Alert, AlertDescription, AlertTitle };
+export { Alert };
