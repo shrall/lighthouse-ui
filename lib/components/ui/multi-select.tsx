@@ -39,6 +39,13 @@ interface MultiSelectProps
   alignment?: "vertical" | "horizontal";
   label?: string;
   tooltip?: React.ReactNode;
+  isLoading?: boolean;
+  isError?: boolean;
+  refetch?: () => void;
+  infiniteScroll?: {
+    fetchMore: () => void;
+    hasMore: boolean;
+  };
 }
 
 export const MultiSelect = React.forwardRef<
@@ -62,6 +69,10 @@ export const MultiSelect = React.forwardRef<
       alignment = "vertical",
       label,
       tooltip,
+      isLoading,
+      isError,
+      refetch = () => {},
+      infiniteScroll,
       ...props
     },
     ref,
@@ -98,6 +109,30 @@ export const MultiSelect = React.forwardRef<
         onValueChange(allValues);
       }
     };
+
+    //NOTE - Infinite Scroll
+    const observer = React.useRef<IntersectionObserver>();
+
+    const observerRef = React.useCallback(
+      (element: HTMLElement | null) => {
+        // When isLoading is true, this callback will do nothing.
+        // It means that the next function will never be called.
+        // It is safe because the intersection observer has disconnected the previous element.
+        if (isLoading) return;
+
+        if (observer.current) observer.current.disconnect();
+        if (!element) return;
+
+        // Create a new IntersectionObserver instance because hasMore or next may be changed.
+        observer.current = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting && infiniteScroll?.hasMore) {
+            infiniteScroll.fetchMore();
+          }
+        });
+        observer.current.observe(element);
+      },
+      [isLoading, infiniteScroll?.hasMore, infiniteScroll?.fetchMore],
+    );
 
     return (
       <div
@@ -291,6 +326,30 @@ export const MultiSelect = React.forwardRef<
                         );
                       })}
                   </CommandGroup>
+                  {(isLoading || infiniteScroll?.hasMore) && (
+                    <div
+                      ref={infiniteScroll?.hasMore ? observerRef : null}
+                      className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
+                    >
+                      <Icon
+                        name="loading-filled"
+                        className="lui-animate-spin lui-text-ocean-secondary-30"
+                      />
+                    </div>
+                  )}
+                  {isError && (
+                    <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
+                      <div>Failed to Load Data</div>
+                      <div
+                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-underline"
+                        onClick={() => {
+                          refetch();
+                        }}
+                      >
+                        Reload Data
+                      </div>
+                    </div>
+                  )}
                 </CommandList>
               </Command>
             </PopoverContent>

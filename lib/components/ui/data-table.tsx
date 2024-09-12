@@ -78,8 +78,6 @@ export function DataTable<TData, TValue>({
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
-                console.log("head", header);
-                console.log("log", header.column.getCanHide());
                 return (
                   <TableHead key={header.id}>
                     {header.isPlaceholder

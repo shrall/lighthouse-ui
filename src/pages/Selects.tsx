@@ -5,36 +5,35 @@ import { Tooltip } from "@/components/ui/tooltip";
 
 import { useState } from "react";
 
-const frameworksList = [
-  {
-    value: "react",
-    label: "React",
-    description: "A JavaScript library for building user interfaces",
-  },
-  {
-    value: "angular",
-    label: "Angular",
-    description:
-      "A platform and framework for building single-page client applications using HTML and TypeScript",
-  },
-  {
-    value: "vue",
-    label: "Vue",
-    description: "A progressive framework for building user interfaces",
-  },
-  {
-    value: "svelte",
-    label: "Svelte",
-    description: "A new way to build web applications",
-  },
-  {
-    value: "ember",
-    label: "Ember",
-    description: "A framework for ambitious web developers",
-  },
-];
-
 function Selects() {
+  const [frameworksList, setFrameworksList] = useState([
+    {
+      value: "react",
+      label: "React",
+      description: "A JavaScript library for building user interfaces",
+    },
+    {
+      value: "angular",
+      label: "Angular",
+      description:
+        "A platform and framework for building single-page client applications using HTML and TypeScript",
+    },
+    {
+      value: "vue",
+      label: "Vue",
+      description: "A progressive framework for building user interfaces",
+    },
+    {
+      value: "svelte",
+      label: "Svelte",
+      description: "A new way to build web applications",
+    },
+    {
+      value: "ember",
+      label: "Ember",
+      description: "A framework for ambitious web developers",
+    },
+  ]);
   const [selectedValue, setSelectedValue] = useState<string | undefined>();
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
 
@@ -144,7 +143,21 @@ function Selects() {
           maxCount={4}
           label="Framework"
           helperText="Select your favorite framework"
-          disabled
+        />
+        <MultiSelect
+          options={frameworksList}
+          onValueChange={setSelectedValues}
+          defaultValue={selectedValues}
+          placeholder="Select frameworks"
+          maxCount={4}
+          label="Framework"
+          helperText="Select your favorite framework"
+          infiniteScroll={{
+            fetchMore: () => {
+              console.info("fetch more");
+            },
+            hasMore: true,
+          }}
         />
       </div>
     </div>
