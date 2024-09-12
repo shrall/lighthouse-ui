@@ -42,6 +42,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
   (
     {
       options,
+      value,
       onValueChange,
       defaultValue = "",
       placeholder = "Select options",
@@ -59,11 +60,22 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
     },
     ref,
   ) => {
-    const [selectedValue, setSelectedValue] =
-      React.useState<string>(defaultValue);
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
     const [inputFilter, setInputFilter] = React.useState("");
     const inputRef = React.useRef<HTMLInputElement>(null);
+
+    React.useEffect(() => {
+      if (value) {
+        const selectedOption = options.find((option) => option.value === value);
+        if (selectedOption) {
+          setInputFilter(
+            `${selectedOption.label} - ${selectedOption.description}`,
+          );
+        }
+      } else {
+        setInputFilter("");
+      }
+    }, [value, options]);
 
     return (
       <div
@@ -122,7 +134,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                     placeholder={placeholder}
                     value={inputFilter}
                     onChange={(e) => {
-                      setSelectedValue("");
+                      onValueChange("");
                       setInputFilter(e.target.value);
                     }}
                     className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
@@ -151,7 +163,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                     {options
                       .filter((option) =>
-                        selectedValue
+                        value
                           ? true
                           : option.label
                               .toLowerCase()
@@ -162,21 +174,18 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                           <CommandItem
                             key={option.value}
                             onSelect={() => {
-                              if (selectedValue === option.value) {
-                                setSelectedValue("");
+                              if (value === option.value) {
                                 setInputFilter("");
                                 onValueChange("");
                                 return;
                               }
-                              setInputFilter(
-                                `${option.label} - ${option.description}`,
-                              );
-                              setSelectedValue(option.value);
+
+                              onValueChange(option.value);
                               setIsPopoverOpen(false);
                             }}
                             className={cn(
                               "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                              selectedValue === option.value &&
+                              value === option.value &&
                                 "!lui-bg-ocean-secondary-10",
                             )}
                           >
