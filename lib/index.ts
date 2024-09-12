@@ -13,7 +13,7 @@ export { Icon, IconTypeKeys } from "./components/ui/icon";
 export { Toaster, toast } from "./components/ui/sonner";
 export { Tooltip } from "./components/ui/tooltip";
 
-//NOTE - Beta
+//NOTE - v0.2.0
 export {
     Card,
     CardContent,
@@ -24,26 +24,29 @@ export {
 } from "./components/ui/card";
 export { Checkbox } from "./components/ui/checkbox";
 export { Chip } from "./components/ui/chip";
-export {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "./components/ui/dropdown-menu";
 export { Input } from "./components/ui/input";
 export { Pagination } from "./components/ui/pagination";
-export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
-export { Calendar } from "./components/ui/calendar";
-export { DataTable } from "./components/ui/data-table";
 export { Skeleton } from "./components/ui/skeleton";
-export {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "./components/ui/table";
 export { Select } from "./components/ui/select";
 export { MultiSelect } from "./components/ui/multi-select";
 export { Textarea } from "./components/ui/textarea";
+
+
+//NOTE - Beta
+// export { Calendar } from "./components/ui/calendar";
+// export { DataTable } from "./components/ui/data-table";
+// export {
+//     Table,
+//     TableBody,
+//     TableCell,
+//     TableHead,
+//     TableHeader,
+//     TableRow,
+// } from "./components/ui/table";
+// export {
+//     DropdownMenu,
+//     DropdownMenuContent,
+//     DropdownMenuItem,
+//     DropdownMenuTrigger,
+// } from "./components/ui/dropdown-menu";
+// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
