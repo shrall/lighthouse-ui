@@ -33,20 +33,20 @@ export { Textarea } from "./components/ui/textarea";
 
 
 //NOTE - Beta
-// export { Calendar } from "./components/ui/calendar";
-// export { DataTable } from "./components/ui/data-table";
-// export {
-//     Table,
-//     TableBody,
-//     TableCell,
-//     TableHead,
-//     TableHeader,
-//     TableRow,
-// } from "./components/ui/table";
-// export {
-//     DropdownMenu,
-//     DropdownMenuContent,
-//     DropdownMenuItem,
-//     DropdownMenuTrigger,
-// } from "./components/ui/dropdown-menu";
-// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Calendar } from "./components/ui/calendar";
+export { DataTable } from "./components/ui/data-table";
+export {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+} from "./components/ui/table";
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
+export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
