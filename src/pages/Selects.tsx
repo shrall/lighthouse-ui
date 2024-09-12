@@ -154,7 +154,29 @@ function Selects() {
           helperText="Select your favorite framework"
           infiniteScroll={{
             fetchMore: () => {
-              console.info("fetch more");
+              setFrameworksList([
+                ...frameworksList,
+                {
+                  value: Math.random().toString(),
+                  label: `Framework ${Math.random().toString()}`,
+                  description: "A new framework",
+                },
+                {
+                  value: Math.random().toString(),
+                  label: `Framework ${Math.random().toString()}`,
+                  description: "A new framework",
+                },
+                {
+                  value: Math.random().toString(),
+                  label: `Framework ${Math.random().toString()}`,
+                  description: "A new framework",
+                },
+                {
+                  value: Math.random().toString(),
+                  label: `Framework ${Math.random().toString()}`,
+                  description: "A new framework",
+                },
+              ]);
             },
             hasMore: true,
           }}

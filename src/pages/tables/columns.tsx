@@ -111,27 +111,27 @@ export const mobileColumns: ColumnDef<Payment>[] = [
       const data = row.original;
       return (
         <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-2 lui-text-xs">
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               Status
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.status}
             </div>
           </div>
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               E-Mail
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.email}
             </div>
           </div>
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               Amount
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.amount}
             </div>
             <div className="lui-text-ocean-dark-10">USD</div>
@@ -152,27 +152,27 @@ export const mobileColumnsWithoutCheckbox: ColumnDef<Payment>[] = [
       const data = row.original;
       return (
         <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-2 lui-text-xs">
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               Status
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.status}
             </div>
           </div>
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               E-Mail
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.email}
             </div>
           </div>
-          <div className="lui-flex lui-flex-col lui-items-start lui-gap-y-1">
+          <div className="lui-flex lui-flex-col lui-items-start">
             <div className="lui-font-semibold lui-text-ocean-primary-20">
               Amount
             </div>
-            <div className="lui-font-semibold lui-text-ocean-dark-30">
+            <div className="lui-text-sm lui-text-ocean-dark-30">
               {data.amount}
             </div>
             <div className="lui-text-ocean-dark-10">USD</div>

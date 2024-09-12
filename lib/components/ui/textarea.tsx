@@ -137,6 +137,7 @@ export const Textarea = React.forwardRef<
               "lui-border-b lui-border-ocean-dark-10 focus:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-40",
               "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
               "focus-visible:lui-outline-none",
+              errorMessage && "lui-border-ocean-danger-20",
               className,
             )}
             onChange={(e) => {
