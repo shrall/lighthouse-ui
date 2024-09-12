@@ -11,7 +11,10 @@ export interface InputProps
   inputStyle?: InputStyle;
   leftNode?: React.ReactNode;
   rightNode?: React.ReactNode;
-  regex?: "text" | "number";
+  regex?: {
+    type: "number" | "custom";
+    pattern?: RegExp;
+  };
   errorMessage?: string;
   helperText?: string;
   alignment?: "vertical" | "horizontal";
@@ -46,9 +49,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
       if (regex) {
         e.target.value = e.target.value.replace(
-          regex === "text"
-            ? /[^a-zA-Z0-9@#$%&*()_+=!{};:,./<>?|\-\]]/g
-            : /[^0-9]/g,
+          regex.type === "custom" && regex.pattern
+            ? regex.pattern
+            : regex.type === "number"
+              ? /[^0-9]/g
+              : "",
           "",
         );
       }
