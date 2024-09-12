@@ -1,5 +1,16 @@
 
 
+## [0.2.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.14...v0.2.0) (2024-09-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **alert:** update title & description as props instead of component
+
+### Features
+
+* **alert:** update title & description as props instead of component ([70b461a](https://github.com/shrall/lighthouse-ui/commit/70b461a56fdc603b2aa55d51ef6927055f9206ac))
+
 ## [0.2.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.13...v0.2.0-beta.14) (2024-09-11)
 
 
