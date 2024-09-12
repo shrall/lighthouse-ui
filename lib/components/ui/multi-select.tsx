@@ -223,6 +223,11 @@ export const MultiSelect = React.forwardRef<
                         onChange={(e) => {
                           setInputFilter(e.target.value);
                         }}
+                        onKeyDown={(e) => {
+                          if (e.key === "Backspace" && inputFilter === "") {
+                            setSelectedValues((prev) => prev.slice(0, -1));
+                          }
+                        }}
                         className="focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                         ref={inputRef}
                         disabled={props.disabled}
