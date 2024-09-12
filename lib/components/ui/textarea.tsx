@@ -56,6 +56,10 @@ type AutosizeTextAreaProps = {
   tooltip?: React.ReactNode;
   maxHeight?: number;
   minHeight?: number;
+  regex?: {
+    type: "number" | "custom";
+    pattern?: RegExp;
+  };
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = React.forwardRef<
@@ -76,6 +80,8 @@ export const Textarea = React.forwardRef<
       errorMessage,
       helperText,
       disabled,
+      maxLength,
+      regex,
       ...props
     }: AutosizeTextAreaProps,
     ref: React.Ref<AutosizeTextAreaRef>,
@@ -100,6 +106,25 @@ export const Textarea = React.forwardRef<
     React.useEffect(() => {
       setTriggerAutoSize(value as string);
     }, [props?.defaultValue, value]);
+
+    function handleChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
+      if (regex) {
+        e.target.value = e.target.value.replace(
+          regex.type === "custom" && regex.pattern
+            ? regex.pattern
+            : regex.type === "number"
+              ? /[^0-9]/g
+              : "",
+          "",
+        );
+      }
+      if (maxLength) {
+        e.target.value = e.target.value.slice(0, maxLength);
+      }
+      if (onChange) {
+        onChange(e);
+      }
+    }
 
     return (
       <div
@@ -140,9 +165,10 @@ export const Textarea = React.forwardRef<
               errorMessage && "lui-border-ocean-danger-20",
               className,
             )}
+            maxLength={Infinity}
             onChange={(e) => {
               setTriggerAutoSize(e.target.value);
-              onChange?.(e);
+              handleChange(e);
             }}
             disabled={disabled}
           />
