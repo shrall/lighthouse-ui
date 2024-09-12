@@ -164,6 +164,7 @@ export const MultiSelect = React.forwardRef<
                               }}
                               variant="secondary"
                               size="small"
+                              disabled={props.disabled}
                             >
                               {option?.label}
                             </Chip>
@@ -173,7 +174,8 @@ export const MultiSelect = React.forwardRef<
                           <Chip
                             variant="inactive"
                             size="small"
-                            className="lui-border lui-border-ocean-dark-20"
+                            className="lui-border lui-border-ocean-dark-20 aria-disabled:lui-border-transparent"
+                            disabled={props.disabled}
                           >
                             {`${selectedValues.length - maxCount} more`}
                           </Chip>
