@@ -1,5 +1,13 @@
 
 
+## [0.2.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.1...v0.2.2) (2024-09-12)
+
+
+### Features
+
+* **input:** update regex props with custom pattern ([74e4c39](https://github.com/shrall/lighthouse-ui/commit/74e4c398ae9ca2b1feb882313ff4c02ba3861feb))
+* **textarea:** update regex props with custom pattern ([e6acbc2](https://github.com/shrall/lighthouse-ui/commit/e6acbc2a0cd9c9f361b4d41f42dd1febfb75a6f8))
+
 ## [0.2.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.0...v0.2.1) (2024-09-12)
 
 
