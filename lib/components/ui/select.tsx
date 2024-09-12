@@ -172,6 +172,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                 `${option.label} - ${option.description}`,
                               );
                               setSelectedValue(option.value);
+                              setIsPopoverOpen(false);
                             }}
                             className={cn(
                               "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
