@@ -1,5 +1,27 @@
 
 
+## [0.2.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.0...v0.2.1) (2024-09-12)
+
+
+### Features
+
+* **multi-select:** add support for loading, error, & infinite scrolling ([a21c9d6](https://github.com/shrall/lighthouse-ui/commit/a21c9d6eded08b0095e7178b861d78beb708cd89))
+* **multi-select:** delete selected chips by pressing backspace ([bfaab7e](https://github.com/shrall/lighthouse-ui/commit/bfaab7e1cc3de271a1bca5e60e477ef6a763ea56))
+* **select:** close popover when an item is selected ([997d72b](https://github.com/shrall/lighthouse-ui/commit/997d72b47ce2b9b0f2a451262e4c65be6c0cd7c1))
+
+
+### Bug Fixes
+
+* **select:** not updating value that is selected ([de9d742](https://github.com/shrall/lighthouse-ui/commit/de9d742c780a7cc8abe4f50b1d0d48122a80d659))
+
+
+### Styles
+
+* **multi-select:** set chips styling to disabled too when component is disabled ([a00025b](https://github.com/shrall/lighthouse-ui/commit/a00025bc1a72e3c64405ba9f796f6bb715fc8d24))
+* **multi-select:** set underline to red when there's an error ([958e9ea](https://github.com/shrall/lighthouse-ui/commit/958e9ea6ff5ed3385e29338a3cdb903339d7c69e))
+* **select:** set underline to red when there's an error ([fba24df](https://github.com/shrall/lighthouse-ui/commit/fba24dfcecfbf827fc17348d19a337fddd586caa))
+* **textarea:** set underline to red when there's an error ([ec272b0](https://github.com/shrall/lighthouse-ui/commit/ec272b03b1eff8b728ae179301ec6bbfc953eefa))
+
 ## [0.2.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.14...v0.2.0) (2024-09-12)
 
 
