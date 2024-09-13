@@ -13,13 +13,7 @@ import { Input } from "./input";
 import { Icon } from "./icon";
 
 interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
-  texts?: {
-    showItems?: string;
-    data?: string;
-    of?: string;
-    go?: string;
-    goToPage?: string;
-  };
+  locale?: "en" | "id";
   isLoading?: boolean;
   pageSize: number;
   setPageSize: (size: number) => void;
@@ -36,13 +30,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
   (
     {
       className,
-      texts = {
-        showItems: "Show items",
-        data: "Data",
-        of: "of",
-        go: "Go",
-        goToPage: "Go to page",
-      },
+      locale = "en",
       isLoading,
       pageSize,
       setPageSize,
@@ -80,7 +68,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
               <DropdownMenu>
                 <DropdownMenuTrigger className="lui-group lui-flex lui-items-center lui-gap-x-1 lui-rounded-xl lui-border lui-border-ocean-light-40 lui-p-3 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
                   <span className="lui-hidden xl:lui-block">
-                    {texts.showItems}
+                    {locale === "en" ? "Show Items" : "Tampilkan Data"}
                   </span>
                   <span className="lui-font-semibold">{pageSize}</span>
                   <Icon
@@ -118,11 +106,11 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
           ) : (
             !(totalData < 1) && (
               <span className="lui-mr-auto md:lui-mr-0">
-                {texts.data}: {(pageNumber - 1) * pageSize + 1}-
+                Data: {(pageNumber - 1) * pageSize + 1}-
                 {pageSize * pageNumber > totalData
                   ? totalData
                   : pageSize * pageNumber}{" "}
-                {texts.of} {totalData}
+                {locale === "en" ? "of" : "dari"} {totalData}
               </span>
             )
           )}
@@ -153,7 +141,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                     className="lui-flex lui-items-center lui-justify-center lui-gap-x-5 lui-px-5 lui-py-3"
                   >
                     <span className="lui-text-sm lui-text-ocean-primary-10">
-                      {texts.goToPage}
+                      {locale === "en" ? "Go to page" : "Buka halaman"}
                     </span>
                     <div className="lui-w-10 lui-font-semibold lui-text-ocean-primary-10">
                       <Input
@@ -182,7 +170,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                         searchPageNumber > totalPage
                       }
                     >
-                      {texts.go}
+                      {locale === "en" ? "Go" : "Tampilkan"}
                     </Button>
                   </DropdownMenuContent>
                 </DropdownMenu>

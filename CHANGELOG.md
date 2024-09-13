@@ -1,171 +1,153 @@
+## [0.2.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.2...v0.2.3) (2024-09-13)
 
+### Features
 
-## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.2...v0.3.0-beta.0) (2024-09-12)
+- **multi-select:** add locale prop ([59f2c06](https://github.com/shrall/lighthouse-ui/commit/59f2c06478f3ceb215f8a07574156422b0a3edae))
+- **pagination:** add locale prop ([943e95d](https://github.com/shrall/lighthouse-ui/commit/943e95d312eebcdbdb2e0fe9e69a29af766ae126))
+- **select:** add isLoading, isError, refetch, and infinite scroll props ([929358d](https://github.com/shrall/lighthouse-ui/commit/929358db8d80b991008887af771cf390fe038f73))
+- **select:** add locale prop ([f527794](https://github.com/shrall/lighthouse-ui/commit/f527794a9fe0b58cf211656435dc3bca0cadf2b5))
 
 ## [0.2.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.1...v0.2.2) (2024-09-12)
 
-
 ### Features
 
-* **input:** update regex props with custom pattern ([74e4c39](https://github.com/shrall/lighthouse-ui/commit/74e4c398ae9ca2b1feb882313ff4c02ba3861feb))
-* **textarea:** update regex props with custom pattern ([e6acbc2](https://github.com/shrall/lighthouse-ui/commit/e6acbc2a0cd9c9f361b4d41f42dd1febfb75a6f8))
+- **input:** update regex props with custom pattern ([74e4c39](https://github.com/shrall/lighthouse-ui/commit/74e4c398ae9ca2b1feb882313ff4c02ba3861feb))
+- **textarea:** update regex props with custom pattern ([e6acbc2](https://github.com/shrall/lighthouse-ui/commit/e6acbc2a0cd9c9f361b4d41f42dd1febfb75a6f8))
 
 ## [0.2.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.0...v0.2.1) (2024-09-12)
 
-
 ### Features
 
-* **multi-select:** add support for loading, error, & infinite scrolling ([a21c9d6](https://github.com/shrall/lighthouse-ui/commit/a21c9d6eded08b0095e7178b861d78beb708cd89))
-* **multi-select:** delete selected chips by pressing backspace ([bfaab7e](https://github.com/shrall/lighthouse-ui/commit/bfaab7e1cc3de271a1bca5e60e477ef6a763ea56))
-* **select:** close popover when an item is selected ([997d72b](https://github.com/shrall/lighthouse-ui/commit/997d72b47ce2b9b0f2a451262e4c65be6c0cd7c1))
-
+- **multi-select:** add support for loading, error, & infinite scrolling ([a21c9d6](https://github.com/shrall/lighthouse-ui/commit/a21c9d6eded08b0095e7178b861d78beb708cd89))
+- **multi-select:** delete selected chips by pressing backspace ([bfaab7e](https://github.com/shrall/lighthouse-ui/commit/bfaab7e1cc3de271a1bca5e60e477ef6a763ea56))
+- **select:** close popover when an item is selected ([997d72b](https://github.com/shrall/lighthouse-ui/commit/997d72b47ce2b9b0f2a451262e4c65be6c0cd7c1))
 
 ### Bug Fixes
 
-* **select:** not updating value that is selected ([de9d742](https://github.com/shrall/lighthouse-ui/commit/de9d742c780a7cc8abe4f50b1d0d48122a80d659))
-
+- **select:** not updating value that is selected ([de9d742](https://github.com/shrall/lighthouse-ui/commit/de9d742c780a7cc8abe4f50b1d0d48122a80d659))
 
 ### Styles
 
-* **multi-select:** set chips styling to disabled too when component is disabled ([a00025b](https://github.com/shrall/lighthouse-ui/commit/a00025bc1a72e3c64405ba9f796f6bb715fc8d24))
-* **multi-select:** set underline to red when there's an error ([958e9ea](https://github.com/shrall/lighthouse-ui/commit/958e9ea6ff5ed3385e29338a3cdb903339d7c69e))
-* **select:** set underline to red when there's an error ([fba24df](https://github.com/shrall/lighthouse-ui/commit/fba24dfcecfbf827fc17348d19a337fddd586caa))
-* **textarea:** set underline to red when there's an error ([ec272b0](https://github.com/shrall/lighthouse-ui/commit/ec272b03b1eff8b728ae179301ec6bbfc953eefa))
+- **multi-select:** set chips styling to disabled too when component is disabled ([a00025b](https://github.com/shrall/lighthouse-ui/commit/a00025bc1a72e3c64405ba9f796f6bb715fc8d24))
+- **multi-select:** set underline to red when there's an error ([958e9ea](https://github.com/shrall/lighthouse-ui/commit/958e9ea6ff5ed3385e29338a3cdb903339d7c69e))
+- **select:** set underline to red when there's an error ([fba24df](https://github.com/shrall/lighthouse-ui/commit/fba24dfcecfbf827fc17348d19a337fddd586caa))
+- **textarea:** set underline to red when there's an error ([ec272b0](https://github.com/shrall/lighthouse-ui/commit/ec272b03b1eff8b728ae179301ec6bbfc953eefa))
 
 ## [0.2.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.14...v0.2.0) (2024-09-12)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **alert:** update title & description as props instead of component
+- **alert:** update title & description as props instead of component
 
 ### Features
 
-* **alert:** update title & description as props instead of component ([70b461a](https://github.com/shrall/lighthouse-ui/commit/70b461a56fdc603b2aa55d51ef6927055f9206ac))
+- **alert:** update title & description as props instead of component ([70b461a](https://github.com/shrall/lighthouse-ui/commit/70b461a56fdc603b2aa55d51ef6927055f9206ac))
 
 ## [0.2.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.13...v0.2.0-beta.14) (2024-09-11)
 
-
 ### Features
 
-* **table:** added compatibility for mobile styling ([f11ad8e](https://github.com/shrall/lighthouse-ui/commit/f11ad8e4bcce79cff41058ebde466ff11e35a527))
+- **table:** added compatibility for mobile styling ([f11ad8e](https://github.com/shrall/lighthouse-ui/commit/f11ad8e4bcce79cff41058ebde466ff11e35a527))
 
 ## [0.2.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.12...v0.2.0-beta.13) (2024-09-09)
 
-
 ### Features
 
-* **pagination:** close go to page popover when go button is clicked ([007c5c4](https://github.com/shrall/lighthouse-ui/commit/007c5c4de537851d245a0b332a55fb1edc15fc67))
-
+- **pagination:** close go to page popover when go button is clicked ([007c5c4](https://github.com/shrall/lighthouse-ui/commit/007c5c4de537851d245a0b332a55fb1edc15fc67))
 
 ### Bug Fixes
 
-* **chip:** x icon gets smaller when text gets longer ([48400dc](https://github.com/shrall/lighthouse-ui/commit/48400dc7d3227069f6a1d9cb4f6dd3a0531d2e79))
+- **chip:** x icon gets smaller when text gets longer ([48400dc](https://github.com/shrall/lighthouse-ui/commit/48400dc7d3227069f6a1d9cb4f6dd3a0531d2e79))
 
 ## [0.2.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.11...v0.2.0-beta.12) (2024-09-09)
 
-
 ### Features
 
-* **select:** add disabled state ([e7e7a91](https://github.com/shrall/lighthouse-ui/commit/e7e7a91184163a888173a9f3376e0014d376fd7d))
-
+- **select:** add disabled state ([e7e7a91](https://github.com/shrall/lighthouse-ui/commit/e7e7a91184163a888173a9f3376e0014d376fd7d))
 
 ### Bug Fixes
 
-* **tooltip:** align offset position incorrect when alignment is not center ([0ad64e7](https://github.com/shrall/lighthouse-ui/commit/0ad64e771a1163a26ebc618bf1a8ca315ca3a242))
-
+- **tooltip:** align offset position incorrect when alignment is not center ([0ad64e7](https://github.com/shrall/lighthouse-ui/commit/0ad64e771a1163a26ebc618bf1a8ca315ca3a242))
 
 ### Styles
 
-* **chip:** set font weight to regular ([528dd5d](https://github.com/shrall/lighthouse-ui/commit/528dd5d45da4ffb1b53995ed9dde26b56eba8704))
-* **input:** adjust colors for search input's icons & field ([cc88ad4](https://github.com/shrall/lighthouse-ui/commit/cc88ad40e65fd710cb91148962dc64405e415c7a))
-* **pagination:** remove hover and active color change on arrows ([5bd836d](https://github.com/shrall/lighthouse-ui/commit/5bd836de30bb4ad5ae38f847f7dbf640e8623f24))
+- **chip:** set font weight to regular ([528dd5d](https://github.com/shrall/lighthouse-ui/commit/528dd5d45da4ffb1b53995ed9dde26b56eba8704))
+- **input:** adjust colors for search input's icons & field ([cc88ad4](https://github.com/shrall/lighthouse-ui/commit/cc88ad40e65fd710cb91148962dc64405e415c7a))
+- **pagination:** remove hover and active color change on arrows ([5bd836d](https://github.com/shrall/lighthouse-ui/commit/5bd836de30bb4ad5ae38f847f7dbf640e8623f24))
 
 ## [0.2.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.10...v0.2.0-beta.11) (2024-09-09)
 
-
 ### Features
 
-* **multi-select:** add label, helper text & error message ([1bae28f](https://github.com/shrall/lighthouse-ui/commit/1bae28f0147c9b41583fe17f9028682bdcc3e5d8))
-* **select:** add label, helper text & error message ([6a6d53c](https://github.com/shrall/lighthouse-ui/commit/6a6d53c576dc245e028e9d7015d5386939e3e393))
+- **multi-select:** add label, helper text & error message ([1bae28f](https://github.com/shrall/lighthouse-ui/commit/1bae28f0147c9b41583fe17f9028682bdcc3e5d8))
+- **select:** add label, helper text & error message ([6a6d53c](https://github.com/shrall/lighthouse-ui/commit/6a6d53c576dc245e028e9d7015d5386939e3e393))
 
 ## [0.2.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-09)
 
-
 ### Features
 
-* add multi option select ([032f630](https://github.com/shrall/lighthouse-ui/commit/032f630629ec2bb436538c387f81d9e3bbc65b0c))
-* add single option select ([33d7d7d](https://github.com/shrall/lighthouse-ui/commit/33d7d7de9af4be90c58a8e670c2b431ab0e9dfb1))
-* add textarea ([e4a31ac](https://github.com/shrall/lighthouse-ui/commit/e4a31ac2fcea67bbf373b39242c84f663e1bddda))
-* **select:** add search input on selects ([38c55ad](https://github.com/shrall/lighthouse-ui/commit/38c55ad29a27241084686c625e841e2c87b1fce3))
-
+- add multi option select ([032f630](https://github.com/shrall/lighthouse-ui/commit/032f630629ec2bb436538c387f81d9e3bbc65b0c))
+- add single option select ([33d7d7d](https://github.com/shrall/lighthouse-ui/commit/33d7d7de9af4be90c58a8e670c2b431ab0e9dfb1))
+- add textarea ([e4a31ac](https://github.com/shrall/lighthouse-ui/commit/e4a31ac2fcea67bbf373b39242c84f663e1bddda))
+- **select:** add search input on selects ([38c55ad](https://github.com/shrall/lighthouse-ui/commit/38c55ad29a27241084686c625e841e2c87b1fce3))
 
 ### Styles
 
-* **pagination:** set show items dropdown width to follow trigger ([06ac0fe](https://github.com/shrall/lighthouse-ui/commit/06ac0fea5007563043f81849e72d677b60dae6a0))
-* **select:** update content height ([e2552b1](https://github.com/shrall/lighthouse-ui/commit/e2552b1bfab144d4702c0638118f29300d0b9df7))
+- **pagination:** set show items dropdown width to follow trigger ([06ac0fe](https://github.com/shrall/lighthouse-ui/commit/06ac0fea5007563043f81849e72d677b60dae6a0))
+- **select:** update content height ([e2552b1](https://github.com/shrall/lighthouse-ui/commit/e2552b1bfab144d4702c0638118f29300d0b9df7))
 
 ## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
 
-
 ### Bug Fixes
 
-* **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
+- **chip:** using p element causing hydration errors ([b3a1517](https://github.com/shrall/lighthouse-ui/commit/b3a151760c6f4f5e03e721aefd264bcec8a345e0))
 
 ## [0.2.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
 
-
 ### Features
 
-* **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
-
+- **chip:** update behavior when text overflows max width ([c101aa5](https://github.com/shrall/lighthouse-ui/commit/c101aa54c7a1f580b9f8dc8cbc4b1db3cadcaa99))
 
 ### Styles
 
-* **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
+- **chip:** update height when there's an X icon ([5ef754e](https://github.com/shrall/lighthouse-ui/commit/5ef754ebfba1766256d587335a365fa5f79dcb25))
 
 ## [0.2.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
 
-
 ### Bug Fixes
 
-* disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
+- disabled outline chip shows primary 10 border ([ffbdd84](https://github.com/shrall/lighthouse-ui/commit/ffbdd84e370fabbd9d989c097f6ac1fd6bc4d9f4))
 
 ## [0.2.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-03)
 
-
 ### Bug Fixes
 
-* **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
+- **chip:** outline disabled height is incorrect ([fdc059c](https://github.com/shrall/lighthouse-ui/commit/fdc059caa5e2ae768b4863689a6ef1290dbe4c44))
 
 ## [0.2.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-08-30)
 
-
 ### Features
 
-* beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
-* beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
+- beta release for card, checkbox, chip, dropdownmenu, and input ([11eb8b8](https://github.com/shrall/lighthouse-ui/commit/11eb8b80adf89214625f41b3d9cdb4bb98aaf565))
+- beta release for pagination, popover, calendar, datatable, skeleton, and table ([fe3b6cc](https://github.com/shrall/lighthouse-ui/commit/fe3b6cc19005506f8171339af1e825d500b7b061))
 
 ## [0.1.7](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-05)
 
-
 ### Styles
 
-* **toast:** remove white border ([643c2d8](https://github.com/shrall/lighthouse-ui/commit/643c2d8a6e597cf98b9509ff02ba39fe2cd5a062))
+- **toast:** remove white border ([643c2d8](https://github.com/shrall/lighthouse-ui/commit/643c2d8a6e597cf98b9509ff02ba39fe2cd5a062))
 
 ## [0.1.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-04)
 
-
 ### Features
 
-* **toast:** export toast function from sonner ([cbf0581](https://github.com/shrall/lighthouse-ui/commit/cbf0581c88a39ccdf84e260c528476b0bac0989a))
+- **toast:** export toast function from sonner ([cbf0581](https://github.com/shrall/lighthouse-ui/commit/cbf0581c88a39ccdf84e260c528476b0bac0989a))
 
 ## [0.1.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.6...v0.2.0-beta.10) (2024-09-04)
 
-
 ### Code Refactoring
 
-* **toast:** convert const declaration to function ([8ae6dd0](https://github.com/shrall/lighthouse-ui/commit/8ae6dd0af3436f8a2a84510e8bfd25074478e1c8))
+- **toast:** convert const declaration to function ([8ae6dd0](https://github.com/shrall/lighthouse-ui/commit/8ae6dd0af3436f8a2a84510e8bfd25074478e1c8))
 
 ## [0.2.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.0-beta.5...v0.2.0-beta.6) (2024-09-03)
 
