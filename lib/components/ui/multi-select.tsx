@@ -26,6 +26,7 @@ interface MultiSelectProps
   }[];
 
   onValueChange: (value: string[]) => void;
+  locale?: "en" | "id";
   defaultValue: string[];
   placeholder?: string;
   maxCount?: number;
@@ -54,6 +55,7 @@ export const MultiSelect = React.forwardRef<
 >(
   (
     {
+      locale = "en",
       options,
       onValueChange,
       defaultValue = [],
@@ -274,7 +276,11 @@ export const MultiSelect = React.forwardRef<
             >
               <Command>
                 <CommandList className="lui-max-h-[282px]">
-                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandEmpty>
+                    {locale === "en"
+                      ? "No results found"
+                      : "Data tidak ditemukan"}
+                  </CommandEmpty>
                   <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                     {showSelectAll && (
                       <CommandItem
@@ -295,7 +301,9 @@ export const MultiSelect = React.forwardRef<
                                 : "indeterminate"
                           }
                         />
-                        <span>(Select All)</span>
+                        <span>
+                          ({locale === "en" ? "Select All" : "Pilih Semua"})
+                        </span>
                       </CommandItem>
                     )}
                     {options
@@ -345,14 +353,18 @@ export const MultiSelect = React.forwardRef<
                   )}
                   {isError && (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
-                      <div>Failed to Load Data</div>
+                      <div>
+                        {locale === "en"
+                          ? "Failed to load data"
+                          : "Gagal memuat data"}
+                      </div>
                       <div
                         className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-underline"
                         onClick={() => {
                           refetch();
                         }}
                       >
-                        Reload Data
+                        {locale === "en" ? "Reload Data" : "Muat Ulang"}
                       </div>
                     </div>
                   )}
