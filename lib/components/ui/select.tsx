@@ -36,6 +36,13 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   alignment?: "vertical" | "horizontal";
   label?: string;
   tooltip?: React.ReactNode;
+  isLoading?: boolean;
+  isError?: boolean;
+  refetch?: () => void;
+  infiniteScroll?: {
+    fetchMore: () => void;
+    hasMore: boolean;
+  };
 }
 
 export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
@@ -57,6 +64,10 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       label,
       tooltip,
       className,
+      isLoading,
+      isError,
+      refetch = () => {},
+      infiniteScroll,
       ...props
     },
     ref,
@@ -77,6 +88,30 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
         setInputFilter("");
       }
     }, [value, options]);
+
+    //NOTE - Infinite Scroll
+    const observer = React.useRef<IntersectionObserver>();
+
+    const observerRef = React.useCallback(
+      (element: HTMLElement | null) => {
+        // When isLoading is true, this callback will do nothing.
+        // It means that the next function will never be called.
+        // It is safe because the intersection observer has disconnected the previous element.
+        if (isLoading) return;
+
+        if (observer.current) observer.current.disconnect();
+        if (!element) return;
+
+        // Create a new IntersectionObserver instance because hasMore or next may be changed.
+        observer.current = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting && infiniteScroll?.hasMore) {
+            infiniteScroll.fetchMore();
+          }
+        });
+        observer.current.observe(element);
+      },
+      [isLoading, infiniteScroll?.hasMore, infiniteScroll?.fetchMore],
+    );
 
     return (
       <div
@@ -208,6 +243,34 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                         );
                       })}
                   </CommandGroup>
+                  {(isLoading || infiniteScroll?.hasMore) && (
+                    <div
+                      ref={infiniteScroll?.hasMore ? observerRef : null}
+                      className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
+                    >
+                      <Icon
+                        name="loading-filled"
+                        className="lui-animate-spin lui-text-ocean-secondary-30"
+                      />
+                    </div>
+                  )}
+                  {isError && (
+                    <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
+                      <div>
+                        {locale === "en"
+                          ? "Failed to load data"
+                          : "Gagal memuat data"}
+                      </div>
+                      <div
+                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-underline"
+                        onClick={() => {
+                          refetch();
+                        }}
+                      >
+                        {locale === "en" ? "Reload Data" : "Muat Ulang"}
+                      </div>
+                    </div>
+                  )}
                 </CommandList>
               </Command>
             </PopoverContent>
