@@ -1,5 +1,15 @@
 
 
+## [0.2.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.2...v0.2.3) (2024-09-13)
+
+
+### Features
+
+* **multi-select:** add locale prop ([59f2c06](https://github.com/shrall/lighthouse-ui/commit/59f2c06478f3ceb215f8a07574156422b0a3edae))
+* **pagination:** add locale prop ([943e95d](https://github.com/shrall/lighthouse-ui/commit/943e95d312eebcdbdb2e0fe9e69a29af766ae126))
+* **select:** add isLoading, isError, refetch, and infinite scroll props ([929358d](https://github.com/shrall/lighthouse-ui/commit/929358db8d80b991008887af771cf390fe038f73))
+* **select:** add locale prop ([f527794](https://github.com/shrall/lighthouse-ui/commit/f527794a9fe0b58cf211656435dc3bca0cadf2b5))
+
 ## [0.2.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.1...v0.2.2) (2024-09-12)
 
 
