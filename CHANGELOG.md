@@ -1,5 +1,18 @@
 
 
+## [0.2.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.4...v0.2.5) (2024-09-13)
+
+
+### Features
+
+* **multi-select:** search based on option's descriptions ([03300da](https://github.com/shrall/lighthouse-ui/commit/03300da2394a0085060b531657a27ee5598db80d))
+* **select:** search based on option's descriptions ([694ac3c](https://github.com/shrall/lighthouse-ui/commit/694ac3c956d23dabb1aa0f4309539b24ae6e83e1))
+
+
+### Bug Fixes
+
+* **icon:** checkbox checked/unchecked stroke gets thicker ([62fd04b](https://github.com/shrall/lighthouse-ui/commit/62fd04b763315803b0935c1a32a9927b13c02ae9))
+
 ## [0.2.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.2.4) (2024-09-13)
 
 
