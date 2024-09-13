@@ -226,6 +226,9 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                 ? true
                                 : option.label
                                     .toLowerCase()
+                                    .includes(inputFilter.toLowerCase()) ||
+                                  option.description
+                                    ?.toLowerCase()
                                     .includes(inputFilter.toLowerCase()),
                             )
                             .map((option) => {
