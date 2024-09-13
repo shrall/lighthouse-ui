@@ -276,82 +276,7 @@ export const MultiSelect = React.forwardRef<
             >
               <Command>
                 <CommandList className="lui-max-h-[282px]">
-                  <CommandEmpty>
-                    {locale === "en"
-                      ? "No results found"
-                      : "Data tidak ditemukan"}
-                  </CommandEmpty>
-                  <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                    {showSelectAll && (
-                      <CommandItem
-                        key="all"
-                        onSelect={toggleAll}
-                        className={cn(
-                          "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                          selectedValues.length === options.length &&
-                            "!lui-bg-ocean-secondary-10",
-                        )}
-                      >
-                        <Checkbox
-                          checked={
-                            selectedValues.length === options.length
-                              ? true
-                              : selectedValues.length === 0
-                                ? false
-                                : "indeterminate"
-                          }
-                        />
-                        <span>
-                          ({locale === "en" ? "Select All" : "Pilih Semua"})
-                        </span>
-                      </CommandItem>
-                    )}
-                    {options
-                      .filter((option) =>
-                        option.label
-                          .toLowerCase()
-                          .includes(inputFilter.toLowerCase()),
-                      )
-                      .map((option) => {
-                        const isSelected = selectedValues.includes(
-                          option.value,
-                        );
-                        return (
-                          <CommandItem
-                            key={option.value}
-                            onSelect={() => toggleOption(option.value)}
-                            className={cn(
-                              "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                              isSelected && "!lui-bg-ocean-secondary-10",
-                            )}
-                          >
-                            <Checkbox checked={isSelected ? true : false} />
-                            <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
-                              <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
-                                {option.label}
-                              </span>
-                              {option.description && (
-                                <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
-                                  {option.description}
-                                </p>
-                              )}
-                            </div>
-                          </CommandItem>
-                        );
-                      })}
-                  </CommandGroup>
-                  {(isLoading || infiniteScroll?.hasMore) && (
-                    <div
-                      ref={infiniteScroll?.hasMore ? observerRef : null}
-                      className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
-                    >
-                      <Icon
-                        name="loading-filled"
-                        className="lui-animate-spin lui-text-ocean-secondary-30"
-                      />
-                    </div>
-                  )}
-                  {isError && (
+                  {isError && !isLoading ? (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
                       <div>
                         {locale === "en"
@@ -366,6 +291,94 @@ export const MultiSelect = React.forwardRef<
                       >
                         {locale === "en" ? "Reload Data" : "Muat Ulang"}
                       </div>
+                    </div>
+                  ) : (
+                    !isError && (
+                      <>
+                        <CommandEmpty>
+                          {locale === "en"
+                            ? "No results found"
+                            : "Data tidak ditemukan"}
+                        </CommandEmpty>
+                        <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
+                          {showSelectAll && (
+                            <CommandItem
+                              key="all"
+                              onSelect={toggleAll}
+                              className={cn(
+                                "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                selectedValues.length === options.length &&
+                                  "!lui-bg-ocean-secondary-10",
+                              )}
+                            >
+                              <Checkbox
+                                checked={
+                                  selectedValues.length === options.length
+                                    ? true
+                                    : selectedValues.length === 0
+                                      ? false
+                                      : "indeterminate"
+                                }
+                              />
+                              <span>
+                                (
+                                {locale === "en" ? "Select All" : "Pilih Semua"}
+                                )
+                              </span>
+                            </CommandItem>
+                          )}
+                          {options
+                            .filter(
+                              (option) =>
+                                option.label
+                                  .toLowerCase()
+                                  .includes(inputFilter.toLowerCase()) ||
+                                option.description
+                                  ?.toLowerCase()
+                                  .includes(inputFilter.toLowerCase()),
+                            )
+                            .map((option) => {
+                              const isSelected = selectedValues.includes(
+                                option.value,
+                              );
+                              return (
+                                <CommandItem
+                                  key={option.value}
+                                  onSelect={() => toggleOption(option.value)}
+                                  className={cn(
+                                    "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                    isSelected && "!lui-bg-ocean-secondary-10",
+                                  )}
+                                >
+                                  <Checkbox
+                                    checked={isSelected ? true : false}
+                                  />
+                                  <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
+                                    <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
+                                      {option.label}
+                                    </span>
+                                    {option.description && (
+                                      <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
+                                        {option.description}
+                                      </p>
+                                    )}
+                                  </div>
+                                </CommandItem>
+                              );
+                            })}
+                        </CommandGroup>
+                      </>
+                    )
+                  )}
+                  {(isLoading || infiniteScroll?.hasMore) && (
+                    <div
+                      ref={infiniteScroll?.hasMore ? observerRef : null}
+                      className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
+                    >
+                      <Icon
+                        name="loading-filled"
+                        className="lui-animate-spin lui-text-ocean-secondary-30"
+                      />
                     </div>
                   )}
                 </CommandList>
