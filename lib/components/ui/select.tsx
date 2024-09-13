@@ -17,12 +17,12 @@ import {
 import { Icon } from "./icon";
 
 interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  locale?: "en" | "id";
   options: {
     label: string;
     description?: string;
     value: string;
   }[];
-
   onValueChange: (value: string) => void;
   defaultValue?: string;
   placeholder?: string;
@@ -41,6 +41,7 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
   (
     {
+      locale = "en",
       options,
       value,
       onValueChange,
@@ -159,7 +160,11 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
             >
               <Command>
                 <CommandList className="lui-max-h-[282px]">
-                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandEmpty>
+                    {locale === "en"
+                      ? "No results found"
+                      : "Data tidak ditemukan"}
+                  </CommandEmpty>
                   <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                     {options
                       .filter((option) =>
