@@ -1,5 +1,13 @@
 
 
+## [0.2.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.2.4) (2024-09-13)
+
+
+### Bug Fixes
+
+* **multi-select:** results not found and error state can show up at the same time ([98b9672](https://github.com/shrall/lighthouse-ui/commit/98b9672a5375ad57643559443b37411d94a1bea7))
+* **select:** results not found and error state can show up at the same time ([a9f6fd6](https://github.com/shrall/lighthouse-ui/commit/a9f6fd6bc94084e012ebd067bc0912c3d243273a))
+
 ## [0.2.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.2...v0.2.3) (2024-09-13)
 
 
