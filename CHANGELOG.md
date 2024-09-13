@@ -1,3 +1,16 @@
+
+
+## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.5...v0.3.0-beta.2) (2024-09-13)
+
+
+### Styles
+
+* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.5...v0.3.0-beta.2) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.5...v0.3.0-beta.2) (2024-09-12)
+
 ## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.3.0-beta.1) (2024-09-13)
 
 ## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.3.0-beta.1) (2024-09-12)
