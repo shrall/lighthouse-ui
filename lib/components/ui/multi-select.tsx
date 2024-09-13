@@ -328,10 +328,14 @@ export const MultiSelect = React.forwardRef<
                             </CommandItem>
                           )}
                           {options
-                            .filter((option) =>
-                              option.label
-                                .toLowerCase()
-                                .includes(inputFilter.toLowerCase()),
+                            .filter(
+                              (option) =>
+                                option.label
+                                  .toLowerCase()
+                                  .includes(inputFilter.toLowerCase()) ||
+                                option.description
+                                  ?.toLowerCase()
+                                  .includes(inputFilter.toLowerCase()),
                             )
                             .map((option) => {
                               const isSelected = selectedValues.includes(
