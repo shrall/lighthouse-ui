@@ -1,3 +1,9 @@
+
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.3.0-beta.1) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.3...v0.3.0-beta.1) (2024-09-12)
+
 ## [0.2.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.2...v0.2.3) (2024-09-13)
 
 ### Features
