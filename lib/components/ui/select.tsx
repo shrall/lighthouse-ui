@@ -53,7 +53,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       value,
       onValueChange,
       defaultValue = "",
-      placeholder = "Select options",
+      placeholder = "",
       maxCount = 3,
       modalPopover = false,
       asChild = false,
