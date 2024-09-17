@@ -1,5 +1,12 @@
 
 
+## [0.2.7](https://github.com/shrall/lighthouse-ui/compare/v0.2.6...v0.2.7) (2024-09-17)
+
+
+### Styles
+
+* **badge:** update info variant text color ([92386c2](https://github.com/shrall/lighthouse-ui/commit/92386c22e976ecec6008e60ea4f5405eb684ef51))
+
 ## [0.2.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.5...v0.2.6) (2024-09-17)
 
 
