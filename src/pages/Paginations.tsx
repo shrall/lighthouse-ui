@@ -14,7 +14,6 @@ function Paginations() {
       <h3>Paginations</h3>
       <div className="lui-flex lui-items-center lui-gap-2">
         <Pagination
-          className="lui-w-full"
           pageSize={pageSize}
           setPageSize={setPageSize}
           pageNumber={pageNumber}
