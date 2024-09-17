@@ -1,5 +1,13 @@
 
 
+## [0.2.8](https://github.com/shrall/lighthouse-ui/compare/v0.2.7...v0.2.8) (2024-09-17)
+
+
+### Bug Fixes
+
+* **multi-select:** select all option shows on initial loading ([235ae87](https://github.com/shrall/lighthouse-ui/commit/235ae877f3c1b67a5dba8a5827c568fb3b4872ae))
+* **select:** select all option shows on initial loading ([286329b](https://github.com/shrall/lighthouse-ui/commit/286329bd4a6d3b3cb22ea0c68b38b6bf9eae0c41))
+
 ## [0.2.7](https://github.com/shrall/lighthouse-ui/compare/v0.2.6...v0.2.7) (2024-09-17)
 
 
