@@ -19,14 +19,13 @@ import { Checkbox } from "./checkbox";
 
 interface MultiSelectProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  locale?: "en" | "id";
   options: {
     label: string;
     description?: string;
     value: string;
   }[];
-
   onValueChange: (value: string[]) => void;
-  locale?: "en" | "id";
   defaultValue: string[];
   placeholder?: string;
   maxCount?: number;
@@ -301,43 +300,32 @@ export const MultiSelect = React.forwardRef<
                             : "Data tidak ditemukan"}
                         </CommandEmpty>
                         <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                          {showSelectAll &&
-                            options.filter(
-                              (option) =>
-                                option.label
-                                  .toLowerCase()
-                                  .includes(inputFilter.toLowerCase()) ||
-                                option.description
-                                  ?.toLowerCase()
-                                  .includes(inputFilter.toLowerCase()),
-                            ).length !== 0 && (
-                              <CommandItem
-                                key="all"
-                                onSelect={toggleAll}
-                                className={cn(
-                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                                  selectedValues.length === options.length &&
-                                    "!lui-bg-ocean-secondary-10",
-                                )}
-                              >
-                                <Checkbox
-                                  checked={
-                                    selectedValues.length === options.length
-                                      ? true
-                                      : selectedValues.length === 0
-                                        ? false
-                                        : "indeterminate"
-                                  }
-                                />
-                                <span>
-                                  (
-                                  {locale === "en"
-                                    ? "Select All"
-                                    : "Pilih Semua"}
-                                  )
-                                </span>
-                              </CommandItem>
-                            )}
+                          {showSelectAll && inputFilter === "" && (
+                            <CommandItem
+                              key="all"
+                              onSelect={toggleAll}
+                              className={cn(
+                                "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                selectedValues.length === options.length &&
+                                  "!lui-bg-ocean-secondary-10",
+                              )}
+                            >
+                              <Checkbox
+                                checked={
+                                  selectedValues.length === options.length
+                                    ? true
+                                    : selectedValues.length === 0
+                                      ? false
+                                      : "indeterminate"
+                                }
+                              />
+                              <span>
+                                (
+                                {locale === "en" ? "Select All" : "Pilih Semua"}
+                                )
+                              </span>
+                            </CommandItem>
+                          )}
                           {options
                             .filter(
                               (option) =>
