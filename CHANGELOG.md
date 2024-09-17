@@ -1,3 +1,32 @@
+
+
+## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-17)
+
+
+### Features
+
+* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+
+## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-17)
+
+## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-13)
+
+
+### Styles
+
+* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-12)
+
+## [0.2.7](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.3...v0.3.0-beta.4) (2024-09-17)
+
+
+### Styles
+
+* **badge:** update info variant text color ([92386c2](https://github.com/shrall/lighthouse-ui/commit/92386c22e976ecec6008e60ea4f5405eb684ef51))
+
 ## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.6...v0.3.0-beta.3) (2024-09-17)
 
 ## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.6...v0.3.0-beta.3) (2024-09-13)
