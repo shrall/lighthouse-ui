@@ -19,14 +19,13 @@ import { Checkbox } from "./checkbox";
 
 interface MultiSelectProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  locale?: "en" | "id";
   options: {
     label: string;
     description?: string;
     value: string;
   }[];
-
   onValueChange: (value: string[]) => void;
-  locale?: "en" | "id";
   defaultValue: string[];
   placeholder?: string;
   maxCount?: number;
@@ -59,7 +58,7 @@ export const MultiSelect = React.forwardRef<
       options,
       onValueChange,
       defaultValue = [],
-      placeholder = "Select options",
+      placeholder = "",
       maxCount = 3,
       modalPopover = false,
       asChild = false,
@@ -275,7 +274,7 @@ export const MultiSelect = React.forwardRef<
               onOpenAutoFocus={(e) => e.preventDefault()}
             >
               <Command>
-                <CommandList className="lui-max-h-[282px]">
+                <CommandList className="lui-max-h-[256px]">
                   {isError && !isLoading ? (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
                       <div>
@@ -301,7 +300,7 @@ export const MultiSelect = React.forwardRef<
                             : "Data tidak ditemukan"}
                         </CommandEmpty>
                         <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                          {showSelectAll && (
+                          {showSelectAll && inputFilter === "" && (
                             <CommandItem
                               key="all"
                               onSelect={toggleAll}

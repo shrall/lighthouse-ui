@@ -53,7 +53,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       value,
       onValueChange,
       defaultValue = "",
-      placeholder = "Select options",
+      placeholder = "",
       maxCount = 3,
       modalPopover = false,
       asChild = false,
@@ -194,7 +194,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               onOpenAutoFocus={(e) => e.preventDefault()}
             >
               <Command>
-                <CommandList className="lui-max-h-[282px]">
+                <CommandList className="lui-max-h-[256px]">
                   {isError && !isLoading ? (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
                       <div>
