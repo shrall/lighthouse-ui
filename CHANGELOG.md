@@ -1,5 +1,27 @@
 
 
+## [0.2.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.5...v0.2.6) (2024-09-17)
+
+
+### Features
+
+* **multi-select:** hide select all option when searching ([65f2d23](https://github.com/shrall/lighthouse-ui/commit/65f2d232e2ba86d11e783274e191620aee483be1))
+* **multi-select:** remove placeholder default value ([d7509ae](https://github.com/shrall/lighthouse-ui/commit/d7509ae20086157cce54aaa9d3ddae72af3a59cd))
+* **select:** remove placeholder default value ([9518f9a](https://github.com/shrall/lighthouse-ui/commit/9518f9a71972f39be2bcdd2c1fc00312184f8c58))
+
+
+### Bug Fixes
+
+* **icon:** remove warnings on path props ([8904a93](https://github.com/shrall/lighthouse-ui/commit/8904a93a41aad311b5881c268387e0404544b35d))
+* **multi-select:** still showing select all when there's no results ([2239737](https://github.com/shrall/lighthouse-ui/commit/22397372bde4ff5b6ec2ac21006cc391448c3e75))
+
+
+### Styles
+
+* **multi-select:** adjust options menu max height to 256px ([9f88d33](https://github.com/shrall/lighthouse-ui/commit/9f88d336de8cced5cf9d10925ae23d5cb8de0e6c))
+* **pagination:** add width full class on component ([27d4481](https://github.com/shrall/lighthouse-ui/commit/27d4481bc998b904206f6078d1edc1e0913ba3c2))
+* **select:** adjust options menu max height to 256px ([cbb09f9](https://github.com/shrall/lighthouse-ui/commit/cbb09f904ef9bbf2ae3b660cc6389a7f054b9fff))
+
 ## [0.2.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.4...v0.2.5) (2024-09-13)
 
 
