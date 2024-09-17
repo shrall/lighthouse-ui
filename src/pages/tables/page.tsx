@@ -75,22 +75,17 @@ function Tables() {
           data={data}
           isError={true}
           errorRow={
-            <TableCell
-              colSpan={columns.length}
-              className="lui-h-36 lui-gap-2 lui-text-center"
-            >
-              <div className="lui-flex lui-flex-col">
-                <span>Failed to Load Data</span>
-                <span
-                  onClick={() => {
-                    console.log("reload");
-                  }}
-                  className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-                >
-                  Reload
-                </span>
-              </div>
-            </TableCell>
+            <div className="lui-flex lui-flex-col">
+              <span>Failed to Load Data</span>
+              <span
+                onClick={() => {
+                  console.log("reload");
+                }}
+                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
+              >
+                Reload
+              </span>
+            </div>
           }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}
@@ -133,22 +128,17 @@ function Tables() {
           data={data}
           isError={true}
           errorRow={
-            <TableCell
-              colSpan={columns.length}
-              className="lui-h-36 lui-gap-2 lui-text-center"
-            >
-              <div className="lui-flex lui-flex-col">
-                <span>Failed to Load Data</span>
-                <span
-                  onClick={() => {
-                    console.log("reload");
-                  }}
-                  className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-                >
-                  Reload
-                </span>
-              </div>
-            </TableCell>
+            <div className="lui-flex lui-flex-col">
+              <span>Failed to Load Data</span>
+              <span
+                onClick={() => {
+                  console.log("reload");
+                }}
+                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
+              >
+                Reload
+              </span>
+            </div>
           }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}
@@ -187,22 +177,17 @@ function Tables() {
           data={data}
           isError={true}
           errorRow={
-            <TableCell
-              colSpan={columns.length}
-              className="lui-h-36 lui-gap-2 lui-text-center"
-            >
-              <div className="lui-flex lui-flex-col">
-                <span>Failed to Load Data</span>
-                <span
-                  onClick={() => {
-                    console.log("reload");
-                  }}
-                  className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-                >
-                  Reload
-                </span>
-              </div>
-            </TableCell>
+            <div className="lui-flex lui-flex-col">
+              <span>Failed to Load Data</span>
+              <span
+                onClick={() => {
+                  console.log("reload");
+                }}
+                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
+              >
+                Reload
+              </span>
+            </div>
           }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}

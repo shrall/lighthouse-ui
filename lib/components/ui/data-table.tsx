@@ -101,7 +101,12 @@ export function DataTable<TData, TValue>({
           ) : isError ? (
             //NOTE - Error State
             <TableRow className="lui-border-none hover:lui-bg-transparent">
-              {errorRow}
+              <TableCell
+                colSpan={columns.length}
+                className="lui-h-full lui-min-h-36 lui-text-center lui-align-middle"
+              >
+                {errorRow}
+              </TableCell>
             </TableRow>
           ) : table.getRowModel().rows?.length ? (
             //NOTE - Data State
