@@ -11,7 +11,7 @@ const badgeVariants = cva(
         success: "lui-text-ocean-success-20 lui-bg-ocean-success-10",
         danger: "lui-text-ocean-danger-20 lui-bg-ocean-danger-10",
         warning: "lui-text-ocean-warning-20 lui-bg-ocean-warning-10",
-        info: "lui-text-ocean-primary-20 lui-bg-ocean-secondary-10",
+        info: "lui-text-ocean-primary-10 lui-bg-ocean-secondary-10",
         inactive: "lui-text-ocean-dark-20 lui-bg-ocean-light-40",
       },
     },
