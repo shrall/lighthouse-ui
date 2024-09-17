@@ -292,7 +292,8 @@ export const MultiSelect = React.forwardRef<
                       </div>
                     </div>
                   ) : (
-                    !isError && (
+                    !isError &&
+                    options.length > 0 && (
                       <>
                         <CommandEmpty>
                           {locale === "en"
