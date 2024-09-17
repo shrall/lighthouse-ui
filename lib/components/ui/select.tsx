@@ -212,7 +212,8 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                       </div>
                     </div>
                   ) : (
-                    !isError && (
+                    !isError &&
+                    options.length > 0 && (
                       <>
                         <CommandEmpty>
                           {locale === "en"
