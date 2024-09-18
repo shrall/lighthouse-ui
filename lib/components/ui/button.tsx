@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Icon, IconType } from "./icon";
 
 const buttonVariants = cva(
-  "lui-inline-flex lui-items-center lui-justify-center lui-whitespace-nowrap lui-rounded-full lui-transition-colors lui-w-fit",
+  "lui-inline-flex lui-items-center lui-justify-center lui-transition-colors lui-w-fit",
   {
     variants: {
       variant: {
@@ -19,11 +19,11 @@ const buttonVariants = cva(
       },
       size: {
         large:
-          "lui-text-base lui-min-w-40 lui-h-12 lui-px-6 lui-py-3 lui-gap-2",
+          "lui-text-base lui-min-w-40 lui-min-h-12 lui-px-6 lui-py-3 lui-gap-2 lui-rounded-3xl",
         medium:
-          "lui-text-sm lui-min-w-[124px] lui-h-10 lui-px-5 lui-py-[9.5px] lui-gap-2",
+          "lui-text-sm lui-min-w-[124px] lui-min-h-10 lui-px-5 lui-py-[9.5px] lui-gap-2 lui-rounded-[20px]",
         small:
-          "lui-text-xs lui-min-w-[110px] lui-h-8 lui-px-4 lui-py-[6px] lui-gap-1",
+          "lui-text-xs lui-min-w-[110px] lui-min-h-8 lui-px-4 lui-py-[6px] lui-gap-1 lui-rounded-2xl",
       },
     },
     defaultVariants: {
@@ -52,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {leftIcon && <Icon name={leftIcon} />}
-        {children}
+        <span className="lui-break-anywhere">{children}</span>
         {rightIcon && <Icon name={rightIcon} />}
       </button>
     );
