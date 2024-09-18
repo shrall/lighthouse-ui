@@ -1,3 +1,36 @@
+
+
+## [0.3.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-18)
+
+## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
+
+## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
+
+
+### Features
+
+* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+
+## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
+
+## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-13)
+
+
+### Styles
+
+* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-12)
+
+## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-18)
+
+
+### Features
+
+* **button:** break texts to a new line & adjust border radius for each size ([64f491c](https://github.com/shrall/lighthouse-ui/commit/64f491caaf9d78b24bae5e28abb43fe37c0df73c))
+
 ## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.4...v0.3.0-beta.5) (2024-09-17)
 
 ## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.4...v0.3.0-beta.5) (2024-09-17)
