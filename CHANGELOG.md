@@ -1,5 +1,12 @@
 
 
+## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.2.8...v0.2.9) (2024-09-18)
+
+
+### Features
+
+* **button:** break texts to a new line & adjust border radius for each size ([64f491c](https://github.com/shrall/lighthouse-ui/commit/64f491caaf9d78b24bae5e28abb43fe37c0df73c))
+
 ## [0.2.8](https://github.com/shrall/lighthouse-ui/compare/v0.2.7...v0.2.8) (2024-09-17)
 
 
