@@ -1,5 +1,16 @@
 
 
+## [0.2.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.10...v0.2.11) (2024-09-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* set default input style for input & textarea to underline
+
+### Features
+
+* set default input style for input & textarea to underline ([3336b79](https://github.com/shrall/lighthouse-ui/commit/3336b79ea1d35bbc725a33ee7595df21d3af96b8))
+
 ## [0.2.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.9...v0.2.10) (2024-09-19)
 
 
