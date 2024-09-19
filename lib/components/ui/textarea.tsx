@@ -47,8 +47,11 @@ export type AutosizeTextAreaRef = {
   minHeight: number;
 };
 
+type InputStyle = "default" | "underline";
+
 type AutosizeTextAreaProps = {
   container?: { className?: string };
+  inputStyle?: InputStyle;
   errorMessage?: string;
   helperText?: string;
   alignment?: "vertical" | "horizontal";
@@ -71,6 +74,7 @@ export const Textarea = React.forwardRef<
       maxHeight = 105,
       minHeight = 30,
       container,
+      inputStyle = "default",
       label,
       alignment = "vertical",
       className,
@@ -159,7 +163,11 @@ export const Textarea = React.forwardRef<
             ref={textAreaRef}
             className={cn(
               "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
-              "lui-border-b lui-border-ocean-dark-10 focus:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-40",
+              inputStyle === "default" &&
+                "lui-rounded-xl lui-border lui-border-ocean-light-30 lui-px-3 lui-py-[13.5px] disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
+              inputStyle === "underline" &&
+                "lui-border-b lui-border-ocean-dark-10 disabled:lui-border-ocean-light-40",
+              "focus:lui-border-ocean-primary-10",
               "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
               "focus-visible:lui-outline-none",
               errorMessage && "lui-border-ocean-danger-20",
