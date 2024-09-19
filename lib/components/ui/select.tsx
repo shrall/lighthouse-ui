@@ -131,7 +131,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
             )}
           >
             <label
-              htmlFor={props.name}
+              htmlFor={props.id}
               className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
             >
               {label}
