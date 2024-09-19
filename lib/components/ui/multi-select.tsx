@@ -238,7 +238,7 @@ export const MultiSelect = React.forwardRef<
                     <Icon
                       name="chevron-down-outline"
                       className={cn(
-                        "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                        "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
                         props.disabled && "lui-text-ocean-light-40",
                       )}
                     />
@@ -259,7 +259,7 @@ export const MultiSelect = React.forwardRef<
                     <Icon
                       name="chevron-down-outline"
                       className={cn(
-                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
                         props.disabled && "lui-text-ocean-light-40",
                       )}
                     />
