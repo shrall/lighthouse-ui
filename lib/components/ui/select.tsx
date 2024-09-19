@@ -131,7 +131,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
             )}
           >
             <label
-              htmlFor={props.name}
+              htmlFor={props.id}
               className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
             >
               {label}
@@ -180,7 +180,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <Icon
                     name="chevron-down-outline"
                     className={cn(
-                      "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                      "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
                       props.disabled && "lui-text-ocean-light-40",
                     )}
                   />

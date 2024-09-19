@@ -32,7 +32,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       errorMessage,
       helperText,
       leftNode,
-      inputStyle = "default",
+      inputStyle = "underline",
       rightNode,
       disabled,
       onChange,
@@ -82,7 +82,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             )}
           >
             <label
-              htmlFor={props.name}
+              htmlFor={props.id}
               className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
             >
               {label}

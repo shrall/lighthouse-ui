@@ -1,35 +1,56 @@
-
-
 ## [0.3.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-18)
 
 ## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
 
 ## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
 
-
 ### Features
 
-* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+- **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
 
 ## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-17)
 
 ## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-13)
 
-
 ### Styles
 
-* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+- **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
 
 ## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-13)
 
 ## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-12)
 
-## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-18)
+## [0.2.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.10...v0.2.11) (2024-09-19)
 
+### ⚠ BREAKING CHANGES
+
+- set default input style for input & textarea to underline
 
 ### Features
 
-* **button:** break texts to a new line & adjust border radius for each size ([64f491c](https://github.com/shrall/lighthouse-ui/commit/64f491caaf9d78b24bae5e28abb43fe37c0df73c))
+- set default input style for input & textarea to underline ([3336b79](https://github.com/shrall/lighthouse-ui/commit/3336b79ea1d35bbc725a33ee7595df21d3af96b8))
+
+## [0.2.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.9...v0.2.10) (2024-09-19)
+
+### ⚠ BREAKING CHANGES
+
+- **textarea:** add inputStyle prop
+
+### Features
+
+- **multi-select:** update chevron color ([4f7f11a](https://github.com/shrall/lighthouse-ui/commit/4f7f11a9bed00a2c486301b9a33f4d7cbbcea8e7))
+- **select:** update chevron color ([9b3b336](https://github.com/shrall/lighthouse-ui/commit/9b3b336b9e12db18a2307bba5f59605ce1e9dc05))
+- setup htmlFor property for all components with labels ([916d2e9](https://github.com/shrall/lighthouse-ui/commit/916d2e96861fb138bf23c6a9e65b2c4cc0a4ffac))
+
+## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.5...v0.3.0-beta.6) (2024-09-18)
+
+- **textarea:** add inputStyle prop ([d86263b](https://github.com/shrall/lighthouse-ui/commit/d86263b3e9a438e7fdfc83cbb02768bbfc0bf070))
+
+## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.2.8...v0.2.9) (2024-09-18)
+
+### Features
+
+- **button:** break texts to a new line & adjust border radius for each size ([64f491c](https://github.com/shrall/lighthouse-ui/commit/64f491caaf9d78b24bae5e28abb43fe37c0df73c))
 
 ## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.4...v0.3.0-beta.5) (2024-09-17)
 
