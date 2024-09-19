@@ -1,5 +1,23 @@
 
 
+## [0.2.10](https://github.com/shrall/lighthouse-ui/compare/v0.2.9...v0.2.10) (2024-09-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **textarea:** add inputStyle prop
+
+### Features
+
+* **multi-select:** update chevron color ([4f7f11a](https://github.com/shrall/lighthouse-ui/commit/4f7f11a9bed00a2c486301b9a33f4d7cbbcea8e7))
+* **select:** update chevron color ([9b3b336](https://github.com/shrall/lighthouse-ui/commit/9b3b336b9e12db18a2307bba5f59605ce1e9dc05))
+* setup htmlFor property for all components with labels ([916d2e9](https://github.com/shrall/lighthouse-ui/commit/916d2e96861fb138bf23c6a9e65b2c4cc0a4ffac))
+
+
+### Styles
+
+* **textarea:** add inputStyle prop ([d86263b](https://github.com/shrall/lighthouse-ui/commit/d86263b3e9a438e7fdfc83cbb02768bbfc0bf070))
+
 ## [0.2.9](https://github.com/shrall/lighthouse-ui/compare/v0.2.8...v0.2.9) (2024-09-18)
 
 
