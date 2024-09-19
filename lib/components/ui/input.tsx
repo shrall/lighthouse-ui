@@ -32,7 +32,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       errorMessage,
       helperText,
       leftNode,
-      inputStyle = "default",
+      inputStyle = "underline",
       rightNode,
       disabled,
       onChange,

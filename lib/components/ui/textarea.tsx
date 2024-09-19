@@ -74,7 +74,7 @@ export const Textarea = React.forwardRef<
       maxHeight = 105,
       minHeight = 30,
       container,
-      inputStyle = "default",
+      inputStyle = "underline",
       label,
       alignment = "vertical",
       className,
