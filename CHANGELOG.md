@@ -1,5 +1,13 @@
 
 
+## [0.2.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.11...v0.2.12) (2024-09-20)
+
+
+### Features
+
+* **button:** set icons size for each button sizes ([f14ae5c](https://github.com/shrall/lighthouse-ui/commit/f14ae5c538902803b343140e8ecd1f0d8e7777df))
+* **chip:** setup title prop to show text tooltip on hover ([ae1c1ba](https://github.com/shrall/lighthouse-ui/commit/ae1c1bacfd2e75a9cbe5561d586ab97f45d77200))
+
 ## [0.2.11](https://github.com/shrall/lighthouse-ui/compare/v0.2.10...v0.2.11) (2024-09-19)
 
 
