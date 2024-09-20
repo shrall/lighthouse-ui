@@ -53,6 +53,7 @@ function Chip({
         className,
         props.onClick && "lui-cursor-pointer",
       )}
+      title={typeof children === "string" ? children : undefined}
       aria-disabled={disabled}
       {...props}
     >
