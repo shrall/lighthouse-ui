@@ -22,21 +22,23 @@ const alertVariants = cva(
   },
 );
 
-const Alert = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof alertVariants> & {
-      description?: string;
-      actionType?: "close";
-      alertAction?: () => void;
-    }
->(
+type AlertProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof alertVariants> & {
+    /** Description of the alert */
+    description?: string;
+    /** Action type of the alert. Default shows a chevron right icon, close shows a cross icon */
+    actionType?: "default" | "close";
+    /** Callback function for the alert action when the icon is clicked */
+    alertAction?: () => void;
+  };
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   (
     {
       className,
       variant,
       children,
-      actionType,
+      actionType = "default",
       alertAction,
       title,
       description,
@@ -48,6 +50,7 @@ const Alert = React.forwardRef<
       ref={ref}
       role="alert"
       className={cn(alertVariants({ variant }), className)}
+      title={title}
       {...props}
     >
       {variant === "success" && (
