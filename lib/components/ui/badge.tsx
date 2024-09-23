@@ -27,9 +27,10 @@ export interface BadgeProps
   textOnly?: boolean;
 }
 
-function Badge({ className, variant, textOnly = false, ...props }: BadgeProps) {
-  return (
+const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
+  ({ className, variant, textOnly = false, ...props }, ref) => (
     <div
+      ref={ref}
       className={cn(
         badgeVariants({ variant }),
         className,
@@ -37,7 +38,7 @@ function Badge({ className, variant, textOnly = false, ...props }: BadgeProps) {
       )}
       {...props}
     />
-  );
-}
+  ),
+);
 
 export { Badge };
