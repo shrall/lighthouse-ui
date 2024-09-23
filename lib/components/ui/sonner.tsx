@@ -1,6 +1,9 @@
 import { Toaster as Sonner, toast } from "sonner";
 
-import { Icon } from "./icon";
+import { CheckFilled } from "./icon/CheckFilled";
+import { ExclamationFilled } from "./icon/ExclamationFilled";
+import { CrossFilled } from "./icon/CrossFilled";
+import { InfoFilled } from "./icon/InfoFilled";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
@@ -24,10 +27,10 @@ function Toaster({ ...props }: ToasterProps) {
         },
       }}
       icons={{
-        success: <Icon name="check-filled" />,
-        warning: <Icon name="exclamation-filled" />,
-        error: <Icon name="cross-filled" />,
-        info: <Icon name="info-filled" />,
+        success: <CheckFilled />,
+        warning: <ExclamationFilled />,
+        error: <CrossFilled />,
+        info: <InfoFilled />,
       }}
       position="top-center"
       {...props}

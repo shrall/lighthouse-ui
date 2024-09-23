@@ -2,8 +2,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-
-import { Icon } from "./icon";
+import { CheckFilled } from "./icon/CheckFilled";
+import { CrossFilled } from "./icon/CrossFilled";
+import { ExclamationFilled } from "./icon/ExclamationFilled";
+import { InfoFilled } from "./icon/InfoFilled";
+import { CrossLargeOutline } from "./icon/CrossLargeOutline";
+import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
 const alertVariants = cva(
   "lui-relative lui-w-full lui-flex lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 lui-gap-3",
@@ -53,25 +57,16 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
       title={title}
       {...props}
     >
-      {variant === "success" && (
-        <Icon name="check-filled" className="lui-min-w-6" />
-      )}
-      {variant === "danger" && (
-        <Icon name="cross-filled" className="lui-min-w-6" />
-      )}
-      {variant === "warning" && (
-        <Icon name="exclamation-filled" className="lui-min-w-6" />
-      )}
-      {variant === "info" && (
-        <Icon name="info-filled" className="lui-min-w-6" />
-      )}
+      {variant === "success" && <CheckFilled className="lui-min-w-6" />}
+      {variant === "danger" && <CrossFilled className="lui-min-w-6" />}
+      {variant === "warning" && <ExclamationFilled className="lui-min-w-6" />}
+      {variant === "info" && <InfoFilled className="lui-min-w-6" />}
       <div className="lui-flex lui-w-full lui-flex-col">
         <AlertTitle>{title}</AlertTitle>
         {description && <AlertDescription>{description}</AlertDescription>}
       </div>
       {actionType === "close" && alertAction ? (
-        <Icon
-          name="cross-large-outline"
+        <CrossLargeOutline
           className="lui-min-w-6 lui-cursor-pointer"
           onClick={() => {
             alertAction();
@@ -79,8 +74,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
         />
       ) : (
         alertAction && (
-          <Icon
-            name="chevron-right-outline"
+          <ChevronRightOutline
             className="lui-min-w-6 lui-cursor-pointer"
             onClick={() => {
               alertAction();

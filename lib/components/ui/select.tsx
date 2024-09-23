@@ -14,7 +14,8 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { Icon } from "./icon";
+import { ChevronDownOutline } from "./icon/ChevronDownOutline";
+import { LoadingFilled } from "./icon/LoadingFilled";
 
 interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
@@ -196,8 +197,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                     ref={inputRef}
                     disabled={props.disabled}
                   />
-                  <Icon
-                    name="chevron-down-outline"
+                  <ChevronDownOutline
                     className={cn(
                       "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
                       props.disabled && "lui-text-ocean-light-40",
@@ -305,10 +305,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                       ref={infiniteScroll?.hasMore ? observerRef : null}
                       className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
                     >
-                      <Icon
-                        name="loading-filled"
-                        className="lui-animate-spin lui-text-ocean-secondary-30"
-                      />
+                      <LoadingFilled className="lui-animate-spin lui-text-ocean-secondary-30" />
                     </div>
                   )}
                 </CommandList>

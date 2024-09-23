@@ -10,7 +10,9 @@ import {
 } from "./dropdown-menu";
 import { Button } from "./button";
 import { Input } from "./input";
-import { Icon } from "./icon";
+import { ChevronDownOutline } from "./icon/ChevronDownOutline";
+import { ChevronLeftOutline } from "./icon/ChevronLeftOutline";
+import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
 interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
   locale?: "en" | "id";
@@ -71,10 +73,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                     {locale === "en" ? "Show Items" : "Tampilkan Data"}
                   </span>
                   <span className="lui-font-semibold">{pageSize}</span>
-                  <Icon
-                    name="chevron-down-outline"
-                    className="lui-transition-all group-data-[state=open]:lui-rotate-180"
-                  />
+                  <ChevronDownOutline className="lui-transition-all group-data-[state=open]:lui-rotate-180" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   side="top"
@@ -127,7 +126,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                   onClick={() => setPageNumber(pageNumber - 1)}
                   disabled={pageNumber === 1}
                 >
-                  <Icon name="chevron-left-outline" />
+                  <ChevronLeftOutline />
                 </Button>
                 <DropdownMenu
                   open={showGoToPage}
@@ -179,7 +178,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
                   onClick={() => setPageNumber(pageNumber + 1)}
                   disabled={pageNumber === totalPage}
                 >
-                  <Icon name="chevron-right-outline" />
+                  <ChevronRightOutline />
                 </Button>
               </>
             )

@@ -1,9 +1,9 @@
 import { MultiSelect } from "@/components/ui/multi-select";
 import { Select } from "@/components/ui/select";
-import { Icon } from "@/components/ui/icon";
 import { Tooltip } from "@/components/ui/tooltip";
 
 import { useState } from "react";
+import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
 
 function Selects() {
   const [frameworksList, setFrameworksList] = useState([
@@ -36,6 +36,7 @@ function Selects() {
   ]);
   const [selectedValue, setSelectedValue] = useState<string | undefined>();
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
+  const [search, setSearch] = useState("");
 
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
@@ -48,6 +49,10 @@ function Selects() {
           placeholder="Select framework"
           label="Framework"
           helperText="Select your favorite framework"
+          search={{
+            query: search,
+            setQuery: setSearch,
+          }}
         />
         <Select
           options={frameworksList}
@@ -66,12 +71,7 @@ function Selects() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
@@ -90,6 +90,10 @@ function Selects() {
           maxCount={4}
           label="Framework"
           helperText="Select your favorite framework"
+          search={{
+            query: search,
+            setQuery: setSearch,
+          }}
         />
         <MultiSelect
           options={frameworksList}
@@ -110,12 +114,7 @@ function Selects() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >

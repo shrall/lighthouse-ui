@@ -1,5 +1,8 @@
+import { CrossFilled } from "@/components/ui/icon/CrossFilled";
+import { EyeOpenOutline } from "@/components/ui/icon/EyeOpenOutline";
+import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
+import { SearchOutline } from "@/components/ui/icon/SearchOutline";
 import { Input } from "@/components/ui/input";
-import { Icon } from "@/components/ui/icon";
 import { Tooltip } from "@/components/ui/tooltip";
 import { useState } from "react";
 
@@ -18,13 +21,10 @@ function Inputs() {
         />
         <Input
           placeholder="Placeholder"
-          leftNode={
-            <Icon name="search-outline" className="lui-min-h-6 lui-min-w-6" />
-          }
+          leftNode={<SearchOutline className="lui-min-h-6 lui-min-w-6" />}
           rightNode={
             value && (
-              <Icon
-                name="cross-filled"
+              <CrossFilled
                 className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
                 onClick={() => setValue("")}
               />
@@ -35,13 +35,10 @@ function Inputs() {
         />
         <Input
           placeholder="Placeholder"
-          leftNode={
-            <Icon name="search-outline" className="lui-min-h-6 lui-min-w-6" />
-          }
+          leftNode={<SearchOutline className="lui-min-h-6 lui-min-w-6" />}
           rightNode={
             value && (
-              <Icon
-                name="cross-filled"
+              <CrossFilled
                 className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
                 onClick={() => setValue("")}
               />
@@ -81,8 +78,7 @@ function Inputs() {
           placeholder="Placeholder"
           type={showPassword ? "text" : "password"}
           rightNode={
-            <Icon
-              name="eye-open-outline"
+            <EyeOpenOutline
               className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             />
@@ -95,8 +91,7 @@ function Inputs() {
           placeholder="Placeholder"
           type={showPassword ? "text" : "password"}
           rightNode={
-            <Icon
-              name="eye-open-outline"
+            <EyeOpenOutline
               className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             />
@@ -124,12 +119,7 @@ function Inputs() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
@@ -161,12 +151,7 @@ function Inputs() {
           alignment="horizontal"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >

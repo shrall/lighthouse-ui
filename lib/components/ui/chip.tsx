@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
-import { Icon } from "./icon";
+import { CrossLargeOutline } from "./icon/CrossLargeOutline";
 
 const chipVariants = cva(
   "lui-inline-flex lui-items-center lui-border lui-gap-x-[10px] lui-rounded-lg lui-border-transparent lui-w-fit lui-px-3 lui-text-xs lui-transition-colors focus:lui-outline-none lui-max-w-[316px]",
@@ -59,8 +59,7 @@ function Chip({
     >
       <div className="lui-truncate">{children}</div>
       {removeOnClick && (
-        <Icon
-          name="cross-large-outline"
+        <CrossLargeOutline
           size={16}
           onClick={removeOnClick}
           className="lui-min-h-4 lui-min-w-4 lui-cursor-pointer"

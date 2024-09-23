@@ -1,5 +1,5 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { Icon } from "@/components/ui/icon";
+import { SortOutline } from "@/components/ui/icon/SortOutline";
 import { ColumnDef } from "@tanstack/react-table";
 
 export type Payment = {
@@ -56,7 +56,7 @@ export const columns: ColumnDef<Payment>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Status
-          <Icon name="sort-outline" size={16} />
+          <SortOutline size={16} />
         </div>
       );
     },
@@ -70,7 +70,7 @@ export const columns: ColumnDef<Payment>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
           Email
-          <Icon name="sort-outline" size={16} />
+          <SortOutline size={16} />
         </div>
       );
     },

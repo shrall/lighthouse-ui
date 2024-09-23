@@ -1,6 +1,6 @@
 import { Textarea } from "@/components/ui/textarea";
-import { Icon } from "@/components/ui/icon";
 import { Tooltip } from "@/components/ui/tooltip";
+import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
 
 function Textareas() {
   return (
@@ -19,12 +19,7 @@ function Textareas() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
@@ -56,12 +51,7 @@ function Textareas() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
@@ -100,12 +90,7 @@ function Textareas() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
@@ -134,12 +119,7 @@ function Textareas() {
           label="Label w/Tooltip"
           tooltip={
             <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
+              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
               side="top"
               title="Tooltip Title"
             >
