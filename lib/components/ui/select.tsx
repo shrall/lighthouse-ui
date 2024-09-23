@@ -88,11 +88,15 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
         if (selectedOption) {
           if (search) {
             search.setQuery(
-              `${selectedOption.label} - ${selectedOption.description}`,
+              selectedOption.description
+                ? `${selectedOption.label} - ${selectedOption.description}`
+                : selectedOption.label,
             );
           } else {
             setInputFilter(
-              `${selectedOption.label} - ${selectedOption.description}`,
+              selectedOption.description
+                ? `${selectedOption.label} - ${selectedOption.description}`
+                : selectedOption.label,
             );
           }
         }
@@ -103,7 +107,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
           setInputFilter("");
         }
       }
-    }, [value, options]);
+    }, [value]);
 
     //NOTE - Infinite Scroll
     const observer = React.useRef<IntersectionObserver>();
