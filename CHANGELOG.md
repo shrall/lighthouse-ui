@@ -1,5 +1,29 @@
 
 
+## [0.2.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.13...v0.2.14) (2024-09-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **icon:** split each type into their own separate components
+
+### Features
+
+* **alert:** add props explanation ([b27f66c](https://github.com/shrall/lighthouse-ui/commit/b27f66c526ea401b7fc509044fbd92131371fb09))
+* **badge:** add ref prop ([b73784c](https://github.com/shrall/lighthouse-ui/commit/b73784c532e67a108eff10093617aa111c2af0cc))
+* **badge:** convert component from div to span ([d4d16fe](https://github.com/shrall/lighthouse-ui/commit/d4d16fec3e49c3a2bc1cdfff6de56c3b07658da1))
+* **badge:** remove paddings for textonly variant ([2991e91](https://github.com/shrall/lighthouse-ui/commit/2991e912976bb32d817421de4e4f9984a2e29a68))
+
+
+### Bug Fixes
+
+* **select:** label shows undefined when description is not set ([00e765e](https://github.com/shrall/lighthouse-ui/commit/00e765e61303c513450494d9d179491e320623e6))
+
+
+### Code Refactoring
+
+* **icon:** split each type into their own separate components ([cb7e3be](https://github.com/shrall/lighthouse-ui/commit/cb7e3bec894664c9716deaa056e70634db2fae33))
+
 ## [0.2.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.12...v0.2.13) (2024-09-23)
 
 
