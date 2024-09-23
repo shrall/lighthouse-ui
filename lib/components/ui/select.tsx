@@ -39,6 +39,10 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
   isError?: boolean;
   refetch?: () => void;
+  search?: {
+    query: string;
+    setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
   infiniteScroll?: {
     fetchMore: () => void;
     hasMore: boolean;
@@ -67,6 +71,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       isLoading,
       isError,
       refetch = () => {},
+      search,
       infiniteScroll,
       ...props
     },
@@ -80,12 +85,22 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       if (value) {
         const selectedOption = options.find((option) => option.value === value);
         if (selectedOption) {
-          setInputFilter(
-            `${selectedOption.label} - ${selectedOption.description}`,
-          );
+          if (search) {
+            search.setQuery(
+              `${selectedOption.label} - ${selectedOption.description}`,
+            );
+          } else {
+            setInputFilter(
+              `${selectedOption.label} - ${selectedOption.description}`,
+            );
+          }
         }
       } else {
-        setInputFilter("");
+        if (search) {
+          search.setQuery("");
+        } else {
+          setInputFilter("");
+        }
       }
     }, [value, options]);
 
@@ -168,10 +183,14 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <input
                     type="text"
                     placeholder={placeholder}
-                    value={inputFilter}
+                    value={search ? search.query : inputFilter}
                     onChange={(e) => {
                       onValueChange("");
-                      setInputFilter(e.target.value);
+                      if (search) {
+                        search.setQuery(e.target.value);
+                      } else {
+                        setInputFilter(e.target.value);
+                      }
                     }}
                     className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                     ref={inputRef}
@@ -227,10 +246,18 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                 ? true
                                 : option.label
                                     .toLowerCase()
-                                    .includes(inputFilter.toLowerCase()) ||
+                                    .includes(
+                                      search
+                                        ? search.query.toLowerCase()
+                                        : inputFilter.toLowerCase(),
+                                    ) ||
                                   option.description
                                     ?.toLowerCase()
-                                    .includes(inputFilter.toLowerCase()),
+                                    .includes(
+                                      search
+                                        ? search.query.toLowerCase()
+                                        : inputFilter.toLowerCase(),
+                                    ),
                             )
                             .map((option) => {
                               return (
@@ -238,7 +265,11 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                   key={option.value}
                                   onSelect={() => {
                                     if (value === option.value) {
-                                      setInputFilter("");
+                                      if (search) {
+                                        search.setQuery("");
+                                      } else {
+                                        setInputFilter("");
+                                      }
                                       onValueChange("");
                                       return;
                                     }
