@@ -40,39 +40,19 @@ function Badges() {
         >
           Inactive
         </Badge>
-        <Badge
-          variant="success"
-          className="md:lui-px-3 md:lui-py-[3px] md:lui-text-xs"
-          textOnly
-        >
+        <Badge variant="success" textOnly>
           Success
         </Badge>
-        <Badge
-          variant="danger"
-          className="md:lui-px-3 md:lui-py-[3px] md:lui-text-xs"
-          textOnly
-        >
+        <Badge variant="danger" textOnly>
           Danger
         </Badge>
-        <Badge
-          variant="warning"
-          className="md:lui-px-3 md:lui-py-[3px] md:lui-text-xs"
-          textOnly
-        >
+        <Badge variant="warning" textOnly>
           Warning
         </Badge>
-        <Badge
-          variant="info"
-          className="md:lui-px-3 md:lui-py-[3px] md:lui-text-xs"
-          textOnly
-        >
+        <Badge variant="info" textOnly>
           Info
         </Badge>
-        <Badge
-          variant="inactive"
-          className="md:lui-px-3 md:lui-py-[3px] md:lui-text-xs"
-          textOnly
-        >
+        <Badge variant="inactive" textOnly>
           Inactive
         </Badge>
       </div>
