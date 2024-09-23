@@ -1,5 +1,13 @@
 
 
+## [0.2.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.12...v0.2.13) (2024-09-23)
+
+
+### Features
+
+* **multi-select:** add search prop ([5ee06b5](https://github.com/shrall/lighthouse-ui/commit/5ee06b53f6b9d2f8853562b5ff2e588767655965))
+* **select:** add search prop ([d4d390b](https://github.com/shrall/lighthouse-ui/commit/d4d390ba8905f5e9808f9109adb061bbb6045d9b))
+
 ## [0.2.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.11...v0.2.12) (2024-09-20)
 
 
