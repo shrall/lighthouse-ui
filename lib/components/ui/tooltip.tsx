@@ -25,7 +25,7 @@ const TooltipContent = React.forwardRef<
     {...props}
   >
     {children}
-    <TooltipPrimitive.Arrow asChild={true}>
+    <TooltipPrimitive.Arrow asChild>
       <svg
         width="24"
         height="17"
