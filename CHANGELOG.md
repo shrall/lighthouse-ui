@@ -1,3 +1,40 @@
+
+
+## [0.3.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-24)
+
+
+### Features
+
+* add tabs ([3ca86dc](https://github.com/shrall/lighthouse-ui/commit/3ca86dc4bdd6da3b05372104d122db77e8b1af20))
+
+## [0.3.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-20)
+
+## [0.3.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-19)
+
+## [0.3.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-18)
+
+## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-17)
+
+## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-17)
+
+
+### Features
+
+* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+
+## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-17)
+
+## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-13)
+
+
+### Styles
+
+* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.3.0-beta.9) (2024-09-12)
+
 ## [0.3.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-20)
 
 ## [0.3.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-19)
