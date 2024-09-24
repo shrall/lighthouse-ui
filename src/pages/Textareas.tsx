@@ -1,6 +1,6 @@
 import { Textarea } from "@/components/ui/textarea";
-import { Tooltip } from "@/components/ui/tooltip";
 import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
+import { TooltipText } from "@/index";
 
 function Textareas() {
   return (
@@ -16,18 +16,16 @@ function Textareas() {
         <Textarea
           inputStyle="underline"
           placeholder="Type your message here."
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
         <Textarea
@@ -48,18 +46,16 @@ function Textareas() {
           inputStyle="underline"
           placeholder="Type your message here."
           alignment="horizontal"
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>
@@ -87,18 +83,16 @@ function Textareas() {
         />
         <Textarea
           placeholder="Type your message here."
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
         <Textarea
@@ -116,18 +110,16 @@ function Textareas() {
         <Textarea
           placeholder="Type your message here."
           alignment="horizontal"
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>

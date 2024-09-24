@@ -3,7 +3,7 @@ import { EyeOpenOutline } from "@/components/ui/icon/EyeOpenOutline";
 import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
 import { SearchOutline } from "@/components/ui/icon/SearchOutline";
 import { Input } from "@/components/ui/input";
-import { Tooltip } from "@/components/ui/tooltip";
+import { TooltipText } from "@/index";
 import { useState } from "react";
 
 function Inputs() {
@@ -116,18 +116,16 @@ function Inputs() {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>
@@ -147,19 +145,17 @@ function Inputs() {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          label="Long Label w/Tooltip"
+          label="Long Label w/TooltipText"
           alignment="horizontal"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>

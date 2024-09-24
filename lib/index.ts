@@ -116,7 +116,8 @@ export { UserSettingFilled } from "./components/ui/icon/UserSettingFilled";
 export { UserSettingOutline } from "./components/ui/icon/UserSettingOutline";
 export { ZipOutline } from "./components/ui/icon/ZipOutline";
 export { Toaster, toast } from "./components/ui/sonner";
-export { Tooltip } from "./components/ui/tooltip";
+export { TooltipText } from "./components/ui/tooltip-text";
+export { TooltipImage } from "./components/ui/tooltip-image";
 
 //NOTE - v0.2.0
 export {

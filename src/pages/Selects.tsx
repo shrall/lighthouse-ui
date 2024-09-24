@@ -1,9 +1,9 @@
 import { MultiSelect } from "@/components/ui/multi-select";
 import { Select } from "@/components/ui/select";
-import { Tooltip } from "@/components/ui/tooltip";
 
 import { useState } from "react";
 import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
+import { TooltipText } from "@/index";
 
 function Selects() {
   const [frameworksList, setFrameworksList] = useState([
@@ -68,18 +68,16 @@ function Selects() {
           value={selectedValue}
           onValueChange={setSelectedValue}
           placeholder="Select framework"
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
         <MultiSelect
@@ -111,18 +109,16 @@ function Selects() {
           defaultValue={selectedValues}
           placeholder="Select frameworks"
           maxCount={4}
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={<QuestionFilled className="lui-text-ocean-primary-10" />}
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
         <Select
