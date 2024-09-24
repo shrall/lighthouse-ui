@@ -1,5 +1,17 @@
 
 
+## [0.2.15](https://github.com/shrall/lighthouse-ui/compare/v0.2.14...v0.2.15) (2024-09-24)
+
+
+### Features
+
+* **button:** set button default type to button ([373ccc0](https://github.com/shrall/lighthouse-ui/commit/373ccc0ad8826f0863423014bd38411296a24390))
+
+
+### Code Refactoring
+
+* **tooltip:** split tooltip into 2 components ([825fac9](https://github.com/shrall/lighthouse-ui/commit/825fac9e732382403e38c8b90d9c41a4ccd19623))
+
 ## [0.2.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.13...v0.2.14) (2024-09-23)
 
 
