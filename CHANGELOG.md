@@ -1,5 +1,12 @@
 
 
+## [0.2.17](https://github.com/shrall/lighthouse-ui/compare/v0.2.16...v0.2.17) (2024-09-24)
+
+
+### Styles
+
+* **alert:** set title & description line height to 1.5rem ([7b67052](https://github.com/shrall/lighthouse-ui/commit/7b6705235e024937096574c9902c6403b0f15232))
+
 ## [0.2.16](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.2.16) (2024-09-24)
 
 
