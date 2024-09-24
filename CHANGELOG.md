@@ -1,5 +1,12 @@
 
 
+## [0.2.16](https://github.com/shrall/lighthouse-ui/compare/v0.2.15...v0.2.16) (2024-09-24)
+
+
+### Bug Fixes
+
+* **select:** search query is set to value when state is selected ([b67ebdb](https://github.com/shrall/lighthouse-ui/commit/b67ebdb1c2f07876c1f928ec72479f31ab51fbe1))
+
 ## [0.2.15](https://github.com/shrall/lighthouse-ui/compare/v0.2.14...v0.2.15) (2024-09-24)
 
 
