@@ -13,6 +13,7 @@ import Checkboxes from "./pages/Checkboxes";
 import Chips from "./pages/Chips";
 import Selects from "./pages/Selects";
 import Textareas from "./pages/Textareas";
+import Tabs from "./pages/Tabs";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Paginations />
       <Selects />
       <Tables />
+      <Tabs />
       <Textareas />
       <Toasts />
       <Tooltips />

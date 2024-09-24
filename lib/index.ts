@@ -156,3 +156,5 @@ export {
     DropdownMenuTrigger,
 } from "./components/ui/dropdown-menu";
 export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Tabs, TabsContent } from "./components/ui/tabs";
+export type { TabMenu } from "./components/ui/tabs";
