@@ -8,9 +8,9 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Icon } from "@/components/ui/icon";
 import { cn } from "@/lib/utils";
 import { enUS } from "date-fns/locale";
+import { CalendarOutline } from "@/components/ui/icon/CalendarOutline";
 
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -32,10 +32,7 @@ function Calendars() {
                 !date && "text-muted-foreground",
               )}
             >
-              <Icon
-                name="calendar-outline"
-                className="lui-mr-2 lui-h-4 lui-w-4"
-              />
+              <CalendarOutline className="lui-mr-2 lui-h-4 lui-w-4" />
               {date?.from ? (
                 date.to ? (
                   <>

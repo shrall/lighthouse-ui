@@ -14,7 +14,8 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { Icon } from "./icon";
+import { ChevronDownOutline } from "./icon/ChevronDownOutline";
+import { LoadingFilled } from "./icon/LoadingFilled";
 
 interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
@@ -39,6 +40,10 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
   isError?: boolean;
   refetch?: () => void;
+  search?: {
+    query: string;
+    setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
   infiniteScroll?: {
     fetchMore: () => void;
     hasMore: boolean;
@@ -67,6 +72,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       isLoading,
       isError,
       refetch = () => {},
+      search,
       infiniteScroll,
       ...props
     },
@@ -80,14 +86,28 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       if (value) {
         const selectedOption = options.find((option) => option.value === value);
         if (selectedOption) {
-          setInputFilter(
-            `${selectedOption.label} - ${selectedOption.description}`,
-          );
+          if (search) {
+            search.setQuery(
+              selectedOption.description
+                ? `${selectedOption.label} - ${selectedOption.description}`
+                : selectedOption.label,
+            );
+          } else {
+            setInputFilter(
+              selectedOption.description
+                ? `${selectedOption.label} - ${selectedOption.description}`
+                : selectedOption.label,
+            );
+          }
         }
       } else {
-        setInputFilter("");
+        if (search) {
+          search.setQuery("");
+        } else {
+          setInputFilter("");
+        }
       }
-    }, [value, options]);
+    }, [value]);
 
     //NOTE - Infinite Scroll
     const observer = React.useRef<IntersectionObserver>();
@@ -168,17 +188,20 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <input
                     type="text"
                     placeholder={placeholder}
-                    value={inputFilter}
+                    value={search ? search.query : inputFilter}
                     onChange={(e) => {
                       onValueChange("");
-                      setInputFilter(e.target.value);
+                      if (search) {
+                        search.setQuery(e.target.value);
+                      } else {
+                        setInputFilter(e.target.value);
+                      }
                     }}
                     className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                     ref={inputRef}
                     disabled={props.disabled}
                   />
-                  <Icon
-                    name="chevron-down-outline"
+                  <ChevronDownOutline
                     className={cn(
                       "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
                       props.disabled && "lui-text-ocean-light-40",
@@ -227,10 +250,18 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                 ? true
                                 : option.label
                                     .toLowerCase()
-                                    .includes(inputFilter.toLowerCase()) ||
+                                    .includes(
+                                      search
+                                        ? search.query.toLowerCase()
+                                        : inputFilter.toLowerCase(),
+                                    ) ||
                                   option.description
                                     ?.toLowerCase()
-                                    .includes(inputFilter.toLowerCase()),
+                                    .includes(
+                                      search
+                                        ? search.query.toLowerCase()
+                                        : inputFilter.toLowerCase(),
+                                    ),
                             )
                             .map((option) => {
                               return (
@@ -238,7 +269,11 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                   key={option.value}
                                   onSelect={() => {
                                     if (value === option.value) {
-                                      setInputFilter("");
+                                      if (search) {
+                                        search.setQuery("");
+                                      } else {
+                                        setInputFilter("");
+                                      }
                                       onValueChange("");
                                       return;
                                     }
@@ -274,10 +309,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                       ref={infiniteScroll?.hasMore ? observerRef : null}
                       className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
                     >
-                      <Icon
-                        name="loading-filled"
-                        className="lui-animate-spin lui-text-ocean-secondary-30"
-                      />
+                      <LoadingFilled className="lui-animate-spin lui-text-ocean-secondary-30" />
                     </div>
                   )}
                 </CommandList>

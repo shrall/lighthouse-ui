@@ -14,8 +14,9 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { Icon } from "./icon";
 import { Checkbox } from "./checkbox";
+import { ChevronDownOutline } from "./icon/ChevronDownOutline";
+import { LoadingFilled } from "./icon/LoadingFilled";
 
 interface MultiSelectProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -42,6 +43,10 @@ interface MultiSelectProps
   isLoading?: boolean;
   isError?: boolean;
   refetch?: () => void;
+  search?: {
+    query: string;
+    setQuery: React.Dispatch<React.SetStateAction<string>>;
+  };
   infiniteScroll?: {
     fetchMore: () => void;
     hasMore: boolean;
@@ -73,6 +78,7 @@ export const MultiSelect = React.forwardRef<
       isLoading,
       isError,
       refetch = () => {},
+      search,
       infiniteScroll,
       ...props
     },
@@ -221,12 +227,19 @@ export const MultiSelect = React.forwardRef<
                       <input
                         type="text"
                         placeholder={placeholder}
-                        value={inputFilter}
+                        value={search ? search.query : inputFilter}
                         onChange={(e) => {
-                          setInputFilter(e.target.value);
+                          if (search) {
+                            search.setQuery(e.target.value);
+                          } else {
+                            setInputFilter(e.target.value);
+                          }
                         }}
                         onKeyDown={(e) => {
-                          if (e.key === "Backspace" && inputFilter === "") {
+                          if (
+                            e.key === "Backspace" &&
+                            (search ? search.query === "" : inputFilter === "")
+                          ) {
                             setSelectedValues((prev) => prev.slice(0, -1));
                           }
                         }}
@@ -235,8 +248,7 @@ export const MultiSelect = React.forwardRef<
                         disabled={props.disabled}
                       />
                     </div>
-                    <Icon
-                      name="chevron-down-outline"
+                    <ChevronDownOutline
                       className={cn(
                         "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
                         props.disabled && "lui-text-ocean-light-40",
@@ -248,16 +260,19 @@ export const MultiSelect = React.forwardRef<
                     <input
                       type="text"
                       placeholder={placeholder}
-                      value={inputFilter}
+                      value={search ? search.query : inputFilter}
                       onChange={(e) => {
-                        setInputFilter(e.target.value);
+                        if (search) {
+                          search.setQuery(e.target.value);
+                        } else {
+                          setInputFilter(e.target.value);
+                        }
                       }}
                       className="lui-h-full lui-w-full focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                       ref={inputRef}
                       disabled={props.disabled}
                     />
-                    <Icon
-                      name="chevron-down-outline"
+                    <ChevronDownOutline
                       className={cn(
                         "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
                         props.disabled && "lui-text-ocean-light-40",
@@ -301,41 +316,54 @@ export const MultiSelect = React.forwardRef<
                             : "Data tidak ditemukan"}
                         </CommandEmpty>
                         <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                          {showSelectAll && inputFilter === "" && (
-                            <CommandItem
-                              key="all"
-                              onSelect={toggleAll}
-                              className={cn(
-                                "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                                selectedValues.length === options.length &&
-                                  "!lui-bg-ocean-secondary-10",
-                              )}
-                            >
-                              <Checkbox
-                                checked={
-                                  selectedValues.length === options.length
-                                    ? true
-                                    : selectedValues.length === 0
-                                      ? false
-                                      : "indeterminate"
-                                }
-                              />
-                              <span>
-                                (
-                                {locale === "en" ? "Select All" : "Pilih Semua"}
-                                )
-                              </span>
-                            </CommandItem>
-                          )}
+                          {showSelectAll &&
+                            (search
+                              ? search.query === ""
+                              : inputFilter === "") && (
+                              <CommandItem
+                                key="all"
+                                onSelect={toggleAll}
+                                className={cn(
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                  selectedValues.length === options.length &&
+                                    "!lui-bg-ocean-secondary-10",
+                                )}
+                              >
+                                <Checkbox
+                                  checked={
+                                    selectedValues.length === options.length
+                                      ? true
+                                      : selectedValues.length === 0
+                                        ? false
+                                        : "indeterminate"
+                                  }
+                                />
+                                <span>
+                                  (
+                                  {locale === "en"
+                                    ? "Select All"
+                                    : "Pilih Semua"}
+                                  )
+                                </span>
+                              </CommandItem>
+                            )}
                           {options
                             .filter(
                               (option) =>
                                 option.label
                                   .toLowerCase()
-                                  .includes(inputFilter.toLowerCase()) ||
+                                  .includes(
+                                    search
+                                      ? search.query.toLowerCase()
+                                      : inputFilter.toLowerCase(),
+                                  ) ||
                                 option.description
                                   ?.toLowerCase()
-                                  .includes(inputFilter.toLowerCase()),
+                                  .includes(
+                                    search
+                                      ? search.query.toLowerCase()
+                                      : inputFilter.toLowerCase(),
+                                  ),
                             )
                             .map((option) => {
                               const isSelected = selectedValues.includes(
@@ -375,10 +403,7 @@ export const MultiSelect = React.forwardRef<
                       ref={infiniteScroll?.hasMore ? observerRef : null}
                       className="p-4 lui-flex lui-h-full lui-w-full lui-items-center lui-justify-center lui-bg-white lui-py-5"
                     >
-                      <Icon
-                        name="loading-filled"
-                        className="lui-animate-spin lui-text-ocean-secondary-30"
-                      />
+                      <LoadingFilled className="lui-animate-spin lui-text-ocean-secondary-30" />
                     </div>
                   )}
                 </CommandList>

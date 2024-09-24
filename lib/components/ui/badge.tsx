@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "lui-inline-flex lui-items-center lui-rounded-full lui-w-fit lui-font-semibold lui-px-3 lui-py-[3px] lui-text-xs md:lui-px-4 md:lui-py-[5.5px] md:lui-text-sm",
+  "lui-inline-flex lui-items-center lui-rounded-full lui-w-fit lui-font-semibold lui-px-3 lui-py-[0.1875rem] lui-text-xs md:lui-px-4 md:lui-py-[0.34375rem] md:lui-text-sm",
   {
     variants: {
       variant: {
@@ -22,22 +22,23 @@ const badgeVariants = cva(
 );
 
 export interface BadgeProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends React.HTMLAttributes<HTMLSpanElement>,
     VariantProps<typeof badgeVariants> {
   textOnly?: boolean;
 }
 
-function Badge({ className, variant, textOnly = false, ...props }: BadgeProps) {
-  return (
-    <div
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+  ({ className, variant, textOnly = false, ...props }, ref) => (
+    <span
+      ref={ref}
       className={cn(
         badgeVariants({ variant }),
         className,
-        textOnly && "lui-bg-transparent",
+        textOnly && "lui-bg-transparent lui-p-0 md:lui-p-0",
       )}
       {...props}
     />
-  );
-}
+  ),
+);
 
 export { Badge };

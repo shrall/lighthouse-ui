@@ -3,8 +3,6 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-import { Icon, IconType } from "./icon";
-
 const buttonVariants = cva(
   "lui-inline-flex lui-items-center lui-justify-center lui-transition-colors lui-w-fit",
   {
@@ -36,24 +34,34 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  leftIcon?: IconType;
-  rightIcon?: IconType;
+  leftNode?: React.ReactNode;
+  rightNode?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, leftIcon, rightIcon, variant, size, children, ...props },
+    {
+      className,
+      leftNode,
+      rightNode,
+      variant,
+      size,
+      type = "button",
+      children,
+      ...props
+    },
     ref,
   ) => {
     return (
       <button
-        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
+        type={type}
+        className={cn(buttonVariants({ variant, size, className }))}
         {...props}
       >
-        {leftIcon && <Icon name={leftIcon} />}
+        {leftNode && leftNode}
         <span className="lui-break-anywhere">{children}</span>
-        {rightIcon && <Icon name={rightIcon} />}
+        {rightNode && rightNode}
       </button>
     );
   },

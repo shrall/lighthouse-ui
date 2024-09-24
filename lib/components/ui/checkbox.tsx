@@ -4,7 +4,9 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Icon } from "./icon";
+import { CheckboxUncheckedOutline } from "./icon/CheckboxUncheckedOutline";
+import { CheckboxCheckedFilled } from "./icon/CheckboxCheckedFilled";
+import { CheckboxIndeterminateFilled } from "./icon/CheckboxIndeterminateFilled";
 
 interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
@@ -28,8 +30,7 @@ const Checkbox = React.forwardRef<
       {...props}
     >
       <CheckboxPrimitive.Indicator asChild forceMount>
-        <Icon
-          name="checkbox-unchecked-outline"
+        <CheckboxUncheckedOutline
           size={20}
           className={
             "lui-hidden lui-text-ocean-dark-10 group-disabled:lui-text-ocean-light-40 data-[state=unchecked]:lui-flex"
@@ -37,8 +38,7 @@ const Checkbox = React.forwardRef<
         />
       </CheckboxPrimitive.Indicator>
       <CheckboxPrimitive.Indicator asChild>
-        <Icon
-          name="checkbox-checked-filled"
+        <CheckboxCheckedFilled
           size={20}
           className={
             "lui-hidden lui-text-ocean-secondary-20 group-disabled:lui-text-ocean-light-40 data-[state=checked]:lui-flex"
@@ -46,8 +46,7 @@ const Checkbox = React.forwardRef<
         />
       </CheckboxPrimitive.Indicator>
       <CheckboxPrimitive.Indicator asChild>
-        <Icon
-          name="checkbox-indeterminate-filled"
+        <CheckboxIndeterminateFilled
           size={20}
           className={
             "lui-hidden lui-text-ocean-secondary-20 group-disabled:lui-text-ocean-light-40 data-[state=indeterminate]:lui-flex"

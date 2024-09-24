@@ -1,6 +1,9 @@
+import { CrossFilled } from "@/components/ui/icon/CrossFilled";
+import { EyeOpenOutline } from "@/components/ui/icon/EyeOpenOutline";
+import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
+import { SearchOutline } from "@/components/ui/icon/SearchOutline";
 import { Input } from "@/components/ui/input";
-import { Icon } from "@/components/ui/icon";
-import { Tooltip } from "@/components/ui/tooltip";
+import { TooltipText } from "@/index";
 import { useState } from "react";
 
 function Inputs() {
@@ -18,13 +21,10 @@ function Inputs() {
         />
         <Input
           placeholder="Placeholder"
-          leftNode={
-            <Icon name="search-outline" className="lui-min-h-6 lui-min-w-6" />
-          }
+          leftNode={<SearchOutline className="lui-min-h-6 lui-min-w-6" />}
           rightNode={
             value && (
-              <Icon
-                name="cross-filled"
+              <CrossFilled
                 className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
                 onClick={() => setValue("")}
               />
@@ -35,13 +35,10 @@ function Inputs() {
         />
         <Input
           placeholder="Placeholder"
-          leftNode={
-            <Icon name="search-outline" className="lui-min-h-6 lui-min-w-6" />
-          }
+          leftNode={<SearchOutline className="lui-min-h-6 lui-min-w-6" />}
           rightNode={
             value && (
-              <Icon
-                name="cross-filled"
+              <CrossFilled
                 className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
                 onClick={() => setValue("")}
               />
@@ -81,8 +78,7 @@ function Inputs() {
           placeholder="Placeholder"
           type={showPassword ? "text" : "password"}
           rightNode={
-            <Icon
-              name="eye-open-outline"
+            <EyeOpenOutline
               className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             />
@@ -95,8 +91,7 @@ function Inputs() {
           placeholder="Placeholder"
           type={showPassword ? "text" : "password"}
           rightNode={
-            <Icon
-              name="eye-open-outline"
+            <EyeOpenOutline
               className="lui-min-h-6 lui-min-w-6 lui-cursor-pointer"
               onClick={() => setShowPassword(!showPassword)}
             />
@@ -121,23 +116,16 @@ function Inputs() {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          label="Label w/Tooltip"
+          label="Label w/TooltipText"
           tooltip={
-            <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>
@@ -157,24 +145,17 @@ function Inputs() {
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          label="Long Label w/Tooltip"
+          label="Long Label w/TooltipText"
           alignment="horizontal"
           tooltip={
-            <Tooltip
-              trigger={
-                <Icon
-                  name="question-filled"
-                  className="lui-text-ocean-primary-10"
-                />
-              }
-              side="top"
-              title="Tooltip Title"
-            >
-              <p>
+            <TooltipText
+              title="TooltipText Title"
+              description="
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
-              </p>
-            </Tooltip>
+                commodo ligula eget dolor."
+            >
+              <QuestionFilled className="lui-text-ocean-primary-10" />
+            </TooltipText>
           }
         />
       </div>

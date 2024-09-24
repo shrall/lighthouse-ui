@@ -2,8 +2,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-
-import { Icon } from "./icon";
+import { CheckFilled } from "./icon/CheckFilled";
+import { CrossFilled } from "./icon/CrossFilled";
+import { ExclamationFilled } from "./icon/ExclamationFilled";
+import { InfoFilled } from "./icon/InfoFilled";
+import { CrossLargeOutline } from "./icon/CrossLargeOutline";
+import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
 const alertVariants = cva(
   "lui-relative lui-w-full lui-flex lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 lui-gap-3",
@@ -22,21 +26,23 @@ const alertVariants = cva(
   },
 );
 
-const Alert = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> &
-    VariantProps<typeof alertVariants> & {
-      description?: string;
-      actionType?: "close";
-      alertAction?: () => void;
-    }
->(
+type AlertProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof alertVariants> & {
+    /** Description of the alert */
+    description?: string;
+    /** Action type of the alert. Default shows a chevron right icon, close shows a cross icon */
+    actionType?: "default" | "close";
+    /** Callback function for the alert action when the icon is clicked */
+    alertAction?: () => void;
+  };
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   (
     {
       className,
       variant,
       children,
-      actionType,
+      actionType = "default",
       alertAction,
       title,
       description,
@@ -48,27 +54,19 @@ const Alert = React.forwardRef<
       ref={ref}
       role="alert"
       className={cn(alertVariants({ variant }), className)}
+      title={title}
       {...props}
     >
-      {variant === "success" && (
-        <Icon name="check-filled" className="lui-min-w-6" />
-      )}
-      {variant === "danger" && (
-        <Icon name="cross-filled" className="lui-min-w-6" />
-      )}
-      {variant === "warning" && (
-        <Icon name="exclamation-filled" className="lui-min-w-6" />
-      )}
-      {variant === "info" && (
-        <Icon name="info-filled" className="lui-min-w-6" />
-      )}
+      {variant === "success" && <CheckFilled className="lui-min-w-6" />}
+      {variant === "danger" && <CrossFilled className="lui-min-w-6" />}
+      {variant === "warning" && <ExclamationFilled className="lui-min-w-6" />}
+      {variant === "info" && <InfoFilled className="lui-min-w-6" />}
       <div className="lui-flex lui-w-full lui-flex-col">
         <AlertTitle>{title}</AlertTitle>
         {description && <AlertDescription>{description}</AlertDescription>}
       </div>
       {actionType === "close" && alertAction ? (
-        <Icon
-          name="cross-large-outline"
+        <CrossLargeOutline
           className="lui-min-w-6 lui-cursor-pointer"
           onClick={() => {
             alertAction();
@@ -76,8 +74,7 @@ const Alert = React.forwardRef<
         />
       ) : (
         alertAction && (
-          <Icon
-            name="chevron-right-outline"
+          <ChevronRightOutline
             className="lui-min-w-6 lui-cursor-pointer"
             onClick={() => {
               alertAction();

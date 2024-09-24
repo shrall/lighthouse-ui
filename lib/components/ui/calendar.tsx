@@ -10,10 +10,11 @@ import {
 } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { Icon } from "./icon";
 import { format, addYears } from "date-fns";
 import { Button } from "./button";
 import { enUS } from "date-fns/locale";
+import { ChevronLeftOutline } from "./icon/ChevronLeftOutline";
+import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -107,8 +108,7 @@ function Calendar({
 
           return (
             <div className="lui-flex lui-w-80 lui-items-center lui-justify-between lui-pb-1">
-              <Icon
-                name="chevron-left-outline"
+              <ChevronLeftOutline
                 className="lui-size-4 lui-cursor-pointer lui-text-ocean-dark-20"
                 onClick={() => {
                   if (content === "date" || content === "month") {
@@ -164,8 +164,7 @@ function Calendar({
                   {getYearRange(props.displayMonth.getFullYear())}
                 </span>
               )}
-              <Icon
-                name="chevron-right-outline"
+              <ChevronRightOutline
                 className="lui-size-4 lui-cursor-pointer lui-text-ocean-dark-20"
                 onClick={() => {
                   if (content === "date" || content === "month") {

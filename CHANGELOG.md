@@ -1,5 +1,3 @@
-
-
 ## [0.3.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-20)
 
 ## [0.3.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-19)
@@ -10,31 +8,60 @@
 
 ## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-17)
 
-
-### Features
-
-* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
-
-## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-17)
+- **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
 
 ## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-13)
 
-
 ### Styles
 
-* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+- **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
 
 ## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-13)
 
 ## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-12)
 
-## [0.2.12](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.7...v0.3.0-beta.8) (2024-09-20)
-
+## [0.2.15](https://github.com/shrall/lighthouse-ui/compare/v0.2.14...v0.2.15) (2024-09-24)
 
 ### Features
 
-* **button:** set icons size for each button sizes ([f14ae5c](https://github.com/shrall/lighthouse-ui/commit/f14ae5c538902803b343140e8ecd1f0d8e7777df))
-* **chip:** setup title prop to show text tooltip on hover ([ae1c1ba](https://github.com/shrall/lighthouse-ui/commit/ae1c1bacfd2e75a9cbe5561d586ab97f45d77200))
+- **button:** set button default type to button ([373ccc0](https://github.com/shrall/lighthouse-ui/commit/373ccc0ad8826f0863423014bd38411296a24390))
+
+### Code Refactoring
+
+- **tooltip:** split tooltip into 2 components ([825fac9](https://github.com/shrall/lighthouse-ui/commit/825fac9e732382403e38c8b90d9c41a4ccd19623))
+
+## [0.2.14](https://github.com/shrall/lighthouse-ui/compare/v0.2.13...v0.2.14) (2024-09-23)
+
+### ⚠ BREAKING CHANGES
+
+- **icon:** split each type into their own separate components
+
+### Features
+
+- **alert:** add props explanation ([b27f66c](https://github.com/shrall/lighthouse-ui/commit/b27f66c526ea401b7fc509044fbd92131371fb09))
+- **badge:** add ref prop ([b73784c](https://github.com/shrall/lighthouse-ui/commit/b73784c532e67a108eff10093617aa111c2af0cc))
+- **badge:** convert component from div to span ([d4d16fe](https://github.com/shrall/lighthouse-ui/commit/d4d16fec3e49c3a2bc1cdfff6de56c3b07658da1))
+- **badge:** remove paddings for textonly variant ([2991e91](https://github.com/shrall/lighthouse-ui/commit/2991e912976bb32d817421de4e4f9984a2e29a68))
+
+### Bug Fixes
+
+- **select:** label shows undefined when description is not set ([00e765e](https://github.com/shrall/lighthouse-ui/commit/00e765e61303c513450494d9d179491e320623e6))
+
+### Code Refactoring
+
+- **icon:** split each type into their own separate components ([cb7e3be](https://github.com/shrall/lighthouse-ui/commit/cb7e3bec894664c9716deaa056e70634db2fae33))
+
+## [0.2.13](https://github.com/shrall/lighthouse-ui/compare/v0.2.12...v0.2.13) (2024-09-23)
+
+### Features
+
+- **multi-select:** add search prop ([5ee06b5](https://github.com/shrall/lighthouse-ui/commit/5ee06b53f6b9d2f8853562b5ff2e588767655965))
+- **select:** add search prop ([d4d390b](https://github.com/shrall/lighthouse-ui/commit/d4d390ba8905f5e9808f9109adb061bbb6045d9b))
+
+## [0.2.12](https://github.com/shrall/lighthouse-ui/compare/v0.2.11...v0.2.12) (2024-09-20)
+
+- **button:** set icons size for each button sizes ([f14ae5c](https://github.com/shrall/lighthouse-ui/commit/f14ae5c538902803b343140e8ecd1f0d8e7777df))
+- **chip:** setup title prop to show text tooltip on hover ([ae1c1ba](https://github.com/shrall/lighthouse-ui/commit/ae1c1bacfd2e75a9cbe5561d586ab97f45d77200))
 
 ## [0.3.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.6...v0.3.0-beta.7) (2024-09-19)
 

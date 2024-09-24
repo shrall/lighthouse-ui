@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { PlaceholderOutline } from "@/index";
 
 function Buttons() {
   return (
@@ -49,36 +50,39 @@ function Buttons() {
         <Button variant="ghost" size="large" disabled>
           Ghost
         </Button>
-        <Button size="small" leftIcon="placeholder-outline">
+        <Button size="small" leftNode={<PlaceholderOutline />}>
           Primary
         </Button>
-        <Button leftIcon="placeholder-outline">Primary</Button>
-        <Button size="large" leftIcon="placeholder-outline">
+        <Button leftNode={<PlaceholderOutline />}>Primary</Button>
+        <Button size="large" leftNode={<PlaceholderOutline />}>
           Primary
         </Button>
 
-        <Button size="small" rightIcon="placeholder-outline">
+        <Button size="small" rightNode={<PlaceholderOutline />}>
           Primary
         </Button>
-        <Button rightIcon="placeholder-outline">Primary</Button>
-        <Button size="large" rightIcon="placeholder-outline">
+        <Button rightNode={<PlaceholderOutline />}>Primary</Button>
+        <Button size="large" rightNode={<PlaceholderOutline />}>
           Primary
         </Button>
 
         <Button
           size="small"
-          leftIcon="placeholder-outline"
-          rightIcon="placeholder-outline"
+          leftNode={<PlaceholderOutline />}
+          rightNode={<PlaceholderOutline />}
         >
           Primary
         </Button>
-        <Button leftIcon="placeholder-outline" rightIcon="placeholder-outline">
+        <Button
+          leftNode={<PlaceholderOutline />}
+          rightNode={<PlaceholderOutline />}
+        >
           Primary
         </Button>
         <Button
           size="large"
-          leftIcon="placeholder-outline"
-          rightIcon="placeholder-outline"
+          leftNode={<PlaceholderOutline />}
+          rightNode={<PlaceholderOutline />}
         >
           Primary
         </Button>
