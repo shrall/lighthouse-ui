@@ -1,5 +1,13 @@
 
 
+## [0.2.20](https://github.com/shrall/lighthouse-ui/compare/v0.2.19...v0.2.20) (2024-09-25)
+
+
+### Features
+
+* **input:** rename default style to outline ([aa7b472](https://github.com/shrall/lighthouse-ui/commit/aa7b472cf9ccb8b258f4f298cc7f508b0b322d95))
+* **textarea:** rename default style to outline ([9cc5702](https://github.com/shrall/lighthouse-ui/commit/9cc5702e58b2384c86ed3e837f0c06c9126e6534))
+
 ## [0.2.19](https://github.com/shrall/lighthouse-ui/compare/v0.2.18...v0.2.19) (2024-09-25)
 
 
