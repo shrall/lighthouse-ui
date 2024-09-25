@@ -1,5 +1,12 @@
 
 
+## [0.2.18](https://github.com/shrall/lighthouse-ui/compare/v0.2.17...v0.2.18) (2024-09-25)
+
+
+### Bug Fixes
+
+* **icon:** chevron right outline showing the filled version ([7b4d265](https://github.com/shrall/lighthouse-ui/commit/7b4d265ecf255f8a101586705753e1267e401426))
+
 ## [0.2.17](https://github.com/shrall/lighthouse-ui/compare/v0.2.16...v0.2.17) (2024-09-24)
 
 
