@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-type InputStyle = "default" | "underline";
+type InputStyle = "outline" | "underline";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -94,7 +94,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <div
             className={cn(
               "lui-flex lui-w-full lui-items-center lui-gap-x-2 lui-text-sm placeholder:lui-text-ocean-dark-10 focus-within:lui-border-ocean-primary-10 has-[svg]:lui-text-ocean-dark-10",
-              inputStyle === "default" &&
+              inputStyle === "outline" &&
                 "lui-rounded-lg lui-bg-ocean-light-20 lui-px-3 lui-py-2",
               inputStyle === "underline" &&
                 "lui-border-b lui-border-ocean-dark-10 lui-pb-1.5",
@@ -102,7 +102,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 type === "password" &&
                 value &&
                 "lui-text-xl lui-tracking-[10px]",
-              inputStyle === "default" &&
+              inputStyle === "outline" &&
                 disabled &&
                 "lui-bg-ocean-light-20 lui-text-ocean-light-40 has-[svg]:lui-text-ocean-light-40",
               inputStyle === "underline" &&
@@ -117,7 +117,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               type={type}
               className={cn(
                 "lui-w-full lui-text-ocean-dark-30 lui-outline-none disabled:placeholder:lui-text-ocean-light-40",
-                inputStyle === "default" &&
+                inputStyle === "outline" &&
                   "lui-bg-ocean-light-20 focus:placeholder:lui-text-ocean-light-40",
                 inputStyle === "underline" && "lui-h-6 disabled:lui-bg-white",
                 input && input.className,
