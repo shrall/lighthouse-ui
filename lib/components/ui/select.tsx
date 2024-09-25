@@ -82,33 +82,6 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
     const [inputFilter, setInputFilter] = React.useState("");
     const inputRef = React.useRef<HTMLInputElement>(null);
 
-    React.useEffect(() => {
-      if (value) {
-        const selectedOption = options.find((option) => option.value === value);
-        if (selectedOption) {
-          if (search) {
-            search.setQuery(
-              selectedOption.description
-                ? `${selectedOption.label} - ${selectedOption.description}`
-                : selectedOption.label,
-            );
-          } else {
-            setInputFilter(
-              selectedOption.description
-                ? `${selectedOption.label} - ${selectedOption.description}`
-                : selectedOption.label,
-            );
-          }
-        }
-      } else {
-        if (search) {
-          search.setQuery("");
-        } else {
-          setInputFilter("");
-        }
-      }
-    }, [value]);
-
     //NOTE - Infinite Scroll
     const observer = React.useRef<IntersectionObserver>();
 
@@ -188,13 +161,31 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <input
                     type="text"
                     placeholder={placeholder}
-                    value={search ? search.query : inputFilter}
+                    value={
+                      value
+                        ? options.find((option) => option.value === value)
+                            ?.description
+                          ? `${options.find((option) => option.value === value)?.label} - ${options.find((option) => option.value === value)?.description}`
+                          : options.find((option) => option.value === value)
+                              ?.label
+                        : search
+                          ? search.query
+                          : inputFilter
+                    }
                     onChange={(e) => {
                       onValueChange("");
-                      if (search) {
-                        search.setQuery(e.target.value);
+                      if (value) {
+                        if (search) {
+                          search.setQuery("");
+                        } else {
+                          setInputFilter("");
+                        }
                       } else {
-                        setInputFilter(e.target.value);
+                        if (search) {
+                          search.setQuery(e.target.value);
+                        } else {
+                          setInputFilter(e.target.value);
+                        }
                       }
                     }}
                     className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
@@ -268,12 +259,12 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                 <CommandItem
                                   key={option.value}
                                   onSelect={() => {
+                                    if (search) {
+                                      search.setQuery("");
+                                    } else {
+                                      setInputFilter("");
+                                    }
                                     if (value === option.value) {
-                                      if (search) {
-                                        search.setQuery("");
-                                      } else {
-                                        setInputFilter("");
-                                      }
                                       onValueChange("");
                                       return;
                                     }

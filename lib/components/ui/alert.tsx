@@ -93,7 +93,10 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
-    className={cn("lui-text-start lui-font-bold lui-break-anywhere", className)}
+    className={cn(
+      "lui-text-start lui-font-bold lui-leading-6 lui-break-anywhere",
+      className,
+    )}
     {...props}
   />
 ));
@@ -105,7 +108,7 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("lui-text-start lui-break-anywhere", className)}
+    className={cn("lui-text-start lui-leading-6 lui-break-anywhere", className)}
     {...props}
   />
 ));
