@@ -1,5 +1,12 @@
 
 
+## [0.2.19](https://github.com/shrall/lighthouse-ui/compare/v0.2.18...v0.2.19) (2024-09-25)
+
+
+### Bug Fixes
+
+* **icon:** chevron left outline not exported ([2f99b93](https://github.com/shrall/lighthouse-ui/commit/2f99b932375b211542b90211d4365c7e665dd6a6))
+
 ## [0.2.18](https://github.com/shrall/lighthouse-ui/compare/v0.2.17...v0.2.18) (2024-09-25)
 
 
