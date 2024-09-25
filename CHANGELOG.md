@@ -1,3 +1,14 @@
+
+
+## [0.3.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.11...v0.3.0-beta.12) (2024-09-25)
+
+## [0.2.19](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.11...v0.3.0-beta.12) (2024-09-25)
+
+
+### Bug Fixes
+
+* **icon:** chevron left outline not exported ([2f99b93](https://github.com/shrall/lighthouse-ui/commit/2f99b932375b211542b90211d4365c7e665dd6a6))
+
 ## [0.3.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.10...v0.3.0-beta.11) (2024-09-25)
 
 ## [0.3.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.9...v0.3.0-beta.10) (2024-09-25)
