@@ -1,13 +1,17 @@
-
-
 ## [0.3.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.11...v0.3.0-beta.12) (2024-09-25)
 
-## [0.2.19](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.11...v0.3.0-beta.12) (2024-09-25)
+## [0.2.20](https://github.com/shrall/lighthouse-ui/compare/v0.2.19...v0.2.20) (2024-09-25)
 
+### Features
+
+- **input:** rename default style to outline ([aa7b472](https://github.com/shrall/lighthouse-ui/commit/aa7b472cf9ccb8b258f4f298cc7f508b0b322d95))
+- **textarea:** rename default style to outline ([9cc5702](https://github.com/shrall/lighthouse-ui/commit/9cc5702e58b2384c86ed3e837f0c06c9126e6534))
+
+## [0.2.19](https://github.com/shrall/lighthouse-ui/compare/v0.2.18...v0.2.19) (2024-09-25)
 
 ### Bug Fixes
 
-* **icon:** chevron left outline not exported ([2f99b93](https://github.com/shrall/lighthouse-ui/commit/2f99b932375b211542b90211d4365c7e665dd6a6))
+- **icon:** chevron left outline not exported ([2f99b93](https://github.com/shrall/lighthouse-ui/commit/2f99b932375b211542b90211d4365c7e665dd6a6))
 
 ## [0.3.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.10...v0.3.0-beta.11) (2024-09-25)
 

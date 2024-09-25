@@ -47,7 +47,7 @@ export type AutosizeTextAreaRef = {
   minHeight: number;
 };
 
-type InputStyle = "default" | "underline";
+type InputStyle = "outline" | "underline";
 
 type AutosizeTextAreaProps = {
   container?: { className?: string };
@@ -163,7 +163,7 @@ export const Textarea = React.forwardRef<
             ref={textAreaRef}
             className={cn(
               "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
-              inputStyle === "default" &&
+              inputStyle === "outline" &&
                 "lui-rounded-xl lui-border lui-border-ocean-light-30 lui-px-3 lui-py-[13.5px] disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
               inputStyle === "underline" &&
                 "lui-border-b lui-border-ocean-dark-10 disabled:lui-border-ocean-light-40",
