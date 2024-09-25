@@ -30,6 +30,7 @@ export { CheckOutline } from "./components/ui/icon/CheckOutline";
 export { ChevronDownFilled } from "./components/ui/icon/ChevronDownFilled";
 export { ChevronDownOutline } from "./components/ui/icon/ChevronDownOutline";
 export { ChevronLeftFilled } from "./components/ui/icon/ChevronLeftFilled";
+export { ChevronLeftOutline } from "./components/ui/icon/ChevronLeftOutline";
 export { ChevronRightFilled } from "./components/ui/icon/ChevronRightFilled";
 export { ChevronRightOutline } from "./components/ui/icon/ChevronRightOutline";
 export { ChevronUpFilled } from "./components/ui/icon/ChevronUpFilled";

@@ -20,6 +20,7 @@ import { CheckOutline } from "@/components/ui/icon/CheckOutline";
 import { ChevronDownFilled } from "@/components/ui/icon/ChevronDownFilled";
 import { ChevronDownOutline } from "@/components/ui/icon/ChevronDownOutline";
 import { ChevronLeftFilled } from "@/components/ui/icon/ChevronLeftFilled";
+import { ChevronLeftOutline } from "@/components/ui/icon/ChevronLeftOutline";
 import { ChevronRightFilled } from "@/components/ui/icon/ChevronRightFilled";
 import { ChevronRightOutline } from "@/components/ui/icon/ChevronRightOutline";
 import { ChevronUpFilled } from "@/components/ui/icon/ChevronUpFilled";
@@ -133,7 +134,7 @@ function Icons() {
         <ChevronDownFilled />
         <ChevronDownOutline />
         <ChevronLeftFilled />
-        <ChevronRightOutline />
+        <ChevronLeftOutline />
         <ChevronRightFilled />
         <ChevronRightOutline />
         <ChevronUpFilled />
