@@ -21,13 +21,14 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface DataTableProps<TData, TValue> {
+  locale?: "en" | "id";
   className?: string;
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   isLoading?: boolean;
   loadingRow?: React.ReactNode;
   isError?: boolean;
-  errorRow?: React.ReactNode;
+  refetch?: () => void;
   rowSelection?: Record<number, boolean>;
   setRowSelection?: Dispatch<SetStateAction<Record<number, boolean>>>;
   sorting?: SortingState;
@@ -36,13 +37,14 @@ interface DataTableProps<TData, TValue> {
 }
 
 export function DataTable<TData, TValue>({
+  locale,
   className,
   columns,
   data,
   isLoading,
   loadingRow,
   isError,
-  errorRow,
+  refetch = () => {},
   rowSelection,
   setRowSelection,
   sorting,
@@ -105,7 +107,21 @@ export function DataTable<TData, TValue>({
                 colSpan={columns.length}
                 className="lui-h-full lui-min-h-36 lui-text-center lui-align-middle"
               >
-                {errorRow}
+                <div className="lui-flex lui-flex-col">
+                  <span>
+                    {locale === "en"
+                      ? "Failed to load data"
+                      : "Gagal memuat data"}
+                  </span>
+                  <span
+                    onClick={() => {
+                      refetch();
+                    }}
+                    className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
+                  >
+                    {locale === "en" ? "Reload Data" : "Muat Ulang"}
+                  </span>
+                </div>
               </TableCell>
             </TableRow>
           ) : table.getRowModel().rows?.length ? (
@@ -126,7 +142,7 @@ export function DataTable<TData, TValue>({
             //NOTE - Empty State
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                {locale === "en" ? "No results found" : "Data tidak ditemukan"}
               </TableCell>
             </TableRow>
           )}

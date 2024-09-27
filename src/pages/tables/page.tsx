@@ -74,19 +74,6 @@ function Tables() {
           columns={columns}
           data={data}
           isError={true}
-          errorRow={
-            <div className="lui-flex lui-flex-col">
-              <span>Failed to Load Data</span>
-              <span
-                onClick={() => {
-                  console.log("reload");
-                }}
-                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-              >
-                Reload
-              </span>
-            </div>
-          }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}
           sorting={sorting}
@@ -127,19 +114,6 @@ function Tables() {
           columns={mobileColumns}
           data={data}
           isError={true}
-          errorRow={
-            <div className="lui-flex lui-flex-col">
-              <span>Failed to Load Data</span>
-              <span
-                onClick={() => {
-                  console.log("reload");
-                }}
-                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-              >
-                Reload
-              </span>
-            </div>
-          }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}
           sorting={sorting}
@@ -176,19 +150,6 @@ function Tables() {
           columns={mobileColumnsWithoutCheckbox}
           data={data}
           isError={true}
-          errorRow={
-            <div className="lui-flex lui-flex-col">
-              <span>Failed to Load Data</span>
-              <span
-                onClick={() => {
-                  console.log("reload");
-                }}
-                className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 lui-underline"
-              >
-                Reload
-              </span>
-            </div>
-          }
           rowSelection={rowSelection}
           setRowSelection={setRowSelection}
           sorting={sorting}
