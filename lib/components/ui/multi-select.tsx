@@ -298,7 +298,7 @@ export const MultiSelect = React.forwardRef<
                           : "Gagal memuat data"}
                       </div>
                       <div
-                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-underline"
+                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
                         onClick={() => {
                           refetch();
                         }}

@@ -150,12 +150,12 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
             >
               <button
                 ref={ref}
-                {...props}
                 className={cn(
                   "lui-group lui-flex lui-w-full lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
                   errorMessage && "lui-border-ocean-danger-20",
                   className,
                 )}
+                {...props}
               >
                 <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
                   <input
@@ -217,7 +217,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                           : "Gagal memuat data"}
                       </div>
                       <div
-                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-underline"
+                        className="lui-cursor-pointer lui-text-xs lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
                         onClick={() => {
                           refetch();
                         }}
