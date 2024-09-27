@@ -1,5 +1,13 @@
 
 
+## [0.2.21](https://github.com/shrall/lighthouse-ui/compare/v0.2.20...v0.2.21) (2024-09-27)
+
+
+### Styles
+
+* **multi-select:** update reload text on hover style ([dda14a5](https://github.com/shrall/lighthouse-ui/commit/dda14a5f015a059bc726790d04f2acabcfd8346a))
+* **select:** update reload text on hover style ([7a4d091](https://github.com/shrall/lighthouse-ui/commit/7a4d091a75852d77efd85abf41ac129db207b79b))
+
 ## [0.2.20](https://github.com/shrall/lighthouse-ui/compare/v0.2.19...v0.2.20) (2024-09-25)
 
 
