@@ -69,6 +69,7 @@ const TabsList = React.forwardRef<
       tabsStyle === "filled" && size === "large" && "lui-p-1.5",
       tabsStyle === "filled" &&
         "lui-items-center lui-justify-center lui-gap-x-2 lui-rounded-xl lui-bg-ocean-secondary-10",
+      tabsStyle === "underline" && "lui-border-b lui-border-ocean-light-30",
       className,
     )}
     {...props}
@@ -90,7 +91,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "lui-group lui-flex-1 lui-items-center lui-justify-center lui-px-2",
+      "lui-group lui-flex-1 lui-items-center lui-justify-center",
       "lui-transition-all focus-visible:lui-outline-none",
       "disabled:lui-pointer-events-none disabled:lui-text-ocean-light-40",
       tabsStyle === "filled" && size === "medium" && "lui-py-[7.5px]",
@@ -105,7 +106,7 @@ const TabsTrigger = React.forwardRef<
   >
     <span
       className={cn(
-        "lui-my-auto lui-line-clamp-2",
+        "lui-my-auto lui-line-clamp-2 lui-px-6",
         tabsStyle === "underline" && "lui-my-3",
       )}
     >

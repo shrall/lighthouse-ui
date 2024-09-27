@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function Tabs() {
   const [tabMenus] = useState<TabMenu[]>([
-    { name: "Lorem Ipsum Dolor sit amet Dolor sit amet", value: "account" },
+    { name: "Account", value: "account" },
     { name: "Password", value: "password" },
     { name: "Email", value: "email", disabled: true },
   ]);
@@ -22,7 +22,7 @@ function Tabs() {
           tabMenus={tabMenus}
         >
           <TabsContent value="account">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Change your account settings here.
           </TabsContent>
           <TabsContent value="password">Change your password here.</TabsContent>
           <TabsContent value="email">Change your email here.</TabsContent>
