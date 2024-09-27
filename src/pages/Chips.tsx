@@ -4,7 +4,7 @@ function Chips() {
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Chips</h3>
-      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Chip>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -20,7 +20,7 @@ function Chips() {
         <Chip variant="outline">Outline</Chip>
         <Chip variant="inactive">Inactive</Chip>
       </div>
-      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Chip disabled>Primary</Chip>
         <Chip variant="secondary" disabled>
           Secondary
@@ -32,7 +32,7 @@ function Chips() {
           Inactive
         </Chip>
       </div>
-      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Chip size="small">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -54,7 +54,7 @@ function Chips() {
           Inactive
         </Chip>
       </div>
-      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Chip
           removeOnClick={() => {
             console.log("close");
@@ -95,7 +95,7 @@ function Chips() {
           Inactive
         </Chip>
       </div>
-      <div className="lui-flex lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Chip
           size="small"
           removeOnClick={() => {

@@ -159,3 +159,16 @@ export {
 export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
 export { Tabs, TabsContent } from "./components/ui/tabs";
 export type { TabMenu } from "./components/ui/tabs";
+export {
+    Dialog,
+    DialogClose,
+    DialogTrigger,
+    DialogContent,
+    DialogHeader,
+    DialogFooter,
+    DialogTitle,
+    DialogDescription,
+} from "./components/ui/dialog";
+export {
+    DialogText
+} from "./components/ui/dialog-text";

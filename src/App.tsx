@@ -14,6 +14,7 @@ import Chips from "./pages/Chips";
 import Selects from "./pages/Selects";
 import Textareas from "./pages/Textareas";
 import Tabs from "./pages/Tabs";
+import Dialogs from "./pages/Dialogs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Cards />
       <Checkboxes />
       <Chips />
+      <Dialogs />
       <Icons />
       <Inputs />
       <Paginations />

@@ -5,7 +5,7 @@ function Buttons() {
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Buttons</h3>
-      <div className="lui-grid lui-grid-cols-3 lui-items-center lui-justify-center lui-gap-2 lui-text-center md:lui-grid-cols-6">
+      <div className="lui-grid lui-grid-cols-2 lui-items-center lui-justify-center lui-gap-2 lui-text-center sm:lui-grid-cols-3 md:lui-grid-cols-6">
         <Button size="small">Primary</Button>
         <Button>Primary</Button>
         <Button size="large">Primary</Button>
