@@ -1,3 +1,80 @@
+
+
+## [0.3.0-beta.15](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-10-01)
+
+
+### Features
+
+* add circle stepper ([e717eda](https://github.com/shrall/lighthouse-ui/commit/e717eda60b841ab524a5a6c0ffc7ae368baae381))
+* add stepper ([c3d9bdf](https://github.com/shrall/lighthouse-ui/commit/c3d9bdfe5d1ad8fd8eebaf6a5b9253ac7546fd35))
+
+## [0.3.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* **table:** remove errorRow & add locale + refetch props
+
+### Features
+
+* add dialogs ([8ae3880](https://github.com/shrall/lighthouse-ui/commit/8ae388079ee50f75c9141828b33c6cb0bed11ed4))
+* **table:** remove errorRow & add locale + refetch props ([e78e035](https://github.com/shrall/lighthouse-ui/commit/e78e035600aa5509ec13b373a6f53e14ca9000d3))
+
+
+### Styles
+
+* **tabs:** add bottom border to underline tabs ([fdcab89](https://github.com/shrall/lighthouse-ui/commit/fdcab89ed6463e31f3a1f96573ada624029e18d4))
+
+## [0.3.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-25)
+
+## [0.3.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-25)
+
+## [0.3.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-25)
+
+## [0.3.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-25)
+
+## [0.3.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-24)
+
+
+### Features
+
+* add tabs ([3ca86dc](https://github.com/shrall/lighthouse-ui/commit/3ca86dc4bdd6da3b05372104d122db77e8b1af20))
+
+## [0.3.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-20)
+
+## [0.3.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-19)
+
+## [0.3.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-18)
+
+## [0.3.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-17)
+
+## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-17)
+
+
+### Features
+
+* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+
+## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-17)
+
+## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-13)
+
+
+### Styles
+
+* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+
+## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-13)
+
+## [0.3.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-09-12)
+
+## [0.2.22](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-10-01)
+
+
+### Features
+
+* **select:** add search.minQueryLength prop ([901fc47](https://github.com/shrall/lighthouse-ui/commit/901fc4710252db4f0ca73f811924266989c5de6b))
+
 ## [0.3.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.13...v0.3.0-beta.14) (2024-09-27)
 
 ### ⚠ BREAKING CHANGES
