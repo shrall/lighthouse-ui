@@ -1,5 +1,16 @@
 
 
+## [0.3.0-beta.16](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.15...v0.3.0-beta.16) (2024-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **stepper:** rename CircleStepper to StepperCircle
+
+### Features
+
+* **stepper:** rename CircleStepper to StepperCircle ([f6cc9d1](https://github.com/shrall/lighthouse-ui/commit/f6cc9d1c6085ae1c6c0e38e7594d7accac406b7a))
+
 ## [0.3.0-beta.15](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.14...v0.3.0-beta.15) (2024-10-01)
 
 
