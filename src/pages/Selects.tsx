@@ -52,6 +52,7 @@ function Selects() {
           search={{
             query: search,
             setQuery: setSearch,
+            minQueryLength: 2,
           }}
         />
         <Select
