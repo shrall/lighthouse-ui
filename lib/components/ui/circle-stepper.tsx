@@ -116,4 +116,4 @@ const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
   },
 );
 
-export default CircleStepper;
+export { CircleStepper };
