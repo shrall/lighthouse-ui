@@ -43,6 +43,7 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   search?: {
     query: string;
     setQuery: React.Dispatch<React.SetStateAction<string>>;
+    minQueryLength?: number;
   };
   infiniteScroll?: {
     fetchMore: () => void;
@@ -243,14 +244,24 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                     .toLowerCase()
                                     .includes(
                                       search
-                                        ? search.query.toLowerCase()
+                                        ? search.minQueryLength
+                                          ? search.query.length >
+                                            search.minQueryLength
+                                            ? search.query.toLowerCase()
+                                            : ""
+                                          : search.query.toLowerCase()
                                         : inputFilter.toLowerCase(),
                                     ) ||
                                   option.description
                                     ?.toLowerCase()
                                     .includes(
                                       search
-                                        ? search.query.toLowerCase()
+                                        ? search.minQueryLength
+                                          ? search.query.length >
+                                            search.minQueryLength
+                                            ? search.query.toLowerCase()
+                                            : ""
+                                          : search.query.toLowerCase()
                                         : inputFilter.toLowerCase(),
                                     ),
                             )
