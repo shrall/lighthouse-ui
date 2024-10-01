@@ -15,6 +15,7 @@ import Selects from "./pages/Selects";
 import Textareas from "./pages/Textareas";
 import Tabs from "./pages/Tabs";
 import Dialogs from "./pages/Dialogs";
+import Steppers from "./pages/Stepper";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Inputs />
       <Paginations />
       <Selects />
+      <Steppers />
       <Tables />
       <Tabs />
       <Textareas />
