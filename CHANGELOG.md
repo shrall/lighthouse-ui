@@ -1,5 +1,12 @@
 
 
+## [0.2.22](https://github.com/shrall/lighthouse-ui/compare/v0.2.21...v0.2.22) (2024-10-01)
+
+
+### Features
+
+* **select:** add search.minQueryLength prop ([901fc47](https://github.com/shrall/lighthouse-ui/commit/901fc4710252db4f0ca73f811924266989c5de6b))
+
 ## [0.2.21](https://github.com/shrall/lighthouse-ui/compare/v0.2.20...v0.2.21) (2024-09-27)
 
 
