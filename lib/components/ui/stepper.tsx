@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import React from "react";
+import * as React from "react";
 import { CheckFilled } from "./icon/CheckFilled";
 
 type StepperProps = React.HTMLAttributes<HTMLDivElement> & {
@@ -17,7 +17,7 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
     return (
       <div ref={ref} className={cn("lui-flex", className)} {...props}>
         {steps.map((s, i) => (
-          <>
+          <React.Fragment key={i}>
             <div
               className={cn(
                 "lui-flex lui-flex-col lui-items-center lui-gap-y-1 lui-text-sm lui-font-semibold",
@@ -47,7 +47,7 @@ const Stepper = React.forwardRef<HTMLDivElement, StepperProps>(
                 <div className="lui-w-full lui-border lui-border-ocean-light-30" />
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     );

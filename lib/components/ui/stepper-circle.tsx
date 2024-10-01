@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-type CircleStepperProps = React.HTMLAttributes<HTMLDivElement> & {
+type StepperCircleProps = React.HTMLAttributes<HTMLDivElement> & {
   /** The current step of the stepper */
   step: number;
   /** The total number of steps in the stepper */
@@ -17,7 +17,7 @@ type CircleStepperProps = React.HTMLAttributes<HTMLDivElement> & {
   size?: "medium" | "large";
 };
 
-const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
+const StepperCircle = React.forwardRef<HTMLDivElement, StepperCircleProps>(
   (
     {
       className,
@@ -30,7 +30,7 @@ const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
     },
     ref,
   ) => {
-    const circumference = 2 * Math.PI * 20;
+    const circumference = 2 * Math.PI * (size === "medium" ? 20 : 25);
 
     return (
       <div
@@ -75,7 +75,7 @@ const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
           >
             <circle
               className="lui-text-ocean-secondary-10"
-              stroke-width="5"
+              strokeWidth="5"
               stroke="currentColor"
               fill="transparent"
               r={size === "medium" ? "20" : "25"}
@@ -84,12 +84,12 @@ const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
             />
             <circle
               className="lui-text-ocean-secondary-20"
-              stroke-width="5"
+              strokeWidth="5"
               strokeDasharray={circumference}
               strokeDashoffset={
                 circumference - (step / totalSteps) * circumference
               }
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke="currentColor"
               fill="transparent"
               r={size === "medium" ? "20" : "25"}
@@ -116,4 +116,4 @@ const CircleStepper = React.forwardRef<HTMLDivElement, CircleStepperProps>(
   },
 );
 
-export { CircleStepper };
+export { StepperCircle };

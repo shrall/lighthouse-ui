@@ -173,4 +173,4 @@ export {
     DialogText
 } from "./components/ui/dialog-text";
 export { Stepper } from "./components/ui/stepper";
-export { CircleStepper } from "./components/ui/circle-stepper";
+export { StepperCircle } from "./components/ui/stepper-circle";

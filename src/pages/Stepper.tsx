@@ -1,14 +1,14 @@
-import { CircleStepper } from "@/components/ui/circle-stepper";
+import { StepperCircle } from "@/components/ui/stepper-circle";
 import { Stepper } from "@/components/ui/stepper";
 import { useState } from "react";
 
 function Steppers() {
-  const [step, _setStep] = useState(2);
+  const [step, _setStep] = useState(1);
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Steppers</h3>
       <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
-        <CircleStepper
+        <StepperCircle
           step={step}
           totalSteps={7}
           label={{
@@ -16,7 +16,7 @@ function Steppers() {
             description: "Description",
           }}
         />
-        <CircleStepper
+        <StepperCircle
           step={step}
           totalSteps={7}
           label={{
@@ -25,7 +25,7 @@ function Steppers() {
           }}
           align="start"
         />
-        <CircleStepper
+        <StepperCircle
           step={step}
           totalSteps={7}
           label={{
