@@ -1,5 +1,12 @@
 
 
+## [0.3.0-beta.17](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.16...v0.3.0-beta.17) (2024-10-03)
+
+
+### Features
+
+* add time picker ([07e1439](https://github.com/shrall/lighthouse-ui/commit/07e14397376f3b669df4612a6c7c4485e123d5a0))
+
 ## [0.3.0-beta.16](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.15...v0.3.0-beta.16) (2024-10-01)
 
 
