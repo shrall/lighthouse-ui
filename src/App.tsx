@@ -16,6 +16,7 @@ import Textareas from "./pages/Textareas";
 import Tabs from "./pages/Tabs";
 import Dialogs from "./pages/Dialogs";
 import Steppers from "./pages/Stepper";
+import TimePickers from "./pages/TimePickers";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <Steppers />
       <Tables />
       <Tabs />
+      <TimePickers />
       <Textareas />
       <Toasts />
       <Tooltips />

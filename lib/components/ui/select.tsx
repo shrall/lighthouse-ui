@@ -27,7 +27,6 @@ interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onValueChange: (value: string) => void;
   defaultValue?: string;
   placeholder?: string;
-  maxCount?: number;
   modalPopover?: boolean;
   asChild?: boolean;
   className?: string;
@@ -60,7 +59,6 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       onValueChange,
       defaultValue = "",
       placeholder = "",
-      maxCount = 3,
       modalPopover = false,
       asChild = false,
       container,
@@ -195,7 +193,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   />
                   <ChevronDownOutline
                     className={cn(
-                      "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180 group-data-[state=open]:lui-text-ocean-primary-10",
+                      "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
                       props.disabled && "lui-text-ocean-light-40",
                     )}
                   />
