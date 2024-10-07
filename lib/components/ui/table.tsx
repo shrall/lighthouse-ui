@@ -49,7 +49,7 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-      "lui-border-t lui-border-ocean-light-30 lui-bg-slate-100/50 lui-font-medium [&>tr]:last:lui-border-b-0",
+      "lui-border-t lui-border-ocean-light-30 lui-font-medium [&>tr]:last:lui-border-b-0",
       className,
     )}
     {...props}
@@ -109,7 +109,7 @@ const TableCaption = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn("lui-mt-4 lui-text-sm lui-text-slate-500", className)}
+    className={cn("lui-mt-4 lui-text-sm", className)}
     {...props}
   />
 ));

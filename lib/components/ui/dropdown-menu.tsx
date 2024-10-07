@@ -25,7 +25,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
-      "lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-px-2 lui-py-1.5 lui-text-sm lui-outline-none focus:lui-bg-slate-100 data-[state=open]:lui-bg-slate-100",
+      "lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-px-2 lui-py-1.5 lui-text-sm lui-outline-none",
       inset && "lui-pl-8",
       className,
     )}
@@ -45,7 +45,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-      "data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2 lui-z-50 lui-min-w-[8rem] lui-overflow-hidden lui-rounded-md lui-border lui-border-slate-200 lui-bg-white lui-p-1 lui-text-slate-950 lui-shadow-lg",
+      "lui-z-50 lui-min-w-[8rem] lui-overflow-hidden lui-rounded-md lui-border lui-bg-white lui-p-1 lui-shadow-lg data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2",
       className,
     )}
     {...props}
@@ -63,7 +63,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        "data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2 lui-z-50 lui-min-w-[var(--radix-dropdown-menu-trigger-width)] lui-overflow-hidden lui-rounded-md lui-border lui-border-slate-200 lui-bg-white lui-p-1 lui-text-slate-950 lui-shadow-md",
+        "lui-z-50 lui-min-w-[var(--radix-dropdown-menu-trigger-width)] lui-overflow-hidden lui-rounded-md lui-border lui-bg-white lui-p-1 lui-shadow-md data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0 data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95 data-[side=bottom]:lui-slide-in-from-top-2 data-[side=left]:lui-slide-in-from-right-2 data-[side=right]:lui-slide-in-from-left-2 data-[side=top]:lui-slide-in-from-bottom-2",
         className,
       )}
       {...props}
@@ -81,7 +81,7 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-px-2 lui-py-1.5 lui-text-sm lui-outline-none lui-transition-colors focus:lui-bg-slate-100 focus:lui-text-slate-900 data-[disabled]:lui-pointer-events-none data-[disabled]:lui-opacity-50",
+      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-px-2 lui-py-1.5 lui-text-sm lui-outline-none lui-transition-colors data-[disabled]:lui-pointer-events-none",
       inset && "lui-pl-8",
       className,
     )}
@@ -97,7 +97,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
   <DropdownMenuPrimitive.CheckboxItem
     ref={ref}
     className={cn(
-      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-py-1.5 lui-pl-8 lui-pr-2 lui-text-sm lui-outline-none lui-transition-colors focus:lui-bg-slate-100 focus:lui-text-slate-900 data-[disabled]:lui-pointer-events-none data-[disabled]:lui-opacity-50",
+      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-py-1.5 lui-pl-8 lui-pr-2 lui-text-sm lui-outline-none lui-transition-colors data-[disabled]:lui-pointer-events-none data-[disabled]:lui-opacity-50",
       className,
     )}
     checked={checked}
@@ -121,7 +121,7 @@ const DropdownMenuRadioItem = React.forwardRef<
   <DropdownMenuPrimitive.RadioItem
     ref={ref}
     className={cn(
-      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-py-1.5 lui-pl-8 lui-pr-2 lui-text-sm lui-outline-none lui-transition-colors focus:lui-bg-slate-100 focus:lui-text-slate-900 data-[disabled]:lui-pointer-events-none data-[disabled]:lui-opacity-50",
+      "lui-relative lui-flex lui-cursor-default lui-select-none lui-items-center lui-rounded-sm lui-py-1.5 lui-pl-8 lui-pr-2 lui-text-sm lui-outline-none lui-transition-colors data-[disabled]:lui-pointer-events-none",
       className,
     )}
     {...props}
@@ -160,7 +160,7 @@ const DropdownMenuSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
-    className={cn("lui--mx-1 lui-my-1 lui-h-px lui-bg-slate-100", className)}
+    className={cn("lui--mx-1 lui-my-1 lui-h-px", className)}
     {...props}
   />
 ));
