@@ -1,5 +1,21 @@
 
 
+## [0.2.23](https://github.com/shrall/lighthouse-ui/compare/v0.2.22...v0.2.23) (2024-10-07)
+
+
+### Features
+
+* **checkbox:** toggle on enter ([44385af](https://github.com/shrall/lighthouse-ui/commit/44385af83446fe1a271c168de7b1ae6034135aa4))
+* **multi-select:** add keyboard navigation ([cc0fef7](https://github.com/shrall/lighthouse-ui/commit/cc0fef7f0eb3f8ac17bcffd08479be63b453239b))
+* **multi-select:** update search algorithm ([9cedc92](https://github.com/shrall/lighthouse-ui/commit/9cedc9265541a5399913f5fb5d7470099f98c253))
+* **select:** add keyboard navigation ([2382669](https://github.com/shrall/lighthouse-ui/commit/2382669dfead925231e427eba4560d1d78792021))
+* **select:** update search algorithm ([d095da0](https://github.com/shrall/lighthouse-ui/commit/d095da0d2f83f830c7d242f5bf2966146fae0c51))
+
+
+### Styles
+
+* remove slate color usage ([5bc7f6b](https://github.com/shrall/lighthouse-ui/commit/5bc7f6be2005aa5953e1319ce6b2c2c27f7b11db))
+
 ## [0.2.22](https://github.com/shrall/lighthouse-ui/compare/v0.2.21...v0.2.22) (2024-10-01)
 
 
