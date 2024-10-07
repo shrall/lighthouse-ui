@@ -83,21 +83,18 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
     const [inputFilter, setInputFilter] = React.useState("");
     const inputRef = React.useRef<HTMLInputElement>(null);
+    const commandRef = React.useRef<HTMLDivElement>(null);
 
     //NOTE - Infinite Scroll
     const observer = React.useRef<IntersectionObserver>();
 
     const observerRef = React.useCallback(
       (element: HTMLElement | null) => {
-        // When isLoading is true, this callback will do nothing.
-        // It means that the next function will never be called.
-        // It is safe because the intersection observer has disconnected the previous element.
         if (isLoading) return;
 
         if (observer.current) observer.current.disconnect();
         if (!element) return;
 
-        // Create a new IntersectionObserver instance because hasMore or next may be changed.
         observer.current = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting && infiniteScroll?.hasMore) {
             infiniteScroll.fetchMore();
@@ -107,6 +104,28 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
       },
       [isLoading, infiniteScroll?.hasMore, infiniteScroll?.fetchMore],
     );
+
+    //NOTE - Keyboard Navigation
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        const event = new KeyboardEvent("keydown", {
+          key: e.key,
+          bubbles: true,
+        });
+        commandRef.current?.dispatchEvent(event);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        const selectedItem = commandRef.current?.querySelector<HTMLElement>(
+          '[data-selected="true"]',
+        );
+        if (selectedItem) {
+          selectedItem.click();
+        } else {
+          setIsPopoverOpen(true);
+        }
+      }
+    };
 
     return (
       <div
@@ -149,6 +168,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                 }
                 setIsPopoverOpen(true);
               }}
+              tabIndex={-1}
             >
               <button
                 ref={ref}
@@ -195,6 +215,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                     className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                     ref={inputRef}
                     disabled={props.disabled}
+                    onKeyDown={handleKeyDown}
                   />
                   <ChevronDownOutline
                     className={cn(
@@ -211,7 +232,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               onEscapeKeyDown={() => setIsPopoverOpen(false)}
               onOpenAutoFocus={(e) => e.preventDefault()}
             >
-              <Command>
+              <Command ref={commandRef}>
                 <CommandList className="lui-max-h-[256px]">
                   {isError && !isLoading ? (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
@@ -274,7 +295,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                                   setIsPopoverOpen(false);
                                 }}
                                 className={cn(
-                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 data-[selected=true]:lui-bg-ocean-light-20",
                                   value === option.value &&
                                     "!lui-bg-ocean-secondary-10",
                                 )}
