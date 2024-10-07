@@ -1,4 +1,5 @@
 import * as React from "react";
+import { matchSorter } from "match-sorter";
 
 import { cn } from "@/lib/utils";
 import { Chip } from "./chip";
@@ -347,53 +348,40 @@ export const MultiSelect = React.forwardRef<
                                 </span>
                               </CommandItem>
                             )}
-                          {options
-                            .filter(
-                              (option) =>
-                                option.label
-                                  .toLowerCase()
-                                  .includes(
-                                    search
-                                      ? search.query.toLowerCase()
-                                      : inputFilter.toLowerCase(),
-                                  ) ||
-                                option.description
-                                  ?.toLowerCase()
-                                  .includes(
-                                    search
-                                      ? search.query.toLowerCase()
-                                      : inputFilter.toLowerCase(),
-                                  ),
-                            )
-                            .map((option) => {
-                              const isSelected = selectedValues.includes(
-                                option.value,
-                              );
-                              return (
-                                <CommandItem
-                                  key={option.value}
-                                  onSelect={() => toggleOption(option.value)}
-                                  className={cn(
-                                    "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                                    isSelected && "!lui-bg-ocean-secondary-10",
+                          {matchSorter(
+                            options,
+                            search ? search.query : inputFilter,
+                            {
+                              keys: ["label", "description"],
+                              threshold: matchSorter.rankings.CONTAINS,
+                            },
+                          ).map((option) => {
+                            const isSelected = selectedValues.includes(
+                              option.value,
+                            );
+                            return (
+                              <CommandItem
+                                key={option.value}
+                                onSelect={() => toggleOption(option.value)}
+                                className={cn(
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                  isSelected && "!lui-bg-ocean-secondary-10",
+                                )}
+                              >
+                                <Checkbox checked={isSelected ? true : false} />
+                                <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
+                                  <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
+                                    {option.label}
+                                  </span>
+                                  {option.description && (
+                                    <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
+                                      {option.description}
+                                    </p>
                                   )}
-                                >
-                                  <Checkbox
-                                    checked={isSelected ? true : false}
-                                  />
-                                  <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
-                                    <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
-                                      {option.label}
-                                    </span>
-                                    {option.description && (
-                                      <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
-                                        {option.description}
-                                      </p>
-                                    )}
-                                  </div>
-                                </CommandItem>
-                              );
-                            })}
+                                </div>
+                              </CommandItem>
+                            );
+                          })}
                         </CommandGroup>
                       </>
                     )
