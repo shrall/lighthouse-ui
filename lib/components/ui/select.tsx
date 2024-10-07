@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/command";
 import { ChevronDownOutline } from "./icon/ChevronDownOutline";
 import { LoadingFilled } from "./icon/LoadingFilled";
+import { matchSorter } from "match-sorter";
 
 interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
@@ -162,17 +163,19 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                   <input
                     type="text"
                     placeholder={placeholder}
-                    value={
-                      value
-                        ? options.find((option) => option.value === value)
-                            ?.description
-                          ? `${options.find((option) => option.value === value)?.label} - ${options.find((option) => option.value === value)?.description}`
-                          : options.find((option) => option.value === value)
-                              ?.label
-                        : search
-                          ? search.query
-                          : inputFilter
-                    }
+                    value={(() => {
+                      if (value) {
+                        const selectedOption = options.find(
+                          (option) => option.value === value,
+                        );
+                        if (selectedOption) {
+                          return selectedOption.description
+                            ? `${selectedOption.label} - ${selectedOption.description}`
+                            : selectedOption.label;
+                        }
+                      }
+                      return search ? search.query : inputFilter;
+                    })()}
                     onChange={(e) => {
                       onValueChange("");
                       if (value) {
@@ -236,72 +239,59 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                             : "Data tidak ditemukan"}
                         </CommandEmpty>
                         <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
-                          {options
-                            .filter((option) =>
-                              value
-                                ? true
-                                : option.label
-                                    .toLowerCase()
-                                    .includes(
-                                      search
-                                        ? search.minQueryLength
-                                          ? search.query.length >
-                                            search.minQueryLength
-                                            ? search.query.toLowerCase()
-                                            : ""
-                                          : search.query.toLowerCase()
-                                        : inputFilter.toLowerCase(),
-                                    ) ||
-                                  option.description
-                                    ?.toLowerCase()
-                                    .includes(
-                                      search
-                                        ? search.minQueryLength
-                                          ? search.query.length >
-                                            search.minQueryLength
-                                            ? search.query.toLowerCase()
-                                            : ""
-                                          : search.query.toLowerCase()
-                                        : inputFilter.toLowerCase(),
-                                    ),
-                            )
-                            .map((option) => {
-                              return (
-                                <CommandItem
-                                  key={option.value}
-                                  onSelect={() => {
-                                    if (search) {
-                                      search.setQuery("");
-                                    } else {
-                                      setInputFilter("");
-                                    }
-                                    if (value === option.value) {
-                                      onValueChange("");
-                                      return;
-                                    }
+                          {matchSorter(
+                            options,
+                            (() => {
+                              if (
+                                search?.minQueryLength &&
+                                search.query.length <= search.minQueryLength
+                              ) {
+                                return "";
+                              }
+                              return search ? search.query : inputFilter;
+                            })(),
+                            {
+                              keys: ["label", "description"],
+                              threshold: matchSorter.rankings.CONTAINS,
+                              baseSort: (a, b) => (a.index < b.index ? -1 : 1),
+                            },
+                          ).map((option) => {
+                            return (
+                              <CommandItem
+                                key={option.value}
+                                onSelect={() => {
+                                  if (search) {
+                                    search.setQuery("");
+                                  } else {
+                                    setInputFilter("");
+                                  }
+                                  if (value === option.value) {
+                                    onValueChange("");
+                                    return;
+                                  }
 
-                                    onValueChange(option.value);
-                                    setIsPopoverOpen(false);
-                                  }}
-                                  className={cn(
-                                    "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                                    value === option.value &&
-                                      "!lui-bg-ocean-secondary-10",
+                                  onValueChange(option.value);
+                                  setIsPopoverOpen(false);
+                                }}
+                                className={cn(
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                  value === option.value &&
+                                    "!lui-bg-ocean-secondary-10",
+                                )}
+                              >
+                                <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
+                                  <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
+                                    {option.label}
+                                  </span>
+                                  {option.description && (
+                                    <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
+                                      {option.description}
+                                    </p>
                                   )}
-                                >
-                                  <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
-                                    <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
-                                      {option.label}
-                                    </span>
-                                    {option.description && (
-                                      <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
-                                        {option.description}
-                                      </p>
-                                    )}
-                                  </div>
-                                </CommandItem>
-                              );
-                            })}
+                                </div>
+                              </CommandItem>
+                            );
+                          })}
                         </CommandGroup>
                       </>
                     )
