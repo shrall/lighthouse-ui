@@ -1,4 +1,5 @@
 import * as React from "react";
+import { matchSorter } from "match-sorter";
 
 import { cn } from "@/lib/utils";
 import { Chip } from "./chip";
@@ -89,6 +90,7 @@ export const MultiSelect = React.forwardRef<
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
     const [inputFilter, setInputFilter] = React.useState("");
     const inputRef = React.useRef<HTMLInputElement>(null);
+    const commandRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
       setSelectedValues(defaultValue);
@@ -141,6 +143,34 @@ export const MultiSelect = React.forwardRef<
       [isLoading, infiniteScroll?.hasMore, infiniteScroll?.fetchMore],
     );
 
+    //NOTE - Keyboard Navigation
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        const event = new KeyboardEvent("keydown", {
+          key: e.key,
+          bubbles: true,
+        });
+        commandRef.current?.dispatchEvent(event);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        const selectedItem = commandRef.current?.querySelector<HTMLElement>(
+          '[data-selected="true"]',
+        );
+        if (selectedItem) {
+          selectedItem.click();
+          inputRef.current?.focus();
+        } else {
+          setIsPopoverOpen(true);
+        }
+      } else if (
+        e.key === "Backspace" &&
+        (search ? search.query === "" : inputFilter === "")
+      ) {
+        setSelectedValues((prev) => prev.slice(0, -1));
+      }
+    };
+
     return (
       <div
         className={cn(
@@ -182,6 +212,7 @@ export const MultiSelect = React.forwardRef<
                 }
                 setIsPopoverOpen(true);
               }}
+              tabIndex={-1}
             >
               <button
                 ref={ref}
@@ -192,71 +223,35 @@ export const MultiSelect = React.forwardRef<
                   className,
                 )}
               >
-                {selectedValues.length > 0 ? (
-                  <div className="lui-flex lui-w-full lui-items-center lui-justify-between">
-                    <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
-                      <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
-                        {selectedValues.slice(0, maxCount).map((value) => {
-                          const option = options.find((o) => o.value === value);
-                          return (
-                            <Chip
-                              key={value}
-                              removeOnClick={(e) => {
-                                e.stopPropagation();
-                                toggleOption(value);
-                              }}
-                              variant="secondary"
-                              size="small"
-                              disabled={props.disabled}
-                            >
-                              {option?.label}
-                            </Chip>
-                          );
-                        })}
-                        {selectedValues.length > maxCount && (
-                          <Chip
-                            variant="inactive"
-                            size="small"
-                            className="lui-border lui-border-ocean-dark-20 aria-disabled:lui-border-transparent"
-                            disabled={props.disabled}
-                          >
-                            {`${selectedValues.length - maxCount} more`}
-                          </Chip>
-                        )}
-                      </div>
-                      <input
-                        type="text"
-                        placeholder={placeholder}
-                        value={search ? search.query : inputFilter}
-                        onChange={(e) => {
-                          if (search) {
-                            search.setQuery(e.target.value);
-                          } else {
-                            setInputFilter(e.target.value);
-                          }
-                        }}
-                        onKeyDown={(e) => {
-                          if (
-                            e.key === "Backspace" &&
-                            (search ? search.query === "" : inputFilter === "")
-                          ) {
-                            setSelectedValues((prev) => prev.slice(0, -1));
-                          }
-                        }}
-                        className="focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
-                        ref={inputRef}
+                <div className="lui-flex lui-w-full lui-items-center lui-justify-between">
+                  <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
+                    {selectedValues.slice(0, maxCount).map((value) => {
+                      const option = options.find((o) => o.value === value);
+                      return (
+                        <Chip
+                          key={value}
+                          removeOnClick={(e) => {
+                            e.stopPropagation();
+                            toggleOption(value);
+                          }}
+                          variant="secondary"
+                          size="small"
+                          disabled={props.disabled}
+                        >
+                          {option?.label}
+                        </Chip>
+                      );
+                    })}
+                    {selectedValues.length > maxCount && (
+                      <Chip
+                        variant="inactive"
+                        size="small"
+                        className="lui-border lui-border-ocean-dark-20 aria-disabled:lui-border-transparent"
                         disabled={props.disabled}
-                      />
-                    </div>
-                    <ChevronDownOutline
-                      className={cn(
-                        "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
-                        props.disabled && "lui-text-ocean-light-40",
-                      )}
-                    />
-                  </div>
-                ) : (
-                  <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
+                      >
+                        {`${selectedValues.length - maxCount} more`}
+                      </Chip>
+                    )}
                     <input
                       type="text"
                       placeholder={placeholder}
@@ -268,18 +263,19 @@ export const MultiSelect = React.forwardRef<
                           setInputFilter(e.target.value);
                         }
                       }}
-                      className="lui-h-full lui-w-full focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
+                      onKeyDown={handleKeyDown}
+                      className="focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                       ref={inputRef}
                       disabled={props.disabled}
                     />
-                    <ChevronDownOutline
-                      className={cn(
-                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
-                        props.disabled && "lui-text-ocean-light-40",
-                      )}
-                    />
                   </div>
-                )}
+                  <ChevronDownOutline
+                    className={cn(
+                      "lui-ml-auto lui-min-h-6 lui-min-w-6 lui-text-ocean-primary-10 lui-transition-all group-data-[state=open]:lui-rotate-180",
+                      props.disabled && "lui-text-ocean-light-40",
+                    )}
+                  />
+                </div>
               </button>
             </PopoverTrigger>
             <PopoverContent
@@ -288,7 +284,7 @@ export const MultiSelect = React.forwardRef<
               onEscapeKeyDown={() => setIsPopoverOpen(false)}
               onOpenAutoFocus={(e) => e.preventDefault()}
             >
-              <Command>
+              <Command ref={commandRef}>
                 <CommandList className="lui-max-h-[256px]">
                   {isError && !isLoading ? (
                     <div className="p-4 lui-flex lui-h-full lui-w-full lui-flex-col lui-items-center lui-justify-center lui-gap-y-2 lui-bg-white lui-py-5">
@@ -324,7 +320,7 @@ export const MultiSelect = React.forwardRef<
                                 key="all"
                                 onSelect={toggleAll}
                                 className={cn(
-                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 data-[selected=true]:lui-bg-ocean-light-20",
                                   selectedValues.length === options.length &&
                                     "!lui-bg-ocean-secondary-10",
                                 )}
@@ -347,53 +343,40 @@ export const MultiSelect = React.forwardRef<
                                 </span>
                               </CommandItem>
                             )}
-                          {options
-                            .filter(
-                              (option) =>
-                                option.label
-                                  .toLowerCase()
-                                  .includes(
-                                    search
-                                      ? search.query.toLowerCase()
-                                      : inputFilter.toLowerCase(),
-                                  ) ||
-                                option.description
-                                  ?.toLowerCase()
-                                  .includes(
-                                    search
-                                      ? search.query.toLowerCase()
-                                      : inputFilter.toLowerCase(),
-                                  ),
-                            )
-                            .map((option) => {
-                              const isSelected = selectedValues.includes(
-                                option.value,
-                              );
-                              return (
-                                <CommandItem
-                                  key={option.value}
-                                  onSelect={() => toggleOption(option.value)}
-                                  className={cn(
-                                    "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 hover:lui-bg-ocean-light-20",
-                                    isSelected && "!lui-bg-ocean-secondary-10",
+                          {matchSorter(
+                            options,
+                            search ? search.query : inputFilter,
+                            {
+                              keys: ["label", "description"],
+                              threshold: matchSorter.rankings.CONTAINS,
+                            },
+                          ).map((option) => {
+                            const isSelected = selectedValues.includes(
+                              option.value,
+                            );
+                            return (
+                              <CommandItem
+                                key={option.value}
+                                onSelect={() => toggleOption(option.value)}
+                                className={cn(
+                                  "lui-cursor-pointer lui-items-start lui-gap-x-3 lui-px-5 lui-py-3 data-[selected=true]:lui-bg-ocean-light-20",
+                                  isSelected && "!lui-bg-ocean-secondary-10",
+                                )}
+                              >
+                                <Checkbox checked={isSelected ? true : false} />
+                                <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
+                                  <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
+                                    {option.label}
+                                  </span>
+                                  {option.description && (
+                                    <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
+                                      {option.description}
+                                    </p>
                                   )}
-                                >
-                                  <Checkbox
-                                    checked={isSelected ? true : false}
-                                  />
-                                  <div className="lui-flex lui-w-full lui-min-w-0 lui-flex-col lui-gap-y-1 lui-text-start">
-                                    <span className="lui-text-sm lui-font-semibold lui-text-ocean-dark-20">
-                                      {option.label}
-                                    </span>
-                                    {option.description && (
-                                      <p className="lui-truncate lui-text-xs lui-text-ocean-dark-10">
-                                        {option.description}
-                                      </p>
-                                    )}
-                                  </div>
-                                </CommandItem>
-                              );
-                            })}
+                                </div>
+                              </CommandItem>
+                            );
+                          })}
                         </CommandGroup>
                       </>
                     )

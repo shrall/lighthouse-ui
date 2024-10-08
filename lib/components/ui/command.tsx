@@ -13,7 +13,7 @@ const Command = React.forwardRef<
   <CommandPrimitive
     ref={ref}
     className={cn(
-      "lui-flex lui-h-full lui-w-full lui-flex-col lui-overflow-hidden lui-rounded-md lui-bg-white lui-text-slate-950",
+      "lui-flex lui-h-full lui-w-full lui-flex-col lui-overflow-hidden lui-rounded-md",
       className,
     )}
     {...props}
@@ -27,7 +27,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
     <Dialog {...props}>
       <DialogContent className="lui-overflow-hidden lui-p-0 lui-shadow-lg">
-        <Command className="[&_[cmdk-group-heading]]:lui-px-2 [&_[cmdk-group-heading]]:lui-font-medium [&_[cmdk-group-heading]]:lui-text-slate-500 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:lui-pt-0 [&_[cmdk-group]]:lui-px-2 [&_[cmdk-input-wrapper]_svg]:lui-h-5 [&_[cmdk-input-wrapper]_svg]:lui-w-5 [&_[cmdk-input]]:lui-h-12 [&_[cmdk-item]]:lui-px-2 [&_[cmdk-item]]:lui-py-3 [&_[cmdk-item]_svg]:lui-h-5 [&_[cmdk-item]_svg]:lui-w-5">
+        <Command className="[&_[cmdk-group-heading]]:lui-px-2 [&_[cmdk-group-heading]]:lui-font-medium [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:lui-pt-0 [&_[cmdk-group]]:lui-px-2 [&_[cmdk-input-wrapper]_svg]:lui-h-5 [&_[cmdk-input-wrapper]_svg]:lui-w-5 [&_[cmdk-input]]:lui-h-12 [&_[cmdk-item]]:lui-px-2 [&_[cmdk-item]]:lui-py-3 [&_[cmdk-item]_svg]:lui-h-5 [&_[cmdk-item]_svg]:lui-w-5">
           {children}
         </Command>
       </DialogContent>
@@ -47,7 +47,7 @@ const CommandInput = React.forwardRef<
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
-        "lui-flex lui-h-11 lui-w-full lui-rounded-md lui-bg-transparent lui-py-3 lui-text-sm lui-outline-none placeholder:lui-text-slate-500 disabled:lui-cursor-not-allowed disabled:lui-opacity-50",
+        "lui-flex lui-h-11 lui-w-full lui-rounded-md lui-bg-transparent lui-py-3 lui-text-sm lui-outline-none disabled:lui-cursor-not-allowed disabled:lui-opacity-50",
         className,
       )}
       {...props}
@@ -93,7 +93,7 @@ const CommandGroup = React.forwardRef<
   <CommandPrimitive.Group
     ref={ref}
     className={cn(
-      "lui-overflow-hidden lui-p-1 lui-text-slate-950 [&_[cmdk-group-heading]]:lui-px-2 [&_[cmdk-group-heading]]:lui-py-1.5 [&_[cmdk-group-heading]]:lui-text-xs [&_[cmdk-group-heading]]:lui-font-medium [&_[cmdk-group-heading]]:lui-text-slate-500",
+      "lui-overflow-hidden lui-p-1 [&_[cmdk-group-heading]]:lui-px-2 [&_[cmdk-group-heading]]:lui-py-1.5 [&_[cmdk-group-heading]]:lui-text-xs [&_[cmdk-group-heading]]:lui-font-medium",
       className,
     )}
     {...props}
@@ -108,7 +108,7 @@ const CommandSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
     ref={ref}
-    className={cn("lui--mx-1 lui-h-px lui-bg-slate-200", className)}
+    className={cn("lui--mx-1 lui-h-px", className)}
     {...props}
   />
 ));
@@ -136,10 +136,7 @@ const CommandShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
-      className={cn(
-        "lui-ml-auto lui-text-xs lui-tracking-widest lui-text-slate-500",
-        className,
-      )}
+      className={cn("lui-ml-auto lui-text-xs lui-tracking-widest", className)}
       {...props}
     />
   );

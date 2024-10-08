@@ -28,6 +28,12 @@ const Checkbox = React.forwardRef<
         className,
       )}
       {...props}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          e.target.dispatchEvent(new Event("click", { bubbles: true }));
+        }
+      }}
     >
       <CheckboxPrimitive.Indicator asChild forceMount>
         <CheckboxUncheckedOutline

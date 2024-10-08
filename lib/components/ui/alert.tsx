@@ -10,7 +10,7 @@ import { CrossLargeOutline } from "./icon/CrossLargeOutline";
 import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
 const alertVariants = cva(
-  "lui-relative lui-w-full lui-flex lui-items-start lui-text-sm lui-rounded-[10px] lui-border lui-border-slate-200 lui-p-3 lui-gap-3",
+  "lui-relative lui-w-full lui-flex lui-items-start lui-text-sm lui-rounded-[10px] lui-p-3 lui-gap-3",
   {
     variants: {
       variant: {
