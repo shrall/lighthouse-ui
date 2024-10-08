@@ -1,5 +1,12 @@
 
 
+## [0.3.0-beta.19](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.18...v0.3.0-beta.19) (2024-10-08)
+
+
+### Features
+
+* **time-picker:** add keyboard navigation ([288105e](https://github.com/shrall/lighthouse-ui/commit/288105e54f181673b21eda70527246810a607930))
+
 ## [0.3.0-beta.18](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-08)
 
 ## [0.3.0-beta.17](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-03)
