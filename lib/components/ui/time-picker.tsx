@@ -83,9 +83,10 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
     },
     ref,
   ) => {
-    const inputRef = React.useRef<HTMLInputElement>(null);
     const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(value || defaultValue);
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const commandRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
       setInputValue(value || defaultValue);
@@ -154,6 +155,28 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     }, [min, max]);
 
+    //NOTE - Keyboard Navigation
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        const event = new KeyboardEvent("keydown", {
+          key: e.key,
+          bubbles: true,
+        });
+        commandRef.current?.dispatchEvent(event);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        const selectedItem = commandRef.current?.querySelector<HTMLElement>(
+          '[data-selected="true"]',
+        );
+        if (selectedItem) {
+          selectedItem.click();
+        } else {
+          setIsPopoverOpen(true);
+        }
+      }
+    };
+
     return (
       <div
         className={cn(
@@ -171,6 +194,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               }
               setIsPopoverOpen(true);
             }}
+            tabIndex={-1}
           >
             <button
               ref={ref}
@@ -190,6 +214,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                   className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                   ref={inputRef}
                   disabled={props.disabled}
+                  onKeyDown={handleKeyDown}
                 />
                 <ClockFilled
                   className={cn(
@@ -206,7 +231,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             onEscapeKeyDown={() => setIsPopoverOpen(false)}
             onOpenAutoFocus={(e) => e.preventDefault()}
           >
-            <Command>
+            <Command ref={commandRef}>
               <CommandList className="lui-max-h-[256px]">
                 <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                   {generateTimeOptions.map((option) => {
@@ -227,7 +252,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                           isSelected && "!lui-bg-ocean-secondary-10",
                           isDisabled &&
                             "lui-cursor-not-allowed lui-bg-ocean-light-10",
-                          !isDisabled && "hover:lui-bg-ocean-light-20",
+                          !isDisabled &&
+                            "data-[selected=true]:lui-bg-ocean-light-20",
                         )}
                       >
                         <span
