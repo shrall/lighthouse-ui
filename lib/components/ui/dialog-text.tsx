@@ -4,6 +4,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import {
   Dialog,
   DialogContent,
+  DialogContentProps,
   DialogDescription,
   DialogFooter,
   DialogHeader,
@@ -19,7 +20,7 @@ type DialogTextProps = React.ComponentPropsWithoutRef<
   DialogPrimitive.DialogProps & {
     title: string;
     description?: string;
-    contentProps?: DialogPrimitive.DialogContentProps;
+    contentProps?: DialogContentProps;
     buttons?: {
       primary: {
         text: string;
