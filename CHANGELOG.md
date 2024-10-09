@@ -1,5 +1,12 @@
 
 
+## [0.3.0-beta.20](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.19...v0.3.0-beta.20) (2024-10-09)
+
+
+### Features
+
+* **dialog:** add showClose and size props ([b6f6ff1](https://github.com/shrall/lighthouse-ui/commit/b6f6ff189580a4cc7b61312e179e063b7d990857))
+
 ## [0.3.0-beta.19](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.18...v0.3.0-beta.19) (2024-10-08)
 
 
