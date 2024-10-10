@@ -152,7 +152,10 @@ const PaginationDetailed = React.forwardRef<
           >
             <DoubleChevronLeftOutline
               aria-label="Go to first page"
-              className="lui-size-6"
+              className={cn(
+                "lui-size-6",
+                pageNumber !== 1 && "lui-text-ocean-primary-10",
+              )}
             />
           </PaginationButton>
           <PaginationButton
@@ -161,7 +164,10 @@ const PaginationDetailed = React.forwardRef<
           >
             <ChevronLeftOutline
               aria-label="Go to previous page"
-              className="lui-size-6"
+              className={cn(
+                "lui-size-6",
+                pageNumber !== 1 && "lui-text-ocean-primary-10",
+              )}
             />
           </PaginationButton>
           {renderPageNumbers()}
@@ -171,7 +177,10 @@ const PaginationDetailed = React.forwardRef<
           >
             <ChevronRightOutline
               aria-label="Go to next page"
-              className="lui-size-6"
+              className={cn(
+                "lui-size-6",
+                pageNumber !== totalPage && "lui-text-ocean-primary-10",
+              )}
             />
           </PaginationButton>
           <PaginationButton
@@ -180,7 +189,10 @@ const PaginationDetailed = React.forwardRef<
           >
             <DoubleChevronRightOutline
               aria-label="Go to last page"
-              className="lui-size-6"
+              className={cn(
+                "lui-size-6",
+                pageNumber !== totalPage && "lui-text-ocean-primary-10",
+              )}
             />
           </PaginationButton>
         </PaginationContent>
