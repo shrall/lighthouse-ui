@@ -60,6 +60,15 @@ interface TimePickerProps
   max?: string;
   /** Array of disabled times or time ranges (format: "HH:mm", e.g., "09:00") */
   disabledTimes?: Array<string | { start: string; end: string }>;
+  /** Whether to show the icon
+   * @default true
+   */
+  showIcon?: boolean;
+  /**
+   * Custom icon
+   * @default <ClockFilled className="lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10" />
+   */
+  customIcon?: React.ReactNode;
 }
 
 export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
@@ -79,6 +88,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       min,
       max,
       disabledTimes = [],
+      showIcon = true,
+      customIcon,
       ...props
     },
     ref,
@@ -216,12 +227,17 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                   disabled={props.disabled}
                   onKeyDown={handleKeyDown}
                 />
-                <ClockFilled
-                  className={cn(
-                    "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10",
-                    props.disabled && "lui-text-ocean-light-40",
-                  )}
-                />
+                {showIcon &&
+                  (customIcon ? (
+                    customIcon
+                  ) : (
+                    <ClockFilled
+                      className={cn(
+                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10",
+                        props.disabled && "lui-text-ocean-light-40",
+                      )}
+                    />
+                  ))}
               </div>
             </button>
           </PopoverTrigger>
