@@ -172,6 +172,7 @@ export {
 export {
     DialogText
 } from "./components/ui/dialog-text";
+export { PaginationDetailed } from "./components/ui/pagination-detailed";
 export { Stepper } from "./components/ui/stepper";
 export { StepperCircle } from "./components/ui/stepper-circle";
 export { addMinutes, TimePicker } from "@/components/ui/time-picker";

@@ -1,4 +1,5 @@
 import { Pagination } from "@/components/ui/pagination";
+import { PaginationDetailed } from "@/components/ui/pagination-detailed";
 import { useState } from "react";
 
 function Paginations() {
@@ -24,6 +25,14 @@ function Paginations() {
           totalData={totalData}
         />
       </div>
+      <PaginationDetailed
+        pageSize={pageSize}
+        setPageSize={setPageSize}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+        totalPage={Math.ceil(totalData / pageSize)}
+        totalData={totalData}
+      />
     </div>
   );
 }

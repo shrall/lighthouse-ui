@@ -14,7 +14,7 @@ import { ChevronDownOutline } from "./icon/ChevronDownOutline";
 import { ChevronLeftOutline } from "./icon/ChevronLeftOutline";
 import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 
-interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
+interface PaginationProps extends React.HTMLAttributes<HTMLElement> {
   locale?: "en" | "id";
   isLoading?: boolean;
   pageSize: number;
@@ -28,7 +28,7 @@ interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
   totalData: number;
 }
 
-const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
+const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
   (
     {
       className,
@@ -48,12 +48,13 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     ref,
   ) => {
     const [showGoToPage, setShowGoToPage] = React.useState(false);
+
     React.useEffect(() => {
       setPageNumber(1);
     }, [pageSize]);
 
     return (
-      <div
+      <nav
         className={cn(
           "lui-flex lui-w-full lui-items-center lui-p-4 lui-text-sm md:lui-text-base",
           (isLoading || totalData < 1) && "lui-pt-5",
@@ -184,7 +185,7 @@ const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
             )
           )}
         </div>
-      </div>
+      </nav>
     );
   },
 );
