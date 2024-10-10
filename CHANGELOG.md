@@ -1,5 +1,13 @@
 
 
+## [0.3.0-beta.21](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.20...v0.3.0-beta.21) (2024-10-10)
+
+
+### Features
+
+* add detailed pagination ([66fcd75](https://github.com/shrall/lighthouse-ui/commit/66fcd7588c13fbc2c16d0088a24e04a790acd967))
+* add separator ([51a7c39](https://github.com/shrall/lighthouse-ui/commit/51a7c39a477dee5b46986cdf272b9fdf9f076f12))
+
 ## [0.3.0-beta.20](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.19...v0.3.0-beta.20) (2024-10-09)
 
 
