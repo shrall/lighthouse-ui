@@ -138,6 +138,8 @@ export { Select } from "./components/ui/select";
 export { MultiSelect } from "./components/ui/multi-select";
 export { Textarea } from "./components/ui/textarea";
 
+//NOTE - v0.3.0
+export { Separator } from "./components/ui/separator";
 
 //NOTE - Beta
 export { Calendar } from "./components/ui/calendar";
