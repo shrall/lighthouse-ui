@@ -1,5 +1,17 @@
 
 
+## [0.3.0-beta.22](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.21...v0.3.0-beta.22) (2024-10-11)
+
+
+### Features
+
+* **time-picker:** add showIcon & customIcon props ([beceb0d](https://github.com/shrall/lighthouse-ui/commit/beceb0d7308dad99084647c8be130300a6d492f1))
+
+
+### Styles
+
+* **pagination-detailed:** set arrow colors to primary 10 when not disabled ([df017de](https://github.com/shrall/lighthouse-ui/commit/df017de121a101e6d2577c7558bdeec5e665ec52))
+
 ## [0.3.0-beta.21](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.20...v0.3.0-beta.21) (2024-10-10)
 
 
