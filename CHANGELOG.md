@@ -1,5 +1,12 @@
 
 
+## [0.3.0-beta.23](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.22...v0.3.0-beta.23) (2024-10-11)
+
+
+### Features
+
+* **pagination-detailed:** add text information ([5c4d504](https://github.com/shrall/lighthouse-ui/commit/5c4d5044fafaaabf55e79a6c337d34ed67f2bf28))
+
 ## [0.3.0-beta.22](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.21...v0.3.0-beta.22) (2024-10-11)
 
 
