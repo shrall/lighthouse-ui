@@ -37,7 +37,7 @@ const PaginationDetailed = React.forwardRef<
   ) => {
     React.useEffect(() => {
       setPageNumber(1);
-    }, [pageSize]);
+    }, [pageSize, totalData]);
 
     const renderPageNumbers = () => {
       const pageNumbers = [];
@@ -143,7 +143,7 @@ const PaginationDetailed = React.forwardRef<
         ref={ref}
         {...props}
       >
-        <div className="lui-hidden lui-flex-1 lui-text-base sm:lui-block">
+        <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base sm:lui-block">
           {locale === "en" ? "Show data " : "Menampilkan data "}
           {(pageNumber - 1) * pageSize + 1}-
           {pageSize * pageNumber > totalData
