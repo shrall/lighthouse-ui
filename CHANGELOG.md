@@ -1,5 +1,12 @@
 
 
+## [0.3.0-beta.25](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.24...v0.3.0-beta.25) (2024-10-11)
+
+
+### Features
+
+* **time-picker:** scroll to selected item on open ([61c369c](https://github.com/shrall/lighthouse-ui/commit/61c369c76e83f6a85af7708d8afb90cf305fad89))
+
 ## [0.3.0-beta.24](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.23...v0.3.0-beta.24) (2024-10-11)
 
 
