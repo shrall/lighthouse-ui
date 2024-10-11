@@ -11,7 +11,6 @@ interface PaginationDetailedProps extends React.HTMLAttributes<HTMLElement> {
   contentProps?: React.ComponentProps<"ul">;
   locale?: "en" | "id";
   pageSize: number;
-  setPageSize: (size: number) => void;
   pageNumber: number;
   setPageNumber: (page: number) => void;
   totalPage: number;
@@ -27,7 +26,6 @@ const PaginationDetailed = React.forwardRef<
       className,
       locale = "en",
       pageSize,
-      setPageSize,
       pageNumber,
       setPageNumber,
       totalPage,

@@ -27,7 +27,6 @@ function Paginations() {
       </div>
       <PaginationDetailed
         pageSize={pageSize}
-        setPageSize={setPageSize}
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
         totalPage={Math.ceil(totalData / pageSize)}
