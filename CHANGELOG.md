@@ -1,5 +1,17 @@
 
 
+## [0.3.0-beta.24](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.23...v0.3.0-beta.24) (2024-10-11)
+
+
+### Features
+
+* **pagination-detailed:** remove setPageSize prop ([adf63d4](https://github.com/shrall/lighthouse-ui/commit/adf63d4b96161809c87b17f6f872130620cda47c))
+
+
+### Styles
+
+* **pagination-detailed:** set text information alignment to start ([7e61e3d](https://github.com/shrall/lighthouse-ui/commit/7e61e3d02470ce8c21178497e851966c7a5cdf7a))
+
 ## [0.3.0-beta.23](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.22...v0.3.0-beta.23) (2024-10-11)
 
 
