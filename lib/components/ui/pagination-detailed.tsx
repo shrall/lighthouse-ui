@@ -139,12 +139,20 @@ const PaginationDetailed = React.forwardRef<
         role="navigation"
         aria-label="pagination"
         className={cn(
-          "lui-flex lui-w-full lui-items-center lui-justify-center",
+          "lui-flex lui-w-full lui-items-center lui-justify-end",
           className,
         )}
         ref={ref}
         {...props}
       >
+        <div className="lui-hidden lui-flex-1 lui-text-base sm:lui-block">
+          {locale === "en" ? "Show data " : "Menampilkan data "}
+          {(pageNumber - 1) * pageSize + 1}-
+          {pageSize * pageNumber > totalData
+            ? totalData
+            : pageSize * pageNumber}{" "}
+          {locale === "en" ? "of" : "dari"} {totalData}
+        </div>
         <PaginationContent {...contentProps}>
           <PaginationButton
             onClick={() => setPageNumber(1)}
