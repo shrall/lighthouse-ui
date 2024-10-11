@@ -98,6 +98,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
     const [inputValue, setInputValue] = React.useState(value || defaultValue);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const commandRef = React.useRef<HTMLDivElement>(null);
+    const selectedItemRef = React.useRef<HTMLDivElement>(null);
+    const commandListRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
       setInputValue(value || defaultValue);
@@ -188,6 +190,30 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     };
 
+    React.useEffect(() => {
+      if (isPopoverOpen) {
+        requestAnimationFrame(() => {
+          const commandList = commandListRef.current;
+          const selectedItem = selectedItemRef.current;
+
+          if (commandList && selectedItem) {
+            const commandListRect = commandList.getBoundingClientRect();
+            const selectedItemRect = selectedItem.getBoundingClientRect();
+
+            const scrollTop =
+              selectedItem.offsetTop -
+              commandList.offsetTop -
+              (commandListRect.height - selectedItemRect.height) / 2;
+
+            commandList.scrollTo({
+              top: scrollTop,
+              behavior: "instant",
+            });
+          }
+        });
+      }
+    }, [isPopoverOpen]);
+
     return (
       <div
         className={cn(
@@ -203,7 +229,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               if (inputRef.current) {
                 inputRef.current.focus();
               }
-              setIsPopoverOpen(true);
+              setIsPopoverOpen(!isPopoverOpen);
             }}
             tabIndex={-1}
           >
@@ -247,8 +273,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             onEscapeKeyDown={() => setIsPopoverOpen(false)}
             onOpenAutoFocus={(e) => e.preventDefault()}
           >
-            <Command ref={commandRef}>
-              <CommandList className="lui-max-h-[256px]">
+            <Command>
+              <CommandList className="lui-max-h-[256px]" ref={commandListRef}>
                 <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                   {generateTimeOptions.map((option) => {
                     const isSelected = inputValue === option.value;
@@ -271,6 +297,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                           !isDisabled &&
                             "data-[selected=true]:lui-bg-ocean-light-20",
                         )}
+                        ref={isSelected ? selectedItemRef : undefined}
                       >
                         <span
                           className={cn(
