@@ -1,111 +1,97 @@
-
-
 ## [0.3.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.25...v0.3.0) (2024-10-11)
+
+- Released Separator, DataTable, Table, Tabs, Dialog, DialogText, PaginationDetailed, Stepper, StepperCircle, and TimePicker for stable version.
 
 ## [0.3.0-beta.25](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.24...v0.3.0-beta.25) (2024-10-11)
 
-
 ### Features
 
-* **time-picker:** scroll to selected item on open ([61c369c](https://github.com/shrall/lighthouse-ui/commit/61c369c76e83f6a85af7708d8afb90cf305fad89))
+- **time-picker:** scroll to selected item on open ([61c369c](https://github.com/shrall/lighthouse-ui/commit/61c369c76e83f6a85af7708d8afb90cf305fad89))
 
 ## [0.3.0-beta.24](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.23...v0.3.0-beta.24) (2024-10-11)
 
-
 ### Features
 
-* **pagination-detailed:** remove setPageSize prop ([adf63d4](https://github.com/shrall/lighthouse-ui/commit/adf63d4b96161809c87b17f6f872130620cda47c))
-
+- **pagination-detailed:** remove setPageSize prop ([adf63d4](https://github.com/shrall/lighthouse-ui/commit/adf63d4b96161809c87b17f6f872130620cda47c))
 
 ### Styles
 
-* **pagination-detailed:** set text information alignment to start ([7e61e3d](https://github.com/shrall/lighthouse-ui/commit/7e61e3d02470ce8c21178497e851966c7a5cdf7a))
+- **pagination-detailed:** set text information alignment to start ([7e61e3d](https://github.com/shrall/lighthouse-ui/commit/7e61e3d02470ce8c21178497e851966c7a5cdf7a))
 
 ## [0.3.0-beta.23](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.22...v0.3.0-beta.23) (2024-10-11)
 
-
 ### Features
 
-* **pagination-detailed:** add text information ([5c4d504](https://github.com/shrall/lighthouse-ui/commit/5c4d5044fafaaabf55e79a6c337d34ed67f2bf28))
+- **pagination-detailed:** add text information ([5c4d504](https://github.com/shrall/lighthouse-ui/commit/5c4d5044fafaaabf55e79a6c337d34ed67f2bf28))
 
 ## [0.3.0-beta.22](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.21...v0.3.0-beta.22) (2024-10-11)
 
-
 ### Features
 
-* **time-picker:** add showIcon & customIcon props ([beceb0d](https://github.com/shrall/lighthouse-ui/commit/beceb0d7308dad99084647c8be130300a6d492f1))
-
+- **time-picker:** add showIcon & customIcon props ([beceb0d](https://github.com/shrall/lighthouse-ui/commit/beceb0d7308dad99084647c8be130300a6d492f1))
 
 ### Styles
 
-* **pagination-detailed:** set arrow colors to primary 10 when not disabled ([df017de](https://github.com/shrall/lighthouse-ui/commit/df017de121a101e6d2577c7558bdeec5e665ec52))
+- **pagination-detailed:** set arrow colors to primary 10 when not disabled ([df017de](https://github.com/shrall/lighthouse-ui/commit/df017de121a101e6d2577c7558bdeec5e665ec52))
 
 ## [0.3.0-beta.21](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.20...v0.3.0-beta.21) (2024-10-10)
 
-
 ### Features
 
-* add detailed pagination ([66fcd75](https://github.com/shrall/lighthouse-ui/commit/66fcd7588c13fbc2c16d0088a24e04a790acd967))
-* add separator ([51a7c39](https://github.com/shrall/lighthouse-ui/commit/51a7c39a477dee5b46986cdf272b9fdf9f076f12))
+- add detailed pagination ([66fcd75](https://github.com/shrall/lighthouse-ui/commit/66fcd7588c13fbc2c16d0088a24e04a790acd967))
+- add separator ([51a7c39](https://github.com/shrall/lighthouse-ui/commit/51a7c39a477dee5b46986cdf272b9fdf9f076f12))
 
 ## [0.3.0-beta.20](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.19...v0.3.0-beta.20) (2024-10-09)
 
-
 ### Features
 
-* **dialog:** add showClose and size props ([b6f6ff1](https://github.com/shrall/lighthouse-ui/commit/b6f6ff189580a4cc7b61312e179e063b7d990857))
+- **dialog:** add showClose and size props ([b6f6ff1](https://github.com/shrall/lighthouse-ui/commit/b6f6ff189580a4cc7b61312e179e063b7d990857))
 
 ## [0.3.0-beta.19](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.18...v0.3.0-beta.19) (2024-10-08)
 
-
 ### Features
 
-* **time-picker:** add keyboard navigation ([288105e](https://github.com/shrall/lighthouse-ui/commit/288105e54f181673b21eda70527246810a607930))
+- **time-picker:** add keyboard navigation ([288105e](https://github.com/shrall/lighthouse-ui/commit/288105e54f181673b21eda70527246810a607930))
 
 ## [0.3.0-beta.18](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-08)
 
 ## [0.3.0-beta.17](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-03)
 
-
 ### Features
 
-* add time picker ([07e1439](https://github.com/shrall/lighthouse-ui/commit/07e14397376f3b669df4612a6c7c4485e123d5a0))
+- add time picker ([07e1439](https://github.com/shrall/lighthouse-ui/commit/07e14397376f3b669df4612a6c7c4485e123d5a0))
 
 ## [0.3.0-beta.16](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-01)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **stepper:** rename CircleStepper to StepperCircle
+- **stepper:** rename CircleStepper to StepperCircle
 
 ### Features
 
-* **stepper:** rename CircleStepper to StepperCircle ([f6cc9d1](https://github.com/shrall/lighthouse-ui/commit/f6cc9d1c6085ae1c6c0e38e7594d7accac406b7a))
+- **stepper:** rename CircleStepper to StepperCircle ([f6cc9d1](https://github.com/shrall/lighthouse-ui/commit/f6cc9d1c6085ae1c6c0e38e7594d7accac406b7a))
 
 ## [0.3.0-beta.15](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-01)
 
-
 ### Features
 
-* add circle stepper ([e717eda](https://github.com/shrall/lighthouse-ui/commit/e717eda60b841ab524a5a6c0ffc7ae368baae381))
-* add stepper ([c3d9bdf](https://github.com/shrall/lighthouse-ui/commit/c3d9bdfe5d1ad8fd8eebaf6a5b9253ac7546fd35))
+- add circle stepper ([e717eda](https://github.com/shrall/lighthouse-ui/commit/e717eda60b841ab524a5a6c0ffc7ae368baae381))
+- add stepper ([c3d9bdf](https://github.com/shrall/lighthouse-ui/commit/c3d9bdfe5d1ad8fd8eebaf6a5b9253ac7546fd35))
 
 ## [0.3.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-27)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **table:** remove errorRow & add locale + refetch props
+- **table:** remove errorRow & add locale + refetch props
 
 ### Features
 
-* add dialogs ([8ae3880](https://github.com/shrall/lighthouse-ui/commit/8ae388079ee50f75c9141828b33c6cb0bed11ed4))
-* **table:** remove errorRow & add locale + refetch props ([e78e035](https://github.com/shrall/lighthouse-ui/commit/e78e035600aa5509ec13b373a6f53e14ca9000d3))
-
+- add dialogs ([8ae3880](https://github.com/shrall/lighthouse-ui/commit/8ae388079ee50f75c9141828b33c6cb0bed11ed4))
+- **table:** remove errorRow & add locale + refetch props ([e78e035](https://github.com/shrall/lighthouse-ui/commit/e78e035600aa5509ec13b373a6f53e14ca9000d3))
 
 ### Styles
 
-* **tabs:** add bottom border to underline tabs ([fdcab89](https://github.com/shrall/lighthouse-ui/commit/fdcab89ed6463e31f3a1f96573ada624029e18d4))
+- **tabs:** add bottom border to underline tabs ([fdcab89](https://github.com/shrall/lighthouse-ui/commit/fdcab89ed6463e31f3a1f96573ada624029e18d4))
 
 ## [0.3.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-25)
 
@@ -117,10 +103,9 @@
 
 ## [0.3.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-24)
 
-
 ### Features
 
-* add tabs ([3ca86dc](https://github.com/shrall/lighthouse-ui/commit/3ca86dc4bdd6da3b05372104d122db77e8b1af20))
+- add tabs ([3ca86dc](https://github.com/shrall/lighthouse-ui/commit/3ca86dc4bdd6da3b05372104d122db77e8b1af20))
 
 ## [0.3.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-20)
 
@@ -132,19 +117,17 @@
 
 ## [0.3.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-17)
 
-
 ### Features
 
-* **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
+- **table:** update error row prop ([f6d9270](https://github.com/shrall/lighthouse-ui/commit/f6d9270cc5de62152d0e74983c9e50e0d8d141bb))
 
 ## [0.3.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-17)
 
 ## [0.3.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-13)
 
-
 ### Styles
 
-* **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
+- **table:** update content alignment to top ([49220bc](https://github.com/shrall/lighthouse-ui/commit/49220bcb3a065e0d601d76fb3a3763473240fab4))
 
 ## [0.3.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-09-13)
 
@@ -152,19 +135,17 @@
 
 ## [0.2.23](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.17...v0.3.0-beta.18) (2024-10-07)
 
-
 ### Features
 
-* **checkbox:** toggle on enter ([44385af](https://github.com/shrall/lighthouse-ui/commit/44385af83446fe1a271c168de7b1ae6034135aa4))
-* **multi-select:** add keyboard navigation ([cc0fef7](https://github.com/shrall/lighthouse-ui/commit/cc0fef7f0eb3f8ac17bcffd08479be63b453239b))
-* **multi-select:** update search algorithm ([9cedc92](https://github.com/shrall/lighthouse-ui/commit/9cedc9265541a5399913f5fb5d7470099f98c253))
-* **select:** add keyboard navigation ([2382669](https://github.com/shrall/lighthouse-ui/commit/2382669dfead925231e427eba4560d1d78792021))
-* **select:** update search algorithm ([d095da0](https://github.com/shrall/lighthouse-ui/commit/d095da0d2f83f830c7d242f5bf2966146fae0c51))
-
+- **checkbox:** toggle on enter ([44385af](https://github.com/shrall/lighthouse-ui/commit/44385af83446fe1a271c168de7b1ae6034135aa4))
+- **multi-select:** add keyboard navigation ([cc0fef7](https://github.com/shrall/lighthouse-ui/commit/cc0fef7f0eb3f8ac17bcffd08479be63b453239b))
+- **multi-select:** update search algorithm ([9cedc92](https://github.com/shrall/lighthouse-ui/commit/9cedc9265541a5399913f5fb5d7470099f98c253))
+- **select:** add keyboard navigation ([2382669](https://github.com/shrall/lighthouse-ui/commit/2382669dfead925231e427eba4560d1d78792021))
+- **select:** update search algorithm ([d095da0](https://github.com/shrall/lighthouse-ui/commit/d095da0d2f83f830c7d242f5bf2966146fae0c51))
 
 ### Styles
 
-* remove slate color usage ([5bc7f6b](https://github.com/shrall/lighthouse-ui/commit/5bc7f6be2005aa5953e1319ce6b2c2c27f7b11db))
+- remove slate color usage ([5bc7f6b](https://github.com/shrall/lighthouse-ui/commit/5bc7f6be2005aa5953e1319ce6b2c2c27f7b11db))
 
 ## [0.3.0-beta.17](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.16...v0.3.0-beta.17) (2024-10-03)
 
