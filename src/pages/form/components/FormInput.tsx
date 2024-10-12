@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Control, Controller, FieldPath, FieldValues } from "react-hook-form";
+import { Control, Controller, FieldValues, Path } from "react-hook-form";
 
 type InputStyle = "outline" | "underline";
 
@@ -11,16 +11,20 @@ export interface FormInputProps<TFieldValues extends FieldValues>
   inputStyle?: InputStyle;
   leftNode?: React.ReactNode;
   rightNode?: React.ReactNode;
-  regex?: {
-    type: "number" | "custom";
-    pattern?: RegExp;
-  };
+  regex?:
+    | {
+        type: "number";
+      }
+    | {
+        type: "custom";
+        pattern: RegExp;
+      };
   helperText?: string;
   alignment?: "vertical" | "horizontal";
   label?: string;
   tooltip?: React.ReactNode;
   control: Control<TFieldValues>;
-  name: FieldPath<TFieldValues>;
+  name: Path<TFieldValues>;
 }
 
 const FormInput = <TFieldValues extends FieldValues>({
