@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { FormInput } from "./components/FormInput";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,14 +8,14 @@ import { formSchema } from "./schema/form";
 
 interface FormPageProps {}
 
-interface FormData extends FieldValues {
+interface FormData {
   name: string;
 }
 
 const FormPage: React.FC<FormPageProps> = () => {
   const [submittedData, setSubmittedData] = useState<FormData | null>(null);
 
-  const { control, handleSubmit, formState } = useForm<FormData>({
+  const { control, handleSubmit } = useForm<FormData>({
     mode: "onTouched",
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -28,8 +28,6 @@ const FormPage: React.FC<FormPageProps> = () => {
     setSubmittedData(data);
   };
 
-  console.log("outside", formState.errors.name);
-
   return (
     <div className="lui-flex lui-min-h-screen lui-items-center lui-justify-center">
       <Card className="lui-w-full lui-max-w-5xl">
@@ -41,7 +39,7 @@ const FormPage: React.FC<FormPageProps> = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="lui-flex lui-flex-col lui-gap-y-4"
           >
-            <FormInput<FormData>
+            <FormInput
               control={control}
               name="name"
               placeholder="Name"
