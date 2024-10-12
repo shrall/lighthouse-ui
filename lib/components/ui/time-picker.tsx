@@ -190,30 +190,6 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     };
 
-    React.useEffect(() => {
-      if (isPopoverOpen) {
-        requestAnimationFrame(() => {
-          const commandList = commandListRef.current;
-          const selectedItem = selectedItemRef.current;
-
-          if (commandList && selectedItem) {
-            const commandListRect = commandList.getBoundingClientRect();
-            const selectedItemRect = selectedItem.getBoundingClientRect();
-
-            const scrollTop =
-              selectedItem.offsetTop -
-              commandList.offsetTop -
-              (commandListRect.height - selectedItemRect.height) / 2;
-
-            commandList.scrollTo({
-              top: scrollTop,
-              behavior: "instant",
-            });
-          }
-        });
-      }
-    }, [isPopoverOpen]);
-
     return (
       <div
         className={cn(
@@ -273,7 +249,11 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             onEscapeKeyDown={() => setIsPopoverOpen(false)}
             onOpenAutoFocus={(e) => e.preventDefault()}
           >
-            <Command>
+            <Command
+              ref={commandRef}
+              value={inputValue}
+              onValueChange={onValueChange}
+            >
               <CommandList className="lui-max-h-[256px]" ref={commandListRef}>
                 <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                   {generateTimeOptions.map((option) => {
