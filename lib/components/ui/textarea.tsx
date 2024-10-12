@@ -156,12 +156,18 @@ export const Textarea = React.forwardRef<
             {tooltip && tooltip}
           </div>
         )}
-        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
+        <div
+          className={cn(
+            "lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1",
+            inputStyle === "outline" && "lui-overflow-hidden lui-rounded-xl",
+          )}
+        >
           <textarea
             {...props}
             value={value}
             ref={textAreaRef}
             className={cn(
+              "lui-scrollbar lui-scrollbar-thumb-rounded-full lui-scrollbar-track-rounded-full lui-scrollbar-thumb-ocean-secondary-scrollbar lui-scrollbar-track-transparent",
               "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
               inputStyle === "outline" &&
                 "lui-rounded-xl lui-border lui-border-ocean-light-30 lui-px-3 lui-py-[13.5px] disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
