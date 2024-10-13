@@ -1,5 +1,7 @@
 
 
+## [0.4.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.1...v0.4.0-beta.0) (2024-10-13)
+
 ## [0.3.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0...v0.3.1) (2024-10-13)
 
 
