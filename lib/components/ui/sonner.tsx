@@ -16,7 +16,7 @@ function Toaster({ ...props }: ToasterProps) {
         classNames: {
           toast:
             "lui-items-start lui-text-sm lui-w-full lui-p-3 lui-gap-3 lui-border-0",
-          title: "lui-font-bold",
+          title: "lui-font-bold lui-leading-6",
           actionButton: "!lui-bg-transparent !lui-px-0 !lui-text-current",
           icon: "lui-m-0 lui-min-w-6 lui-min-h-6",
           //NOTE - Variants
