@@ -86,7 +86,7 @@ function Calendar({
         table: "lui-w-full lui-border-collapse lui-space-y-1",
         head_row: "lui-flex lui-gap-x-1.5 lui-w-full lui-justify-between",
         head_cell:
-          "text-slate-500 lui-rounded-md lui-w-9 lui-font-normal text-[0.8rem]",
+          "lui-text-ocean-dark-10 lui-rounded-md lui-w-9 lui-font-normal text-[0.8rem]",
         row: "lui-flex lui-w-full lui-mt-2 lui-gap-x-1.5 lui-justify-between",
         cell: "lui-h-9 lui-w-9 lui-text-center lui-text-sm lui-p-0 lui-relative hover:lui-bg-ocean-primary-20 disabled:hover:lui-bg-transparent lui-rounded-full [&:has([aria-selected])]:lui-bg-ocean-secondary-10 [&:has([aria-selected])]:lui-text-ocean-primary-10 focus-within:lui-relative focus-within:lui-z-20",
         day: "lui-h-9 lui-w-9 lui-p-0 lui-font-normal aria-selected:lui-opacity-100 lui-text-ocean-primary-10 lui-rounded-full hover:lui-text-white",
@@ -95,8 +95,8 @@ function Calendar({
           "lui-bg-ocean-primary-10 lui-text-white hover:lui-bg-ocean-primary-20",
         day_today: "",
         day_outside:
-          "day-outside text-slate-500 lui-opacity-50 aria-selected:lui-bg-ocean-primary-10 aria-selected:lui-opacity-30",
-        day_disabled: "text-slate-500 lui-opacity-50",
+          "day-outside lui-text-ocean-dark-10 lui-opacity-50 aria-selected:lui-bg-ocean-primary-10 aria-selected:lui-opacity-30",
+        day_disabled: "lui-text-ocean-dark-10 lui-opacity-50",
         day_range_middle:
           "aria-selected:lui-bg-ocean-secondary-10 aria-selected:lui-text-ocean-primary-10 lui-border lui-border-ocean-primary-10 lui-text-ocean-primary-10",
         day_hidden: "lui-invisible",
