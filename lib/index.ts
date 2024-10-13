@@ -170,11 +170,11 @@ export { StepperCircle } from "./components/ui/stepper-circle";
 export { addMinutes, TimePicker } from "@/components/ui/time-picker";
 
 //NOTE - Beta
-// export { Calendar } from "./components/ui/calendar";
-// export {
-//     DropdownMenu,
-//     DropdownMenuContent,
-//     DropdownMenuItem,
-//     DropdownMenuTrigger,
-// } from "./components/ui/dropdown-menu";
-// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Calendar } from "./components/ui/calendar";
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
+export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
