@@ -12,7 +12,7 @@ const config = {
     "./lib/components/**/*.{ts,tsx}",
   ],
   prefix: "lui-",
-  plugins: [stylesPlugin, require("tailwindcss-animate"), require("tailwind-scrollbar")],
+  plugins: [stylesPlugin, require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

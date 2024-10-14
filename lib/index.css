@@ -71,3 +71,18 @@
   font-weight: 800;
   font-style: italic;
 }
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+::-webkit-scrollbar-track {
+  background: #f4f8fc !important;
+  border-radius: 9999px !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #7aaad3 !important;
+  border-radius: 9999px !important;
+}

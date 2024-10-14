@@ -29,7 +29,6 @@ const themeConfig = {
                         30: '#00335E',
                     },
                     secondary: {
-                        "scrollbar": "#7AAAD3",
                         10: '#E6F3FF',
                         20: '#00B5F0',
                         30: '#0094D5',

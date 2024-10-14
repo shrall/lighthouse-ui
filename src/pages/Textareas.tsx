@@ -8,9 +8,10 @@ function Textareas() {
       <h3>Textareas</h3>
       <div className="lui-grid lui-grid-cols-3 lui-items-center lui-justify-center lui-gap-2 lui-text-center">
         <Textarea
-          inputStyle="outline"
+          inputStyle="underline"
           label="Textarea"
           placeholder="Type your message here."
+          regex={{ type: "number" }}
         />
         <Textarea
           inputStyle="underline"
