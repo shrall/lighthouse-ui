@@ -1,3 +1,16 @@
+
+
+## [0.4.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-15)
+
+## [0.4.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
+
+
+### Styles
+
+* **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
+
+## [0.4.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
+
 ## [0.4.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.0...v0.4.0-beta.1) (2024-10-13)
 
 ### Styles
