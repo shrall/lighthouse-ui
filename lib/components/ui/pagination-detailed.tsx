@@ -237,7 +237,7 @@ const PaginationButton = React.forwardRef<
       size="large"
       className={cn(
         "lui-min-h-8 lui-w-fit lui-min-w-8 lui-rounded-[0.25rem] lui-p-1 lui-font-bold",
-        "lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40",
+        "lui-text-ocean-dark-10 hover:lui-text-ocean-dark-20 disabled:lui-text-ocean-light-40",
         active && "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
         className,
       )}
