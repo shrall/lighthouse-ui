@@ -178,3 +178,6 @@ export {
     DropdownMenuTrigger,
 } from "./components/ui/dropdown-menu";
 export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { PlusOutline } from "./components/ui/icon/PlusOutline";
+export { MinusOutline } from "./components/ui/icon/MinusOutline";
+export { ArrowRightLargeOutline } from "./components/ui/icon/ArrowRightLargeOutline";
