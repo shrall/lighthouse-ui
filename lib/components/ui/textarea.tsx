@@ -148,7 +148,7 @@ export const Textarea = React.forwardRef<
             )}
           >
             <label
-              htmlFor={props.id}
+              htmlFor={props.name}
               className="lui-text-start lui-text-sm lui-font-semibold lui-text-ocean-primary-10 lui-break-anywhere"
             >
               {label}
@@ -156,18 +156,24 @@ export const Textarea = React.forwardRef<
             {tooltip && tooltip}
           </div>
         )}
-        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
+        <div
+          className={cn(
+            "lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1",
+            inputStyle === "outline" &&
+              "lui-overflow-hidden lui-rounded-xl lui-p-3",
+            inputStyle === "outline" &&
+              "lui-rounded-xl lui-border lui-border-ocean-light-30 has-[:focus]:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
+          )}
+        >
           <textarea
             {...props}
+            id={props.name}
             value={value}
             ref={textAreaRef}
             className={cn(
               "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
-              inputStyle === "outline" &&
-                "lui-rounded-xl lui-border lui-border-ocean-light-30 lui-px-3 lui-py-[13.5px] disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
               inputStyle === "underline" &&
                 "lui-border-b lui-border-ocean-dark-10 disabled:lui-border-ocean-light-40",
-              "focus:lui-border-ocean-primary-10",
               "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
               "focus-visible:lui-outline-none",
               errorMessage && "lui-border-ocean-danger-20",
