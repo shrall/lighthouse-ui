@@ -1,42 +1,42 @@
-
-
 ## [0.4.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.0...v0.4.0-beta.1) (2024-10-13)
-
 
 ### Styles
 
-* **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
+- **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
 
 ## [0.4.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.1...v0.4.0-beta.0) (2024-10-13)
 
-## [0.3.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0...v0.3.1) (2024-10-13)
-
-
-### ⚠ BREAKING CHANGES
-
-* **textarea:** scrollbar overflows for outline style
-
-### Features
-
-* **multi-select:** toggle dropdown on clicking trigger ([c2d9898](https://github.com/shrall/lighthouse-ui/commit/c2d9898560dceed6d15ab4fd14ba9487629526de))
-* **select:** toggle dropdown on clicking trigger ([6018996](https://github.com/shrall/lighthouse-ui/commit/6018996177bfb3f5b28aa17f7eab55ce4a162a64))
-
-
-### Bug Fixes
-
-* **textarea:** scrollbar overflows for outline style ([c5376e7](https://github.com/shrall/lighthouse-ui/commit/c5376e77bb3788efd6217f4c9dd270beb46611f2))
-* **time-picker:** keyboard navigation was not responding ([11412e5](https://github.com/shrall/lighthouse-ui/commit/11412e504c95974f342d41ef9a079fd8615a0427))
-
+## [0.3.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.1...v0.3.2) (2024-10-15)
 
 ### Styles
 
-* **pagination-detailed:** set disabled buttons text color to light 40 ([f26b700](https://github.com/shrall/lighthouse-ui/commit/f26b700cef4c93a5fb637e260b795225ade74927))
-* **toast:** set title line height to 1.5rem ([e8c8ed7](https://github.com/shrall/lighthouse-ui/commit/e8c8ed7921e56c9dc08720a1fb9a42687bc43b96))
+- **dialog:** set default text color to dark-20 ([270563e](https://github.com/shrall/lighthouse-ui/commit/270563e94ae9552dac15905158443cab0cbc8053))
+- **textarea:** set all padding to 12px ([42dd5d2](https://github.com/shrall/lighthouse-ui/commit/42dd5d206d77c8e6d45d8641f2c4474ea8b4b208))
 
+## [0.3.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0...v0.3.1) (2024-10-13)
+
+### ⚠ BREAKING CHANGES
+
+- **textarea:** scrollbar overflows for outline style
+
+### Features
+
+- **multi-select:** toggle dropdown on clicking trigger ([c2d9898](https://github.com/shrall/lighthouse-ui/commit/c2d9898560dceed6d15ab4fd14ba9487629526de))
+- **select:** toggle dropdown on clicking trigger ([6018996](https://github.com/shrall/lighthouse-ui/commit/6018996177bfb3f5b28aa17f7eab55ce4a162a64))
+
+### Bug Fixes
+
+- **textarea:** scrollbar overflows for outline style ([c5376e7](https://github.com/shrall/lighthouse-ui/commit/c5376e77bb3788efd6217f4c9dd270beb46611f2))
+- **time-picker:** keyboard navigation was not responding ([11412e5](https://github.com/shrall/lighthouse-ui/commit/11412e504c95974f342d41ef9a079fd8615a0427))
+
+### Styles
+
+- **pagination-detailed:** set disabled buttons text color to light 40 ([f26b700](https://github.com/shrall/lighthouse-ui/commit/f26b700cef4c93a5fb637e260b795225ade74927))
+- **toast:** set title line height to 1.5rem ([e8c8ed7](https://github.com/shrall/lighthouse-ui/commit/e8c8ed7921e56c9dc08720a1fb9a42687bc43b96))
 
 ### Documentation
 
-* update changelog ([9667cda](https://github.com/shrall/lighthouse-ui/commit/9667cda5ac5b09885de650341d9e10db6a2ef4ab))
+- update changelog ([9667cda](https://github.com/shrall/lighthouse-ui/commit/9667cda5ac5b09885de650341d9e10db6a2ef4ab))
 
 ## [0.3.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.0-beta.25...v0.3.0) (2024-10-11)
 

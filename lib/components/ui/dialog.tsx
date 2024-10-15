@@ -44,7 +44,7 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "lui-bg-white lui-p-6 lui-font-bca sm:lui-p-8",
+        "lui-bg-white lui-p-6 lui-font-bca lui-text-ocean-dark-20 sm:lui-p-8",
         "lui-w-[calc(100vw-48px)] lui-translate-x-[-50%] lui-translate-y-[-50%] lui-gap-4 lui-rounded-[1.25rem]",
         "lui-duration-200 data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out",
         "data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0",
