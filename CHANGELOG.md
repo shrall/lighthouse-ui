@@ -1,5 +1,13 @@
 
 
+## [0.3.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.1...v0.3.2) (2024-10-15)
+
+
+### Styles
+
+* **dialog:** set default text color to dark-20 ([270563e](https://github.com/shrall/lighthouse-ui/commit/270563e94ae9552dac15905158443cab0cbc8053))
+* **textarea:** set all padding to 12px ([42dd5d2](https://github.com/shrall/lighthouse-ui/commit/42dd5d206d77c8e6d45d8641f2c4474ea8b4b208))
+
 ## [0.3.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.0...v0.3.1) (2024-10-13)
 
 
