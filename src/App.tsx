@@ -17,10 +17,11 @@ import Tabs from "./pages/Tabs";
 import Dialogs from "./pages/Dialogs";
 import Steppers from "./pages/Stepper";
 import TimePickers from "./pages/TimePickers";
-
+import Accordions from "./pages/Accordions";
 function App() {
   return (
     <div className="lui-min-h-screen lui-divide-y-2 lui-divide-dashed lui-divide-ocean-primary-30 lui-font-bca">
+      <Accordions />
       <Alerts />
       <Buttons />
       <Badges />
