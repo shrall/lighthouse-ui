@@ -1,3 +1,22 @@
+
+
+## [0.5.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+## [0.5.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+## [0.5.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+## [0.4.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.2...v0.5.0-beta.3) (2024-10-16)
+
+
+### Styles
+
+* **accordion:** set spacing between accordions to 8px ([ee57db6](https://github.com/shrall/lighthouse-ui/commit/ee57db6b19ac085734092f0e4ff8fa7362bcd77c))
+
 ## [0.4.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.2...v0.4.3) (2024-10-16)
 
 ### Styles
