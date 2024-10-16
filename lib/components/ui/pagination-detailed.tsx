@@ -11,6 +11,7 @@ import useWindowSize from "@/hooks/useWindowSize";
 interface PaginationDetailedProps extends React.HTMLAttributes<HTMLElement> {
   contentProps?: React.ComponentProps<"ul">;
   locale?: "en" | "id";
+  showLabel?: boolean;
   pageSize: number;
   pageNumber: number;
   setPageNumber: (page: number) => void;
@@ -26,6 +27,7 @@ const PaginationDetailed = React.forwardRef<
     {
       className,
       locale = "en",
+      showLabel = true,
       pageSize,
       pageNumber,
       setPageNumber,
@@ -149,14 +151,16 @@ const PaginationDetailed = React.forwardRef<
         ref={ref}
         {...props}
       >
-        <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base sm:lui-block">
-          {locale === "en" ? "Show data " : "Menampilkan data "}
-          {(pageNumber - 1) * pageSize + 1}-
-          {pageSize * pageNumber > totalData
-            ? totalData
-            : pageSize * pageNumber}{" "}
-          {locale === "en" ? "of" : "dari"} {totalData}
-        </div>
+        {showLabel && (
+          <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base sm:lui-block">
+            {locale === "en" ? "Show data " : "Menampilkan data "}
+            {(pageNumber - 1) * pageSize + 1}-
+            {pageSize * pageNumber > totalData
+              ? totalData
+              : pageSize * pageNumber}{" "}
+            {locale === "en" ? "of" : "dari"} {totalData}
+          </div>
+        )}
         <PaginationContent {...contentProps}>
           <PaginationButton
             onClick={() => setPageNumber(1)}
