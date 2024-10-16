@@ -21,7 +21,7 @@ const FormComponent = <T extends FieldValues>(
       ref={ref}
       onSubmit={(e) => {
         e.preventDefault();
-        form.handleSubmit(onSubmit);
+        form.handleSubmit(onSubmit)(e);
       }}
       {...props}
     >

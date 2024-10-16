@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "./schema/form";
 import Form from "./components/Form";
+import { FormCheckbox } from "./components/FormCheckbox";
 
 interface FormPageProps {}
 
 interface FormData {
   name: string;
+  checkbox: boolean;
 }
 
 const FormPage: React.FC<FormPageProps> = () => {
@@ -22,11 +24,11 @@ const FormPage: React.FC<FormPageProps> = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
+      checkbox: false,
     },
   });
 
   const onSubmit = (data: FormData) => {
-    console.log(data);
     setSubmittedData(data);
   };
 
@@ -49,12 +51,17 @@ const FormPage: React.FC<FormPageProps> = () => {
               label="Name"
               ref={inputRef}
             />
+            <FormCheckbox
+              control={form.control}
+              name="checkbox"
+              label={{ text: "Checkbox" }}
+            />
             <Button type="submit">Submit</Button>
           </Form>
           <div>
             <div>
               <h1>Submitted Data</h1>
-              {submittedData && <p>{submittedData.name}</p>}
+              {submittedData && <p>{JSON.stringify(submittedData)}</p>}
             </div>
           </div>
         </CardContent>
