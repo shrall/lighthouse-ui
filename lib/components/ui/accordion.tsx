@@ -11,7 +11,7 @@ const Accordion = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Root
     ref={ref}
-    className={cn("lui-w-full", className)}
+    className={cn("lui-w-full lui-space-y-2", className)}
     {...props}
   />
 ));
