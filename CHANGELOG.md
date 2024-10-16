@@ -1,5 +1,12 @@
 
 
+## [0.4.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.2...v0.4.3) (2024-10-16)
+
+
+### Styles
+
+* **accordion:** set spacing between accordions to 8px ([ee57db6](https://github.com/shrall/lighthouse-ui/commit/ee57db6b19ac085734092f0e4ff8fa7362bcd77c))
+
 ## [0.4.2](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.4.2) (2024-10-16)
 
 
