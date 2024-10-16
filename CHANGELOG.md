@@ -1,3 +1,9 @@
+
+
+## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.5.0-beta.0) (2024-10-16)
+
+## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.5.0-beta.0) (2024-10-16)
+
 ## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2024-10-16)
 
 ## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
