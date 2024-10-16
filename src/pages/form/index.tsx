@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FormInput } from "./components/FormInput";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,6 +14,7 @@ interface FormData {
 }
 
 const FormPage: React.FC<FormPageProps> = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [submittedData, setSubmittedData] = useState<FormData | null>(null);
 
   const form = useForm<FormData>({
@@ -46,6 +47,7 @@ const FormPage: React.FC<FormPageProps> = () => {
               name="name"
               placeholder="Name"
               label="Name"
+              ref={inputRef}
             />
             <Button type="submit">Submit</Button>
           </Form>
