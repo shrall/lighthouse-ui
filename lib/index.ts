@@ -169,16 +169,19 @@ export { Stepper } from "./components/ui/stepper";
 export { StepperCircle } from "./components/ui/stepper-circle";
 export { addMinutes, TimePicker } from "@/components/ui/time-picker";
 
-//NOTE - Beta
-export { Calendar } from "./components/ui/calendar";
-export {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "./components/ui/dropdown-menu";
-export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+//NOTE - v0.4.0
 export { PlusOutline } from "./components/ui/icon/PlusOutline";
 export { MinusOutline } from "./components/ui/icon/MinusOutline";
 export { ArrowRightLargeOutline } from "./components/ui/icon/ArrowRightLargeOutline";
 export { LightbulbOutline } from "./components/ui/icon/LightbulbOutline";
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./components/ui/accordion";
+
+//NOTE - Beta
+// export { Calendar } from "./components/ui/calendar";
+// export {
+//     DropdownMenu,
+//     DropdownMenuContent,
+//     DropdownMenuItem,
+//     DropdownMenuTrigger,
+// } from "./components/ui/dropdown-menu";
+// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
