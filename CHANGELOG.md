@@ -1,5 +1,12 @@
 
 
+## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
+
+
+### Features
+
+* **pagination-detailed:** set as a client component ([6282de4](https://github.com/shrall/lighthouse-ui/commit/6282de46368dbd8857467f70ad29f12554ac039a))
+
 ## [0.4.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0) (2024-10-16)
 
 
