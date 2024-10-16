@@ -1,30 +1,33 @@
-
-
 ## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2024-10-16)
 
+## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
 
 ### Features
 
-* add accordion ([02cf409](https://github.com/shrall/lighthouse-ui/commit/02cf409a95bc2423d986411bcb68173d14901482))
-* **icon:** add lightbulb outline icon ([eda906b](https://github.com/shrall/lighthouse-ui/commit/eda906b496ddbfbdbe13fe0cf11b02b37e785263))
-* **icon:** add plus, minus, & arrow right large - outline icons ([c78206b](https://github.com/shrall/lighthouse-ui/commit/c78206bcfc0e2df0dd8d78d2738ad895b4920bba))
-* **pagination-detailed:** add showLabel prop ([36adcd1](https://github.com/shrall/lighthouse-ui/commit/36adcd14234b26b9577664519d450e96e66bd46c))
-* **pagination-detailed:** show less buttons based on screen sizes ([84784b4](https://github.com/shrall/lighthouse-ui/commit/84784b48e46cb74ab463628d566c571ae36b627b))
-* **time-picker:** set the scroll position to top when opening the popover ([7a7afaf](https://github.com/shrall/lighthouse-ui/commit/7a7afaf0c0ee6b49beee234c1f21ecd7651548f2))
+- **pagination-detailed:** set as a client component ([6282de4](https://github.com/shrall/lighthouse-ui/commit/6282de46368dbd8857467f70ad29f12554ac039a))
 
+## [0.4.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0) (2024-10-16)
+
+### Features
+
+- add accordion ([02cf409](https://github.com/shrall/lighthouse-ui/commit/02cf409a95bc2423d986411bcb68173d14901482))
+- **icon:** add lightbulb outline icon ([eda906b](https://github.com/shrall/lighthouse-ui/commit/eda906b496ddbfbdbe13fe0cf11b02b37e785263))
+- **icon:** add plus, minus, & arrow right large - outline icons ([c78206b](https://github.com/shrall/lighthouse-ui/commit/c78206bcfc0e2df0dd8d78d2738ad895b4920bba))
+- **pagination-detailed:** add showLabel prop ([36adcd1](https://github.com/shrall/lighthouse-ui/commit/36adcd14234b26b9577664519d450e96e66bd46c))
+- **pagination-detailed:** show less buttons based on screen sizes ([84784b4](https://github.com/shrall/lighthouse-ui/commit/84784b48e46cb74ab463628d566c571ae36b627b))
+- **time-picker:** set the scroll position to top when opening the popover ([7a7afaf](https://github.com/shrall/lighthouse-ui/commit/7a7afaf0c0ee6b49beee234c1f21ecd7651548f2))
 
 ### Styles
 
-* **pagination-detailed:** update buttons text color to dark 20 on hover ([0e18153](https://github.com/shrall/lighthouse-ui/commit/0e181536067aeefc06cbb69108b62fddbd857714))
+- **pagination-detailed:** update buttons text color to dark 20 on hover ([0e18153](https://github.com/shrall/lighthouse-ui/commit/0e181536067aeefc06cbb69108b62fddbd857714))
 
 ## [0.4.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-15)
 
 ## [0.4.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
 
-
 ### Styles
 
-* **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
+- **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
 
 ## [0.4.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
 
