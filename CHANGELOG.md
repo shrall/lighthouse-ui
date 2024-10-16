@@ -1,12 +1,12 @@
-
-
 ## [0.5.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.0...v0.5.0-beta.1) (2024-10-16)
 
 ## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.5.0-beta.0) (2024-10-16)
 
-## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.5.0-beta.0) (2024-10-16)
+## [0.4.2](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.4.2) (2024-10-16)
 
-## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2024-10-16)
+### Bug Fixes
+
+- adjust useWindowSize hook to work on client components ([1e2e56e](https://github.com/shrall/lighthouse-ui/commit/1e2e56e8ebff22394608b2ee1af9a10656877679))
 
 ## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
 
@@ -28,6 +28,8 @@
 ### Styles
 
 - **pagination-detailed:** update buttons text color to dark 20 on hover ([0e18153](https://github.com/shrall/lighthouse-ui/commit/0e181536067aeefc06cbb69108b62fddbd857714))
+
+## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2024-10-16)
 
 ## [0.4.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-15)
 
