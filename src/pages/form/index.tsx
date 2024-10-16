@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "./schema/form";
+import Form from "./components/Form";
 
 interface FormPageProps {}
 
@@ -15,7 +16,7 @@ interface FormData {
 const FormPage: React.FC<FormPageProps> = () => {
   const [submittedData, setSubmittedData] = useState<FormData | null>(null);
 
-  const { control, handleSubmit } = useForm<FormData>({
+  const form = useForm<FormData>({
     mode: "onTouched",
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,18 +36,19 @@ const FormPage: React.FC<FormPageProps> = () => {
           <CardTitle>Form</CardTitle>
         </CardHeader>
         <CardContent className="lui-grid lui-w-full lui-grid-cols-2 lui-gap-x-4">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
+          <Form
+            form={form}
+            onSubmit={onSubmit}
             className="lui-flex lui-flex-col lui-gap-y-4"
           >
             <FormInput
-              control={control}
+              control={form.control}
               name="name"
               placeholder="Name"
               label="Name"
             />
             <Button type="submit">Submit</Button>
-          </form>
+          </Form>
           <div>
             <div>
               <h1>Submitted Data</h1>
