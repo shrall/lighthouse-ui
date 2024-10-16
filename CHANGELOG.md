@@ -1,5 +1,12 @@
 
 
+## [0.4.2](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.4.2) (2024-10-16)
+
+
+### Bug Fixes
+
+* adjust useWindowSize hook to work on client components ([1e2e56e](https://github.com/shrall/lighthouse-ui/commit/1e2e56e8ebff22394608b2ee1af9a10656877679))
+
 ## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
 
 
