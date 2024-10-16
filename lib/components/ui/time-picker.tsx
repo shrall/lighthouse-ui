@@ -190,6 +190,17 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     };
 
+    //NOTE - Scroll to selected item when popover is open
+    React.useEffect(() => {
+      if (isPopoverOpen) {
+        setTimeout(() => {
+          if (commandListRef.current && selectedItemRef.current) {
+            selectedItemRef.current.scrollIntoView({ block: "start" });
+          }
+        }, 0);
+      }
+    }, [isPopoverOpen]);
+
     return (
       <div
         className={cn(
@@ -212,7 +223,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             <button
               ref={ref}
               className={cn(
-                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
+                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 data-[state=open]:lui-border-ocean-primary-10 focus:lui-outline-none",
                 errorMessage && "lui-border-ocean-danger-20",
                 className,
               )}
@@ -254,7 +265,10 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               value={inputValue}
               onValueChange={onValueChange}
             >
-              <CommandList className="lui-max-h-[256px]" ref={commandListRef}>
+              <CommandList
+                className="lui-max-h-[256px] lui-overflow-y-auto"
+                ref={commandListRef}
+              >
                 <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                   {generateTimeOptions.map((option) => {
                     const isSelected = inputValue === option.value;
