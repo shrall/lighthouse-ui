@@ -46,6 +46,7 @@ const PaginationDetailed = React.forwardRef<
     }, [pageSize, totalData]);
 
     const renderPageNumbers = () => {
+      if (!width) return;
       const pageNumbers = [];
       if (totalPage <= (width < 768 ? 5 : 7)) {
         //NOTE - Show all pages if total pages are 7 or less
