@@ -20,6 +20,7 @@ function Inputs() {
           onChange={(e) => setValue(e.target.value)}
         />
         <Input
+          inputStyle="outline"
           placeholder="Placeholder"
           leftNode={<SearchOutline className="lui-min-h-6 lui-min-w-6" />}
           rightNode={

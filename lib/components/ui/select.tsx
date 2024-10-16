@@ -164,7 +164,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                 if (inputRef.current) {
                   inputRef.current.focus();
                 }
-                setIsPopoverOpen(true);
+                setIsPopoverOpen(!isPopoverOpen);
               }}
               tabIndex={-1}
             >

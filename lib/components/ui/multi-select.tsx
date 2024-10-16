@@ -210,7 +210,7 @@ export const MultiSelect = React.forwardRef<
                 if (inputRef.current) {
                   inputRef.current.focus();
                 }
-                setIsPopoverOpen(true);
+                setIsPopoverOpen(!isPopoverOpen);
               }}
               tabIndex={-1}
             >

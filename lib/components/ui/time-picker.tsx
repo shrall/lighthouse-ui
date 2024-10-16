@@ -60,6 +60,15 @@ interface TimePickerProps
   max?: string;
   /** Array of disabled times or time ranges (format: "HH:mm", e.g., "09:00") */
   disabledTimes?: Array<string | { start: string; end: string }>;
+  /** Whether to show the icon
+   * @default true
+   */
+  showIcon?: boolean;
+  /**
+   * Custom icon
+   * @default <ClockFilled className="lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10" />
+   */
+  customIcon?: React.ReactNode;
 }
 
 export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
@@ -79,6 +88,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       min,
       max,
       disabledTimes = [],
+      showIcon = true,
+      customIcon,
       ...props
     },
     ref,
@@ -87,6 +98,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
     const [inputValue, setInputValue] = React.useState(value || defaultValue);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const commandRef = React.useRef<HTMLDivElement>(null);
+    const selectedItemRef = React.useRef<HTMLDivElement>(null);
+    const commandListRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
       setInputValue(value || defaultValue);
@@ -177,6 +190,17 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     };
 
+    //NOTE - Scroll to selected item when popover is open
+    React.useEffect(() => {
+      if (isPopoverOpen) {
+        setTimeout(() => {
+          if (commandListRef.current && selectedItemRef.current) {
+            selectedItemRef.current.scrollIntoView({ block: "start" });
+          }
+        }, 0);
+      }
+    }, [isPopoverOpen]);
+
     return (
       <div
         className={cn(
@@ -192,14 +216,14 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               if (inputRef.current) {
                 inputRef.current.focus();
               }
-              setIsPopoverOpen(true);
+              setIsPopoverOpen(!isPopoverOpen);
             }}
             tabIndex={-1}
           >
             <button
               ref={ref}
               className={cn(
-                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
+                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 data-[state=open]:lui-border-ocean-primary-10 focus:lui-outline-none",
                 errorMessage && "lui-border-ocean-danger-20",
                 className,
               )}
@@ -216,12 +240,17 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                   disabled={props.disabled}
                   onKeyDown={handleKeyDown}
                 />
-                <ClockFilled
-                  className={cn(
-                    "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10",
-                    props.disabled && "lui-text-ocean-light-40",
-                  )}
-                />
+                {showIcon &&
+                  (customIcon ? (
+                    customIcon
+                  ) : (
+                    <ClockFilled
+                      className={cn(
+                        "lui-min-h-6 lui-min-w-6 lui-text-ocean-dark-10 lui-transition-all group-data-[state=open]:lui-text-ocean-primary-10",
+                        props.disabled && "lui-text-ocean-light-40",
+                      )}
+                    />
+                  ))}
               </div>
             </button>
           </PopoverTrigger>
@@ -231,8 +260,15 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             onEscapeKeyDown={() => setIsPopoverOpen(false)}
             onOpenAutoFocus={(e) => e.preventDefault()}
           >
-            <Command ref={commandRef}>
-              <CommandList className="lui-max-h-[256px]">
+            <Command
+              ref={commandRef}
+              value={inputValue}
+              onValueChange={onValueChange}
+            >
+              <CommandList
+                className="lui-max-h-[256px] lui-overflow-y-auto"
+                ref={commandListRef}
+              >
                 <CommandGroup className="lui-p-0 [&_[cmdk-group-items]]:lui-divide-y [&_[cmdk-group-items]]:lui-divide-ocean-light-30">
                   {generateTimeOptions.map((option) => {
                     const isSelected = inputValue === option.value;
@@ -255,6 +291,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                           !isDisabled &&
                             "data-[selected=true]:lui-bg-ocean-light-20",
                         )}
+                        ref={isSelected ? selectedItemRef : undefined}
                       >
                         <span
                           className={cn(

@@ -41,11 +41,8 @@ function Steppers() {
           steps={[
             { label: "Step 1" },
             { label: "Step 2" },
-            { label: "Step 3" },
-            { label: "Step 4" },
-            { label: "Step 5" },
-            { label: "Step 6", disabled: true },
-            { label: "Step 7", disabled: true },
+            { label: "Step 3", disabled: true },
+            { label: "Step 4", disabled: true },
           ]}
         />
       </div>
