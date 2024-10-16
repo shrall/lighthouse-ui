@@ -177,11 +177,11 @@ export { LightbulbOutline } from "./components/ui/icon/LightbulbOutline";
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./components/ui/accordion";
 
 //NOTE - Beta
-// export { Calendar } from "./components/ui/calendar";
-// export {
-//     DropdownMenu,
-//     DropdownMenuContent,
-//     DropdownMenuItem,
-//     DropdownMenuTrigger,
-// } from "./components/ui/dropdown-menu";
-// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Calendar } from "./components/ui/calendar";
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
+export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
