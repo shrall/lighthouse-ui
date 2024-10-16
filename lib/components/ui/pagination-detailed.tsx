@@ -6,6 +6,7 @@ import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 import { DoubleChevronLeftOutline } from "./icon/DoubleChevronLeftOutline";
 import { DoubleChevronRightOutline } from "./icon/DoubleChevronRightOutline";
 import { Button } from "./button";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface PaginationDetailedProps extends React.HTMLAttributes<HTMLElement> {
   contentProps?: React.ComponentProps<"ul">;
@@ -35,13 +36,15 @@ const PaginationDetailed = React.forwardRef<
     },
     ref,
   ) => {
+    const { width } = useWindowSize();
+
     React.useEffect(() => {
       setPageNumber(1);
     }, [pageSize, totalData]);
 
     const renderPageNumbers = () => {
       const pageNumbers = [];
-      if (totalPage <= 7) {
+      if (totalPage <= (width < 768 ? 5 : 7)) {
         //NOTE - Show all pages if total pages are 7 or less
         for (let i = 1; i <= totalPage; i++) {
           pageNumbers.push(
@@ -73,8 +76,8 @@ const PaginationDetailed = React.forwardRef<
         let end = totalPage - 1;
 
         //NOTE - Show ellipsis if page number is greater than 4 and set start page number to current page - 1
-        if (pageNumber > 4) {
-          start = pageNumber - 1;
+        if (pageNumber > (width < 768 ? 2 : 4)) {
+          start = pageNumber - (width < 768 ? 0 : 1);
           pageNumbers.push(
             <PaginationButton key="ellipsis1" disabled>
               ...
@@ -82,16 +85,19 @@ const PaginationDetailed = React.forwardRef<
           );
         }
         //NOTE - Set end page number to 5 if page number is less than or equal to 4
-        if (pageNumber <= 4) {
-          end = 5;
+        if (pageNumber <= (width < 768 ? 2 : 4)) {
+          end = width < 768 ? 3 : 5;
         }
         //NOTE - Set end page number to current page + 1 if page number is greater than 4 and less than total page - 3
-        if (pageNumber > 4 && pageNumber < totalPage - 3) {
-          end = pageNumber + 1;
+        if (
+          pageNumber > (width < 768 ? 2 : 4) &&
+          pageNumber < totalPage - (width < 768 ? 1 : 3)
+        ) {
+          end = pageNumber + (width < 768 ? 0 : 1);
         }
         //NOTE - Set start page number to total page - 4 if page number is greater than or equal to total page - 3
-        if (pageNumber >= totalPage - 3) {
-          start = totalPage - 4;
+        if (pageNumber >= totalPage - (width < 768 ? 1 : 3)) {
+          start = totalPage - (width < 768 ? 2 : 4);
         }
 
         //NOTE - Loop through page numbers and add to page numbers array from start to end
@@ -109,7 +115,7 @@ const PaginationDetailed = React.forwardRef<
         }
 
         //NOTE - Show ellipsis if page number is less than total page - 3
-        if (pageNumber < totalPage - 3) {
+        if (pageNumber < totalPage - (width < 768 ? 1 : 3)) {
           pageNumbers.push(
             <PaginationButton key="ellipsis2" disabled>
               ...
