@@ -7,12 +7,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema } from "./schema/form";
 import Form from "./components/Form";
 import { FormCheckbox } from "./components/FormCheckbox";
+import { FormSelect } from "./components/FormSelect";
 
 interface FormPageProps {}
 
 interface FormData {
   name: string;
   checkbox: boolean;
+  role: string;
 }
 
 const FormPage: React.FC<FormPageProps> = () => {
@@ -25,6 +27,7 @@ const FormPage: React.FC<FormPageProps> = () => {
     defaultValues: {
       name: "",
       checkbox: false,
+      role: "",
     },
   });
 
@@ -50,6 +53,16 @@ const FormPage: React.FC<FormPageProps> = () => {
               placeholder="Name"
               label="Name"
               ref={inputRef}
+            />
+            <FormSelect
+              control={form.control}
+              name="role"
+              label="Role"
+              options={[
+                { label: "Admin", value: "admin" },
+                { label: "User", value: "user" },
+                { label: "Guest", value: "guest" },
+              ]}
             />
             <FormCheckbox
               control={form.control}
