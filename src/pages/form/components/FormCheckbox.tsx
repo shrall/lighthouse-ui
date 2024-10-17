@@ -28,7 +28,7 @@ const FormCheckbox = React.forwardRef(
       control={control}
       name={name}
       render={({ field }) => {
-        const { value, onChange, onBlur } = field;
+        const { value, onChange, onBlur, disabled } = field;
         return (
           <div className="lui-flex lui-items-center lui-gap-x-2">
             <CheckboxPrimitive.Root
@@ -50,6 +50,7 @@ const FormCheckbox = React.forwardRef(
                   e.target.dispatchEvent(new Event("click", { bubbles: true }));
                 }
               }}
+              disabled={disabled || props.disabled}
               ref={(e) => {
                 if (typeof ref === "function") {
                   ref(e);
