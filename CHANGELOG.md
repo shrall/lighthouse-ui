@@ -1,5 +1,12 @@
 
 
+## [0.4.4](https://github.com/shrall/lighthouse-ui/compare/v0.4.3...v0.4.4) (2024-10-17)
+
+
+### Styles
+
+* **accordion:** add different size based on breakpoints ([b2eeafe](https://github.com/shrall/lighthouse-ui/commit/b2eeafef1fc48eef8ead6aa9e0c1c78a7c3613ea))
+
 ## [0.4.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.2...v0.4.3) (2024-10-16)
 
 
