@@ -1,5 +1,12 @@
 
 
+## [0.4.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.4...v0.4.5) (2024-10-18)
+
+
+### Features
+
+* **icon:** add MediaPlayFilled & FilePDFFilled icons ([01dd6f3](https://github.com/shrall/lighthouse-ui/commit/01dd6f358c03b97291757dc96836c27dbf4b1b20))
+
 ## [0.4.4](https://github.com/shrall/lighthouse-ui/compare/v0.4.3...v0.4.4) (2024-10-17)
 
 
