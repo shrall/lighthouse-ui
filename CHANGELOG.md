@@ -1,5 +1,12 @@
 
 
+## [0.4.7](https://github.com/shrall/lighthouse-ui/compare/v0.4.6...v0.4.7) (2024-10-18)
+
+
+### Features
+
+* **dialog:** add closeOnClickOutside prop ([389914c](https://github.com/shrall/lighthouse-ui/commit/389914c24fbcad11560b77e6fb5efda30453054f))
+
 ## [0.4.6](https://github.com/shrall/lighthouse-ui/compare/v0.4.5...v0.4.6) (2024-10-18)
 
 
