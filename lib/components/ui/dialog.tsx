@@ -33,47 +33,66 @@ export type DialogContentProps = React.ComponentPropsWithoutRef<
 > & {
   showClose?: boolean;
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "full";
+  closeOnClickOutside?: boolean;
 };
 
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   DialogContentProps
->(({ className, children, showClose = false, size = "sm", ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(
-        "lui-bg-white lui-p-6 lui-font-bca lui-text-ocean-dark-20 sm:lui-p-8",
-        "lui-w-[calc(100vw-48px)] lui-translate-x-[-50%] lui-translate-y-[-50%] lui-gap-4 lui-rounded-[1.25rem]",
-        "lui-duration-200 data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out",
-        "data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0",
-        "data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95",
-        "data-[state=closed]:lui-slide-out-to-top-[48%] data-[state=open]:lui-slide-in-from-top-[48%]",
-        "data-[state=closed]:lui-slide-out-to-left-1/2 data-[state=open]:lui-slide-in-from-left-1/2",
-        "lui-fixed lui-left-[50%] lui-top-[50%] lui-z-50",
-        size === "xs" && "lui-max-w-[320px]",
-        size === "sm" && "lui-max-w-[400px]",
-        size === "md" && "lui-max-w-[450px]",
-        size === "lg" && "lui-max-w-[665px]",
-        size === "xl" && "lui-max-w-[936px]",
-        size === "full" && "lui-h-[calc(100vh-48px)] lui-max-w-[100vw]",
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      {showClose && (
-        <DialogClose
-          asChild
-          className="lui-absolute lui-right-3 lui-top-3 lui-cursor-pointer"
-        >
-          <CrossSmallOutline className="lui-text-ocean-dark-10" />
-        </DialogClose>
-      )}
-    </DialogPrimitive.Content>
-  </DialogPortal>
-));
+>(
+  (
+    {
+      className,
+      children,
+      showClose = false,
+      size = "sm",
+      closeOnClickOutside = false,
+      ...props
+    },
+    ref,
+  ) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "lui-bg-white lui-p-6 lui-font-bca lui-text-ocean-dark-20 sm:lui-p-8",
+          "lui-w-[calc(100vw-48px)] lui-translate-x-[-50%] lui-translate-y-[-50%] lui-gap-4 lui-rounded-[1.25rem]",
+          "lui-duration-200 data-[state=open]:lui-animate-in data-[state=closed]:lui-animate-out",
+          "data-[state=closed]:lui-fade-out-0 data-[state=open]:lui-fade-in-0",
+          "data-[state=closed]:lui-zoom-out-95 data-[state=open]:lui-zoom-in-95",
+          "data-[state=closed]:lui-slide-out-to-top-[48%] data-[state=open]:lui-slide-in-from-top-[48%]",
+          "data-[state=closed]:lui-slide-out-to-left-1/2 data-[state=open]:lui-slide-in-from-left-1/2",
+          "lui-fixed lui-left-[50%] lui-top-[50%] lui-z-50",
+          size === "xs" && "lui-max-w-[320px]",
+          size === "sm" && "lui-max-w-[400px]",
+          size === "md" && "lui-max-w-[450px]",
+          size === "lg" && "lui-max-w-[665px]",
+          size === "xl" && "lui-max-w-[936px]",
+          size === "full" && "lui-h-[calc(100vh-48px)] lui-max-w-[100vw]",
+          className,
+        )}
+        {...props}
+        onEscapeKeyDown={(e) => e.preventDefault()}
+        onPointerDownOutside={(e) => {
+          if (!closeOnClickOutside) {
+            e.preventDefault();
+          }
+        }}
+      >
+        {children}
+        {showClose && (
+          <DialogClose
+            asChild
+            className="lui-absolute lui-right-3 lui-top-3 lui-cursor-pointer"
+          >
+            <CrossSmallOutline className="lui-text-ocean-dark-10" />
+          </DialogClose>
+        )}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  ),
+);
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const DialogHeader = ({
