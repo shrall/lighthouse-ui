@@ -1,5 +1,12 @@
 
 
+## [0.4.6](https://github.com/shrall/lighthouse-ui/compare/v0.4.5...v0.4.6) (2024-10-18)
+
+
+### Styles
+
+* **pagination-detailed:** hide text information on screen width < 748px ([e8e200a](https://github.com/shrall/lighthouse-ui/commit/e8e200a574966796a3f8e4519a07146324223c39))
+
 ## [0.4.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.4...v0.4.5) (2024-10-18)
 
 
