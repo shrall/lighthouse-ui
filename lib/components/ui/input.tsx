@@ -11,10 +11,14 @@ export interface InputProps
   inputStyle?: InputStyle;
   leftNode?: React.ReactNode;
   rightNode?: React.ReactNode;
-  regex?: {
-    type: "number" | "custom";
-    pattern?: RegExp;
-  };
+  regex?:
+    | {
+        type: "number";
+      }
+    | {
+        type: "custom";
+        pattern?: RegExp;
+      };
   errorMessage?: string;
   helperText?: string;
   alignment?: "vertical" | "horizontal";
