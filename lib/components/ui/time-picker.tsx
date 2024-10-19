@@ -102,8 +102,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
     const commandListRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
-      setInputValue(value || defaultValue);
-    }, [value, defaultValue]);
+      setInputValue(defaultValue);
+    }, [defaultValue]);
 
     const isTimeDisabled = React.useCallback(
       (time: string) => {
