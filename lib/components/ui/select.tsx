@@ -177,7 +177,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
                 )}
                 {...props}
               >
-                <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
+                <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between lui-caret-ocean-primary-10">
                   <input
                     type="text"
                     placeholder={placeholder}

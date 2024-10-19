@@ -223,7 +223,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             <button
               ref={ref}
               className={cn(
-                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 data-[state=open]:lui-border-ocean-primary-10 focus:lui-outline-none",
+                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
                 errorMessage && "lui-border-ocean-danger-20",
                 className,
               )}
@@ -235,7 +235,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
                   placeholder={"hh:mm"}
                   value={inputValue}
                   onChange={handleInputChange}
-                  className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
+                  className="lui-h-full lui-w-full lui-truncate lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                   ref={inputRef}
                   disabled={props.disabled}
                   onKeyDown={handleKeyDown}

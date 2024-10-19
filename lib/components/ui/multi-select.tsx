@@ -264,7 +264,7 @@ export const MultiSelect = React.forwardRef<
                         }
                       }}
                       onKeyDown={handleKeyDown}
-                      className="focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
+                      className="lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                       ref={inputRef}
                       disabled={props.disabled}
                     />
