@@ -8,6 +8,7 @@ import { formSchema } from "./schema/form";
 import Form from "./components/Form";
 import { FormCheckbox } from "./components/FormCheckbox";
 import { FormSelect } from "./components/FormSelect";
+import { Separator } from "@/index";
 
 interface FormPageProps {}
 
@@ -75,6 +76,10 @@ const FormPage: React.FC<FormPageProps> = () => {
             <div>
               <h1>Submitted Data</h1>
               {submittedData && <p>{JSON.stringify(submittedData)}</p>}
+              <Separator className="lui-my-2 lui-bg-ocean-dark-10" />
+              {form.formState.errors && (
+                <p>{JSON.stringify(form.formState.errors)}</p>
+              )}
             </div>
           </div>
         </CardContent>
