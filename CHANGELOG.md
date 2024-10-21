@@ -1,5 +1,12 @@
 
 
+## [0.4.10](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.4.10) (2024-10-21)
+
+
+### Features
+
+* **icon:** add ArrowLeftLargeOutline icon ([ae5086b](https://github.com/shrall/lighthouse-ui/commit/ae5086b851892e1feeb84161b0db2ce304335488))
+
 ## [0.4.9](https://github.com/shrall/lighthouse-ui/compare/v0.4.8...v0.4.9) (2024-10-21)
 
 
