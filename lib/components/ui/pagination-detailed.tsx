@@ -154,7 +154,7 @@ const PaginationDetailed = React.forwardRef<
         {...props}
       >
         {showLabel && (
-          <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base sm:lui-block">
+          <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base md:lui-block">
             {locale === "en" ? "Show data " : "Menampilkan data "}
             {(pageNumber - 1) * pageSize + 1}-
             {pageSize * pageNumber > totalData

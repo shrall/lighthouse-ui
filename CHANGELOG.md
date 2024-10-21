@@ -8,6 +8,64 @@
 
 ## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
 
+## [0.4.9](https://github.com/shrall/lighthouse-ui/compare/v0.4.8...v0.4.9) (2024-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tabs:** replace list & trigger props to be more complete
+* **tabs:** remove TabsContent & add tab state props
+
+### Code Refactoring
+
+* **tabs:** remove TabsContent & add tab state props ([74372c1](https://github.com/shrall/lighthouse-ui/commit/74372c1e60f69302900b07cd008ba7d7b09a0a8b))
+* **tabs:** replace list & trigger props to be more complete ([20e16aa](https://github.com/shrall/lighthouse-ui/commit/20e16aa663a8870157b3ccd00c768628d2a918a3))
+
+## [0.4.8](https://github.com/shrall/lighthouse-ui/compare/v0.4.7...v0.4.8) (2024-10-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **time-picker:** set error message from the component condition
+
+### Features
+
+* **input:** update regex prop with discriminated union ([f529b72](https://github.com/shrall/lighthouse-ui/commit/f529b72e71c395386d59ffaa5956a64eca2c6d34))
+* **time-picker:** set error message from the component condition ([2f8ce34](https://github.com/shrall/lighthouse-ui/commit/2f8ce346bd076e11f7a7bee53d85ebcbb23cdd75))
+
+
+### Bug Fixes
+
+* **time-picker:** options get selected on hover ([a00e235](https://github.com/shrall/lighthouse-ui/commit/a00e235dcb5ac3b6485c80ba793b1800e187c650))
+
+
+### Styles
+
+* **accordion:** add icon animation ([86ec4c1](https://github.com/shrall/lighthouse-ui/commit/86ec4c1fc5915a908e898b1bd7b6f00c5dba9b92))
+* **input:** set caret color to primary 10 & primary 30 for outline inputs ([71c5f75](https://github.com/shrall/lighthouse-ui/commit/71c5f7579b01f52aeb030c98320e0dd7234537f5))
+* set font smoothing to antialiased ([4cc0bf2](https://github.com/shrall/lighthouse-ui/commit/4cc0bf210e18cadfaf8576a6ca8bef731509b3a8))
+
+## [0.4.7](https://github.com/shrall/lighthouse-ui/compare/v0.4.6...v0.4.7) (2024-10-18)
+
+
+### Features
+
+* **dialog:** add closeOnClickOutside prop ([389914c](https://github.com/shrall/lighthouse-ui/commit/389914c24fbcad11560b77e6fb5efda30453054f))
+
+## [0.4.6](https://github.com/shrall/lighthouse-ui/compare/v0.4.5...v0.4.6) (2024-10-18)
+
+
+### Styles
+
+* **pagination-detailed:** hide text information on screen width < 748px ([e8e200a](https://github.com/shrall/lighthouse-ui/commit/e8e200a574966796a3f8e4519a07146324223c39))
+
+## [0.4.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.4...v0.4.5) (2024-10-18)
+
+
+### Features
+
+* **icon:** add MediaPlayFilled & FilePDFFilled icons ([01dd6f3](https://github.com/shrall/lighthouse-ui/commit/01dd6f358c03b97291757dc96836c27dbf4b1b20))
+
 ## [0.4.4](https://github.com/shrall/lighthouse-ui/compare/v0.4.3...v0.4.4) (2024-10-17)
 
 ### Styles

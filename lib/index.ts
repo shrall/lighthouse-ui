@@ -149,7 +149,7 @@ export {
     TableHeader,
     TableRow,
 } from "./components/ui/table";
-export { Tabs, TabsContent } from "./components/ui/tabs";
+export { Tabs } from "./components/ui/tabs";
 export type { TabMenu } from "./components/ui/tabs";
 export {
     Dialog,
@@ -174,6 +174,8 @@ export { PlusOutline } from "./components/ui/icon/PlusOutline";
 export { MinusOutline } from "./components/ui/icon/MinusOutline";
 export { ArrowRightLargeOutline } from "./components/ui/icon/ArrowRightLargeOutline";
 export { LightbulbOutline } from "./components/ui/icon/LightbulbOutline";
+export { MediaPlayFilled } from "./components/ui/icon/MediaPlayFilled";
+export { FilePDFFilled } from "./components/ui/icon/FilePDFFilled";
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./components/ui/accordion";
 
 //NOTE - Beta
