@@ -45,7 +45,6 @@ function Calendar({
 
   return (
     <DayPicker
-      autoFocus
       showOutsideDays={showOutsideDays}
       disabled={{
         dayOfWeek: [3],

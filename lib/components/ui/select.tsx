@@ -225,7 +225,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               </button>
             </PopoverTrigger>
             <PopoverContent
-              className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
+              className="lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-font-bca"
               align="start"
               onEscapeKeyDown={() => setIsPopoverOpen(false)}
               onOpenAutoFocus={(e) => e.preventDefault()}

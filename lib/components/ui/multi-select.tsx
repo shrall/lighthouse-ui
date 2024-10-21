@@ -279,7 +279,7 @@ export const MultiSelect = React.forwardRef<
               </button>
             </PopoverTrigger>
             <PopoverContent
-              className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
+              className="lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width]"
               align="start"
               onEscapeKeyDown={() => setIsPopoverOpen(false)}
               onOpenAutoFocus={(e) => e.preventDefault()}
