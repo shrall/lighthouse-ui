@@ -4,8 +4,8 @@ import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { cn } from "@/lib/utils";
 
 type TabsProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> & {
-  list?: { className?: string };
-  trigger?: { className?: string };
+  listProps?: TabsListProps;
+  triggerProps?: TabsTriggerProps;
   tabMenus: TabMenu[];
   selectedTab?: string;
   setSelectedTab?: React.Dispatch<React.SetStateAction<string>>;
@@ -20,8 +20,8 @@ const Tabs = React.forwardRef<
   (
     {
       children,
-      list,
-      trigger,
+      listProps,
+      triggerProps,
       tabMenus,
       tabsStyle = "underline",
       size = "medium",
@@ -37,15 +37,15 @@ const Tabs = React.forwardRef<
       value={selectedTab}
       onValueChange={setSelectedTab}
     >
-      <TabsList tabsStyle={tabsStyle} size={size} className={list?.className}>
+      <TabsList tabsStyle={tabsStyle} size={size} {...listProps}>
         {tabMenus.map((tabMenu) => (
           <TabsTrigger
             key={tabMenu.value}
             tabsStyle={tabsStyle}
             size={size}
-            className={trigger?.className}
             value={tabMenu.value}
             disabled={tabMenu.disabled}
+            {...triggerProps}
           >
             {tabMenu.name}
           </TabsTrigger>
