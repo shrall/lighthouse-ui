@@ -10,6 +10,12 @@ import { useState } from "react";
 import { addYears, format } from "date-fns";
 import { enUS } from "react-day-picker/locale";
 
+const getYearRange = (year: number) => {
+  const startYear = Math.floor(year / 12) * 12;
+  const endYear = startYear + 11;
+  return `${startYear}-${endYear}`;
+};
+
 export type CalendarProps = DayPickerProps;
 
 function Calendar({
@@ -51,10 +57,10 @@ function Calendar({
       }}
       components={{
         MonthGrid({ ...props }) {
+          const { months, goToMonth } = useDayPicker();
           if (content === "date") {
             return <table {...props} />;
-          } else {
-            const { months, goToMonth } = useDayPicker();
+          } else if (content === "month") {
             return (
               <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
                 {Array.from({ length: 12 }, (_, i) => i).map((month) => (
@@ -79,6 +85,27 @@ function Calendar({
                         options: locale.options ?? enUS.options,
                       },
                     })}
+                  </Button>
+                ))}
+              </div>
+            );
+          } else {
+            const startYear =
+              Math.floor(months[0].date.getFullYear() / 12) * 12;
+            return (
+              <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
+                {Array.from({ length: 12 }, (_, i) => i).map((year) => (
+                  <Button
+                    key={year}
+                    variant="ghost"
+                    className="lui-w-full lui-min-w-fit lui-p-0 lui-text-sm"
+                    onClick={() => {
+                      const newDate = new Date(startYear + year, 0, 1);
+                      goToMonth(newDate);
+                      setContent("month");
+                    }}
+                  >
+                    {startYear + year}
                   </Button>
                 ))}
               </div>
@@ -118,6 +145,8 @@ function Calendar({
                     previousMonth && goToMonth(previousMonth);
                   } else if (content === "month") {
                     goToMonth(addYears(props.calendarMonth.date, -1));
+                  } else if (content === "year") {
+                    goToMonth(addYears(props.calendarMonth.date, -12));
                   }
                 }}
               >
@@ -151,6 +180,17 @@ function Calendar({
                   {props.calendarMonth.date.getFullYear()}
                 </Button>
               )}
+              {content === "year" && (
+                <Button
+                  variant="ghost"
+                  className="lui-w-fit lui-min-w-fit"
+                  onClick={() => {
+                    setContent("month");
+                  }}
+                >
+                  {getYearRange(props.calendarMonth.date.getFullYear())}
+                </Button>
+              )}
               <Button
                 variant="ghost"
                 className="lui-w-fit lui-min-w-fit lui-p-2"
@@ -159,6 +199,8 @@ function Calendar({
                     nextMonth && goToMonth(nextMonth);
                   } else if (content === "month") {
                     goToMonth(addYears(props.calendarMonth.date, 1));
+                  } else if (content === "year") {
+                    goToMonth(addYears(props.calendarMonth.date, 12));
                   }
                 }}
               >
