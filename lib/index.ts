@@ -149,7 +149,7 @@ export {
     TableHeader,
     TableRow,
 } from "./components/ui/table";
-export { Tabs, TabsContent } from "./components/ui/tabs";
+export { Tabs } from "./components/ui/tabs";
 export type { TabMenu } from "./components/ui/tabs";
 export {
     Dialog,

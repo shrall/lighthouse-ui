@@ -7,7 +7,8 @@ type TabsProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> & {
   list?: { className?: string };
   trigger?: { className?: string };
   tabMenus: TabMenu[];
-  setTabMenus?: React.Dispatch<React.SetStateAction<TabMenu[]>>;
+  selectedTab?: string;
+  setSelectedTab?: React.Dispatch<React.SetStateAction<string>>;
   tabsStyle?: "underline" | "filled";
   size?: "medium" | "large";
 };
@@ -24,11 +25,18 @@ const Tabs = React.forwardRef<
       tabMenus,
       tabsStyle = "underline",
       size = "medium",
+      selectedTab,
+      setSelectedTab,
       ...props
     },
     ref,
   ) => (
-    <TabsPrimitive.Root ref={ref} {...props}>
+    <TabsPrimitive.Root
+      ref={ref}
+      {...props}
+      value={selectedTab}
+      onValueChange={setSelectedTab}
+    >
       <TabsList tabsStyle={tabsStyle} size={size} className={list?.className}>
         {tabMenus.map((tabMenu) => (
           <TabsTrigger
@@ -119,18 +127,10 @@ const TabsTrigger = React.forwardRef<
 ));
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
-const TabsContent = React.forwardRef<
-  React.ElementRef<typeof TabsPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
-  <TabsPrimitive.Content ref={ref} className={cn(className)} {...props} />
-));
-TabsContent.displayName = TabsPrimitive.Content.displayName;
-
 export type TabMenu = {
   name: string;
   value: string;
   disabled?: boolean;
 };
 
-export { Tabs, TabsList, TabsTrigger, TabsContent };
+export { Tabs };
