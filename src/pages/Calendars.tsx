@@ -9,7 +9,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { enUS } from "date-fns/locale";
+import { enUS, id } from "date-fns/locale";
 import { CalendarOutline } from "@/components/ui/icon/CalendarOutline";
 
 function Calendars() {
@@ -49,7 +49,6 @@ function Calendars() {
           </PopoverTrigger>
           <PopoverContent align="center">
             <Calendar
-              initialFocus
               mode="range"
               defaultMonth={date?.from}
               selected={date}
@@ -59,12 +58,17 @@ function Calendars() {
           </PopoverContent>
         </Popover>
         <Calendar
-          initialFocus
           mode="range"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
-          locale={enUS}
+          locale={id}
+        />
+        <Calendar
+          mode="range"
+          defaultMonth={date?.from}
+          selected={date}
+          onSelect={setDate}
         />
       </div>
     </div>
