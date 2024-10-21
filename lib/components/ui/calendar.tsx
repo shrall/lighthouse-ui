@@ -11,6 +11,7 @@ import { addYears, format } from "date-fns";
 import { enUS } from "react-day-picker/locale";
 
 export type CalendarProps = DayPickerProps;
+
 function Calendar({
   className,
   classNames,
@@ -49,6 +50,41 @@ function Calendar({
         ...classNames,
       }}
       components={{
+        MonthGrid({ ...props }) {
+          if (content === "date") {
+            return <table {...props} />;
+          } else {
+            const { months, goToMonth } = useDayPicker();
+            return (
+              <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
+                {Array.from({ length: 12 }, (_, i) => i).map((month) => (
+                  <Button
+                    key={month}
+                    variant="ghost"
+                    className="lui-w-full lui-min-w-fit lui-p-0 lui-text-sm"
+                    onClick={() => {
+                      const newDate = new Date(
+                        months[0].date.getFullYear(),
+                        month,
+                        1,
+                      );
+                      goToMonth(newDate);
+                      setContent("date");
+                    }}
+                  >
+                    {format(new Date(0, month), "MMMM", {
+                      locale: {
+                        localize: locale.localize ?? enUS.localize,
+                        formatLong: locale.formatLong ?? enUS.formatLong,
+                        options: locale.options ?? enUS.options,
+                      },
+                    })}
+                  </Button>
+                ))}
+              </div>
+            );
+          }
+        },
         DayButton({ day, modifiers, className, ...buttonProps }) {
           return (
             <Button
@@ -73,58 +109,56 @@ function Calendar({
         MonthCaption(props) {
           const { goToMonth, nextMonth, previousMonth } = useDayPicker();
           return (
-            <div className="lui-mb-1 lui-flex lui-items-center lui-justify-between">
+            <div className="lui-mb-1 lui-flex lui-items-center lui-justify-between lui-font-semibold">
               <Button
                 variant="ghost"
                 className="lui-w-fit lui-min-w-fit lui-p-2"
                 onClick={() => {
-                  if (content === "date" || content === "month") {
+                  if (content === "date") {
                     previousMonth && goToMonth(previousMonth);
-                  } else if (content === "year") {
-                    goToMonth(
-                      addYears(props.calendarMonth.date.getMonth(), -1),
-                    );
+                  } else if (content === "month") {
+                    goToMonth(addYears(props.calendarMonth.date, -1));
                   }
                 }}
               >
                 <ChevronLeftOutline className="lui-size-6" />
               </Button>
               {content === "date" && (
-                <>
-                  <Button
-                    variant="ghost"
-                    className="lui-w-fit lui-min-w-fit"
-                    onClick={() => {
-                      setContent("month");
-                    }}
-                  >
-                    {format(props.calendarMonth.date, "MMMM", {
-                      locale: {
-                        localize: locale.localize ?? enUS.localize,
-                        formatLong: locale.formatLong ?? enUS.formatLong,
-                        options: locale.options ?? enUS.options,
-                      },
-                    })}
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    className="lui-w-fit lui-min-w-fit"
-                    onClick={() => {
-                      setContent("year");
-                    }}
-                  >
-                    {props.calendarMonth.date.getFullYear()}
-                  </Button>
-                </>
+                <Button
+                  variant="ghost"
+                  className="lui-w-fit lui-min-w-fit"
+                  onClick={() => {
+                    setContent("month");
+                  }}
+                >
+                  {format(props.calendarMonth.date, "MMMM", {
+                    locale: {
+                      localize: locale.localize ?? enUS.localize,
+                      formatLong: locale.formatLong ?? enUS.formatLong,
+                      options: locale.options ?? enUS.options,
+                    },
+                  })}
+                </Button>
+              )}
+              {(content === "date" || content === "month") && (
+                <Button
+                  variant="ghost"
+                  className="lui-w-fit lui-min-w-fit"
+                  onClick={() => {
+                    setContent("year");
+                  }}
+                >
+                  {props.calendarMonth.date.getFullYear()}
+                </Button>
               )}
               <Button
                 variant="ghost"
                 className="lui-w-fit lui-min-w-fit lui-p-2"
                 onClick={() => {
-                  if (content === "date" || content === "month") {
+                  if (content === "date") {
                     nextMonth && goToMonth(nextMonth);
-                  } else if (content === "year") {
-                    goToMonth(addYears(props.calendarMonth.date.getMonth(), 1));
+                  } else if (content === "month") {
+                    goToMonth(addYears(props.calendarMonth.date, 1));
                   }
                 }}
               >
