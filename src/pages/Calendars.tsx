@@ -63,6 +63,17 @@ function Calendars() {
           selected={date}
           onSelect={setDate}
           locale={id}
+          shortcuts={[
+            {
+              label: "Today",
+              onClick: () => setDate({ from: new Date(), to: new Date() }),
+            },
+            {
+              label: "Last 7 days",
+              onClick: () =>
+                setDate({ from: addDays(new Date(), -6), to: new Date() }),
+            },
+          ]}
         />
         <Calendar
           mode="range"

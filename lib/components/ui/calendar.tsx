@@ -16,32 +16,43 @@ const getYearRange = (year: number) => {
   return `${startYear}-${endYear}`;
 };
 
-export type CalendarProps = DayPickerProps;
+type Shortcut = {
+  label: string;
+  onClick: () => void;
+};
+
+type ShortcutsArray =
+  | [Shortcut]
+  | [Shortcut, Shortcut]
+  | [Shortcut, Shortcut, Shortcut]
+  | [Shortcut, Shortcut, Shortcut, Shortcut]
+  | [Shortcut, Shortcut, Shortcut, Shortcut, Shortcut]
+  | [Shortcut, Shortcut, Shortcut, Shortcut, Shortcut, Shortcut];
+
+type CalendarProps = DayPickerProps & {
+  shortcuts?: ShortcutsArray;
+};
 
 function Calendar({
   className,
   classNames,
   locale = enUS,
   showOutsideDays = true,
-
+  shortcuts,
   ...props
 }: CalendarProps) {
   const [content, setContent] = useState<"date" | "month" | "year">("date");
 
   return (
     <DayPicker
+      autoFocus
       showOutsideDays={showOutsideDays}
       disabled={{
         dayOfWeek: [3],
       }}
-      className={cn(
-        "lui-w-[21rem] lui-min-w-[21rem] lui-max-w-[21rem] lui-p-4",
-        className,
-      )}
+      className={cn("lui-p-4", className)}
       classNames={{
-        months:
-          "lui-relative lui-flex lui-flex-col sm:lui-flex-row lui-space-y-4 sm:lui-space-x-4 sm:lui-space-y-0",
-        month: "lui-min-w-full",
+        month: "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem]",
         caption_label: "lui-text-sm lui-font-medium",
         month_grid: "lui-w-full",
         weekdays: "lui-flex lui-gap-x-1 lui-text-ocean-dark-10",
@@ -56,6 +67,27 @@ function Calendar({
         ...classNames,
       }}
       components={{
+        Months({ ...props }) {
+          return (
+            <div className="lui-flex lui-gap-x-4">
+              {shortcuts && (
+                <div className="lui-flex lui-min-w-[7.3125rem] lui-max-w-[7.3125rem] lui-flex-col lui-items-center lui-gap-y-2">
+                  {shortcuts.map((shortcut) => (
+                    <Button
+                      key={shortcut.label}
+                      variant="ghost"
+                      className="lui-w-full lui-min-w-fit lui-p-0"
+                      onClick={shortcut.onClick}
+                    >
+                      {shortcut.label}
+                    </Button>
+                  ))}
+                </div>
+              )}
+              <div {...props} />
+            </div>
+          );
+        },
         MonthGrid({ ...props }) {
           const { months, goToMonth } = useDayPicker();
           if (content === "date") {
@@ -120,7 +152,7 @@ function Calendar({
                 className,
                 "lui-size-10 lui-min-w-fit lui-p-0 lui-font-semibold disabled:lui-text-ocean-light-40",
                 modifiers.range_middle &&
-                  "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10 hover:lui-text-white disabled:lui-border disabled:lui-border-solid disabled:lui-border-ocean-dark-10 disabled:lui-bg-ocean-light-30 disabled:lui-text-ocean-dark-10",
+                  "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10 hover:lui-text-white disabled:lui-text-ocean-dark-10",
                 modifiers?.outside &&
                   "lui-pointer-events-none lui-border-none lui-bg-transparent lui-text-ocean-light-40 disabled:lui-border-none disabled:lui-bg-transparent disabled:lui-text-ocean-light-40",
                 modifiers?.disabled &&
