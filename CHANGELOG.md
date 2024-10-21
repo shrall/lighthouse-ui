@@ -1,5 +1,18 @@
 
 
+## [0.4.9](https://github.com/shrall/lighthouse-ui/compare/v0.4.8...v0.4.9) (2024-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tabs:** replace list & trigger props to be more complete
+* **tabs:** remove TabsContent & add tab state props
+
+### Code Refactoring
+
+* **tabs:** remove TabsContent & add tab state props ([74372c1](https://github.com/shrall/lighthouse-ui/commit/74372c1e60f69302900b07cd008ba7d7b09a0a8b))
+* **tabs:** replace list & trigger props to be more complete ([20e16aa](https://github.com/shrall/lighthouse-ui/commit/20e16aa663a8870157b3ccd00c768628d2a918a3))
+
 ## [0.4.8](https://github.com/shrall/lighthouse-ui/compare/v0.4.7...v0.4.8) (2024-10-19)
 
 
