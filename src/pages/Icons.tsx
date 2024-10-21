@@ -108,6 +108,7 @@ import { UserSettingOutline } from "@/components/ui/icon/UserSettingOutline";
 import { ZipOutline } from "@/components/ui/icon/ZipOutline";
 import { PlusOutline } from "@/components/ui/icon/PlusOutline";
 import { MinusOutline } from "@/components/ui/icon/MinusOutline";
+import { ArrowLeftLargeOutline } from "@/components/ui/icon/ArrowLeftLargeOutline";
 import { ArrowRightLargeOutline } from "@/components/ui/icon/ArrowRightLargeOutline";
 import { LightbulbOutline } from "@/components/ui/icon/LightbulbOutline";
 import { MediaPlayFilled } from "@/components/ui/icon/MediaPlayFilled";
@@ -121,6 +122,7 @@ function Icons() {
         <AddDocOutline />
         <AddFilled />
         <AddOutline />
+        <ArrowLeftLargeOutline />
         <ArrowLeftOutline />
         <ArrowRightLargeOutline />
         <ArrowRightOutline />

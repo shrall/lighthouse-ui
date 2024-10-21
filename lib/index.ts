@@ -172,6 +172,7 @@ export { addMinutes, TimePicker } from "@/components/ui/time-picker";
 //NOTE - v0.4.0
 export { PlusOutline } from "./components/ui/icon/PlusOutline";
 export { MinusOutline } from "./components/ui/icon/MinusOutline";
+export { ArrowLeftLargeOutline } from "./components/ui/icon/ArrowLeftLargeOutline";
 export { ArrowRightLargeOutline } from "./components/ui/icon/ArrowRightLargeOutline";
 export { LightbulbOutline } from "./components/ui/icon/LightbulbOutline";
 export { MediaPlayFilled } from "./components/ui/icon/MediaPlayFilled";
