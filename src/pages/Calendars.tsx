@@ -59,7 +59,6 @@ function Calendars() {
         </Popover>
         <Calendar
           mode="range"
-          size="medium"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
@@ -95,6 +94,12 @@ function Calendars() {
               },
             },
           ]}
+          alert={{
+            variant: "success",
+            title: "Success",
+            description:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting",
+          }}
         />
         <Calendar
           mode="range"

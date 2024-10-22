@@ -15,6 +15,7 @@ import { useEffect, useRef, useState } from "react";
 import { addYears, format } from "date-fns";
 import { enUS } from "react-day-picker/locale";
 import { Separator } from "./separator";
+import { Alert, AlertProps } from "./alert";
 
 const getYearRange = (year: number) => {
   const startYear = Math.floor(year / 12) * 12;
@@ -38,6 +39,7 @@ type ShortcutsArray =
 type CalendarProps = DayPickerProps & {
   shortcuts?: ShortcutsArray;
   size?: "medium" | "large";
+  alert?: AlertProps;
 };
 
 function Calendar({
@@ -47,6 +49,7 @@ function Calendar({
   showOutsideDays = true,
   shortcuts,
   size = "large",
+  alert,
   ...calendarProps
 }: CalendarProps) {
   const [content, setContent] = useState<"date" | "month" | "year">("date");
@@ -92,79 +95,78 @@ function Calendar({
         weeks: "",
         week: "lui-flex lui-mt-2 lui-gap-x-1",
         day: "lui-p-0",
-        range_middle: "bg-accent last:rounded-e-md first:rounded-s-md",
-        range_start: "bg-accent rounded-s-md",
-        range_end: "bg-accent rounded-e-md",
         ...classNames,
       }}
       components={{
         Months({ ...props }) {
           const { goToMonth } = useDayPicker();
           return (
-            <div
-              className={cn(
-                "lui-flex lui-gap-x-4",
-                size === "medium" && "lui-flex-col lui-gap-y-3",
-              )}
-            >
-              {shortcuts && (
-                <div
-                  ref={shortcutContainerRef}
-                  className={cn(
-                    "lui-flex lui-gap-2",
-                    size === "large" &&
-                      "lui-min-w-[7.3125rem] lui-max-w-[7.3125rem] lui-flex-col",
-                    size === "medium" &&
-                      "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
-                  )}
-                >
-                  {shortcuts.map((shortcut) => {
-                    const buttonRef = useRef<HTMLButtonElement>(null);
-                    return (
-                      <Button
-                        ref={buttonRef}
-                        key={shortcut.label}
-                        variant="ghost"
-                        className={cn(
-                          "lui-w-full lui-min-w-fit",
-                          size === "large" && "lui-p-0",
-                          size === "medium" &&
-                            "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
-                          calendarProps.mode === "range" &&
-                            calendarProps.selected?.from?.getDate() ===
-                              shortcut.range.from?.getDate() &&
-                            calendarProps.selected?.to?.getDate() ===
-                              shortcut.range.to?.getDate() &&
-                            "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
-                        )}
-                        onClick={(e) => {
-                          if (calendarProps.mode === "range") {
-                            calendarProps.onSelect?.(
-                              shortcut.range,
-                              shortcut.range.from ?? new Date(),
-                              {},
-                              e,
-                            );
-                            goToMonth(shortcut.range.from ?? new Date());
-                            console.log(buttonRef.current?.offsetLeft);
-                            setShortcutButtonPosition(
-                              buttonRef.current?.offsetLeft
-                                ? buttonRef.current.offsetLeft - 466
-                                : 0,
-                            );
-                          }
-                        }}
-                      >
-                        {shortcut.label}
-                      </Button>
-                    );
-                  })}
-                </div>
-              )}
-              {size === "medium" && (
-                <Separator className="lui-bg-ocean-light-30" />
-              )}
-              <div {...props} />
+            <div className="lui-flex lui-max-w-[26.5rem] lui-flex-col lui-gap-y-3">
+              <div
+                className={cn(
+                  "lui-flex lui-gap-x-4",
+                  size === "medium" && "lui-flex-col lui-gap-y-3",
+                )}
+              >
+                {shortcuts && (
+                  <div
+                    ref={shortcutContainerRef}
+                    className={cn(
+                      "lui-flex lui-gap-2",
+                      size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
+                      size === "medium" &&
+                        "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
+                    )}
+                  >
+                    {shortcuts.map((shortcut) => {
+                      const buttonRef = useRef<HTMLButtonElement>(null);
+                      return (
+                        <Button
+                          ref={buttonRef}
+                          key={shortcut.label}
+                          variant="ghost"
+                          className={cn(
+                            "lui-w-full lui-min-w-fit",
+                            size === "large" && "lui-p-0",
+                            size === "medium" &&
+                              "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
+                            calendarProps.mode === "range" &&
+                              calendarProps.selected?.from?.getDate() ===
+                                shortcut.range.from?.getDate() &&
+                              calendarProps.selected?.to?.getDate() ===
+                                shortcut.range.to?.getDate() &&
+                              "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                          )}
+                          onClick={(e) => {
+                            if (calendarProps.mode === "range") {
+                              calendarProps.onSelect?.(
+                                shortcut.range,
+                                shortcut.range.from ?? new Date(),
+                                {},
+                                e,
+                              );
+                              goToMonth(shortcut.range.from ?? new Date());
+                              console.log(buttonRef.current?.offsetLeft);
+                              setShortcutButtonPosition(
+                                buttonRef.current?.offsetLeft
+                                  ? buttonRef.current.offsetLeft - 466
+                                  : 0,
+                              );
+                            }
+                          }}
+                        >
+                          {shortcut.label}
+                        </Button>
+                      );
+                    })}
+                  </div>
+                )}
+                {size === "medium" && (
+                  <Separator className="lui-bg-ocean-light-30" />
+                )}
+                <div {...props} />
+              </div>
+              {alert && <Alert {...alert} />}
             </div>
           );
         },
@@ -233,14 +235,12 @@ function Calendar({
                 "lui-size-10 lui-min-w-fit lui-p-0 lui-font-semibold disabled:lui-text-ocean-light-40",
                 modifiers.range_middle &&
                   "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10 hover:lui-text-white",
-                modifiers?.outside &&
-                  "lui-pointer-events-none lui-border-none lui-bg-transparent lui-text-ocean-light-40 disabled:lui-border-none disabled:lui-bg-transparent disabled:lui-text-ocean-light-40",
-                modifiers?.disabled &&
-                  "lui-border-none lui-bg-transparent lui-text-ocean-light-40",
                 (modifiers.range_start ||
                   modifiers.range_middle ||
                   modifiers.range_end) &&
                   "disabled:lui-border disabled:lui-border-solid disabled:lui-border-ocean-dark-10 disabled:lui-bg-ocean-light-30 disabled:lui-text-ocean-dark-10",
+                modifiers?.outside &&
+                  "lui-pointer-events-none lui-border-none lui-bg-transparent lui-text-ocean-light-40 disabled:lui-border-none disabled:lui-bg-transparent disabled:lui-text-ocean-light-40",
               )}
               {...buttonProps}
               aria-selected={modifiers.selected || buttonProps["aria-selected"]}

@@ -26,7 +26,7 @@ const alertVariants = cva(
   },
 );
 
-type AlertProps = React.HTMLAttributes<HTMLDivElement> &
+export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof alertVariants> & {
     /** Description of the alert */
     description?: string;
