@@ -36,6 +36,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   leftNode?: React.ReactNode;
   rightNode?: React.ReactNode;
+  textProps?: React.HTMLAttributes<HTMLSpanElement>;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -48,6 +49,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       type = "button",
       children,
+      textProps,
       ...props
     },
     ref,
@@ -60,7 +62,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {leftNode && leftNode}
-        <span className="lui-break-anywhere">{children}</span>
+        <span
+          {...textProps}
+          className={cn("lui-break-anywhere", textProps?.className)}
+        >
+          {children}
+        </span>
         {rightNode && rightNode}
       </button>
     );
