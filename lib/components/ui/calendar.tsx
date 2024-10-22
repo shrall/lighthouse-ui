@@ -101,7 +101,7 @@ function Calendar({
         Months({ ...props }) {
           const { goToMonth } = useDayPicker();
           return (
-            <div className="lui-flex lui-max-w-[26.5rem] lui-flex-col lui-gap-y-3">
+            <div className="lui-flex lui-max-w-[27.5rem] lui-flex-col lui-gap-y-3">
               <div
                 className={cn(
                   "lui-flex lui-gap-x-4",
@@ -112,7 +112,7 @@ function Calendar({
                   <div
                     ref={shortcutContainerRef}
                     className={cn(
-                      "lui-flex lui-gap-2",
+                      "lui-flex lui-w-full lui-gap-2",
                       size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
                       size === "medium" &&
                         "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
@@ -127,7 +127,7 @@ function Calendar({
                           variant="ghost"
                           className={cn(
                             "lui-w-full lui-min-w-fit",
-                            size === "large" && "lui-p-0",
+                            size === "large" && "lui-px-4",
                             size === "medium" &&
                               "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
                             calendarProps.mode === "range" &&
