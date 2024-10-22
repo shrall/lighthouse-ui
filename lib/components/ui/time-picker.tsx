@@ -248,7 +248,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
                 <input
                   type="text"
-                  placeholder={"hh:mm"}
+                  placeholder="hh:mm"
                   value={inputValue}
                   onChange={handleInputChange}
                   className="lui-h-full lui-w-full lui-truncate lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"

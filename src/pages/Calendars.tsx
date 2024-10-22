@@ -59,6 +59,7 @@ function Calendars() {
         </Popover>
         <Calendar
           mode="range"
+          size="medium"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
@@ -66,12 +67,32 @@ function Calendars() {
           shortcuts={[
             {
               label: "Today",
-              onClick: () => setDate({ from: new Date(), to: new Date() }),
+              range: { from: new Date(), to: new Date() },
             },
             {
               label: "Last 7 days",
-              onClick: () =>
-                setDate({ from: addDays(new Date(), -6), to: new Date() }),
+              range: { from: addDays(new Date(), -6), to: new Date() },
+            },
+            {
+              label: "Next 7 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 7),
+              },
+            },
+            {
+              label: "Next 14 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 14),
+              },
+            },
+            {
+              label: "Next 30 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 30),
+              },
             },
           ]}
         />
