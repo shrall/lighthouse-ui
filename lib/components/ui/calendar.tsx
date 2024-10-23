@@ -13,9 +13,9 @@ import { ChevronLeftOutline } from "./icon/ChevronLeftOutline";
 import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 import { useEffect, useRef, useState } from "react";
 import { addYears, format } from "date-fns";
-import { enUS } from "react-day-picker/locale";
 import { Separator } from "./separator";
 import { Alert, AlertProps } from "./alert";
+import { enUS } from "date-fns/locale";
 
 const getYearRange = (year: number) => {
   const startYear = Math.floor(year / 12) * 12;

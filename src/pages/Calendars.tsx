@@ -9,8 +9,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { enUS, id } from "date-fns/locale";
 import { CalendarOutline } from "@/components/ui/icon/CalendarOutline";
+import { enUS, id } from "date-fns/locale";
 
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -104,6 +104,7 @@ function Calendars() {
         <Calendar
           mode="range"
           showMonthRangeToggle
+          locale={enUS}
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
