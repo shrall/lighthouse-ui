@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.6...v0.5.0-beta.7) (2024-10-23)
+
+
+### Styles
+
+* **calendar:** update max width when there's no shortcuts ([140deeb](https://github.com/shrall/lighthouse-ui/commit/140deeb3d4bf8f9617d0262662b9f8cd26699e6c))
+
 ## [0.5.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.5...v0.5.0-beta.6) (2024-10-23)
 
 
