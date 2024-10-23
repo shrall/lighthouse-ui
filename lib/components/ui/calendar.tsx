@@ -8,7 +8,7 @@ import {
 } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
-import { Button } from "./button";
+import { Button, buttonVariants } from "./button";
 import { ChevronLeftOutline } from "./icon/ChevronLeftOutline";
 import { ChevronRightOutline } from "./icon/ChevronRightOutline";
 import { useEffect, useRef, useState } from "react";
@@ -37,10 +37,14 @@ type ShortcutsArray =
   | [Shortcut, Shortcut, Shortcut, Shortcut, Shortcut, Shortcut];
 
 type CalendarProps = DayPickerProps & {
-  shortcuts?: ShortcutsArray;
   size?: "medium" | "large";
   alert?: AlertProps;
-};
+  shortcuts?: ShortcutsArray;
+  showMonthRangeToggle?: boolean;
+} & (
+    | { shortcuts?: ShortcutsArray; showMonthRangeToggle?: never }
+    | { shortcuts?: never; showMonthRangeToggle?: boolean }
+  );
 
 function Calendar({
   className,
@@ -50,8 +54,10 @@ function Calendar({
   shortcuts,
   size = "large",
   alert,
+  showMonthRangeToggle = false,
   ...calendarProps
 }: CalendarProps) {
+  const [rangeType, setRangeType] = useState<"daily" | "monthly">("daily");
   const [content, setContent] = useState<"date" | "month" | "year">("date");
   const [shortcutButtonPosition, setShortcutButtonPosition] =
     useState<number>(0);
@@ -137,6 +143,9 @@ function Calendar({
                                 shortcut.range.to?.getDate() &&
                               "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
                           )}
+                          textProps={{
+                            className: "lui-line-clamp-1",
+                          }}
                           onClick={(e) => {
                             if (calendarProps.mode === "range") {
                               calendarProps.onSelect?.(
@@ -146,7 +155,6 @@ function Calendar({
                                 e,
                               );
                               goToMonth(shortcut.range.from ?? new Date());
-                              console.log(buttonRef.current?.offsetLeft);
                               setShortcutButtonPosition(
                                 buttonRef.current?.offsetLeft
                                   ? buttonRef.current.offsetLeft - 466
@@ -161,6 +169,70 @@ function Calendar({
                     })}
                   </div>
                 )}
+                {showMonthRangeToggle && (
+                  <div
+                    className={cn(
+                      "lui-flex lui-w-full lui-gap-2",
+                      size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
+                      size === "medium" &&
+                        "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
+                    )}
+                  >
+                    <Button
+                      variant="ghost"
+                      className={cn(
+                        "lui-w-full lui-min-w-fit",
+                        size === "large" && "lui-px-4",
+                        size === "medium" &&
+                          "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
+                        rangeType === "daily" &&
+                          "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                      )}
+                      textProps={{
+                        className: "lui-line-clamp-1",
+                      }}
+                      onClick={(e) => {
+                        setContent("date");
+                        setRangeType("daily");
+                        if (calendarProps.mode === "range") {
+                          calendarProps.onSelect?.(
+                            { from: undefined, to: undefined },
+                            new Date(),
+                            {},
+                            e,
+                          );
+                        }
+                      }}
+                    >
+                      {locale === enUS ? "Daily" : "Harian"}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      className={cn(
+                        "lui-w-full lui-min-w-fit",
+                        size === "large" && "lui-px-4",
+                        size === "medium" &&
+                          "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
+                        rangeType === "monthly" &&
+                          "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                      )}
+                      onClick={(e) => {
+                        setContent("month");
+                        setRangeType("monthly");
+                        if (calendarProps.mode === "range") {
+                          calendarProps.onSelect?.(
+                            { from: undefined, to: undefined },
+                            new Date(),
+                            {},
+                            e,
+                          );
+                        }
+                      }}
+                    >
+                      {locale === enUS ? "Monthly" : "Bulanan"}
+                    </Button>
+                  </div>
+                )}
                 {size === "medium" && (
                   <Separator className="lui-bg-ocean-light-30" />
                 )}
@@ -171,7 +243,9 @@ function Calendar({
           );
         },
         MonthGrid({ ...props }) {
-          const { months, goToMonth } = useDayPicker();
+          const { select, months, goToMonth } = useDayPicker<{
+            mode: "range";
+          }>();
           if (content === "date") {
             return <table {...props} />;
           } else if (content === "month") {
@@ -181,15 +255,103 @@ function Calendar({
                   <Button
                     key={month}
                     variant="ghost"
-                    className="lui-w-full lui-min-w-fit lui-p-0 lui-text-sm"
-                    onClick={() => {
-                      const newDate = new Date(
-                        months[0].date.getFullYear(),
-                        month,
-                        1,
-                      );
-                      goToMonth(newDate);
-                      setContent("date");
+                    className={cn(
+                      calendarProps.mode === "range" &&
+                        calendarProps.selected &&
+                        calendarProps.selected.from &&
+                        calendarProps.selected.to &&
+                        calendarProps.selected.from <=
+                          new Date(months[0].date.getFullYear(), month) &&
+                        calendarProps.selected.to >=
+                          new Date(months[0].date.getFullYear(), month) &&
+                        "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                      calendarProps.mode === "range" &&
+                        calendarProps.selected &&
+                        calendarProps.selected.from &&
+                        calendarProps.selected.to &&
+                        ((calendarProps.selected.from.getMonth() === month &&
+                          calendarProps.selected.from.getFullYear() ===
+                            months[0].date.getFullYear()) ||
+                          (calendarProps.selected.to.getMonth() === month &&
+                            calendarProps.selected.to.getFullYear() ===
+                              months[0].date.getFullYear())) &&
+                        buttonVariants({ variant: "primary" }),
+                      "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
+                    )}
+                    onClick={(e) => {
+                      if (rangeType === "daily") {
+                        const newDate = new Date(
+                          months[0].date.getFullYear(),
+                          month,
+                          1,
+                        );
+                        goToMonth(newDate);
+                        setContent("date");
+                      } else {
+                        if (calendarProps.mode === "range") {
+                          //NOTE - If it's fresh or the from is greater than the first day of the month
+                          //NOTE - Select the first day of the month
+                          !calendarProps.selected?.from ||
+                          calendarProps.selected?.from >
+                            new Date(months[0].date.getFullYear(), month, 1)
+                            ? select?.(
+                                new Date(
+                                  months[0].date.getFullYear(),
+                                  month,
+                                  1,
+                                ),
+                                {},
+                                e,
+                              )
+                            : // NOTE - If the to is in the same month
+                              // NOTE - Select the first day of the month and the last day of the month
+                              calendarProps.selected.to &&
+                                calendarProps.selected.to.getMonth() === month
+                              ? calendarProps.onSelect?.(
+                                  {
+                                    from: new Date(
+                                      months[0].date.getFullYear(),
+                                      month,
+                                      1,
+                                    ),
+                                    to: new Date(
+                                      months[0].date.getFullYear(),
+                                      month,
+                                      new Date(
+                                        months[0].date.getFullYear(),
+                                        month + 1,
+                                        0,
+                                      ).getDate(),
+                                    ),
+                                  },
+                                  new Date(
+                                    months[0].date.getFullYear(),
+                                    month,
+                                    new Date(
+                                      months[0].date.getFullYear(),
+                                      month + 1,
+                                      0,
+                                    ).getDate(),
+                                  ),
+                                  {},
+                                  e,
+                                )
+                              : // NOTE - Select the last day of the month
+                                select?.(
+                                  new Date(
+                                    months[0].date.getFullYear(),
+                                    month,
+                                    new Date(
+                                      months[0].date.getFullYear(),
+                                      month + 1,
+                                      0,
+                                    ).getDate(),
+                                  ),
+                                  {},
+                                  e,
+                                );
+                        }
+                      }
                     }}
                   >
                     {format(new Date(0, month), "MMMM", {

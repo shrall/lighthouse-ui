@@ -103,6 +103,7 @@ function Calendars() {
         />
         <Calendar
           mode="range"
+          showMonthRangeToggle
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
