@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.8...v0.5.0-beta.9) (2024-10-23)
+
+
+### Bug Fixes
+
+* **calendar:** locale is mixed ([965e64a](https://github.com/shrall/lighthouse-ui/commit/965e64ade08285b5dfe2e24aa75b93dbc8188478))
+
 ## [0.5.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.7...v0.5.0-beta.8) (2024-10-23)
 
 
