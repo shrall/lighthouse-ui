@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.7...v0.5.0-beta.8) (2024-10-23)
+
+
+### Bug Fixes
+
+* **calendar:** shortcut prop not allowing only data to be passed ([9b20a72](https://github.com/shrall/lighthouse-ui/commit/9b20a722d91cb3990053137b0eae7f8130c1f26a))
+
 ## [0.5.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.6...v0.5.0-beta.7) (2024-10-23)
 
 
