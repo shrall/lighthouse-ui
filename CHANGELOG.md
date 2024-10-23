@@ -1,3 +1,12 @@
+
+
+## [0.5.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.10...v0.5.0-beta.11) (2024-10-23)
+
+
+### Bug Fixes
+
+* **tabs:** set tabs list & triggers props to be optional ([0073f81](https://github.com/shrall/lighthouse-ui/commit/0073f819b54b1a564abd98d767b03d97132bb560))
+
 ## [0.5.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.9...v0.5.0-beta.10) (2024-10-23)
 
 ### Bug Fixes
