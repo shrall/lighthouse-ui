@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.11...v0.5.0-beta.12) (2024-10-23)
+
+
+### Features
+
+* **time-picker:** export ValidTime type ([9da7361](https://github.com/shrall/lighthouse-ui/commit/9da736197dba3e71bd7e677dc99a380315d13db9))
+
 ## [0.5.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.10...v0.5.0-beta.11) (2024-10-23)
 
 
