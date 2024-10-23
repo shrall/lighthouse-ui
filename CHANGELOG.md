@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.5...v0.5.0-beta.6) (2024-10-23)
+
+
+### Styles
+
+* **calendar:** only show month button style variation when it's on month picker mode ([f05fc0b](https://github.com/shrall/lighthouse-ui/commit/f05fc0bd5c916c885f5d5b5b40e20b59b64d61d4))
+
 ## [0.5.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-23)
 
 
