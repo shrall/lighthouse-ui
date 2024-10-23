@@ -79,9 +79,6 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      disabled={{
-        dayOfWeek: [3],
-      }}
       className={cn("lui-p-4", className)}
       classNames={{
         month: "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem]",
