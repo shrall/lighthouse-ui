@@ -107,7 +107,14 @@ function Calendar({
         Months({ ...props }) {
           const { goToMonth } = useDayPicker();
           return (
-            <div className="lui-flex lui-max-w-[27.5rem] lui-flex-col lui-gap-y-3">
+            <div
+              className={cn(
+                "lui-flex lui-max-w-[27.5rem] lui-flex-col lui-gap-y-3",
+                shortcuts || showMonthRangeToggle
+                  ? "lui-max-w-[27.5rem]"
+                  : "lui-max-w-[19rem]",
+              )}
+            >
               <div
                 className={cn(
                   "lui-flex lui-gap-x-4",
