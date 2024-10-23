@@ -168,6 +168,7 @@ export { PaginationDetailed } from "./components/ui/pagination-detailed";
 export { Stepper } from "./components/ui/stepper";
 export { StepperCircle } from "./components/ui/stepper-circle";
 export { addMinutes, TimePicker } from "@/components/ui/time-picker";
+export type { ValidTime } from "@/components/ui/time-picker";
 
 //NOTE - v0.4.0
 export { PlusOutline } from "./components/ui/icon/PlusOutline";
