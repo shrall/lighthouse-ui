@@ -4,8 +4,8 @@ import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { cn } from "@/lib/utils";
 
 type TabsProps = React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root> & {
-  listProps?: TabsListProps;
-  triggerProps?: TabsTriggerProps;
+  listProps?: Partial<TabsListProps>;
+  triggerProps?: Partial<TabsTriggerProps>;
   tabMenus: TabMenu[];
   selectedTab?: string;
   setSelectedTab?: React.Dispatch<React.SetStateAction<string>>;
