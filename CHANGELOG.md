@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.9...v0.5.0-beta.10) (2024-10-23)
+
+
+### Bug Fixes
+
+* **calendar:** 3rd day of the week is always disabled ([52f80a0](https://github.com/shrall/lighthouse-ui/commit/52f80a0f4a055364972dfb72485b440bbc0f3fa1))
+
 ## [0.5.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.8...v0.5.0-beta.9) (2024-10-23)
 
 
