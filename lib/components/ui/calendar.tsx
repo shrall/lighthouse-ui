@@ -28,21 +28,13 @@ type Shortcut = {
   range: DateRange;
 };
 
-type ShortcutsArray =
-  | [Shortcut]
-  | [Shortcut, Shortcut]
-  | [Shortcut, Shortcut, Shortcut]
-  | [Shortcut, Shortcut, Shortcut, Shortcut]
-  | [Shortcut, Shortcut, Shortcut, Shortcut, Shortcut]
-  | [Shortcut, Shortcut, Shortcut, Shortcut, Shortcut, Shortcut];
-
 type CalendarProps = DayPickerProps & {
   size?: "medium" | "large";
   alert?: AlertProps;
-  shortcuts?: ShortcutsArray;
+  shortcuts?: Shortcut[];
   showMonthRangeToggle?: boolean;
 } & (
-    | { shortcuts?: ShortcutsArray; showMonthRangeToggle?: never }
+    | { shortcuts?: Shortcut[]; showMonthRangeToggle?: never }
     | { shortcuts?: never; showMonthRangeToggle?: boolean }
   );
 
