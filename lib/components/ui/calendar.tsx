@@ -256,7 +256,8 @@ function Calendar({
                     key={month}
                     variant="ghost"
                     className={cn(
-                      calendarProps.mode === "range" &&
+                      rangeType === "monthly" &&
+                        calendarProps.mode === "range" &&
                         calendarProps.selected &&
                         calendarProps.selected.from &&
                         calendarProps.selected.to &&
@@ -265,7 +266,8 @@ function Calendar({
                         calendarProps.selected.to >=
                           new Date(months[0].date.getFullYear(), month) &&
                         "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
-                      calendarProps.mode === "range" &&
+                      rangeType === "monthly" &&
+                        calendarProps.mode === "range" &&
                         calendarProps.selected &&
                         calendarProps.selected.from &&
                         calendarProps.selected.to &&
