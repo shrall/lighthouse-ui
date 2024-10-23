@@ -1,3 +1,43 @@
+
+
+## [0.5.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **calendar:** update to be compatible with react-day-picker v9
+
+### Features
+
+* **button:** add textProps prop ([ed24e50](https://github.com/shrall/lighthouse-ui/commit/ed24e509d667ad046570fa84880a1eeb3835ec08))
+* **calendar:** add alert prop ([5ff2f58](https://github.com/shrall/lighthouse-ui/commit/5ff2f58ecca09bcce158953641627da3958121cc))
+* **calendar:** add month picker ([7d0e914](https://github.com/shrall/lighthouse-ui/commit/7d0e9147ee218b926c5d7a9d56e7deb08fc5f544))
+* **calendar:** add month view toggle ([fdb10d8](https://github.com/shrall/lighthouse-ui/commit/fdb10d82c3a16b056ac286fad71f87b384523e2e))
+* **calendar:** add shortcuts ([464fc30](https://github.com/shrall/lighthouse-ui/commit/464fc3035b96614f9479b4d0e6a36dd6e4924c5d))
+* **calendar:** add size prop & new shortcut style ([b492d83](https://github.com/shrall/lighthouse-ui/commit/b492d838ac138927604361bef0b10e07260a4083))
+* **calendar:** add year view toggle ([1bb8ef3](https://github.com/shrall/lighthouse-ui/commit/1bb8ef371617c89613727559ea2fac4e602b0814))
+
+
+### Styles
+
+* **calendar:** adjust size ([ba48528](https://github.com/shrall/lighthouse-ui/commit/ba48528d0bcf5a7e31c585b0ae34851baddb340b))
+* **popover:** remove padding on content ([813494d](https://github.com/shrall/lighthouse-ui/commit/813494def359e266a73fec5f0b088068d0ce20c1))
+
+
+### Code Refactoring
+
+* **calendar:** update to be compatible with react-day-picker v9 ([a1cf24a](https://github.com/shrall/lighthouse-ui/commit/a1cf24a890087b772bca8a3af980cb0d9a8d6fc5))
+
+## [0.5.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-16)
+
+## [0.5.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-16)
+
+## [0.5.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-16)
+
+## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-16)
+
+## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-16)
+
 ## [0.5.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-17)
 
 ## [0.5.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
