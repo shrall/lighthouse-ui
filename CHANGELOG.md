@@ -1,5 +1,16 @@
 
 
+## [0.5.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.12...v0.5.0-beta.13) (2024-10-24)
+
+
+### Styles
+
+* **alert:** set info variant text color to primary 10 ([5ad91df](https://github.com/shrall/lighthouse-ui/commit/5ad91df0c2a13e15089454159558c4e14b131136))
+* **pagination:** remove outer padding ([7518d2e](https://github.com/shrall/lighthouse-ui/commit/7518d2e5b18a8e75f8c0514de665ff64e31c8fe9))
+* **pagination:** set data texts to 14px ([d5d04af](https://github.com/shrall/lighthouse-ui/commit/d5d04af00c13d88ec4183c2f0cec527b2db95ba0))
+* **pagination:** set show items text to 12px ([7c8f6ad](https://github.com/shrall/lighthouse-ui/commit/7c8f6ad84539244c38674f0b90bcdb7776158740))
+* **toast:** update width on responsive screens ([e895034](https://github.com/shrall/lighthouse-ui/commit/e895034e984a1d8243069386d59fe7e83831a160))
+
 ## [0.5.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.11...v0.5.0-beta.12) (2024-10-23)
 
 
