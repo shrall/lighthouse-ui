@@ -105,7 +105,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             <Skeleton className="lui-mr-auto lui-h-4 lui-w-[180px] lui-rounded-full" />
           ) : (
             !(totalData < 1) && (
-              <span className="lui-mr-auto md:lui-mr-0">
+              <span className="lui-mr-auto lui-text-sm md:lui-mr-0">
                 Data: {(pageNumber - 1) * pageSize + 1}-
                 {pageSize * pageNumber > totalData
                   ? totalData
@@ -133,7 +133,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                   open={showGoToPage}
                   onOpenChange={setShowGoToPage}
                 >
-                  <DropdownMenuTrigger className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-px-3 lui-py-2 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
+                  <DropdownMenuTrigger className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-px-3 lui-py-2 lui-text-sm lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
                     {pageNumber}/{totalPage}
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
