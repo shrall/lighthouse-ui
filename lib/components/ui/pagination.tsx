@@ -56,7 +56,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
     return (
       <nav
         className={cn(
-          "lui-flex lui-w-full lui-items-center lui-p-4 lui-text-sm md:lui-text-base",
+          "lui-flex lui-w-full lui-items-center lui-text-sm md:lui-text-base",
           (isLoading || totalData < 1) && "lui-pt-5",
           className,
         )}
