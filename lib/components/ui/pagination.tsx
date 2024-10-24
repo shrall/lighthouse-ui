@@ -70,7 +70,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             !(totalData < 1) && (
               <DropdownMenu>
                 <DropdownMenuTrigger className="lui-group lui-flex lui-items-center lui-gap-x-1 lui-rounded-xl lui-border lui-border-ocean-light-40 lui-p-3 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
-                  <span className="lui-hidden xl:lui-block">
+                  <span className="lui-hidden lui-text-xs xl:lui-block">
                     {locale === "en" ? "Show Items" : "Tampilkan Data"}
                   </span>
                   <span className="lui-font-semibold">{pageSize}</span>
