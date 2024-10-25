@@ -56,7 +56,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
     return (
       <nav
         className={cn(
-          "lui-flex lui-w-full lui-items-center lui-p-4 lui-text-sm md:lui-text-base",
+          "lui-flex lui-w-full lui-items-center lui-text-sm md:lui-text-base",
           (isLoading || totalData < 1) && "lui-pt-5",
           className,
         )}
@@ -70,7 +70,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             !(totalData < 1) && (
               <DropdownMenu>
                 <DropdownMenuTrigger className="lui-group lui-flex lui-items-center lui-gap-x-1 lui-rounded-xl lui-border lui-border-ocean-light-40 lui-p-3 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
-                  <span className="lui-hidden xl:lui-block">
+                  <span className="lui-hidden lui-text-xs xl:lui-block">
                     {locale === "en" ? "Show Items" : "Tampilkan Data"}
                   </span>
                   <span className="lui-font-semibold">{pageSize}</span>
@@ -105,7 +105,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             <Skeleton className="lui-mr-auto lui-h-4 lui-w-[180px] lui-rounded-full" />
           ) : (
             !(totalData < 1) && (
-              <span className="lui-mr-auto md:lui-mr-0">
+              <span className="lui-mr-auto lui-text-sm md:lui-mr-0">
                 Data: {(pageNumber - 1) * pageSize + 1}-
                 {pageSize * pageNumber > totalData
                   ? totalData
@@ -133,7 +133,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                   open={showGoToPage}
                   onOpenChange={setShowGoToPage}
                 >
-                  <DropdownMenuTrigger className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-px-3 lui-py-2 lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
+                  <DropdownMenuTrigger className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-px-3 lui-py-2 lui-text-sm lui-transition-colors hover:lui-border-ocean-primary-10 data-[state=open]:lui-border-ocean-primary-10">
                     {pageNumber}/{totalPage}
                   </DropdownMenuTrigger>
                   <DropdownMenuContent
@@ -145,7 +145,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                     </span>
                     <div className="lui-w-10 lui-font-semibold lui-text-ocean-primary-10">
                       <Input
-                        className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-bg-white lui-p-2 lui-text-center"
+                        className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-bg-white lui-p-2 lui-text-center lui-caret-ocean-primary-10"
                         input={{ className: "lui-bg-white" }}
                         value={searchPageNumber}
                         onChange={(e) =>

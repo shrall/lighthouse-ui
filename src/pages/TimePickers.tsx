@@ -11,12 +11,9 @@ function TimePickers() {
         <TimePicker
           value={value}
           onValueChange={setValue}
-          disabledTimes={[{ start: "12:00", end: "14:00" }, "15:30"]}
-          errorMessage={
-            (value >= "12:00" && value <= "14:00") || value === "15:30"
-              ? "This time is not available"
-              : ""
-          }
+          disabledTimes={[{ start: "12:00", end: "14:00" }, "13:30"]}
+          interval={60}
+          errorMessage={"This time is not available"}
         />
       </div>
       <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
@@ -25,12 +22,14 @@ function TimePickers() {
           onValueChange={setValue}
           min="12:00"
           max="17:00"
+          errorMessage={"This time is not available"}
         />
         <TimePicker
           value={value2}
           onValueChange={setValue2}
           min={value ? addMinutes(value, 30) : "12:00"}
           max="17:00"
+          errorMessage={"This time is not available"}
         />
       </div>
     </div>

@@ -89,5 +89,8 @@ export default
             '.break-anywhere': {
                 'overflow-wrap': 'anywhere',
             },
+            '.scrollbar-w-none': {
+                'scrollbar-width': 'none',
+            },
         });
     }, themeConfig);

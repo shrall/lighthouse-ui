@@ -1,7 +1,7 @@
 {
   "name": "lighthouse-ui-react",
   "private": false,
-  "version": "0.4.0",
+  "version": "0.5.0-beta.13",
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -48,7 +48,7 @@
     "match-sorter": "^6.3.4",
     "next-themes": "^0.3.0",
     "react": "^18",
-    "react-day-picker": "8.10.1",
+    "react-day-picker": "^9.1.4",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
     "sonner": "^1.5.0",

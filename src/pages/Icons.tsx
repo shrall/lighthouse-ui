@@ -106,6 +106,12 @@ import { UserGroupFilled } from "@/components/ui/icon/UserGroupFilled";
 import { UserSettingFilled } from "@/components/ui/icon/UserSettingFilled";
 import { UserSettingOutline } from "@/components/ui/icon/UserSettingOutline";
 import { ZipOutline } from "@/components/ui/icon/ZipOutline";
+import { PlusOutline } from "@/components/ui/icon/PlusOutline";
+import { MinusOutline } from "@/components/ui/icon/MinusOutline";
+import { ArrowRightLargeOutline } from "@/components/ui/icon/ArrowRightLargeOutline";
+import { LightbulbOutline } from "@/components/ui/icon/LightbulbOutline";
+import { MediaPlayFilled } from "@/components/ui/icon/MediaPlayFilled";
+import { FilePDFFilled } from "@/components/ui/icon/FilePDFFilled";
 
 function Icons() {
   return (
@@ -116,6 +122,7 @@ function Icons() {
         <AddFilled />
         <AddOutline />
         <ArrowLeftOutline />
+        <ArrowRightLargeOutline />
         <ArrowRightOutline />
         <BellDashedFilled />
         <BellFilled />
@@ -170,6 +177,7 @@ function Icons() {
         <EyeOpenOutline />
         <FAQOutline />
         <FileOutline />
+        <FilePDFFilled />
         <FileTXTOutline />
         <FileXLXOutline />
         <FilterFilled />
@@ -188,6 +196,7 @@ function Icons() {
         <InfoFilled />
         <InfoOutline />
         <InvoiceOutline />
+        <LightbulbOutline />
         <ListOutline />
         <LoadingFilled />
         <LockOutline />
@@ -196,8 +205,11 @@ function Icons() {
         <MarkAllAsReadOutline />
         <MarkAsReadOutline />
         <MarkAsUnreadOutline />
+        <MinusOutline />
+        <MediaPlayFilled />
         <PhoneFilled />
         <PlaceholderOutline />
+        <PlusOutline />
         <QuestionFilled />
         <ReloadOutline />
         <RotateOutline />

@@ -11,10 +11,14 @@ export interface InputProps
   inputStyle?: InputStyle;
   leftNode?: React.ReactNode;
   rightNode?: React.ReactNode;
-  regex?: {
-    type: "number" | "custom";
-    pattern?: RegExp;
-  };
+  regex?:
+    | {
+        type: "number";
+      }
+    | {
+        type: "custom";
+        pattern?: RegExp;
+      };
   errorMessage?: string;
   helperText?: string;
   alignment?: "vertical" | "horizontal";
@@ -118,8 +122,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               className={cn(
                 "lui-w-full lui-text-ocean-dark-30 lui-outline-none disabled:placeholder:lui-text-ocean-light-40",
                 inputStyle === "outline" &&
-                  "lui-bg-ocean-light-20 focus:placeholder:lui-text-ocean-light-40",
-                inputStyle === "underline" && "lui-h-6 disabled:lui-bg-white",
+                  "lui-bg-ocean-light-20 lui-caret-ocean-primary-30 focus:placeholder:lui-text-ocean-light-40",
+                inputStyle === "underline" &&
+                  "lui-h-6 lui-caret-ocean-primary-10 disabled:lui-bg-white",
                 input && input.className,
               )}
               ref={ref}

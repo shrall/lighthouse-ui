@@ -17,7 +17,7 @@ const alertVariants = cva(
         success: "lui-bg-ocean-success-10 lui-text-ocean-success-20",
         danger: "lui-bg-ocean-danger-10 lui-text-ocean-danger-20",
         warning: "lui-bg-ocean-warning-10 lui-text-ocean-warning-20",
-        info: "lui-bg-ocean-secondary-10 lui-text-ocean-primary-20",
+        info: "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
       },
     },
     defaultVariants: {
@@ -26,7 +26,7 @@ const alertVariants = cva(
   },
 );
 
-type AlertProps = React.HTMLAttributes<HTMLDivElement> &
+export type AlertProps = React.HTMLAttributes<HTMLDivElement> &
   VariantProps<typeof alertVariants> & {
     /** Description of the alert */
     description?: string;

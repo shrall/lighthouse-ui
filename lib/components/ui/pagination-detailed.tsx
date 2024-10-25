@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -45,6 +46,7 @@ const PaginationDetailed = React.forwardRef<
     }, [pageSize, totalData]);
 
     const renderPageNumbers = () => {
+      if (!width) return;
       const pageNumbers = [];
       if (totalPage <= (width < 768 ? 5 : 7)) {
         //NOTE - Show all pages if total pages are 7 or less
@@ -152,7 +154,7 @@ const PaginationDetailed = React.forwardRef<
         {...props}
       >
         {showLabel && (
-          <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base sm:lui-block">
+          <div className="lui-hidden lui-flex-1 lui-text-start lui-text-base md:lui-block">
             {locale === "en" ? "Show data " : "Menampilkan data "}
             {(pageNumber - 1) * pageSize + 1}-
             {pageSize * pageNumber > totalData

@@ -15,6 +15,13 @@ import {
 } from "@/components/ui/command";
 import { ClockFilled } from "./icon/ClockFilled";
 
+type ValidHour =
+  `${"00" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11" | "12" | "13" | "14" | "15" | "16" | "17" | "18" | "19" | "20" | "21" | "22" | "23"}`;
+type ValidMinute =
+  `${"00" | "01" | "02" | "03" | "04" | "05" | "06" | "07" | "08" | "09" | "10" | "11" | "12" | "13" | "14" | "15" | "16" | "17" | "18" | "19" | "20" | "21" | "22" | "23" | "24" | "25" | "26" | "27" | "28" | "29" | "30" | "31" | "32" | "33" | "34" | "35" | "36" | "37" | "38" | "39" | "40" | "41" | "42" | "43" | "44" | "45" | "46" | "47" | "48" | "49" | "50" | "51" | "52" | "53" | "54" | "55" | "56" | "57" | "58" | "59"}`;
+
+export type ValidTime = `${ValidHour}:${ValidMinute}`;
+
 /**
  * Props for the TimePicker component.
  * @interface TimePickerProps
@@ -42,8 +49,6 @@ interface TimePickerProps
   helperText?: string;
   /** Tooltip content */
   tooltip?: React.ReactNode;
-  /** Whether the input is in an error state */
-  isError?: boolean;
   /** Time interval in minutes for generating time options */
   interval?: 5 | 10 | 15 | 30 | 60;
   /**
@@ -59,7 +64,7 @@ interface TimePickerProps
   /** Maximum selectable time (format: "HH:mm", e.g., "17:30") */
   max?: string;
   /** Array of disabled times or time ranges (format: "HH:mm", e.g., "09:00") */
-  disabledTimes?: Array<string | { start: string; end: string }>;
+  disabledTimes?: Array<ValidTime | { start: ValidTime; end: ValidTime }>;
   /** Whether to show the icon
    * @default true
    */
@@ -83,7 +88,6 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       helperText,
       tooltip,
       className,
-      isError,
       interval = 30,
       min,
       max,
@@ -94,27 +98,30 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
     },
     ref,
   ) => {
-    const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
-    const [inputValue, setInputValue] = React.useState(value || defaultValue);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const commandRef = React.useRef<HTMLDivElement>(null);
     const selectedItemRef = React.useRef<HTMLDivElement>(null);
     const commandListRef = React.useRef<HTMLDivElement>(null);
 
+    const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
+    const [inputValue, setInputValue] = React.useState(value || defaultValue);
+    const [isError, setIsError] = React.useState(false);
+
     React.useEffect(() => {
-      setInputValue(value || defaultValue);
-    }, [value, defaultValue]);
+      setInputValue(defaultValue);
+    }, [defaultValue]);
 
     const isTimeDisabled = React.useCallback(
-      (time: string) => {
-        return disabledTimes.some((disabledTime) => {
+      (time: string) =>
+        disabledTimes.some((disabledTime) => {
           if (typeof disabledTime === "string") {
             return time === disabledTime;
           } else {
             return time >= disabledTime.start && time <= disabledTime.end;
           }
-        });
-      },
+        }) ||
+        (max && time > max) ||
+        (min && time < min),
       [disabledTimes],
     );
 
@@ -201,6 +208,15 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
       }
     }, [isPopoverOpen]);
 
+    //NOTE - Error State
+    React.useEffect(() => {
+      if (isTimeDisabled(inputValue)) {
+        setIsError(true);
+      } else {
+        setIsError(false);
+      }
+    }, [inputValue]);
+
     return (
       <div
         className={cn(
@@ -223,8 +239,8 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             <button
               ref={ref}
               className={cn(
-                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 data-[state=open]:lui-border-ocean-primary-10 focus:lui-outline-none",
-                errorMessage && "lui-border-ocean-danger-20",
+                "lui-group lui-flex lui-w-[8.125rem] lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
+                isError && "lui-border-ocean-danger-20",
                 className,
               )}
               {...props}
@@ -232,10 +248,10 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
               <div className="lui-mx-auto lui-flex lui-w-full lui-items-center lui-justify-between">
                 <input
                   type="text"
-                  placeholder={"hh:mm"}
+                  placeholder="hh:mm"
                   value={inputValue}
                   onChange={handleInputChange}
-                  className="lui-h-full lui-w-full lui-truncate focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
+                  className="lui-h-full lui-w-full lui-truncate lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                   ref={inputRef}
                   disabled={props.disabled}
                   onKeyDown={handleKeyDown}
@@ -255,7 +271,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             </button>
           </PopoverTrigger>
           <PopoverContent
-            className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
+            className="lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width]"
             align="start"
             onEscapeKeyDown={() => setIsPopoverOpen(false)}
             onOpenAutoFocus={(e) => e.preventDefault()}
@@ -310,7 +326,7 @@ export const TimePicker = React.forwardRef<HTMLButtonElement, TimePickerProps>(
             </Command>
           </PopoverContent>
         </Popover>
-        {(errorMessage || helperText) && (
+        {((isError && errorMessage) || helperText) && (
           <span
             className={cn(
               "lui-text-xs lui-text-ocean-dark-10",

@@ -9,8 +9,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { enUS } from "date-fns/locale";
 import { CalendarOutline } from "@/components/ui/icon/CalendarOutline";
+import { enUS, id } from "date-fns/locale";
 
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -49,7 +49,6 @@ function Calendars() {
           </PopoverTrigger>
           <PopoverContent align="center">
             <Calendar
-              initialFocus
               mode="range"
               defaultMonth={date?.from}
               selected={date}
@@ -59,12 +58,56 @@ function Calendars() {
           </PopoverContent>
         </Popover>
         <Calendar
-          initialFocus
           mode="range"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
+          locale={id}
+          shortcuts={[
+            {
+              label: "Today",
+              range: { from: new Date(), to: new Date() },
+            },
+            {
+              label: "Last 7 days",
+              range: { from: addDays(new Date(), -6), to: new Date() },
+            },
+            {
+              label: "Next 7 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 7),
+              },
+            },
+            {
+              label: "Next 14 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 14),
+              },
+            },
+            {
+              label: "Next 30 days",
+              range: {
+                from: addDays(new Date(), 1),
+                to: addDays(new Date(), 30),
+              },
+            },
+          ]}
+          alert={{
+            variant: "success",
+            title: "Success",
+            description:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting",
+          }}
+        />
+        <Calendar
+          mode="range"
+          showMonthRangeToggle
           locale={enUS}
+          defaultMonth={date?.from}
+          selected={date}
+          onSelect={setDate}
         />
       </div>
     </div>

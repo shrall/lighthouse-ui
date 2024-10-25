@@ -2,7 +2,6 @@ import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 import { cn } from "@/lib/utils";
-import { PlusOutline } from "./icon/PlusOutline";
 import { MinusOutline } from "./icon/MinusOutline";
 
 const Accordion = React.forwardRef<
@@ -11,7 +10,7 @@ const Accordion = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Root
     ref={ref}
-    className={cn("lui-w-full", className)}
+    className={cn("lui-w-full lui-space-y-2", className)}
     {...props}
   />
 ));
@@ -32,7 +31,7 @@ const AccordionTrigger = React.forwardRef<
   <AccordionPrimitive.Header
     className={cn(
       "lui-flex",
-      "lui-px-8 lui-py-5 [&[data-state=open]]:lui-pb-3 [&[data-state=open]]:lui-pt-5",
+      "lui-px-5 lui-pt-5 md:lui-px-8",
       "lui-rounded-t-xl focus:lui-outline-none",
       "[&[data-state=open]]:lui-bg-ocean-light-20",
     )}
@@ -40,19 +39,21 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "lui-flex lui-flex-1 lui-items-center lui-justify-between",
-        "lui-text-xl lui-font-semibold lui-text-ocean-dark-20 data-[state=open]:lui-font-bold data-[state=open]:lui-text-ocean-primary-30",
+        "lui-group lui-flex lui-flex-1 lui-items-center lui-justify-between",
+        "lui-text-lg lui-font-semibold lui-text-ocean-dark-20 data-[state=open]:lui-font-bold data-[state=open]:lui-text-ocean-primary-30 md:lui-text-xl",
         "lui-border-b-2 lui-border-ocean-light-30",
-        "lui-pb-3",
+        "lui-pb-5",
         "lui-transition-all",
-        "[&[data-state=open]>.minus]:lui-block [&[data-state=open]>.plus]:lui-hidden",
+        // "[&[data-state=closed] .plus]:lui-rotate-0 [&[data-state=open] .plus]:lui-rotate-90",
         className,
       )}
       {...props}
     >
       {children}
-      <PlusOutline className="plus lui-size-6 lui-shrink-0 lui-transition-transform lui-duration-200" />
-      <MinusOutline className="minus lui-hidden lui-size-6 lui-shrink-0 lui-transition-transform lui-duration-200" />
+      <div className="lui-relative lui-size-6">
+        <MinusOutline className="lui-absolute lui-size-6 lui-shrink-0 lui-transition-transform lui-duration-200" />
+        <MinusOutline className="lui-absolute lui-size-6 lui-shrink-0 lui-transition-transform lui-duration-200 group-data-[state=closed]:lui-rotate-90" />
+      </div>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));
@@ -65,13 +66,18 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitive.Content
     ref={ref}
     className={cn(
-      "lui-overflow-hidden lui-text-base lui-text-ocean-dark-20",
+      "lui-overflow-hidden lui-text-sm lui-text-ocean-dark-20 md:lui-text-base",
       "lui-rounded-b-xl lui-bg-ocean-light-20 data-[state=closed]:lui-bg-transparent",
       "lui-transition-all data-[state=closed]:lui-animate-accordion-up data-[state=open]:lui-animate-accordion-down",
     )}
     {...props}
   >
-    <div className={cn("lui-px-8 lui-pb-5 lui-text-start", className)}>
+    <div
+      className={cn(
+        "lui-px-5 lui-pb-5 lui-pt-4 lui-text-start md:lui-px-8",
+        className,
+      )}
+    >
       {children}
     </div>
   </AccordionPrimitive.Content>

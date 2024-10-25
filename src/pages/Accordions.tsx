@@ -10,7 +10,7 @@ function Accordions() {
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Accordions</h3>
       <div className="lui-flex lui-flex-col lui-items-center lui-justify-center lui-gap-2 lui-text-center">
-        <Accordion type="single" collapsible>
+        <Accordion type="multiple">
           <AccordionItem value="item-1">
             <AccordionTrigger>Apa itu Oceana</AccordionTrigger>
             <AccordionContent>
