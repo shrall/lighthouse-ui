@@ -242,6 +242,7 @@ function Calendar({
           const { select, months, goToMonth } = useDayPicker<{
             mode: "range";
           }>();
+
           if (content === "date") {
             return <table {...props} />;
           } else if (content === "month") {
@@ -252,6 +253,14 @@ function Calendar({
                     key={month}
                     variant="ghost"
                     className={cn(
+                      //NOTE - Set month button as selected if the from date is in the same month & year
+                      rangeType === "daily" &&
+                        calendarProps.mode === "range" &&
+                        calendarProps.selected?.from?.getMonth() === month &&
+                        calendarProps.selected?.from?.getFullYear() ===
+                          months[0].date.getFullYear() &&
+                        buttonVariants({ variant: "primary" }),
+                      //NOTE - Set month button as selected in the mid range when the month is in the range of the selected dates
                       rangeType === "monthly" &&
                         calendarProps.mode === "range" &&
                         calendarProps.selected &&
@@ -262,6 +271,7 @@ function Calendar({
                         calendarProps.selected.to >=
                           new Date(months[0].date.getFullYear(), month) &&
                         "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                      //NOTE - Set month button as selected if the to date is in the same month & year as the from & to dates
                       rangeType === "monthly" &&
                         calendarProps.mode === "range" &&
                         calendarProps.selected &&
@@ -372,7 +382,15 @@ function Calendar({
                   <Button
                     key={year}
                     variant="ghost"
-                    className="lui-w-full lui-min-w-fit lui-p-0 lui-text-sm"
+                    className={cn(
+                      //NOTE - Set year button as selected if the from date is in the same year
+                      rangeType === "daily" &&
+                        calendarProps.mode === "range" &&
+                        calendarProps.selected?.from?.getFullYear() ===
+                          startYear + year &&
+                        buttonVariants({ variant: "primary" }),
+                      "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
+                    )}
                     onClick={() => {
                       const newDate = new Date(startYear + year, 0, 1);
                       goToMonth(newDate);
