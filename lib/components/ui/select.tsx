@@ -18,7 +18,8 @@ import { ChevronDownOutline } from "./icon/ChevronDownOutline";
 import { LoadingFilled } from "./icon/LoadingFilled";
 import { matchSorter } from "match-sorter";
 
-interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface SelectProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
   options: {
     label: string;
