@@ -490,6 +490,44 @@ function Calendar({
         },
       }}
       {...calendarProps}
+      onDayClick={(date, modifiers, e) => {
+        if (
+          //NOTE - If nothing is selected yet
+          (calendarProps.mode === "range" &&
+            calendarProps.selected?.from !== undefined &&
+            calendarProps.selected?.to !== undefined) ||
+          //NOTE - If the date is less than the from date
+          (calendarProps.mode === "range" &&
+            calendarProps.selected?.from &&
+            date < calendarProps.selected?.from) ||
+          //NOTE - If nothing is selected yet
+          (calendarProps.mode === "range" && !calendarProps.selected)
+        ) {
+          //NOTE - Select the date as the from date
+          calendarProps.onSelect?.(
+            { from: date, to: undefined },
+            date,
+            modifiers,
+            e,
+          );
+        } else if (
+          //NOTE - If the from date is the same as the date
+          calendarProps.mode === "range" &&
+          calendarProps.selected?.from &&
+          calendarProps.selected?.from.toDateString() === date.toDateString()
+        ) {
+          //NOTE - Select the date as the from and to date
+          calendarProps.onSelect?.(
+            { from: date, to: date },
+            date,
+            modifiers,
+            e,
+          );
+        } else {
+          //NOTE - Otherwise, let the event be handled as usual
+          calendarProps.onDayClick?.(date, modifiers, e);
+        }
+      }}
       locale={
         locale === enUS
           ? {
