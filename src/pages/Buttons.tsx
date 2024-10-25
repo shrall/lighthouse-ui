@@ -50,6 +50,24 @@ function Buttons() {
         <Button variant="ghost" size="large" disabled>
           Ghost
         </Button>
+
+        <Button variant="inversed" size="small">
+          Inversed
+        </Button>
+        <Button variant="inversed">Inversed</Button>
+        <Button variant="inversed" size="large">
+          Inversed
+        </Button>
+        <Button variant="inversed" size="small" disabled>
+          Inversed
+        </Button>
+        <Button variant="inversed" disabled>
+          Inversed
+        </Button>
+        <Button variant="inversed" size="large" disabled>
+          Inversed
+        </Button>
+
         <Button size="small" leftNode={<PlaceholderOutline />}>
           Primary
         </Button>

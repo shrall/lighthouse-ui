@@ -14,6 +14,8 @@ const buttonVariants = cva(
           "lui-bg-transparent lui-border lui-border-ocean-primary-10 lui-text-ocean-primary-10 hover:lui-bg-ocean-light-20 active:lui-bg-ocean-secondary-10 disabled:lui-bg-transparent disabled:lui-border-ocean-light-40 disabled:lui-text-ocean-dark-10",
         ghost:
           "lui-bg-transparent lui-text-ocean-primary-10 hover:lui-bg-ocean-light-20 active:lui-bg-ocean-secondary-10 disabled:lui-bg-transparent disabled:lui-text-ocean-dark-10",
+        inversed:
+          "lui-bg-ocean-light-10 lui-text-ocean-primary-30 hover:lui-bg-ocean-secondary-20 hover:lui-text-ocean-light-10 active:lui-bg-ocean-secondary-30 disabled:lui-text-ocean-dark-10 disabled:lui-bg-transparent",
       },
       size: {
         large:
