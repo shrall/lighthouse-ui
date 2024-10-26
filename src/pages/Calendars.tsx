@@ -3,14 +3,10 @@ import { useState } from "react";
 import { DateRange } from "react-day-picker";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { CalendarOutline } from "@/components/ui/icon/CalendarOutline";
 import { enUS, id } from "date-fns/locale";
+import { DatePicker } from "@/components/ui/date-picker";
 
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
@@ -22,49 +18,40 @@ function Calendars() {
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Calendars</h3>
       <div className="lui-flex lui-flex-col lui-items-center lui-justify-center lui-gap-2 lui-text-center md:lui-flex-row">
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button
-              id="date"
-              variant={"secondary"}
-              className={cn(
-                "lui-w-[300px] lui-justify-start lui-text-left lui-font-normal",
-                !date && "text-muted-foreground",
-              )}
-            >
-              <CalendarOutline className="lui-mr-2 lui-h-4 lui-w-4" />
-              {date?.from ? (
-                date.to ? (
-                  <>
-                    {format(date.from, "LLL dd, y")} -{" "}
-                    {format(date.to, "LLL dd, y")}
-                  </>
-                ) : (
-                  format(date.from, "LLL dd, y")
-                )
+        <DatePicker
+          calendarProps={{
+            mode: "range",
+            defaultMonth: date?.from,
+            selected: date,
+            onSelect: setDate,
+            locale: id,
+          }}
+        >
+          <Button
+            id="date"
+            variant={"secondary"}
+            className={cn(
+              "lui-w-[300px] lui-justify-start lui-text-left lui-font-normal",
+              !date && "text-muted-foreground",
+            )}
+          >
+            <CalendarOutline className="lui-mr-2 lui-h-4 lui-w-4" />
+            {date?.from ? (
+              date.to ? (
+                <>
+                  {format(date.from, "LLL dd, y")} -{" "}
+                  {format(date.to, "LLL dd, y")}
+                </>
               ) : (
-                <span>Pick a date</span>
-              )}
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent align="center">
-            <Calendar
-              mode="range"
-              defaultMonth={date?.from}
-              selected={date}
-              onSelect={setDate}
-              locale={enUS}
-            />
-          </PopoverContent>
-        </Popover>
+                format(date.from, "LLL dd, y")
+              )
+            ) : (
+              <span>Pick a date</span>
+            )}
+          </Button>
+        </DatePicker>
         <Calendar
           mode="range"
-          disabled={[
-            {
-              from: new Date(2024, 0, 1),
-              to: new Date(2024, 11, 30),
-            },
-          ]}
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
@@ -114,6 +101,12 @@ function Calendars() {
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
+          disabled={[
+            {
+              from: new Date(2024, 0, 1),
+              to: new Date(2024, 11, 30),
+            },
+          ]}
         />
       </div>
     </div>

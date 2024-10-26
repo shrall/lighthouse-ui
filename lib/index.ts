@@ -181,6 +181,7 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./
 
 //NOTE - Beta
 export { Calendar } from "./components/ui/calendar";
+export { DatePicker } from "./components/ui/date-picker";
 export {
     DropdownMenu,
     DropdownMenuContent,

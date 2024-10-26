@@ -24,7 +24,7 @@ type Shortcut = {
   range: DateRange;
 };
 
-type CalendarProps = DayPickerProps & {
+export type CalendarProps = DayPickerProps & {
   disabled?: Matcher[];
   size?: "medium" | "large";
   alert?: AlertProps;
