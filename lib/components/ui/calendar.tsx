@@ -3,8 +3,14 @@
 import {
   DateRange,
   DayPicker,
+  Matcher,
+  isDateRange,
   useDayPicker,
   type DayPickerProps,
+  isDateAfterType,
+  isDateBeforeType,
+  isDateInterval,
+  rangeIncludesDate,
 } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -23,12 +29,60 @@ const getYearRange = (year: number) => {
   return `${startYear}-${endYear}`;
 };
 
+const isMonthDisabled = (
+  month: number,
+  year: number,
+  disabled: Matcher[] | undefined,
+) => {
+  if (!disabled || !Array.isArray(disabled)) return false;
+  let isDisabled = false;
+
+  disabled.forEach((matcher) => {
+    if (isDateInterval(matcher)) {
+      isDisabled =
+        (matcher.before.getMonth() > month &&
+          matcher.before.getFullYear() >= year) ||
+        (matcher.after.getMonth() < month &&
+          matcher.after.getFullYear() <= year);
+    } else if (isDateAfterType(matcher)) {
+      isDisabled =
+        matcher.after.getMonth() < month && matcher.after.getFullYear() <= year;
+    } else if (isDateBeforeType(matcher)) {
+      isDisabled =
+        matcher.before.getMonth() > month &&
+        matcher.before.getFullYear() >= year;
+    } else if (isDateRange(matcher)) {
+      isDisabled =
+        rangeIncludesDate(matcher, new Date(year, month, 1)) &&
+        rangeIncludesDate(matcher, new Date(year, month + 1, 0));
+    }
+  });
+
+  const disabledDates = disabled.filter((matcher) => matcher instanceof Date);
+  if (disabledDates.length > 0) {
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    const allDatesInMonth = Array.from(
+      { length: daysInMonth },
+      (_, i) => new Date(year, month, i + 1),
+    );
+
+    isDisabled = allDatesInMonth.every((date) =>
+      disabledDates.some(
+        (disabledDate) => disabledDate.toDateString() === date.toDateString(),
+      ),
+    );
+  }
+  return isDisabled;
+};
+
 type Shortcut = {
   label: string;
   range: DateRange;
 };
 
 type CalendarProps = DayPickerProps & {
+  disabled?: Matcher[];
   size?: "medium" | "large";
   alert?: AlertProps;
   shortcuts?: Shortcut[];
@@ -117,7 +171,7 @@ function Calendar({
                       "lui-flex lui-w-full lui-gap-2",
                       size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
                       size === "medium" &&
-                        "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
+                        "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll lui-scrollbar-w-none",
                     )}
                   >
                     {shortcuts.map((shortcut) => {
@@ -171,7 +225,7 @@ function Calendar({
                       "lui-flex lui-w-full lui-gap-2",
                       size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
                       size === "medium" &&
-                        "lui-scrollbar-w-none lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll",
+                        "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll lui-scrollbar-w-none",
                     )}
                   >
                     <Button
@@ -242,87 +296,103 @@ function Calendar({
           const { select, months, goToMonth } = useDayPicker<{
             mode: "range";
           }>();
-
           if (content === "date") {
             return <table {...props} />;
           } else if (content === "month") {
             return (
               <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
-                {Array.from({ length: 12 }, (_, i) => i).map((month) => (
-                  <Button
-                    key={month}
-                    variant="ghost"
-                    className={cn(
-                      //NOTE - Set month button as selected if the from date is in the same month & year
-                      rangeType === "daily" &&
-                        calendarProps.mode === "range" &&
-                        calendarProps.selected?.from?.getMonth() === month &&
-                        calendarProps.selected?.from?.getFullYear() ===
-                          months[0].date.getFullYear() &&
-                        buttonVariants({ variant: "primary" }),
-                      //NOTE - Set month button as selected in the mid range when the month is in the range of the selected dates
-                      rangeType === "monthly" &&
-                        calendarProps.mode === "range" &&
-                        calendarProps.selected &&
-                        calendarProps.selected.from &&
-                        calendarProps.selected.to &&
-                        calendarProps.selected.from <=
-                          new Date(months[0].date.getFullYear(), month) &&
-                        calendarProps.selected.to >=
-                          new Date(months[0].date.getFullYear(), month) &&
-                        "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
-                      //NOTE - Set month button as selected if the to date is in the same month & year as the from & to dates
-                      rangeType === "monthly" &&
-                        calendarProps.mode === "range" &&
-                        calendarProps.selected &&
-                        calendarProps.selected.from &&
-                        calendarProps.selected.to &&
-                        ((calendarProps.selected.from.getMonth() === month &&
-                          calendarProps.selected.from.getFullYear() ===
-                            months[0].date.getFullYear()) ||
-                          (calendarProps.selected.to.getMonth() === month &&
-                            calendarProps.selected.to.getFullYear() ===
-                              months[0].date.getFullYear())) &&
-                        buttonVariants({ variant: "primary" }),
-                      "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
-                    )}
-                    onClick={(e) => {
-                      if (rangeType === "daily") {
-                        const newDate = new Date(
-                          months[0].date.getFullYear(),
-                          month,
-                          1,
-                        );
-                        goToMonth(newDate);
-                        setContent("date");
-                      } else {
-                        if (calendarProps.mode === "range") {
-                          //NOTE - If it's fresh or the from is greater than the first day of the month
-                          //NOTE - Select the first day of the month
-                          !calendarProps.selected?.from ||
-                          calendarProps.selected?.from >
-                            new Date(months[0].date.getFullYear(), month, 1)
-                            ? select?.(
-                                new Date(
-                                  months[0].date.getFullYear(),
-                                  month,
-                                  1,
-                                ),
-                                {},
-                                e,
-                              )
-                            : // NOTE - If the to is in the same month
-                              // NOTE - Select the first day of the month and the last day of the month
-                              calendarProps.selected.to &&
-                                calendarProps.selected.to.getMonth() === month
-                              ? calendarProps.onSelect?.(
-                                  {
-                                    from: new Date(
-                                      months[0].date.getFullYear(),
-                                      month,
-                                      1,
-                                    ),
-                                    to: new Date(
+                {Array.from({ length: 12 }, (_, i) => i).map((month) => {
+                  const isDisabled = isMonthDisabled(
+                    month,
+                    months[0].date.getFullYear(),
+                    calendarProps.disabled,
+                  );
+                  return (
+                    <Button
+                      key={month}
+                      variant="ghost"
+                      disabled={isDisabled}
+                      className={cn(
+                        //NOTE - Set month button as selected if the from date is in the same month & year
+                        rangeType === "daily" &&
+                          calendarProps.mode === "range" &&
+                          calendarProps.selected?.from?.getMonth() === month &&
+                          calendarProps.selected?.from?.getFullYear() ===
+                            months[0].date.getFullYear() &&
+                          buttonVariants({ variant: "primary" }),
+                        //NOTE - Set month button as selected in the mid range when the month is in the range of the selected dates
+                        rangeType === "monthly" &&
+                          calendarProps.mode === "range" &&
+                          calendarProps.selected &&
+                          calendarProps.selected.from &&
+                          calendarProps.selected.to &&
+                          calendarProps.selected.from <=
+                            new Date(months[0].date.getFullYear(), month) &&
+                          calendarProps.selected.to >=
+                            new Date(months[0].date.getFullYear(), month) &&
+                          "lui-border lui-border-ocean-primary-10 lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                        //NOTE - Set month button as selected if the to date is in the same month & year as the from & to dates
+                        rangeType === "monthly" &&
+                          calendarProps.mode === "range" &&
+                          calendarProps.selected &&
+                          calendarProps.selected.from &&
+                          calendarProps.selected.to &&
+                          ((calendarProps.selected.from.getMonth() === month &&
+                            calendarProps.selected.from.getFullYear() ===
+                              months[0].date.getFullYear()) ||
+                            (calendarProps.selected.to.getMonth() === month &&
+                              calendarProps.selected.to.getFullYear() ===
+                                months[0].date.getFullYear())) &&
+                          buttonVariants({ variant: "primary" }),
+                        "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
+                      )}
+                      onClick={(e) => {
+                        if (rangeType === "daily") {
+                          const newDate = new Date(
+                            months[0].date.getFullYear(),
+                            month,
+                            1,
+                          );
+                          goToMonth(newDate);
+                          setContent("date");
+                        } else {
+                          if (calendarProps.mode === "range") {
+                            //NOTE - If it's fresh or the from is greater than the first day of the month
+                            //NOTE - Select the first day of the month
+                            !calendarProps.selected?.from ||
+                            calendarProps.selected?.from >
+                              new Date(months[0].date.getFullYear(), month, 1)
+                              ? select?.(
+                                  new Date(
+                                    months[0].date.getFullYear(),
+                                    month,
+                                    1,
+                                  ),
+                                  {},
+                                  e,
+                                )
+                              : // NOTE - If the to is in the same month
+                                // NOTE - Select the first day of the month and the last day of the month
+                                calendarProps.selected.to &&
+                                  calendarProps.selected.to.getMonth() === month
+                                ? calendarProps.onSelect?.(
+                                    {
+                                      from: new Date(
+                                        months[0].date.getFullYear(),
+                                        month,
+                                        1,
+                                      ),
+                                      to: new Date(
+                                        months[0].date.getFullYear(),
+                                        month,
+                                        new Date(
+                                          months[0].date.getFullYear(),
+                                          month + 1,
+                                          0,
+                                        ).getDate(),
+                                      ),
+                                    },
+                                    new Date(
                                       months[0].date.getFullYear(),
                                       month,
                                       new Date(
@@ -331,46 +401,37 @@ function Calendar({
                                         0,
                                       ).getDate(),
                                     ),
-                                  },
-                                  new Date(
-                                    months[0].date.getFullYear(),
-                                    month,
+                                    {},
+                                    e,
+                                  )
+                                : // NOTE - Select the last day of the month
+                                  select?.(
                                     new Date(
                                       months[0].date.getFullYear(),
-                                      month + 1,
-                                      0,
-                                    ).getDate(),
-                                  ),
-                                  {},
-                                  e,
-                                )
-                              : // NOTE - Select the last day of the month
-                                select?.(
-                                  new Date(
-                                    months[0].date.getFullYear(),
-                                    month,
-                                    new Date(
-                                      months[0].date.getFullYear(),
-                                      month + 1,
-                                      0,
-                                    ).getDate(),
-                                  ),
-                                  {},
-                                  e,
-                                );
+                                      month,
+                                      new Date(
+                                        months[0].date.getFullYear(),
+                                        month + 1,
+                                        0,
+                                      ).getDate(),
+                                    ),
+                                    {},
+                                    e,
+                                  );
+                          }
                         }
-                      }
-                    }}
-                  >
-                    {format(new Date(0, month), "MMMM", {
-                      locale: {
-                        localize: locale.localize ?? enUS.localize,
-                        formatLong: locale.formatLong ?? enUS.formatLong,
-                        options: locale.options ?? enUS.options,
-                      },
-                    })}
-                  </Button>
-                ))}
+                      }}
+                    >
+                      {format(new Date(0, month), "MMMM", {
+                        locale: {
+                          localize: locale.localize ?? enUS.localize,
+                          formatLong: locale.formatLong ?? enUS.formatLong,
+                          options: locale.options ?? enUS.options,
+                        },
+                      })}
+                    </Button>
+                  );
+                })}
               </div>
             );
           } else {
@@ -378,28 +439,30 @@ function Calendar({
               Math.floor(months[0].date.getFullYear() / 12) * 12;
             return (
               <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
-                {Array.from({ length: 12 }, (_, i) => i).map((year) => (
-                  <Button
-                    key={year}
-                    variant="ghost"
-                    className={cn(
-                      //NOTE - Set year button as selected if the from date is in the same year
-                      rangeType === "daily" &&
-                        calendarProps.mode === "range" &&
-                        calendarProps.selected?.from?.getFullYear() ===
-                          startYear + year &&
-                        buttonVariants({ variant: "primary" }),
-                      "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
-                    )}
-                    onClick={() => {
-                      const newDate = new Date(startYear + year, 0, 1);
-                      goToMonth(newDate);
-                      setContent("month");
-                    }}
-                  >
-                    {startYear + year}
-                  </Button>
-                ))}
+                {Array.from({ length: 12 }, (_, i) => i).map((year) => {
+                  return (
+                    <Button
+                      key={year}
+                      variant="ghost"
+                      className={cn(
+                        //NOTE - Set year button as selected if the from date is in the same year
+                        rangeType === "daily" &&
+                          calendarProps.mode === "range" &&
+                          calendarProps.selected?.from?.getFullYear() ===
+                            startYear + year &&
+                          buttonVariants({ variant: "primary" }),
+                        "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
+                      )}
+                      onClick={() => {
+                        const newDate = new Date(startYear + year, 0, 1);
+                        goToMonth(newDate);
+                        setContent("month");
+                      }}
+                    >
+                      {startYear + year}
+                    </Button>
+                  );
+                })}
               </div>
             );
           }

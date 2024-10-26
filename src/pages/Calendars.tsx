@@ -1,4 +1,4 @@
-import { addDays, format } from "date-fns";
+import { addDays, addYears, format } from "date-fns";
 import { useState } from "react";
 import { DateRange } from "react-day-picker";
 import { Button } from "@/components/ui/button";
@@ -14,8 +14,8 @@ import { enUS, id } from "date-fns/locale";
 
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
-    from: new Date(2022, 0, 20),
-    to: addDays(new Date(2022, 0, 20), 20),
+    from: new Date(),
+    to: addDays(new Date(), 2),
   });
 
   return (
@@ -59,6 +59,12 @@ function Calendars() {
         </Popover>
         <Calendar
           mode="range"
+          disabled={[
+            {
+              from: new Date(2024, 9, 1),
+              to: new Date(2024, 9, 31),
+            },
+          ]}
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
