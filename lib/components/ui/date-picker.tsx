@@ -3,6 +3,7 @@
 import { forwardRef, ForwardedRef, useState, useEffect } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 import { Calendar, CalendarProps } from "./calendar";
+import { cn } from "@/lib/utils";
 
 interface DatePickerProps
   extends React.ComponentPropsWithoutRef<typeof PopoverTrigger> {
@@ -12,7 +13,13 @@ interface DatePickerProps
 
 const DatePicker = forwardRef<HTMLButtonElement, DatePickerProps>(
   (
-    { children, contentProps, calendarProps, ...props }: DatePickerProps,
+    {
+      className,
+      children,
+      contentProps,
+      calendarProps,
+      ...props
+    }: DatePickerProps,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     const [open, setOpen] = useState(false);
@@ -29,7 +36,11 @@ const DatePicker = forwardRef<HTMLButtonElement, DatePickerProps>(
 
     return (
       <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger asChild ref={ref} {...props}>
+        <PopoverTrigger
+          ref={ref}
+          className={cn("lui-w-full", className)}
+          {...props}
+        >
           {children}
         </PopoverTrigger>
         <PopoverContent align="center" {...contentProps}>
