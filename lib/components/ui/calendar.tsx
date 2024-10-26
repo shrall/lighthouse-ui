@@ -4,13 +4,8 @@ import {
   DateRange,
   DayPicker,
   Matcher,
-  isDateRange,
   useDayPicker,
   type DayPickerProps,
-  isDateAfterType,
-  isDateBeforeType,
-  isDateInterval,
-  rangeIncludesDate,
 } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -22,59 +17,7 @@ import { addYears, format } from "date-fns";
 import { Separator } from "./separator";
 import { Alert, AlertProps } from "./alert";
 import { enUS } from "date-fns/locale";
-
-const getYearRange = (year: number) => {
-  const startYear = Math.floor(year / 12) * 12;
-  const endYear = startYear + 11;
-  return `${startYear}-${endYear}`;
-};
-
-const isMonthDisabled = (
-  month: number,
-  year: number,
-  disabled: Matcher[] | undefined,
-) => {
-  if (!disabled || !Array.isArray(disabled)) return false;
-  let isDisabled = false;
-
-  disabled.forEach((matcher) => {
-    if (isDateInterval(matcher)) {
-      isDisabled =
-        (matcher.before.getMonth() > month &&
-          matcher.before.getFullYear() >= year) ||
-        (matcher.after.getMonth() < month &&
-          matcher.after.getFullYear() <= year);
-    } else if (isDateAfterType(matcher)) {
-      isDisabled =
-        matcher.after.getMonth() < month && matcher.after.getFullYear() <= year;
-    } else if (isDateBeforeType(matcher)) {
-      isDisabled =
-        matcher.before.getMonth() > month &&
-        matcher.before.getFullYear() >= year;
-    } else if (isDateRange(matcher)) {
-      isDisabled =
-        rangeIncludesDate(matcher, new Date(year, month, 1)) &&
-        rangeIncludesDate(matcher, new Date(year, month + 1, 0));
-    }
-  });
-
-  const disabledDates = disabled.filter((matcher) => matcher instanceof Date);
-  if (disabledDates.length > 0) {
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    const allDatesInMonth = Array.from(
-      { length: daysInMonth },
-      (_, i) => new Date(year, month, i + 1),
-    );
-
-    isDisabled = allDatesInMonth.every((date) =>
-      disabledDates.some(
-        (disabledDate) => disabledDate.toDateString() === date.toDateString(),
-      ),
-    );
-  }
-  return isDisabled;
-};
+import { getYearRange, isMonthDisabled, isYearDisabled } from "@/lib/calendar";
 
 type Shortcut = {
   label: string;
@@ -440,10 +383,15 @@ function Calendar({
             return (
               <div className="lui-grid lui-grid-cols-3 lui-gap-x-1 lui-gap-y-4">
                 {Array.from({ length: 12 }, (_, i) => i).map((year) => {
+                  const isDisabled = isYearDisabled(
+                    startYear + year,
+                    calendarProps.disabled,
+                  );
                   return (
                     <Button
                       key={year}
                       variant="ghost"
+                      disabled={isDisabled}
                       className={cn(
                         //NOTE - Set year button as selected if the from date is in the same year
                         rangeType === "daily" &&
