@@ -19,7 +19,7 @@ import { Checkbox } from "./checkbox";
 import { ChevronDownOutline } from "./icon/ChevronDownOutline";
 import { LoadingFilled } from "./icon/LoadingFilled";
 
-interface MultiSelectProps
+export interface MultiSelectProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
   options: {
@@ -28,7 +28,7 @@ interface MultiSelectProps
     value: string;
   }[];
   onValueChange: (value: string[]) => void;
-  defaultValue: string[];
+  defaultValue?: string[];
   placeholder?: string;
   maxCount?: number;
   modalPopover?: boolean;
@@ -93,7 +93,9 @@ export const MultiSelect = React.forwardRef<
     const commandRef = React.useRef<HTMLDivElement>(null);
 
     React.useEffect(() => {
-      setSelectedValues(defaultValue);
+      if (defaultValue && defaultValue.length > 0) {
+        setSelectedValues(defaultValue);
+      }
     }, [defaultValue]);
 
     const toggleOption = (value: string) => {
@@ -124,15 +126,11 @@ export const MultiSelect = React.forwardRef<
 
     const observerRef = React.useCallback(
       (element: HTMLElement | null) => {
-        // When isLoading is true, this callback will do nothing.
-        // It means that the next function will never be called.
-        // It is safe because the intersection observer has disconnected the previous element.
         if (isLoading) return;
 
         if (observer.current) observer.current.disconnect();
         if (!element) return;
 
-        // Create a new IntersectionObserver instance because hasMore or next may be changed.
         observer.current = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting && infiniteScroll?.hasMore) {
             infiniteScroll.fetchMore();
@@ -224,7 +222,7 @@ export const MultiSelect = React.forwardRef<
                 )}
               >
                 <div className="lui-flex lui-w-full lui-items-center lui-justify-between">
-                  <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2">
+                  <div className="lui-flex lui-w-full lui-flex-wrap lui-items-center lui-gap-2">
                     {selectedValues.slice(0, maxCount).map((value) => {
                       const option = options.find((o) => o.value === value);
                       return (
@@ -264,7 +262,7 @@ export const MultiSelect = React.forwardRef<
                         }
                       }}
                       onKeyDown={handleKeyDown}
-                      className="lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
+                      className="lui-flex-grow lui-caret-ocean-primary-10 focus:lui-outline-none disabled:lui-bg-transparent disabled:placeholder:lui-text-ocean-light-40"
                       ref={inputRef}
                       disabled={props.disabled}
                     />

@@ -9,6 +9,7 @@ import Form from "./components/Form";
 import { FormCheckbox } from "./components/FormCheckbox";
 import { FormSelect } from "./components/FormSelect";
 import { Separator } from "@/index";
+import { FormMultiSelect } from "./components/FormMultiSelect";
 
 interface FormPageProps {}
 
@@ -16,6 +17,7 @@ interface FormData {
   name: string;
   checkbox: boolean;
   role: string;
+  hobbies: string[];
 }
 
 const FormPage: React.FC<FormPageProps> = () => {
@@ -29,6 +31,7 @@ const FormPage: React.FC<FormPageProps> = () => {
       name: "",
       checkbox: false,
       role: "",
+      hobbies: [],
     },
   });
 
@@ -63,6 +66,16 @@ const FormPage: React.FC<FormPageProps> = () => {
                 { label: "Admin", value: "admin" },
                 { label: "User", value: "user" },
                 { label: "Guest", value: "guest" },
+              ]}
+            />
+            <FormMultiSelect
+              control={form.control}
+              name="hobbies"
+              label="Hobbies"
+              options={[
+                { label: "Coding", value: "coding" },
+                { label: "Reading", value: "reading" },
+                { label: "Traveling", value: "traveling" },
               ]}
             />
             <FormCheckbox

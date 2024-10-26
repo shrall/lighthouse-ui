@@ -6,4 +6,5 @@ export const formSchema = z.object({
     .boolean()
     .refine((value) => value === true, { message: "Checkbox must be checked" }),
   role: z.string().min(1, { message: "Role is required" }),
+  hobbies: z.array(z.string()).min(1, { message: "Hobbies are required" }),
 });

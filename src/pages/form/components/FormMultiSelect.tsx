@@ -1,17 +1,17 @@
 import * as React from "react";
 
 import { Control, Controller, FieldValues, Path } from "react-hook-form";
-import { Select, SelectProps } from "@/components/ui/select";
+import { MultiSelect, MultiSelectProps } from "@/components/ui/multi-select";
 
-interface FormSelectProps<TFieldValues extends FieldValues>
-  extends Omit<SelectProps, "value" | "onValueChange"> {
+interface FormMultiSelect<TFieldValues extends FieldValues>
+  extends Omit<MultiSelectProps, "value" | "onValueChange"> {
   control: Control<TFieldValues>;
   name: Path<TFieldValues>;
 }
 
-const FormSelect = React.forwardRef(
+const FormMultiSelect = React.forwardRef(
   <TFieldValues extends FieldValues>(
-    { control, name, ...props }: FormSelectProps<TFieldValues>,
+    { control, name, ...props }: FormMultiSelect<TFieldValues>,
     ref: React.ForwardedRef<HTMLButtonElement>,
   ) => {
     return (
@@ -23,7 +23,7 @@ const FormSelect = React.forwardRef(
           const { onChange, onBlur, disabled } = field;
 
           return (
-            <Select
+            <MultiSelect
               {...props}
               {...field}
               onValueChange={onChange}
@@ -45,9 +45,9 @@ const FormSelect = React.forwardRef(
     );
   },
 ) as <TFieldValues extends FieldValues>(
-  props: FormSelectProps<TFieldValues> & {
+  props: FormMultiSelect<TFieldValues> & {
     ref?: React.ForwardedRef<HTMLButtonElement>;
   },
 ) => React.ReactElement;
 
-export { FormSelect };
+export { FormMultiSelect };
