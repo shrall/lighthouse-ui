@@ -1,5 +1,12 @@
 
 
+## [0.5.0-beta.15](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.14...v0.5.0-beta.15) (2024-10-26)
+
+
+### Styles
+
+* **date-picker:** set trigger to full width by default ([afcdae7](https://github.com/shrall/lighthouse-ui/commit/afcdae7b0d4787584472664bea726c6d8b9d5fea))
+
 ## [0.5.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.13...v0.5.0-beta.14) (2024-10-26)
 
 
