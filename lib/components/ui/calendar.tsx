@@ -51,6 +51,8 @@ function Calendar({
   const [shortcutButtonPosition, setShortcutButtonPosition] =
     useState<number>(0);
   const shortcutContainerRef = useRef<HTMLDivElement>(null);
+  const [firstShortcutButtonPosition, setFirstShortcutButtonPosition] =
+    useState<number>(0);
 
   useEffect(() => {
     if (shortcutButtonPosition) {
@@ -118,8 +120,21 @@ function Calendar({
                   )}
                 >
                   {shortcuts &&
-                    shortcuts.map((shortcut) => {
+                    shortcuts.map((shortcut, index) => {
                       const buttonRef = useRef<HTMLButtonElement>(null);
+
+                      useEffect(() => {
+                        if (
+                          firstShortcutButtonPosition === 0 &&
+                          buttonRef.current &&
+                          index === 0
+                        ) {
+                          setFirstShortcutButtonPosition(
+                            buttonRef.current?.offsetLeft ?? 0,
+                          );
+                        }
+                      }, [buttonRef]);
+
                       return (
                         <Button
                           ref={buttonRef}
@@ -149,13 +164,10 @@ function Calendar({
                                 e,
                               );
                               goToMonth(shortcut.range.from ?? new Date());
-                              console.info(
-                                "button position:",
-                                buttonRef.current?.offsetLeft,
-                              );
                               setShortcutButtonPosition(
                                 buttonRef.current?.offsetLeft
-                                  ? buttonRef.current.offsetLeft - 456
+                                  ? buttonRef.current.offsetLeft -
+                                      firstShortcutButtonPosition
                                   : 0,
                               );
                             }
