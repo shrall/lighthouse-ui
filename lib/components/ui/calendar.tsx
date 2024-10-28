@@ -108,7 +108,7 @@ function Calendar({
                 )}
               >
                 <div
-                  ref={shortcutContainerRef}
+                  ref={size === "medium" ? shortcutContainerRef : undefined}
                   className={cn(
                     "lui-flex lui-w-full lui-gap-2",
                     size === "large" &&
