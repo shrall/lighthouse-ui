@@ -1,5 +1,12 @@
 
 
+## [0.5.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.2...v0.5.3) (2024-10-28)
+
+
+### Bug Fixes
+
+* **calendar:** set shortcut container ref only on medium size ([866cc59](https://github.com/shrall/lighthouse-ui/commit/866cc594face4d81b23556d86ab943281efb94d5))
+
 ## [0.5.2](https://github.com/shrall/lighthouse-ui/compare/v0.5.1...v0.5.2) (2024-10-28)
 
 
