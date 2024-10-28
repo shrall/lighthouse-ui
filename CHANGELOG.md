@@ -1,5 +1,12 @@
 
 
+## [0.5.5](https://github.com/shrall/lighthouse-ui/compare/v0.5.4...v0.5.5) (2024-10-28)
+
+
+### Bug Fixes
+
+* **calendar:** shortcut button not scrolling horizontally on medium size ([dc3b941](https://github.com/shrall/lighthouse-ui/commit/dc3b94153bedb4356065fbd2a6661bc64d958636))
+
 ## [0.5.4](https://github.com/shrall/lighthouse-ui/compare/v0.5.3...v0.5.4) (2024-10-28)
 
 
