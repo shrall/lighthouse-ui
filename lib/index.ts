@@ -180,7 +180,7 @@ export { MediaPlayFilled } from "./components/ui/icon/MediaPlayFilled";
 export { FilePDFFilled } from "./components/ui/icon/FilePDFFilled";
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./components/ui/accordion";
 
-//NOTE - Beta
+//NOTE - v0.5.0
 export { Calendar } from "./components/ui/calendar";
 export { DatePicker } from "./components/ui/date-picker";
 export {
