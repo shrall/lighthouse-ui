@@ -11,7 +11,7 @@ function Toaster({ ...props }: ToasterProps) {
   return (
     <Sonner
       theme="light"
-      className="lui-font-bca lg:lui-min-w-[800px]"
+      className="lui-w-[calc(100vw-2.5rem)] lui-max-w-[800px] lui-font-bca"
       toastOptions={{
         classNames: {
           toast:

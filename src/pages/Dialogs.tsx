@@ -8,37 +8,37 @@ function Dialogs() {
       <h3>Dialogs</h3>
       <div className="lui-flex lui-flex-wrap lui-items-center lui-gap-2 lui-text-center">
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>xs</Button>
           </DialogTrigger>
           <DialogContent size="xs">hello!</DialogContent>
         </Dialog>
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>sm</Button>
           </DialogTrigger>
           <DialogContent size="sm">hello!</DialogContent>
         </Dialog>
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>md</Button>
           </DialogTrigger>
           <DialogContent size="md">hello!</DialogContent>
         </Dialog>
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>lg</Button>
           </DialogTrigger>
           <DialogContent size="lg">hello!</DialogContent>
         </Dialog>
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>xl</Button>
           </DialogTrigger>
           <DialogContent size="xl">hello!</DialogContent>
         </Dialog>
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>full</Button>
           </DialogTrigger>
           <DialogContent size="full">hello!</DialogContent>
@@ -46,12 +46,14 @@ function Dialogs() {
       </div>
       <div className="lui-flex lui-items-center lui-gap-2 lui-text-center">
         <DialogText
+          asChild
           title="Information"
           description="Morbi rutrum elit et egestas ultricies. Aenean eu lorem id justo Morbi rutrum elit et egestas ultricies. Aenean eu lorem id justo "
         >
           <Button>Text</Button>
         </DialogText>
         <DialogText
+          asChild
           title="With Buttons"
           buttons={{
             primary: {

@@ -168,6 +168,7 @@ export { PaginationDetailed } from "./components/ui/pagination-detailed";
 export { Stepper } from "./components/ui/stepper";
 export { StepperCircle } from "./components/ui/stepper-circle";
 export { addMinutes, TimePicker } from "@/components/ui/time-picker";
+export type { ValidTime } from "@/components/ui/time-picker";
 
 //NOTE - v0.4.0
 export { PlusOutline } from "./components/ui/icon/PlusOutline";
@@ -180,11 +181,12 @@ export { FilePDFFilled } from "./components/ui/icon/FilePDFFilled";
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "./components/ui/accordion";
 
 //NOTE - Beta
-// export { Calendar } from "./components/ui/calendar";
-// export {
-//     DropdownMenu,
-//     DropdownMenuContent,
-//     DropdownMenuItem,
-//     DropdownMenuTrigger,
-// } from "./components/ui/dropdown-menu";
-// export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Calendar } from "./components/ui/calendar";
+export { DatePicker } from "./components/ui/date-picker";
+export {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "./components/ui/dropdown-menu";
+export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";

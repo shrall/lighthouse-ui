@@ -1,123 +1,225 @@
+## [0.5.0-beta.15](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.14...v0.5.0-beta.15) (2024-10-26)
 
+### Styles
 
-## [0.4.10](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.4.10) (2024-10-21)
+- **date-picker:** set trigger to full width by default ([afcdae7](https://github.com/shrall/lighthouse-ui/commit/afcdae7b0d4787584472664bea726c6d8b9d5fea))
 
+## [0.5.0-beta.14](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.13...v0.5.0-beta.14) (2024-10-26)
 
 ### Features
 
-* **icon:** add ArrowLeftLargeOutline icon ([ae5086b](https://github.com/shrall/lighthouse-ui/commit/ae5086b851892e1feeb84161b0db2ce304335488))
+- add date picker ([9639575](https://github.com/shrall/lighthouse-ui/commit/96395753a00720419e32f6e85b767f301739b825))
+- add form component ([6e1764b](https://github.com/shrall/lighthouse-ui/commit/6e1764b64b55d6dd6e4e228e47cf0efeeb214f34))
+- add FormCheckbox ([214a5b9](https://github.com/shrall/lighthouse-ui/commit/214a5b9faef8455ad4a99c8d4a73332f8e4c91a2))
+- add FormMultiSelect component ([028b4d5](https://github.com/shrall/lighthouse-ui/commit/028b4d528198bb74f2852d6b409fc39af08cd696))
+- add FormSelect ([6e2e1dc](https://github.com/shrall/lighthouse-ui/commit/6e2e1dc65d539b19c4a6d59f78f9c2f0d62265f6))
+- **button:** add inversed variant ([755d96c](https://github.com/shrall/lighthouse-ui/commit/755d96c1dc0877538c9f33f677926dadd5822b7a))
+- **calendar:** add active state on month & year view ([40ac8f5](https://github.com/shrall/lighthouse-ui/commit/40ac8f510f173cdc1e17521b6aa4f0f25e5640cd))
+- **calendar:** add logic to show disabled years ([9bec731](https://github.com/shrall/lighthouse-ui/commit/9bec73142a0f668a18652892399d6374ec53aaf4))
+- **calendar:** update day selection behavior ([2118a8d](https://github.com/shrall/lighthouse-ui/commit/2118a8d6f39b3847eb437c243417e806265c0874))
+- **calendar:** update logic to check disabled months ([6b209ee](https://github.com/shrall/lighthouse-ui/commit/6b209eeaa1078cbd9385f032e7a42b8d824d1ebc))
+- **form-checkbox:** set disabled prop from useForm hook ([065d78d](https://github.com/shrall/lighthouse-ui/commit/065d78da0093975c9df69c971fd4afdb1d4a0e0d))
+- **form-checkbox:** set validation to required ([1521862](https://github.com/shrall/lighthouse-ui/commit/1521862302400e60fec68fb3c5f7e7b1a17c9aca))
+- **form-checkbox:** update to use checkbox component directly ([623d173](https://github.com/shrall/lighthouse-ui/commit/623d173c3219ce8949933bff1c612177ed3129b1))
+- **form-input:** add ref prop ([746bb28](https://github.com/shrall/lighthouse-ui/commit/746bb28f80ca67e6e2ebc95df2c1fe8772c56973))
+- **form-input:** set name prop type to follow generics passed to useForm ([7fb6e9a](https://github.com/shrall/lighthouse-ui/commit/7fb6e9a032d73cf22045d464988317fa98013fe0))
+- **form-input:** update regex type to not allow pattern field when type isn't custom ([9a717b4](https://github.com/shrall/lighthouse-ui/commit/9a717b4cf550c38a0ff9450494c78ab07a2ffe20))
+- **form-input:** update to use input component directly ([9eca753](https://github.com/shrall/lighthouse-ui/commit/9eca7539346351c9df4817f0226c437e2d59b011))
+- **form-select:** update to use select component directly ([87811dd](https://github.com/shrall/lighthouse-ui/commit/87811dd52c4f4534f8fe7e60fb625608b638bac4))
+- **form:** add FormInput ([03db78d](https://github.com/shrall/lighthouse-ui/commit/03db78dd36decc03d92580c90deda22558a6a694))
 
-## [0.4.9](https://github.com/shrall/lighthouse-ui/compare/v0.4.8...v0.4.9) (2024-10-21)
+## [0.5.0-beta.13](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.12...v0.5.0-beta.13) (2024-10-24)
 
+### Styles
+
+- **alert:** set info variant text color to primary 10 ([5ad91df](https://github.com/shrall/lighthouse-ui/commit/5ad91df0c2a13e15089454159558c4e14b131136))
+- **pagination:** remove outer padding ([7518d2e](https://github.com/shrall/lighthouse-ui/commit/7518d2e5b18a8e75f8c0514de665ff64e31c8fe9))
+- **pagination:** set data texts to 14px ([d5d04af](https://github.com/shrall/lighthouse-ui/commit/d5d04af00c13d88ec4183c2f0cec527b2db95ba0))
+- **pagination:** set show items text to 12px ([7c8f6ad](https://github.com/shrall/lighthouse-ui/commit/7c8f6ad84539244c38674f0b90bcdb7776158740))
+- **toast:** update width on responsive screens ([e895034](https://github.com/shrall/lighthouse-ui/commit/e895034e984a1d8243069386d59fe7e83831a160))
+
+## [0.5.0-beta.12](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.11...v0.5.0-beta.12) (2024-10-23)
+
+### Features
+
+- **time-picker:** export ValidTime type ([9da7361](https://github.com/shrall/lighthouse-ui/commit/9da736197dba3e71bd7e677dc99a380315d13db9))
+
+## [0.5.0-beta.11](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.10...v0.5.0-beta.11) (2024-10-23)
+
+### Bug Fixes
+
+- **tabs:** set tabs list & triggers props to be optional ([0073f81](https://github.com/shrall/lighthouse-ui/commit/0073f819b54b1a564abd98d767b03d97132bb560))
+
+## [0.5.0-beta.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.9...v0.5.0-beta.10) (2024-10-23)
+
+### Bug Fixes
+
+- **calendar:** 3rd day of the week is always disabled ([52f80a0](https://github.com/shrall/lighthouse-ui/commit/52f80a0f4a055364972dfb72485b440bbc0f3fa1))
+
+## [0.5.0-beta.9](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.8...v0.5.0-beta.9) (2024-10-23)
+
+### Bug Fixes
+
+- **calendar:** locale is mixed ([965e64a](https://github.com/shrall/lighthouse-ui/commit/965e64ade08285b5dfe2e24aa75b93dbc8188478))
+
+## [0.5.0-beta.8](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.7...v0.5.0-beta.8) (2024-10-23)
+
+### Bug Fixes
+
+- **calendar:** shortcut prop not allowing only data to be passed ([9b20a72](https://github.com/shrall/lighthouse-ui/commit/9b20a722d91cb3990053137b0eae7f8130c1f26a))
+
+## [0.5.0-beta.7](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.6...v0.5.0-beta.7) (2024-10-23)
+
+### Styles
+
+- **calendar:** update max width when there's no shortcuts ([140deeb](https://github.com/shrall/lighthouse-ui/commit/140deeb3d4bf8f9617d0262662b9f8cd26699e6c))
+
+## [0.5.0-beta.6](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.5...v0.5.0-beta.6) (2024-10-23)
+
+### Styles
+
+- **calendar:** only show month button style variation when it's on month picker mode ([f05fc0b](https://github.com/shrall/lighthouse-ui/commit/f05fc0bd5c916c885f5d5b5b40e20b59b64d61d4))
+
+## [0.5.0-beta.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.5.0-beta.5) (2024-10-23)
 
 ### ⚠ BREAKING CHANGES
 
-* **tabs:** replace list & trigger props to be more complete
-* **tabs:** remove TabsContent & add tab state props
+- **calendar:** update to be compatible with react-day-picker v9
+
+### Features
+
+- **button:** add textProps prop ([ed24e50](https://github.com/shrall/lighthouse-ui/commit/ed24e509d667ad046570fa84880a1eeb3835ec08))
+- **calendar:** add alert prop ([5ff2f58](https://github.com/shrall/lighthouse-ui/commit/5ff2f58ecca09bcce158953641627da3958121cc))
+- **calendar:** add month picker ([7d0e914](https://github.com/shrall/lighthouse-ui/commit/7d0e9147ee218b926c5d7a9d56e7deb08fc5f544))
+- **calendar:** add month view toggle ([fdb10d8](https://github.com/shrall/lighthouse-ui/commit/fdb10d82c3a16b056ac286fad71f87b384523e2e))
+- **calendar:** add shortcuts ([464fc30](https://github.com/shrall/lighthouse-ui/commit/464fc3035b96614f9479b4d0e6a36dd6e4924c5d))
+- **calendar:** add size prop & new shortcut style ([b492d83](https://github.com/shrall/lighthouse-ui/commit/b492d838ac138927604361bef0b10e07260a4083))
+- **calendar:** add year view toggle ([1bb8ef3](https://github.com/shrall/lighthouse-ui/commit/1bb8ef371617c89613727559ea2fac4e602b0814))
+
+### Styles
+
+- **calendar:** adjust size ([ba48528](https://github.com/shrall/lighthouse-ui/commit/ba48528d0bcf5a7e31c585b0ae34851baddb340b))
+- **popover:** remove padding on content ([813494d](https://github.com/shrall/lighthouse-ui/commit/813494def359e266a73fec5f0b088068d0ce20c1))
 
 ### Code Refactoring
 
-* **tabs:** remove TabsContent & add tab state props ([74372c1](https://github.com/shrall/lighthouse-ui/commit/74372c1e60f69302900b07cd008ba7d7b09a0a8b))
-* **tabs:** replace list & trigger props to be more complete ([20e16aa](https://github.com/shrall/lighthouse-ui/commit/20e16aa663a8870157b3ccd00c768628d2a918a3))
+- **calendar:** update to be compatible with react-day-picker v9 ([a1cf24a](https://github.com/shrall/lighthouse-ui/commit/a1cf24a890087b772bca8a3af980cb0d9a8d6fc5))
 
-## [0.4.8](https://github.com/shrall/lighthouse-ui/compare/v0.4.7...v0.4.8) (2024-10-19)
+## [0.5.0-beta.4](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-17)
 
+## [0.5.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
+
+## [0.5.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
+
+## [0.5.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
+
+## [0.5.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.3...v0.5.0-beta.4) (2024-10-16)
+
+## [0.4.10](https://github.com/shrall/lighthouse-ui/compare/v0.4.9...v0.4.10) (2024-10-21)
+
+### Features
+
+- **icon:** add ArrowLeftLargeOutline icon ([ae5086b](https://github.com/shrall/lighthouse-ui/commit/ae5086b851892e1feeb84161b0db2ce304335488))
+
+## [0.4.9](https://github.com/shrall/lighthouse-ui/compare/v0.4.8...v0.4.9) (2024-10-21)
 
 ### ⚠ BREAKING CHANGES
 
-* **time-picker:** set error message from the component condition
+- **tabs:** replace list & trigger props to be more complete
+- **tabs:** remove TabsContent & add tab state props
+
+### Code Refactoring
+
+- **tabs:** remove TabsContent & add tab state props ([74372c1](https://github.com/shrall/lighthouse-ui/commit/74372c1e60f69302900b07cd008ba7d7b09a0a8b))
+- **tabs:** replace list & trigger props to be more complete ([20e16aa](https://github.com/shrall/lighthouse-ui/commit/20e16aa663a8870157b3ccd00c768628d2a918a3))
+
+## [0.4.8](https://github.com/shrall/lighthouse-ui/compare/v0.4.7...v0.4.8) (2024-10-19)
+
+### ⚠ BREAKING CHANGES
+
+- **time-picker:** set error message from the component condition
 
 ### Features
 
-* **input:** update regex prop with discriminated union ([f529b72](https://github.com/shrall/lighthouse-ui/commit/f529b72e71c395386d59ffaa5956a64eca2c6d34))
-* **time-picker:** set error message from the component condition ([2f8ce34](https://github.com/shrall/lighthouse-ui/commit/2f8ce346bd076e11f7a7bee53d85ebcbb23cdd75))
-
+- **input:** update regex prop with discriminated union ([f529b72](https://github.com/shrall/lighthouse-ui/commit/f529b72e71c395386d59ffaa5956a64eca2c6d34))
+- **time-picker:** set error message from the component condition ([2f8ce34](https://github.com/shrall/lighthouse-ui/commit/2f8ce346bd076e11f7a7bee53d85ebcbb23cdd75))
 
 ### Bug Fixes
 
-* **time-picker:** options get selected on hover ([a00e235](https://github.com/shrall/lighthouse-ui/commit/a00e235dcb5ac3b6485c80ba793b1800e187c650))
-
+- **time-picker:** options get selected on hover ([a00e235](https://github.com/shrall/lighthouse-ui/commit/a00e235dcb5ac3b6485c80ba793b1800e187c650))
 
 ### Styles
 
-* **accordion:** add icon animation ([86ec4c1](https://github.com/shrall/lighthouse-ui/commit/86ec4c1fc5915a908e898b1bd7b6f00c5dba9b92))
-* **input:** set caret color to primary 10 & primary 30 for outline inputs ([71c5f75](https://github.com/shrall/lighthouse-ui/commit/71c5f7579b01f52aeb030c98320e0dd7234537f5))
-* set font smoothing to antialiased ([4cc0bf2](https://github.com/shrall/lighthouse-ui/commit/4cc0bf210e18cadfaf8576a6ca8bef731509b3a8))
+- **accordion:** add icon animation ([86ec4c1](https://github.com/shrall/lighthouse-ui/commit/86ec4c1fc5915a908e898b1bd7b6f00c5dba9b92))
+- **input:** set caret color to primary 10 & primary 30 for outline inputs ([71c5f75](https://github.com/shrall/lighthouse-ui/commit/71c5f7579b01f52aeb030c98320e0dd7234537f5))
+- set font smoothing to antialiased ([4cc0bf2](https://github.com/shrall/lighthouse-ui/commit/4cc0bf210e18cadfaf8576a6ca8bef731509b3a8))
 
 ## [0.4.7](https://github.com/shrall/lighthouse-ui/compare/v0.4.6...v0.4.7) (2024-10-18)
 
-
 ### Features
 
-* **dialog:** add closeOnClickOutside prop ([389914c](https://github.com/shrall/lighthouse-ui/commit/389914c24fbcad11560b77e6fb5efda30453054f))
+- **dialog:** add closeOnClickOutside prop ([389914c](https://github.com/shrall/lighthouse-ui/commit/389914c24fbcad11560b77e6fb5efda30453054f))
 
 ## [0.4.6](https://github.com/shrall/lighthouse-ui/compare/v0.4.5...v0.4.6) (2024-10-18)
 
-
 ### Styles
 
-* **pagination-detailed:** hide text information on screen width < 748px ([e8e200a](https://github.com/shrall/lighthouse-ui/commit/e8e200a574966796a3f8e4519a07146324223c39))
+- **pagination-detailed:** hide text information on screen width < 748px ([e8e200a](https://github.com/shrall/lighthouse-ui/commit/e8e200a574966796a3f8e4519a07146324223c39))
 
 ## [0.4.5](https://github.com/shrall/lighthouse-ui/compare/v0.4.4...v0.4.5) (2024-10-18)
 
-
 ### Features
 
-* **icon:** add MediaPlayFilled & FilePDFFilled icons ([01dd6f3](https://github.com/shrall/lighthouse-ui/commit/01dd6f358c03b97291757dc96836c27dbf4b1b20))
+- **icon:** add MediaPlayFilled & FilePDFFilled icons ([01dd6f3](https://github.com/shrall/lighthouse-ui/commit/01dd6f358c03b97291757dc96836c27dbf4b1b20))
 
 ## [0.4.4](https://github.com/shrall/lighthouse-ui/compare/v0.4.3...v0.4.4) (2024-10-17)
 
-
 ### Styles
 
-* **accordion:** add different size based on breakpoints ([b2eeafe](https://github.com/shrall/lighthouse-ui/commit/b2eeafef1fc48eef8ead6aa9e0c1c78a7c3613ea))
+- **accordion:** add different size based on breakpoints ([b2eeafe](https://github.com/shrall/lighthouse-ui/commit/b2eeafef1fc48eef8ead6aa9e0c1c78a7c3613ea))
 
 ## [0.4.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.2...v0.4.3) (2024-10-16)
 
-
 ### Styles
 
-* **accordion:** set spacing between accordions to 8px ([ee57db6](https://github.com/shrall/lighthouse-ui/commit/ee57db6b19ac085734092f0e4ff8fa7362bcd77c))
+- **accordion:** set spacing between accordions to 8px ([ee57db6](https://github.com/shrall/lighthouse-ui/commit/ee57db6b19ac085734092f0e4ff8fa7362bcd77c))
 
 ## [0.4.2](https://github.com/shrall/lighthouse-ui/compare/v0.4.1...v0.4.2) (2024-10-16)
 
-
 ### Bug Fixes
 
-* adjust useWindowSize hook to work on client components ([1e2e56e](https://github.com/shrall/lighthouse-ui/commit/1e2e56e8ebff22394608b2ee1af9a10656877679))
+- adjust useWindowSize hook to work on client components ([1e2e56e](https://github.com/shrall/lighthouse-ui/commit/1e2e56e8ebff22394608b2ee1af9a10656877679))
 
 ## [0.4.1](https://github.com/shrall/lighthouse-ui/compare/v0.4.0...v0.4.1) (2024-10-16)
 
-
 ### Features
 
-* **pagination-detailed:** set as a client component ([6282de4](https://github.com/shrall/lighthouse-ui/commit/6282de46368dbd8857467f70ad29f12554ac039a))
+- **pagination-detailed:** set as a client component ([6282de4](https://github.com/shrall/lighthouse-ui/commit/6282de46368dbd8857467f70ad29f12554ac039a))
 
 ## [0.4.0](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0) (2024-10-16)
 
-
 ### Features
 
-* add accordion ([02cf409](https://github.com/shrall/lighthouse-ui/commit/02cf409a95bc2423d986411bcb68173d14901482))
-* **icon:** add lightbulb outline icon ([eda906b](https://github.com/shrall/lighthouse-ui/commit/eda906b496ddbfbdbe13fe0cf11b02b37e785263))
-* **icon:** add plus, minus, & arrow right large - outline icons ([c78206b](https://github.com/shrall/lighthouse-ui/commit/c78206bcfc0e2df0dd8d78d2738ad895b4920bba))
-* **pagination-detailed:** add showLabel prop ([36adcd1](https://github.com/shrall/lighthouse-ui/commit/36adcd14234b26b9577664519d450e96e66bd46c))
-* **pagination-detailed:** show less buttons based on screen sizes ([84784b4](https://github.com/shrall/lighthouse-ui/commit/84784b48e46cb74ab463628d566c571ae36b627b))
-* **time-picker:** set the scroll position to top when opening the popover ([7a7afaf](https://github.com/shrall/lighthouse-ui/commit/7a7afaf0c0ee6b49beee234c1f21ecd7651548f2))
-
+- add accordion ([02cf409](https://github.com/shrall/lighthouse-ui/commit/02cf409a95bc2423d986411bcb68173d14901482))
+- **icon:** add lightbulb outline icon ([eda906b](https://github.com/shrall/lighthouse-ui/commit/eda906b496ddbfbdbe13fe0cf11b02b37e785263))
+- **icon:** add plus, minus, & arrow right large - outline icons ([c78206b](https://github.com/shrall/lighthouse-ui/commit/c78206bcfc0e2df0dd8d78d2738ad895b4920bba))
+- **pagination-detailed:** add showLabel prop ([36adcd1](https://github.com/shrall/lighthouse-ui/commit/36adcd14234b26b9577664519d450e96e66bd46c))
+- **pagination-detailed:** show less buttons based on screen sizes ([84784b4](https://github.com/shrall/lighthouse-ui/commit/84784b48e46cb74ab463628d566c571ae36b627b))
+- **time-picker:** set the scroll position to top when opening the popover ([7a7afaf](https://github.com/shrall/lighthouse-ui/commit/7a7afaf0c0ee6b49beee234c1f21ecd7651548f2))
 
 ### Styles
 
-* **pagination-detailed:** update buttons text color to dark 20 on hover ([0e18153](https://github.com/shrall/lighthouse-ui/commit/0e181536067aeefc06cbb69108b62fddbd857714))
+- **pagination-detailed:** update buttons text color to dark 20 on hover ([0e18153](https://github.com/shrall/lighthouse-ui/commit/0e181536067aeefc06cbb69108b62fddbd857714))
+
+## [0.4.0-beta.3](https://github.com/shrall/lighthouse-ui/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2024-10-16)
 
 ## [0.4.0-beta.2](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-15)
 
 ## [0.4.0-beta.1](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
 
-
 ### Styles
 
-* **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
+- **calendar:** remove slate colors ([ef69650](https://github.com/shrall/lighthouse-ui/commit/ef6965029ae870b929ac9a95656f24cbe41db341))
 
 ## [0.4.0-beta.0](https://github.com/shrall/lighthouse-ui/compare/v0.3.2...v0.4.0-beta.2) (2024-10-13)
 

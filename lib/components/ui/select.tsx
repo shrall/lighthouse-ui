@@ -18,7 +18,8 @@ import { ChevronDownOutline } from "./icon/ChevronDownOutline";
 import { LoadingFilled } from "./icon/LoadingFilled";
 import { matchSorter } from "match-sorter";
 
-interface SelectProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface SelectProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   locale?: "en" | "id";
   options: {
     label: string;
@@ -225,7 +226,7 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               </button>
             </PopoverTrigger>
             <PopoverContent
-              className="lui-w-auto lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-p-0 lui-font-bca"
+              className="lui-min-w-[--radix-popover-trigger-width] lui-max-w-[--radix-popover-trigger-width] lui-font-bca"
               align="start"
               onEscapeKeyDown={() => setIsPopoverOpen(false)}
               onOpenAutoFocus={(e) => e.preventDefault()}

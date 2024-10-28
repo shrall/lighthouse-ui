@@ -8,7 +8,7 @@ import { CheckboxUncheckedOutline } from "./icon/CheckboxUncheckedOutline";
 import { CheckboxCheckedFilled } from "./icon/CheckboxCheckedFilled";
 import { CheckboxIndeterminateFilled } from "./icon/CheckboxIndeterminateFilled";
 
-interface CheckboxProps
+export interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
   label?: {
     text: string;
@@ -28,6 +28,7 @@ const Checkbox = React.forwardRef<
         className,
       )}
       {...props}
+      id={props.name}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
           e.preventDefault();
@@ -61,7 +62,8 @@ const Checkbox = React.forwardRef<
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
     {label && (
-      <span
+      <label
+        htmlFor={props.name}
         className={cn(
           "lui-text-xs lui-text-ocean-dark-30",
           props.disabled && "lui-text-ocean-light-40",
@@ -69,7 +71,7 @@ const Checkbox = React.forwardRef<
         )}
       >
         {label.text}
-      </span>
+      </label>
     )}
   </div>
 ));
