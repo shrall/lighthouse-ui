@@ -1,5 +1,12 @@
 
 
+## [0.5.4](https://github.com/shrall/lighthouse-ui/compare/v0.5.3...v0.5.4) (2024-10-28)
+
+
+### Bug Fixes
+
+* **calendar:** adjust medium size shortcut button scrolling amount ([0db7898](https://github.com/shrall/lighthouse-ui/commit/0db7898dcf43560434d450e4ab6325d8985a6c39))
+
 ## [0.5.3](https://github.com/shrall/lighthouse-ui/compare/v0.5.2...v0.5.3) (2024-10-28)
 
 
