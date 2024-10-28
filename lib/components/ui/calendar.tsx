@@ -95,8 +95,8 @@ function Calendar({
           return (
             <div
               className={cn(
-                "lui-flex lui-max-w-[27.5rem] lui-flex-col lui-gap-y-3",
-                shortcuts || showMonthRangeToggle
+                "lui-flex lui-flex-col lui-gap-y-3",
+                (shortcuts || showMonthRangeToggle) && size === "large"
                   ? "lui-max-w-[27.5rem]"
                   : "lui-max-w-[19rem]",
               )}
@@ -219,7 +219,7 @@ function Calendar({
                     </>
                   )}
                 </div>
-                {size === "medium" && (
+                {size === "medium" && (shortcuts || showMonthRangeToggle) && (
                   <Separator className="lui-bg-ocean-light-30" />
                 )}
                 <div {...props} />

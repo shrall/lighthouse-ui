@@ -52,6 +52,7 @@ function Calendars() {
         </DatePicker>
         <Calendar
           mode="range"
+          size="medium"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
