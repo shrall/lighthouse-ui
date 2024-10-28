@@ -1,5 +1,12 @@
 
 
+## [0.5.2](https://github.com/shrall/lighthouse-ui/compare/v0.5.1...v0.5.2) (2024-10-28)
+
+
+### Styles
+
+* **calendar:** remove top separator if there are no buttons on medium size ([4825774](https://github.com/shrall/lighthouse-ui/commit/48257740f69d5c614ff99f6a6aba1f7993c8db59))
+
 ## [0.5.1](https://github.com/shrall/lighthouse-ui/compare/v0.5.0...v0.5.1) (2024-10-28)
 
 
