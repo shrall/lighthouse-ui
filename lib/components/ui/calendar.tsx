@@ -149,9 +149,13 @@ function Calendar({
                                 e,
                               );
                               goToMonth(shortcut.range.from ?? new Date());
+                              console.info(
+                                "button position:",
+                                buttonRef.current?.offsetLeft,
+                              );
                               setShortcutButtonPosition(
                                 buttonRef.current?.offsetLeft
-                                  ? buttonRef.current.offsetLeft - 466
+                                  ? buttonRef.current.offsetLeft - 456
                                   : 0,
                               );
                             }
