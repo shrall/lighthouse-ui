@@ -107,17 +107,18 @@ function Calendar({
                   size === "medium" && "lui-flex-col lui-gap-y-3",
                 )}
               >
-                {shortcuts && (
-                  <div
-                    ref={shortcutContainerRef}
-                    className={cn(
-                      "lui-flex lui-w-full lui-gap-2",
-                      size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
-                      size === "medium" &&
-                        "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll lui-scrollbar-w-none",
-                    )}
-                  >
-                    {shortcuts.map((shortcut) => {
+                <div
+                  ref={shortcutContainerRef}
+                  className={cn(
+                    "lui-flex lui-w-full lui-gap-2",
+                    size === "large" &&
+                      "lui-w-[7.5rem] lui-max-w-[7.5rem] lui-flex-col",
+                    size === "medium" &&
+                      "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll lui-scrollbar-w-none",
+                  )}
+                >
+                  {shortcuts &&
+                    shortcuts.map((shortcut) => {
                       const buttonRef = useRef<HTMLButtonElement>(null);
                       return (
                         <Button
@@ -160,72 +161,64 @@ function Calendar({
                         </Button>
                       );
                     })}
-                  </div>
-                )}
-                {showMonthRangeToggle && (
-                  <div
-                    className={cn(
-                      "lui-flex lui-w-full lui-gap-2",
-                      size === "large" && "lui-max-w-[7.5rem] lui-flex-col",
-                      size === "medium" &&
-                        "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem] lui-overflow-x-scroll lui-scrollbar-w-none",
-                    )}
-                  >
-                    <Button
-                      variant="ghost"
-                      className={cn(
-                        "lui-w-full lui-min-w-fit",
-                        size === "large" && "lui-px-4",
-                        size === "medium" &&
-                          "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
-                        rangeType === "daily" &&
-                          "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
-                      )}
-                      textProps={{
-                        className: "lui-line-clamp-1",
-                      }}
-                      onClick={(e) => {
-                        setContent("date");
-                        setRangeType("daily");
-                        if (calendarProps.mode === "range") {
-                          calendarProps.onSelect?.(
-                            { from: undefined, to: undefined },
-                            new Date(),
-                            {},
-                            e,
-                          );
-                        }
-                      }}
-                    >
-                      {locale === enUS ? "Daily" : "Harian"}
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      className={cn(
-                        "lui-w-full lui-min-w-fit",
-                        size === "large" && "lui-px-4",
-                        size === "medium" &&
-                          "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
-                        rangeType === "monthly" &&
-                          "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
-                      )}
-                      onClick={(e) => {
-                        setContent("month");
-                        setRangeType("monthly");
-                        if (calendarProps.mode === "range") {
-                          calendarProps.onSelect?.(
-                            { from: undefined, to: undefined },
-                            new Date(),
-                            {},
-                            e,
-                          );
-                        }
-                      }}
-                    >
-                      {locale === enUS ? "Monthly" : "Bulanan"}
-                    </Button>
-                  </div>
-                )}
+                  {showMonthRangeToggle && (
+                    <>
+                      <Button
+                        variant="ghost"
+                        className={cn(
+                          "lui-w-full lui-min-w-fit",
+                          size === "large" && "lui-px-4",
+                          size === "medium" &&
+                            "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
+                          rangeType === "daily" &&
+                            "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                        )}
+                        textProps={{
+                          className: "lui-line-clamp-1",
+                        }}
+                        onClick={(e) => {
+                          setContent("date");
+                          setRangeType("daily");
+                          if (calendarProps.mode === "range") {
+                            calendarProps.onSelect?.(
+                              { from: undefined, to: undefined },
+                              new Date(),
+                              {},
+                              e,
+                            );
+                          }
+                        }}
+                      >
+                        {locale === enUS ? "Daily" : "Harian"}
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        className={cn(
+                          "lui-w-full lui-min-w-fit",
+                          size === "large" && "lui-px-4",
+                          size === "medium" &&
+                            "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
+                          rangeType === "monthly" &&
+                            "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
+                        )}
+                        onClick={(e) => {
+                          setContent("month");
+                          setRangeType("monthly");
+                          if (calendarProps.mode === "range") {
+                            calendarProps.onSelect?.(
+                              { from: undefined, to: undefined },
+                              new Date(),
+                              {},
+                              e,
+                            );
+                          }
+                        }}
+                      >
+                        {locale === enUS ? "Monthly" : "Bulanan"}
+                      </Button>
+                    </>
+                  )}
+                </div>
                 {size === "medium" && (
                   <Separator className="lui-bg-ocean-light-30" />
                 )}
