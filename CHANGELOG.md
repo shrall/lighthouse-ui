@@ -1,5 +1,12 @@
 
 
+## [0.5.1](https://github.com/shrall/lighthouse-ui/compare/v0.5.0...v0.5.1) (2024-10-28)
+
+
+### Bug Fixes
+
+* **calendar:** shortcuts menu area is too narrow ([1c32a6d](https://github.com/shrall/lighthouse-ui/commit/1c32a6dfe8c9aa04a4b8ed752caaf57f8219974c))
+
 ## [0.5.0](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.15...v0.5.0) (2024-10-28)
 
 ## [0.4.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.0-beta.15...v0.5.0) (2024-10-21)
