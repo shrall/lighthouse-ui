@@ -24,6 +24,20 @@ function Accordions() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+        <Accordion type="multiple">
+          <AccordionItem value="item-1">
+            <AccordionTrigger style="outline">Apa itu Oceana</AccordionTrigger>
+            <AccordionContent style="outline">
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger style="outline">Apa itu Oceana</AccordionTrigger>
+            <AccordionContent style="outline">
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );
