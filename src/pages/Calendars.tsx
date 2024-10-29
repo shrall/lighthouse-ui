@@ -60,7 +60,10 @@ function Calendars() {
           shortcuts={[
             {
               label: "Today",
-              range: { from: new Date(), to: new Date() },
+              range: {
+                from: new Date("03/10/2000"),
+                to: new Date("03/11/2000"),
+              },
             },
             {
               label: "Last 7 days",

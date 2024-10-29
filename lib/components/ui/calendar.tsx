@@ -265,6 +265,17 @@ function Calendar({
                     months[0].date.getFullYear(),
                     calendarProps.disabled,
                   );
+                  console.info(
+                    "1",
+                    calendarProps.mode === "range",
+                    calendarProps.mode === "range" && calendarProps.selected,
+                    calendarProps.mode === "range" &&
+                      calendarProps.selected &&
+                      calendarProps.selected.from,
+                    calendarProps.mode === "range" &&
+                      calendarProps.selected &&
+                      calendarProps.selected.to,
+                  );
                   return (
                     <Button
                       key={month}
