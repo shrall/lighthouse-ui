@@ -1,5 +1,12 @@
 
 
+## [0.5.7](https://github.com/shrall/lighthouse-ui/compare/v0.5.6...v0.5.7) (2024-10-29)
+
+
+### Bug Fixes
+
+* **calendar:** getFullYear is retrieved from an undefined value ([5688545](https://github.com/shrall/lighthouse-ui/commit/56885458bc46a64e384eba1d3f51f60970bbe717))
+
 ## [0.5.6](https://github.com/shrall/lighthouse-ui/compare/v0.5.5...v0.5.6) (2024-10-29)
 
 
