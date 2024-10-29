@@ -69,6 +69,7 @@ function Calendar({
       const handleWheel = (e: WheelEvent) => {
         e.preventDefault();
         div.scrollLeft += e.deltaY;
+        div.scrollLeft += e.deltaX;
       };
       div.addEventListener("wheel", handleWheel, { passive: false });
       return () => div.removeEventListener("wheel", handleWheel);
