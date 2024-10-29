@@ -1,5 +1,17 @@
 
 
+## [0.5.6](https://github.com/shrall/lighthouse-ui/compare/v0.5.5...v0.5.6) (2024-10-29)
+
+
+### Features
+
+* **calendar:** allow horizontal scrolling on medium sized shortcuts ([4e2e3b8](https://github.com/shrall/lighthouse-ui/commit/4e2e3b8ff26af71416dc39ab6df78d78e3f6f15a))
+
+
+### Styles
+
+* **calendar:** adjust padding from 16px to 12px ([6eba376](https://github.com/shrall/lighthouse-ui/commit/6eba3769d04897306db57198ba6e3db448cfdc45))
+
 ## [0.5.5](https://github.com/shrall/lighthouse-ui/compare/v0.5.4...v0.5.5) (2024-10-28)
 
 
