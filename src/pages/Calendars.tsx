@@ -11,7 +11,7 @@ import { DatePicker } from "@/components/ui/date-picker";
 function Calendars() {
   const [date, setDate] = useState<DateRange | undefined>({
     from: new Date(),
-    to: addDays(new Date(), 2),
+    to: addDays(new Date(), 5),
   });
 
   return (
@@ -19,6 +19,7 @@ function Calendars() {
       <h3>Calendars</h3>
       <div className="lui-flex lui-flex-col lui-items-center lui-justify-center lui-gap-2 lui-text-center md:lui-flex-row">
         <DatePicker
+          asChild
           calendarProps={{
             mode: "range",
             defaultMonth: date?.from,
@@ -52,7 +53,6 @@ function Calendars() {
         </DatePicker>
         <Calendar
           mode="range"
-          size="medium"
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}

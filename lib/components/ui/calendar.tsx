@@ -147,10 +147,15 @@ function Calendar({
                             size === "medium" &&
                               "lui-bg-ocean-light-30 lui-px-3 lui-py-[0.625rem] lui-text-ocean-dark-20",
                             calendarProps.mode === "range" &&
-                              calendarProps.selected?.from?.getDate() ===
-                                shortcut.range.from?.getDate() &&
-                              calendarProps.selected?.to?.getDate() ===
-                                shortcut.range.to?.getDate() &&
+                              shortcut.range.from &&
+                              calendarProps.selected &&
+                              calendarProps.selected.from &&
+                              calendarProps.selected.from.getDate() ===
+                                shortcut.range.from.getDate() &&
+                              shortcut.range.to &&
+                              calendarProps.selected.to &&
+                              calendarProps.selected.to.getDate() ===
+                                shortcut.range.to.getDate() &&
                               "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
                           )}
                           textProps={{
@@ -269,8 +274,10 @@ function Calendar({
                         //NOTE - Set month button as selected if the from date is in the same month & year
                         rangeType === "daily" &&
                           calendarProps.mode === "range" &&
-                          calendarProps.selected?.from?.getMonth() === month &&
-                          calendarProps.selected?.from?.getFullYear() ===
+                          calendarProps.selected &&
+                          calendarProps.selected.from &&
+                          calendarProps.selected.from.getMonth() === month &&
+                          calendarProps.selected.from.getFullYear() ===
                             months[0].date.getFullYear() &&
                           buttonVariants({ variant: "primary" }),
                         //NOTE - Set month button as selected in the mid range when the month is in the range of the selected dates
@@ -406,7 +413,9 @@ function Calendar({
                         //NOTE - Set year button as selected if the from date is in the same year
                         rangeType === "daily" &&
                           calendarProps.mode === "range" &&
-                          calendarProps.selected?.from?.getFullYear() ===
+                          calendarProps.selected &&
+                          calendarProps.selected.from &&
+                          calendarProps.selected.from.getFullYear() ===
                             startYear + year &&
                           buttonVariants({ variant: "primary" }),
                         "lui-w-full lui-min-w-fit lui-p-0 lui-text-sm",
@@ -438,7 +447,7 @@ function Calendar({
                   modifiers.range_middle ||
                   modifiers.range_end) &&
                   "disabled:lui-border disabled:lui-border-solid disabled:lui-border-ocean-dark-10 disabled:lui-bg-ocean-light-30 disabled:lui-text-ocean-dark-10",
-                modifiers?.outside &&
+                modifiers.outside &&
                   "lui-pointer-events-none lui-border-none lui-bg-transparent lui-text-ocean-light-40 disabled:lui-border-none disabled:lui-bg-transparent disabled:lui-text-ocean-light-40",
               )}
               {...buttonProps}
@@ -533,12 +542,14 @@ function Calendar({
         if (
           //NOTE - If nothing is selected yet
           (calendarProps.mode === "range" &&
-            calendarProps.selected?.from !== undefined &&
-            calendarProps.selected?.to !== undefined) ||
+            calendarProps.selected &&
+            calendarProps.selected.from !== undefined &&
+            calendarProps.selected.to !== undefined) ||
           //NOTE - If the date is less than the from date
           (calendarProps.mode === "range" &&
-            calendarProps.selected?.from &&
-            date < calendarProps.selected?.from) ||
+            calendarProps.selected &&
+            calendarProps.selected.from &&
+            date < calendarProps.selected.from) ||
           //NOTE - If nothing is selected yet
           (calendarProps.mode === "range" && !calendarProps.selected)
         ) {
@@ -552,8 +563,9 @@ function Calendar({
         } else if (
           //NOTE - If the from date is the same as the date
           calendarProps.mode === "range" &&
-          calendarProps.selected?.from &&
-          calendarProps.selected?.from.toDateString() === date.toDateString()
+          calendarProps.selected &&
+          calendarProps.selected.from &&
+          calendarProps.selected.from.toDateString() === date.toDateString()
         ) {
           //NOTE - Select the date as the from and to date
           calendarProps.onSelect?.(
