@@ -78,7 +78,7 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
-      className={cn("lui-p-4", className)}
+      className={cn("lui-p-3", className)}
       classNames={{
         month: "lui-w-[19rem] lui-min-w-[19rem] lui-max-w-[19rem]",
         caption_label: "lui-text-sm lui-font-medium",
@@ -105,7 +105,7 @@ function Calendar({
             >
               <div
                 className={cn(
-                  "lui-flex lui-gap-x-4",
+                  (shortcuts || showMonthRangeToggle) && "lui-flex lui-gap-x-4",
                   size === "medium" && "lui-flex-col lui-gap-y-3",
                 )}
               >
