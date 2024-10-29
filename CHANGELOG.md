@@ -1,5 +1,12 @@
 
 
+## [0.5.9](https://github.com/shrall/lighthouse-ui/compare/v0.5.8...v0.5.9) (2024-10-29)
+
+
+### Bug Fixes
+
+* **calendar:** remove console info ([bb2d321](https://github.com/shrall/lighthouse-ui/commit/bb2d321fe7167a31cd8df8a37d14195848a1e000))
+
 ## [0.5.8](https://github.com/shrall/lighthouse-ui/compare/v0.5.7...v0.5.8) (2024-10-29)
 
 
