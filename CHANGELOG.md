@@ -1,5 +1,12 @@
 
 
+## [0.5.8](https://github.com/shrall/lighthouse-ui/compare/v0.5.7...v0.5.8) (2024-10-29)
+
+
+### Bug Fixes
+
+* **calendar:** add a console info to test out undefined values ([3c92efa](https://github.com/shrall/lighthouse-ui/commit/3c92efa3cdd8b6fe2064fd792feab6aa97e8952c))
+
 ## [0.5.7](https://github.com/shrall/lighthouse-ui/compare/v0.5.6...v0.5.7) (2024-10-29)
 
 
