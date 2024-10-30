@@ -190,3 +190,4 @@ export {
     DropdownMenuTrigger,
 } from "./components/ui/dropdown-menu";
 export { Popover, PopoverContent, PopoverTrigger } from "./components/ui/popover";
+export { Switch } from "./components/ui/switch"; 

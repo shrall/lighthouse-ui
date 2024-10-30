@@ -18,6 +18,7 @@ import Dialogs from "./Dialogs";
 import Steppers from "./Stepper";
 import TimePickers from "./TimePickers";
 import Accordions from "./Accordions";
+import Switches from "./Switches";
 
 interface IndexPageProps {}
 
@@ -38,6 +39,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
       <Paginations />
       <Selects />
       <Steppers />
+      <Switches />
       <Tables />
       <Tabs />
       <TimePickers />
