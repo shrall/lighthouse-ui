@@ -1,5 +1,12 @@
 
 
+## [0.5.11](https://github.com/shrall/lighthouse-ui/compare/v0.5.10...v0.5.11) (2024-11-04)
+
+
+### Features
+
+* **calendar:** update month picker behavior to match date picker ([3c284a4](https://github.com/shrall/lighthouse-ui/commit/3c284a444f5a5e105c8e1141aa8e13c9229048a6))
+
 ## [0.5.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.9...v0.5.10) (2024-11-04)
 
 
