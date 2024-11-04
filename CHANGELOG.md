@@ -1,5 +1,14 @@
 
 
+## [0.5.10](https://github.com/shrall/lighthouse-ui/compare/v0.5.9...v0.5.10) (2024-11-04)
+
+
+### Features
+
+* **accordion:** add new outline style ([3868dc7](https://github.com/shrall/lighthouse-ui/commit/3868dc7289b97f7a07f2e6861fb673baea07ff18))
+* add radio button ([dc6ee41](https://github.com/shrall/lighthouse-ui/commit/dc6ee41cb53a3d298fabbf94e0fd821326d84947))
+* add switch ([6f52797](https://github.com/shrall/lighthouse-ui/commit/6f52797db408d20ecf3a9c635507180092e29d1d))
+
 ## [0.5.9](https://github.com/shrall/lighthouse-ui/compare/v0.5.8...v0.5.9) (2024-10-29)
 
 
