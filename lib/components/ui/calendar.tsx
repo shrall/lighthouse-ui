@@ -308,6 +308,7 @@ function Calendar({
                       )}
                       onClick={(e) => {
                         if (rangeType === "daily") {
+                          //NOTE - DAILY MODE
                           const newDate = new Date(
                             months[0].date.getFullYear(),
                             month,
@@ -316,68 +317,98 @@ function Calendar({
                           goToMonth(newDate);
                           setContent("date");
                         } else {
+                          //NOTE - MONTHLY MODE
                           if (calendarProps.mode === "range") {
+                            //NOTE - If the from and to are not the same but it's already selected
+                            //NOTE - Select the first day of the month and the last day of the month
+                            if (
+                              calendarProps.selected &&
+                              calendarProps.selected.from &&
+                              calendarProps.selected.to &&
+                              calendarProps.selected.from !==
+                                calendarProps.selected.to
+                            ) {
+                              const date = new Date(
+                                months[0].date.getFullYear(),
+                                month,
+                                1,
+                              );
+                              calendarProps.onSelect?.(
+                                { from: date, to: date },
+                                date,
+                                {},
+                                e,
+                              );
+                            }
                             //NOTE - If it's fresh or the from is greater than the first day of the month
                             //NOTE - Select the first day of the month
-                            !calendarProps.selected?.from ||
-                            calendarProps.selected?.from >
-                              new Date(months[0].date.getFullYear(), month, 1)
-                              ? select?.(
-                                  new Date(
+                            else if (
+                              !calendarProps.selected?.from ||
+                              calendarProps.selected?.from >
+                                new Date(months[0].date.getFullYear(), month, 1)
+                            ) {
+                              select?.(
+                                new Date(
+                                  months[0].date.getFullYear(),
+                                  month,
+                                  1,
+                                ),
+                                {},
+                                e,
+                              );
+                            }
+                            // NOTE - If the to is in the same month
+                            // NOTE - Select the first day of the month and the last day of the month
+                            else if (
+                              calendarProps.selected.to &&
+                              calendarProps.selected.to.getMonth() === month
+                            ) {
+                              calendarProps.onSelect?.(
+                                {
+                                  from: new Date(
                                     months[0].date.getFullYear(),
                                     month,
                                     1,
                                   ),
-                                  {},
-                                  e,
-                                )
-                              : // NOTE - If the to is in the same month
-                                // NOTE - Select the first day of the month and the last day of the month
-                                calendarProps.selected.to &&
-                                  calendarProps.selected.to.getMonth() === month
-                                ? calendarProps.onSelect?.(
-                                    {
-                                      from: new Date(
-                                        months[0].date.getFullYear(),
-                                        month,
-                                        1,
-                                      ),
-                                      to: new Date(
-                                        months[0].date.getFullYear(),
-                                        month,
-                                        new Date(
-                                          months[0].date.getFullYear(),
-                                          month + 1,
-                                          0,
-                                        ).getDate(),
-                                      ),
-                                    },
+                                  to: new Date(
+                                    months[0].date.getFullYear(),
+                                    month,
                                     new Date(
                                       months[0].date.getFullYear(),
-                                      month,
-                                      new Date(
-                                        months[0].date.getFullYear(),
-                                        month + 1,
-                                        0,
-                                      ).getDate(),
-                                    ),
-                                    {},
-                                    e,
-                                  )
-                                : // NOTE - Select the last day of the month
-                                  select?.(
-                                    new Date(
-                                      months[0].date.getFullYear(),
-                                      month,
-                                      new Date(
-                                        months[0].date.getFullYear(),
-                                        month + 1,
-                                        0,
-                                      ).getDate(),
-                                    ),
-                                    {},
-                                    e,
-                                  );
+                                      month + 1,
+                                      0,
+                                    ).getDate(),
+                                  ),
+                                },
+                                new Date(
+                                  months[0].date.getFullYear(),
+                                  month,
+                                  new Date(
+                                    months[0].date.getFullYear(),
+                                    month + 1,
+                                    0,
+                                  ).getDate(),
+                                ),
+                                {},
+                                e,
+                              );
+                            }
+                            // NOTE - Select the last day of the month
+                            else {
+                              select?.(
+                                new Date(
+                                  months[0].date.getFullYear(),
+                                  month,
+                                  new Date(
+                                    months[0].date.getFullYear(),
+                                    month + 1,
+                                    0,
+                                  ).getDate(),
+                                ),
+                                {},
+                                e,
+                              );
+                            }
                           }
                         }
                       }}
@@ -540,7 +571,7 @@ function Calendar({
       {...calendarProps}
       onDayClick={(date, modifiers, e) => {
         if (
-          //NOTE - If nothing is selected yet
+          //NOTE - If the from and to are not the same but it's already selected
           (calendarProps.mode === "range" &&
             calendarProps.selected &&
             calendarProps.selected.from !== undefined &&
@@ -551,7 +582,9 @@ function Calendar({
             calendarProps.selected.from &&
             date < calendarProps.selected.from) ||
           //NOTE - If nothing is selected yet
-          (calendarProps.mode === "range" && !calendarProps.selected)
+          (calendarProps.mode === "range" &&
+            calendarProps.selected &&
+            calendarProps.selected.from === undefined)
         ) {
           //NOTE - Select the date as the from date
           calendarProps.onSelect?.(

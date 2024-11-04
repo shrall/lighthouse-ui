@@ -53,10 +53,24 @@ function Calendars() {
         </DatePicker>
         <Calendar
           mode="range"
+          showMonthRangeToggle
           defaultMonth={date?.from}
           selected={date}
           onSelect={setDate}
           locale={id}
+          alert={{
+            variant: "success",
+            title: "Success",
+            description:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting",
+          }}
+        />
+        <Calendar
+          mode="range"
+          locale={enUS}
+          defaultMonth={date?.from}
+          selected={date}
+          onSelect={setDate}
           shortcuts={[
             {
               label: "Today",
@@ -91,20 +105,6 @@ function Calendars() {
               },
             },
           ]}
-          alert={{
-            variant: "success",
-            title: "Success",
-            description:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting",
-          }}
-        />
-        <Calendar
-          mode="range"
-          showMonthRangeToggle
-          locale={enUS}
-          defaultMonth={date?.from}
-          selected={date}
-          onSelect={setDate}
           disabled={[
             {
               from: new Date(2024, 0, 1),
