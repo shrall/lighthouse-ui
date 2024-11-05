@@ -347,12 +347,14 @@ function Calendar({
                               calendarProps.selected?.from >
                                 new Date(months[0].date.getFullYear(), month, 1)
                             ) {
-                              select?.(
-                                new Date(
-                                  months[0].date.getFullYear(),
-                                  month,
-                                  1,
-                                ),
+                              const date = new Date(
+                                months[0].date.getFullYear(),
+                                month,
+                                1,
+                              );
+                              calendarProps.onSelect?.(
+                                { from: date, to: date },
+                                date,
                                 {},
                                 e,
                               );
