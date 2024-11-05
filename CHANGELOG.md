@@ -1,5 +1,12 @@
 
 
+## [0.5.12](https://github.com/shrall/lighthouse-ui/compare/v0.5.11...v0.5.12) (2024-11-05)
+
+
+### Features
+
+* **calendar:** update month picker behavior to reset range when selecting an older date ([eceffd4](https://github.com/shrall/lighthouse-ui/commit/eceffd4385f65eb315de8825ed2d717a7fdfb528))
+
 ## [0.5.11](https://github.com/shrall/lighthouse-ui/compare/v0.5.10...v0.5.11) (2024-11-04)
 
 
