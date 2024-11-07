@@ -20,6 +20,7 @@ import TimePickers from "./TimePickers";
 import Accordions from "./Accordions";
 import Switches from "./Switches";
 import RadioButtons from "./RadioButtons";
+import Drawers from "./Drawers";
 
 interface IndexPageProps {}
 
@@ -35,6 +36,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
       <Checkboxes />
       <Chips />
       <Dialogs />
+      <Drawers />
       <Icons />
       <Inputs />
       <Paginations />
