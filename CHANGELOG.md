@@ -1,5 +1,12 @@
 
 
+## [0.5.14](https://github.com/shrall/lighthouse-ui/compare/v0.5.13...v0.5.14) (2024-11-10)
+
+
+### Features
+
+* **drawer:** close drawer on confirming footer button ([9c42663](https://github.com/shrall/lighthouse-ui/commit/9c426638ac20d4ff04aa30c0aa24e89bd6e2f533))
+
 ## [0.5.13](https://github.com/shrall/lighthouse-ui/compare/v0.5.12...v0.5.13) (2024-11-10)
 
 
