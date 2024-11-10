@@ -1,5 +1,12 @@
 
 
+## [0.5.13](https://github.com/shrall/lighthouse-ui/compare/v0.5.12...v0.5.13) (2024-11-10)
+
+
+### Features
+
+* add drawer ([264ad28](https://github.com/shrall/lighthouse-ui/commit/264ad289a968ee979373452ee73120b74c101a9c))
+
 ## [0.5.12](https://github.com/shrall/lighthouse-ui/compare/v0.5.11...v0.5.12) (2024-11-05)
 
 
