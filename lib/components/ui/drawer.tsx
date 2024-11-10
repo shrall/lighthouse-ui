@@ -118,7 +118,7 @@ const DrawerContent = React.forwardRef<
           <div className="lui-m-4 lui-overflow-y-auto">{children}</div>
           {confirmAction && (
             <div className="lui-flex lui-items-center lui-justify-end lui-gap-x-6 lui-p-4">
-              <DrawerClose>
+              <DrawerClose asChild>
                 <Button
                   variant="ghost"
                   size="large"
@@ -127,13 +127,15 @@ const DrawerContent = React.forwardRef<
                   {locale === "en" ? "Cancel" : "Batal"}
                 </Button>
               </DrawerClose>
-              <Button
-                onClick={confirmAction}
-                size="large"
-                className="lui-w-fit lui-min-w-0"
-              >
-                {locale === "en" ? "Confirm" : "Konfirmasi"}
-              </Button>
+              <DrawerClose asChild>
+                <Button
+                  onClick={confirmAction}
+                  size="large"
+                  className="lui-w-fit lui-min-w-0"
+                >
+                  {locale === "en" ? "Confirm" : "Konfirmasi"}
+                </Button>
+              </DrawerClose>
             </div>
           )}
         </DrawerPrimitive.Content>
