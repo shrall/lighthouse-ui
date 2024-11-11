@@ -1,5 +1,13 @@
 
 
+## [0.5.16](https://github.com/shrall/lighthouse-ui/compare/v0.5.15...v0.5.16) (2024-11-11)
+
+
+### Styles
+
+* **button:** update inversed variant style ([f8bba43](https://github.com/shrall/lighthouse-ui/commit/f8bba43227797111a1f0acc8422ccbeb7ba69110))
+* **pagination-detailed:** update show data text color ([a8e9f89](https://github.com/shrall/lighthouse-ui/commit/a8e9f892fdcc0c5159fad5b1b5b983c05e0212cd))
+
 ## [0.5.15](https://github.com/shrall/lighthouse-ui/compare/v0.5.14...v0.5.15) (2024-11-11)
 
 
