@@ -1,5 +1,12 @@
 
 
+## [0.5.15](https://github.com/shrall/lighthouse-ui/compare/v0.5.14...v0.5.15) (2024-11-11)
+
+
+### Features
+
+* **button:** add link variant) ([9ae7e66](https://github.com/shrall/lighthouse-ui/commit/9ae7e66cf098c1920a0635e790d6b77ce57f2355))
+
 ## [0.5.14](https://github.com/shrall/lighthouse-ui/compare/v0.5.13...v0.5.14) (2024-11-10)
 
 
