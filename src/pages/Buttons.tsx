@@ -68,6 +68,23 @@ function Buttons() {
           Inversed
         </Button>
 
+        <Button variant="link" size="small">
+          Link
+        </Button>
+        <Button variant="link">Link</Button>
+        <Button variant="link" size="large">
+          Link
+        </Button>
+        <Button variant="link" size="small" disabled>
+          Link
+        </Button>
+        <Button variant="link" disabled>
+          Link
+        </Button>
+        <Button variant="link" size="large" disabled>
+          Link
+        </Button>
+
         <Button size="small" leftNode={<PlaceholderOutline />}>
           Primary
         </Button>
