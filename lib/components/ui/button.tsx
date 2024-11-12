@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "lui-inline-flex lui-items-center lui-justify-center lui-transition-colors lui-w-fit",
+  "lui-inline-flex lui-items-center lui-justify-center lui-transition-colors lui-w-fit lui-font-semibold",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
           "lui-bg-transparent lui-text-ocean-primary-10 hover:lui-bg-ocean-light-20 active:lui-bg-ocean-secondary-10 disabled:lui-bg-transparent disabled:lui-text-ocean-dark-10",
         inversed:
           "lui-bg-ocean-light-10 lui-text-ocean-primary-10 hover:lui-bg-ocean-secondary-10 active:lui-text-ocean-primary-20 disabled:lui-text-ocean-dark-10 hover:disabled:lui-bg-ocean-light-10",
-        link: "lui-bg-transparent lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30 hover:lui-underline disabled:lui-text-ocean-dark-10 disabled:lui-no-underline",
+        link: "lui-bg-transparent lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30 disabled:lui-text-ocean-dark-10 lui-no-underline",
       },
       size: {
         large:
