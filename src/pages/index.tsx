@@ -21,6 +21,7 @@ import Accordions from "./Accordions";
 import Switches from "./Switches";
 import RadioButtons from "./RadioButtons";
 import Drawers from "./Drawers";
+import Spinners from "./Spinners";
 
 interface IndexPageProps {}
 
@@ -42,6 +43,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
       <Paginations />
       <RadioButtons />
       <Selects />
+      <Spinners />
       <Steppers />
       <Switches />
       <Tables />
