@@ -1,5 +1,12 @@
 
 
+## [0.5.19](https://github.com/shrall/lighthouse-ui/compare/v0.5.18...v0.5.19) (2024-11-12)
+
+
+### Features
+
+* add BCA loader ([f8a398b](https://github.com/shrall/lighthouse-ui/commit/f8a398b26ba1e21cbffbbc2f68ab9dfcfb1566c4))
+
 ## [0.5.18](https://github.com/shrall/lighthouse-ui/compare/v0.5.17...v0.5.18) (2024-11-12)
 
 
