@@ -1,5 +1,12 @@
 
 
+## [0.5.18](https://github.com/shrall/lighthouse-ui/compare/v0.5.17...v0.5.18) (2024-11-12)
+
+
+### Features
+
+* add spinner ([db9f56a](https://github.com/shrall/lighthouse-ui/commit/db9f56a81c0aec4afa1a3b9b58bd480575b0667b))
+
 ## [0.5.17](https://github.com/shrall/lighthouse-ui/compare/v0.5.16...v0.5.17) (2024-11-12)
 
 
