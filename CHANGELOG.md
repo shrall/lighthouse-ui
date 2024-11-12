@@ -1,5 +1,12 @@
 
 
+## [0.5.17](https://github.com/shrall/lighthouse-ui/compare/v0.5.16...v0.5.17) (2024-11-12)
+
+
+### Styles
+
+* **button:** update font weight to 700 ([eb54d36](https://github.com/shrall/lighthouse-ui/commit/eb54d3678b9a3e785ebf967b6d3608a1c03ad4e8))
+
 ## [0.5.16](https://github.com/shrall/lighthouse-ui/compare/v0.5.15...v0.5.16) (2024-11-11)
 
 
