@@ -1,5 +1,12 @@
 
 
+## [0.5.20](https://github.com/shrall/lighthouse-ui/compare/v0.5.19...v0.5.20) (2024-11-20)
+
+
+### Bug Fixes
+
+* **bca-loader:** causing error on ssr pages ([d01302f](https://github.com/shrall/lighthouse-ui/commit/d01302faf2e22f8e573ad58678a47f8dc46e8c41))
+
 ## [0.5.19](https://github.com/shrall/lighthouse-ui/compare/v0.5.18...v0.5.19) (2024-11-12)
 
 
