@@ -2,10 +2,13 @@
 
 import {
   ColumnDef,
+  FilterFn,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
+  getFilteredRowModel,
   SortingState,
+  TableOptions,
   useReactTable,
 } from "@tanstack/react-table";
 
@@ -19,6 +22,24 @@ import {
 } from "@/components/ui/table";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { cn } from "@/lib/utils";
+import { RankingInfo, rankItem } from "@tanstack/match-sorter-utils";
+
+declare module "@tanstack/react-table" {
+  interface FilterFns {
+    fuzzy: FilterFn<unknown>;
+  }
+  interface FilterMeta {
+    itemRank: RankingInfo;
+  }
+}
+
+const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
+  const itemRank = rankItem(row.getValue(columnId), value);
+  addMeta({
+    itemRank,
+  });
+  return itemRank.passed;
+};
 
 interface DataTableProps<TData, TValue> {
   locale?: "en" | "id";
@@ -34,6 +55,9 @@ interface DataTableProps<TData, TValue> {
   sorting?: SortingState;
   setSorting?: Dispatch<SetStateAction<SortingState>>;
   hideHeaderOnMobile?: boolean;
+  globalFilter?: string;
+  setGlobalFilter?: Dispatch<SetStateAction<string>>;
+  tableOptions?: TableOptions<TData>;
 }
 
 export function DataTable<TData, TValue>({
@@ -50,23 +74,33 @@ export function DataTable<TData, TValue>({
   sorting,
   setSorting,
   hideHeaderOnMobile = false,
+  globalFilter,
+  setGlobalFilter,
+  tableOptions,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
-  const [defaultsorting, setDefaultSorting] = useState<SortingState>([]);
+  const [defaultSorting, setDefaultSorting] = useState<SortingState>([]);
+  const [defaultGlobalFilter, setDefaultGlobalFilter] = useState("");
 
   const table = useReactTable({
     data,
     columns,
-    getCoreRowModel: getCoreRowModel(),
-    onRowSelectionChange: setRowSelection
-      ? setRowSelection
-      : setDefaultRowSelection,
-    onSortingChange: setSorting ? setSorting : setDefaultSorting,
-    getSortedRowModel: getSortedRowModel(),
-    state: {
-      sorting: sorting || defaultsorting,
-      rowSelection: rowSelection || defaultRowSelection,
+    filterFns: {
+      fuzzy: fuzzyFilter,
     },
+    getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onRowSelectionChange: setRowSelection ?? setDefaultRowSelection,
+    onSortingChange: setSorting ?? setDefaultSorting,
+    getSortedRowModel: getSortedRowModel(),
+    globalFilterFn: fuzzyFilter,
+    onGlobalFilterChange: setGlobalFilter ?? setDefaultGlobalFilter,
+    state: {
+      sorting: sorting ?? defaultSorting,
+      rowSelection: rowSelection ?? defaultRowSelection,
+      globalFilter: globalFilter ?? defaultGlobalFilter,
+    },
+    ...tableOptions,
   });
 
   return (
