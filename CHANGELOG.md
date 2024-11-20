@@ -1,5 +1,12 @@
 
 
+## [0.5.21](https://github.com/shrall/lighthouse-ui/compare/v0.5.20...v0.5.21) (2024-11-20)
+
+
+### Features
+
+* **data-table:** add search and table options prop ([c29b9d9](https://github.com/shrall/lighthouse-ui/commit/c29b9d9d837a8d7457bbb7e56130696ab2b98298))
+
 ## [0.5.20](https://github.com/shrall/lighthouse-ui/compare/v0.5.19...v0.5.20) (2024-11-20)
 
 
