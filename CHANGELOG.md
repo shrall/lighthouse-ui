@@ -1,5 +1,12 @@
 
 
+## [0.5.23](https://github.com/shrall/lighthouse-ui/compare/v0.5.22...v0.5.23) (2024-11-21)
+
+
+### Features
+
+* **data-table:** set locale prop default value to en ([b4b551b](https://github.com/shrall/lighthouse-ui/commit/b4b551bee890aadbbd2c4bf082903ff83a818522))
+
 ## [0.5.22](https://github.com/shrall/lighthouse-ui/compare/v0.5.21...v0.5.22) (2024-11-21)
 
 
