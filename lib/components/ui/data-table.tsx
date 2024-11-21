@@ -58,6 +58,12 @@ interface DataTableProps<TData, TValue> {
   globalFilter?: string;
   setGlobalFilter?: Dispatch<SetStateAction<string>>;
   tableOptions?: TableOptions<TData>;
+  tableProps?: React.ComponentProps<typeof Table>;
+  tableHeaderProps?: React.ComponentProps<typeof TableHeader>;
+  tableBodyProps?: React.ComponentProps<typeof TableBody>;
+  tableCellProps?: React.ComponentProps<typeof TableCell>;
+  tableHeadProps?: React.ComponentProps<typeof TableHead>;
+  tableRowProps?: React.ComponentProps<typeof TableRow>;
 }
 
 export function DataTable<TData, TValue>({
@@ -77,6 +83,12 @@ export function DataTable<TData, TValue>({
   globalFilter,
   setGlobalFilter,
   tableOptions,
+  tableProps,
+  tableHeaderProps,
+  tableBodyProps,
+  tableCellProps,
+  tableHeadProps,
+  tableRowProps,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
   const [defaultSorting, setDefaultSorting] = useState<SortingState>([]);
@@ -105,17 +117,19 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className={cn("lui-rounded-md lui-border", className)}>
-      <Table>
+      <Table {...tableProps}>
         <TableHeader
+          {...tableHeaderProps}
           className={cn(
             hideHeaderOnMobile && "lui-hidden md:lui-table-header-group",
+            tableHeaderProps?.className,
           )}
         >
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id}>
+            <TableRow key={headerGroup.id} {...tableRowProps}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <TableHead key={header.id}>
+                  <TableHead key={header.id} {...tableHeadProps}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
@@ -128,7 +142,7 @@ export function DataTable<TData, TValue>({
             </TableRow>
           ))}
         </TableHeader>
-        <TableBody>
+        <TableBody {...tableBodyProps}>
           {isLoading ? (
             //NOTE - Loading State
             Array.from({ length: 5 }).map((_, index) => (
@@ -164,9 +178,10 @@ export function DataTable<TData, TValue>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
+                {...tableRowProps}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
+                  <TableCell key={cell.id} {...tableCellProps}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
