@@ -1,5 +1,12 @@
 
 
+## [0.5.22](https://github.com/shrall/lighthouse-ui/compare/v0.5.21...v0.5.22) (2024-11-21)
+
+
+### Features
+
+* **data-table:** add table props to configure the component ([3512b24](https://github.com/shrall/lighthouse-ui/commit/3512b2499c83e665513edf37d801ac2f4e1f3cf5))
+
 ## [0.5.21](https://github.com/shrall/lighthouse-ui/compare/v0.5.20...v0.5.21) (2024-11-20)
 
 
