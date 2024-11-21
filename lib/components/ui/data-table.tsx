@@ -58,16 +58,16 @@ interface DataTableProps<TData, TValue> {
   globalFilter?: string;
   setGlobalFilter?: Dispatch<SetStateAction<string>>;
   tableOptions?: TableOptions<TData>;
-  tableProps?: React.ComponentProps<typeof Table>;
-  tableHeaderProps?: React.ComponentProps<typeof TableHeader>;
-  tableBodyProps?: React.ComponentProps<typeof TableBody>;
-  tableCellProps?: React.ComponentProps<typeof TableCell>;
-  tableHeadProps?: React.ComponentProps<typeof TableHead>;
-  tableRowProps?: React.ComponentProps<typeof TableRow>;
+  tableProps?: React.ComponentPropsWithoutRef<typeof Table>;
+  tableHeaderProps?: React.ComponentPropsWithoutRef<typeof TableHeader>;
+  tableBodyProps?: React.ComponentPropsWithoutRef<typeof TableBody>;
+  tableCellProps?: React.ComponentPropsWithoutRef<typeof TableCell>;
+  tableHeadProps?: React.ComponentPropsWithoutRef<typeof TableHead>;
+  tableRowProps?: React.ComponentPropsWithoutRef<typeof TableRow>;
 }
 
 export function DataTable<TData, TValue>({
-  locale,
+  locale = "en",
   className,
   columns,
   data,
