@@ -1,5 +1,12 @@
 
 
+## [0.5.24](https://github.com/shrall/lighthouse-ui/compare/v0.5.23...v0.5.24) (2024-11-22)
+
+
+### Features
+
+* **table:** export ColumnDef type from @tanstack/react-table ([2f2ac96](https://github.com/shrall/lighthouse-ui/commit/2f2ac96c367ecad814148fe6bdef780159803e67))
+
 ## [0.5.23](https://github.com/shrall/lighthouse-ui/compare/v0.5.22...v0.5.23) (2024-11-21)
 
 
