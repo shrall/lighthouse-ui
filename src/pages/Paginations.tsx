@@ -31,6 +31,7 @@ function Paginations() {
         setPageNumber={setPageNumber}
         totalPage={Math.ceil(totalData / pageSize)}
         totalData={totalData}
+        locale="id"
       />
     </div>
   );

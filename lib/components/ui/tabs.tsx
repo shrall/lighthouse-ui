@@ -99,7 +99,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      "lui-group lui-flex-1 lui-items-center lui-justify-center",
+      "lui-group lui-flex-1 lui-items-center lui-justify-center lui-text-ocean-dark-20",
       "lui-transition-all focus-visible:lui-outline-none",
       "disabled:lui-pointer-events-none disabled:lui-text-ocean-light-40",
       tabsStyle === "filled" && size === "medium" && "lui-py-[7.5px]",
