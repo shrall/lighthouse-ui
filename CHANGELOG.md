@@ -1,5 +1,12 @@
 
 
+## [0.5.25](https://github.com/shrall/lighthouse-ui/compare/v0.5.24...v0.5.25) (2024-11-26)
+
+
+### Styles
+
+* **table:** update selected row bg color ([46c3bd1](https://github.com/shrall/lighthouse-ui/commit/46c3bd116d669cc06104e5fff36357dcbd573c77))
+
 ## [0.5.24](https://github.com/shrall/lighthouse-ui/compare/v0.5.23...v0.5.24) (2024-11-22)
 
 
