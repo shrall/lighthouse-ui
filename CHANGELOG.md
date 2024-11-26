@@ -1,5 +1,12 @@
 
 
+## [0.5.26](https://github.com/shrall/lighthouse-ui/compare/v0.5.25...v0.5.26) (2024-11-26)
+
+
+### Features
+
+* **data-table:** add built-in pagination ([7538424](https://github.com/shrall/lighthouse-ui/commit/7538424e3c1ffd0747687f14ca9f87d5e5df2883))
+
 ## [0.5.25](https://github.com/shrall/lighthouse-ui/compare/v0.5.24...v0.5.25) (2024-11-26)
 
 
