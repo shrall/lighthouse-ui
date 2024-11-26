@@ -147,7 +147,7 @@ const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                       <Input
                         className="lui-rounded-lg lui-border lui-border-ocean-light-40 lui-bg-white lui-p-2 lui-text-center lui-caret-ocean-primary-10"
                         input={{ className: "lui-bg-white" }}
-                        value={searchPageNumber}
+                        value={searchPageNumber ?? ""}
                         onChange={(e) =>
                           setSearchPageNumber(
                             Number(e.target.value) || undefined,

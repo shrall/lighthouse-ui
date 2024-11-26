@@ -9,6 +9,7 @@ import { useState } from "react";
 import { SortingState } from "@tanstack/react-table";
 import { TableCell } from "@/components/ui/table";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Input } from "@/components/ui/input";
 
 const data: Payment[] = [
   {
@@ -40,6 +41,7 @@ const data: Payment[] = [
 function Tables() {
   const [rowSelection, setRowSelection] = useState({});
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [search, setSearch] = useState("");
 
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
@@ -79,14 +81,27 @@ function Tables() {
           sorting={sorting}
           setSorting={setSorting}
         />
-        <DataTable
-          columns={columns}
-          data={data}
-          rowSelection={rowSelection}
-          setRowSelection={setRowSelection}
-          sorting={sorting}
-          setSorting={setSorting}
-        />
+        <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
+          <Input
+            placeholder="Search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <DataTable
+            columns={columns}
+            data={data}
+            rowSelection={rowSelection}
+            setRowSelection={setRowSelection}
+            sorting={sorting}
+            setSorting={setSorting}
+            globalFilter={search}
+            setGlobalFilter={setSearch}
+            withPagination
+            paginationProps={{
+              pageSizes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            }}
+          />
+        </div>
       </div>
       <div className="lui-grid lui-grid-cols-1 lui-gap-2 lui-text-center md:lui-grid-cols-3">
         <DataTable
