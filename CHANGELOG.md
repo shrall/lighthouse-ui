@@ -1,5 +1,12 @@
 
 
+## [0.5.27](https://github.com/shrall/lighthouse-ui/compare/v0.5.26...v0.5.27) (2024-11-26)
+
+
+### Styles
+
+* **tabs:** set default text color to dark 20 ([f976c9c](https://github.com/shrall/lighthouse-ui/commit/f976c9c41aedd2650fdde6928079b9f8e46471ad))
+
 ## [0.5.26](https://github.com/shrall/lighthouse-ui/compare/v0.5.25...v0.5.26) (2024-11-26)
 
 
