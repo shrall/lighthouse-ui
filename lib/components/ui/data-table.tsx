@@ -154,7 +154,12 @@ export function DataTable<TData, TValue>({
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody {...tableBodyProps}>
+          <TableBody
+            {...tableBodyProps}
+            className={cn(
+              table.getRowModel().rows?.length && tableBodyProps?.className,
+            )}
+          >
             {isLoading ? (
               //NOTE - Loading State
               Array.from({ length: 5 }).map((_, index) => (
