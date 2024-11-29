@@ -1,5 +1,13 @@
 
 
+## [0.5.29](https://github.com/shrall/lighthouse-ui/compare/v0.5.28...v0.5.29) (2024-11-29)
+
+
+### Styles
+
+* **data-table:** remove classname override if data is empty ([0d48598](https://github.com/shrall/lighthouse-ui/commit/0d48598040e5f381b75f2b39520c9f62253f5e93))
+* **textarea:** adjust error message placement for outline variant ([6c72988](https://github.com/shrall/lighthouse-ui/commit/6c72988c5977c3ea9020b922c6119a06dccad0d3))
+
 ## [0.5.28](https://github.com/shrall/lighthouse-ui/compare/v0.5.27...v0.5.28) (2024-11-29)
 
 
