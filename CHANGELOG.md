@@ -1,5 +1,12 @@
 
 
+## [0.5.30](https://github.com/shrall/lighthouse-ui/compare/v0.5.29...v0.5.30) (2024-11-29)
+
+
+### Features
+
+* **textarea:** add character count info ([140ba86](https://github.com/shrall/lighthouse-ui/commit/140ba864d0ab17c742b0b25c0d72fd03aa3910e0))
+
 ## [0.5.29](https://github.com/shrall/lighthouse-ui/compare/v0.5.28...v0.5.29) (2024-11-29)
 
 
