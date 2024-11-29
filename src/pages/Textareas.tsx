@@ -11,6 +11,8 @@ function Textareas() {
           inputStyle="outline"
           label="Textarea"
           placeholder="Type your message here."
+          maxLength={10}
+          showCharacterCount
         />
         <Textarea
           inputStyle="underline"

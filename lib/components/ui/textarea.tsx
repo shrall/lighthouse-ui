@@ -63,6 +63,7 @@ type AutosizeTextAreaProps = {
     type: "number" | "custom";
     pattern?: RegExp;
   };
+  showCharacterCount?: boolean;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export const Textarea = React.forwardRef<
@@ -86,6 +87,7 @@ export const Textarea = React.forwardRef<
       disabled,
       maxLength,
       regex,
+      showCharacterCount = false,
       ...props
     }: AutosizeTextAreaProps,
     ref: React.Ref<AutosizeTextAreaRef>,
@@ -159,7 +161,7 @@ export const Textarea = React.forwardRef<
         <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
           <div
             className={cn(
-              "lui-w-full",
+              "lui-flex lui-w-full lui-flex-col",
               inputStyle === "outline" &&
                 "lui-overflow-hidden lui-rounded-xl lui-p-3",
               inputStyle === "outline" &&
@@ -188,6 +190,11 @@ export const Textarea = React.forwardRef<
               }}
               disabled={disabled}
             />
+            {showCharacterCount && maxLength && (
+              <span className="lui-self-end lui-text-xs lui-text-ocean-dark-10">
+                {textAreaRef.current?.value.length} / {maxLength}
+              </span>
+            )}
           </div>
           {(errorMessage || helperText) && (
             <span
