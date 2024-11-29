@@ -1,5 +1,12 @@
 
 
+## [0.5.28](https://github.com/shrall/lighthouse-ui/compare/v0.5.27...v0.5.28) (2024-11-29)
+
+
+### Bug Fixes
+
+* **calendar:** multiple shortcuts showing selected state ([88fb9a9](https://github.com/shrall/lighthouse-ui/commit/88fb9a9fc91a3480db75a335516d3250c3844f77))
+
 ## [0.5.27](https://github.com/shrall/lighthouse-ui/compare/v0.5.26...v0.5.27) (2024-11-26)
 
 
