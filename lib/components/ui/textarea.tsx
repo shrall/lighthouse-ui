@@ -156,36 +156,39 @@ export const Textarea = React.forwardRef<
             {tooltip && tooltip}
           </div>
         )}
-        <div
-          className={cn(
-            "lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1",
-            inputStyle === "outline" &&
-              "lui-overflow-hidden lui-rounded-xl lui-p-3",
-            inputStyle === "outline" &&
-              "lui-rounded-xl lui-border lui-border-ocean-light-30 has-[:focus]:lui-border-ocean-primary-10 disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30",
-          )}
-        >
-          <textarea
-            {...props}
-            id={props.name}
-            value={value}
-            ref={textAreaRef}
+        <div className="lui-flex lui-w-full lui-flex-col lui-items-start lui-gap-y-1">
+          <div
             className={cn(
-              "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
-              inputStyle === "underline" &&
-                "lui-border-b lui-border-ocean-dark-10 disabled:lui-border-ocean-light-40",
-              "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
-              "focus-visible:lui-outline-none",
+              "lui-w-full",
+              inputStyle === "outline" &&
+                "lui-overflow-hidden lui-rounded-xl lui-p-3",
+              inputStyle === "outline" &&
+                "lui-rounded-xl lui-border lui-border-ocean-light-30 disabled:lui-border-ocean-light-30 disabled:lui-bg-ocean-light-30 has-[:focus]:lui-border-ocean-primary-10",
               errorMessage && "lui-border-ocean-danger-20",
-              className,
             )}
-            maxLength={Infinity}
-            onChange={(e) => {
-              setTriggerAutoSize(e.target.value);
-              handleChange(e);
-            }}
-            disabled={disabled}
-          />
+          >
+            <textarea
+              {...props}
+              id={props.name}
+              value={value}
+              ref={textAreaRef}
+              className={cn(
+                "lui-flex lui-w-full lui-resize-none disabled:lui-bg-transparent",
+                inputStyle === "underline" &&
+                  "lui-border-b lui-border-ocean-dark-10 disabled:lui-border-ocean-light-40",
+                "lui-text-sm lui-text-ocean-dark-30 placeholder:lui-text-ocean-dark-10 disabled:lui-text-ocean-light-40 disabled:placeholder:lui-text-ocean-light-40",
+                "focus-visible:lui-outline-none",
+                errorMessage && "lui-border-ocean-danger-20",
+                className,
+              )}
+              maxLength={Infinity}
+              onChange={(e) => {
+                setTriggerAutoSize(e.target.value);
+                handleChange(e);
+              }}
+              disabled={disabled}
+            />
+          </div>
           {(errorMessage || helperText) && (
             <span
               className={cn(
