@@ -135,7 +135,6 @@ function Calendar({
                           );
                         }
                       }, [buttonRef]);
-
                       return (
                         <Button
                           ref={buttonRef}
@@ -152,10 +151,14 @@ function Calendar({
                               calendarProps.selected.from &&
                               calendarProps.selected.from.getDate() ===
                                 shortcut.range.from.getDate() &&
+                              calendarProps.selected.from.getFullYear() ===
+                                shortcut.range.from.getFullYear() &&
                               shortcut.range.to &&
                               calendarProps.selected.to &&
                               calendarProps.selected.to.getDate() ===
                                 shortcut.range.to.getDate() &&
+                              calendarProps.selected.to.getFullYear() ===
+                                shortcut.range.to.getFullYear() &&
                               "lui-bg-ocean-secondary-10 lui-text-ocean-primary-10",
                           )}
                           textProps={{
