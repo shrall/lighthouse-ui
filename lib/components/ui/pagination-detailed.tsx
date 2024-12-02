@@ -41,10 +41,6 @@ const PaginationDetailed = React.forwardRef<
   ) => {
     const { width } = useWindowSize();
 
-    React.useEffect(() => {
-      setPageNumber(1);
-    }, [pageSize, totalData]);
-
     const renderPageNumbers = () => {
       if (!width) return;
       const pageNumbers = [];
@@ -54,7 +50,9 @@ const PaginationDetailed = React.forwardRef<
           pageNumbers.push(
             <PaginationButton
               key={i}
-              onClick={() => setPageNumber(i)}
+              onClick={() => {
+                setPageNumber(i);
+              }}
               aria-current={pageNumber === i ? "page" : undefined}
               active={pageNumber === i}
             >
@@ -67,7 +65,9 @@ const PaginationDetailed = React.forwardRef<
         pageNumbers.push(
           <PaginationButton
             key={1}
-            onClick={() => setPageNumber(1)}
+            onClick={() => {
+              setPageNumber(1);
+            }}
             aria-current={pageNumber === 1 ? "page" : undefined}
             active={pageNumber === 1}
           >
@@ -109,7 +109,9 @@ const PaginationDetailed = React.forwardRef<
           pageNumbers.push(
             <PaginationButton
               key={i}
-              onClick={() => setPageNumber(i)}
+              onClick={() => {
+                setPageNumber(i);
+              }}
               aria-current={pageNumber === i ? "page" : undefined}
               active={pageNumber === i}
             >
@@ -131,7 +133,9 @@ const PaginationDetailed = React.forwardRef<
         pageNumbers.push(
           <PaginationButton
             key={totalPage}
-            onClick={() => setPageNumber(totalPage)}
+            onClick={() => {
+              setPageNumber(totalPage);
+            }}
             aria-current={pageNumber === totalPage ? "page" : undefined}
             active={pageNumber === totalPage}
           >
@@ -165,7 +169,9 @@ const PaginationDetailed = React.forwardRef<
         )}
         <PaginationContent {...contentProps}>
           <PaginationButton
-            onClick={() => setPageNumber(1)}
+            onClick={() => {
+              setPageNumber(1);
+            }}
             disabled={pageNumber === 1}
           >
             <DoubleChevronLeftOutline
@@ -177,7 +183,9 @@ const PaginationDetailed = React.forwardRef<
             />
           </PaginationButton>
           <PaginationButton
-            onClick={() => setPageNumber(Math.max(1, pageNumber - 1))}
+            onClick={() => {
+              setPageNumber(Math.max(1, pageNumber - 1));
+            }}
             disabled={pageNumber === 1}
           >
             <ChevronLeftOutline
@@ -190,7 +198,9 @@ const PaginationDetailed = React.forwardRef<
           </PaginationButton>
           {renderPageNumbers()}
           <PaginationButton
-            onClick={() => setPageNumber(Math.min(totalPage, pageNumber + 1))}
+            onClick={() => {
+              setPageNumber(Math.min(totalPage, pageNumber + 1));
+            }}
             disabled={pageNumber === totalPage}
           >
             <ChevronRightOutline
@@ -202,7 +212,9 @@ const PaginationDetailed = React.forwardRef<
             />
           </PaginationButton>
           <PaginationButton
-            onClick={() => setPageNumber(totalPage)}
+            onClick={() => {
+              setPageNumber(totalPage);
+            }}
             disabled={pageNumber === totalPage}
           >
             <DoubleChevronRightOutline

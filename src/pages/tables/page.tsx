@@ -103,6 +103,13 @@ function Tables() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [search, setSearch] = useState("");
 
+  //NOTE - Pagination
+  const [pageSize, setPageSize] = useState(10);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [searchPageNumber, setSearchPageNumber] = useState<
+    number | undefined
+  >();
+
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Tables</h3>
@@ -132,15 +139,36 @@ function Tables() {
           sorting={sorting}
           setSorting={setSorting}
         />
-        <DataTable
-          columns={columns}
-          data={data}
-          isError={true}
-          rowSelection={rowSelection}
-          setRowSelection={setRowSelection}
-          sorting={sorting}
-          setSorting={setSorting}
-        />
+        <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
+          <Input
+            placeholder="Search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <DataTable
+            columns={columns}
+            data={data.slice(
+              (pageNumber - 1) * pageSize,
+              pageSize * pageNumber,
+            )}
+            rowSelection={rowSelection}
+            setRowSelection={setRowSelection}
+            sorting={sorting}
+            setSorting={setSorting}
+            globalFilter={search}
+            setGlobalFilter={setSearch}
+            paginationProps={{
+              pageSize,
+              setPageSize,
+              pageNumber,
+              setPageNumber,
+              searchPageNumber,
+              setSearchPageNumber,
+              totalData: data.length,
+              totalPage: Math.ceil(data.length / pageSize),
+            }}
+          />
+        </div>
         <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
           <Input
             placeholder="Search"
