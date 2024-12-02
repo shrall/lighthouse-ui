@@ -68,6 +68,7 @@ interface DataTableProps<TData, TValue> {
   tableRowProps?: React.ComponentPropsWithoutRef<typeof TableRow>;
   withPagination?: boolean;
   paginationProps?: Partial<React.ComponentPropsWithoutRef<typeof Pagination>>;
+  onPaginationChange?: (pageIndex: number, pageSize: number) => void;
 }
 
 export function DataTable<TData, TValue>({
@@ -95,6 +96,7 @@ export function DataTable<TData, TValue>({
   tableRowProps,
   withPagination,
   paginationProps,
+  onPaginationChange,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
   const [defaultSorting, setDefaultSorting] = useState<SortingState>([]);
@@ -226,10 +228,20 @@ export function DataTable<TData, TValue>({
       {withPagination && (
         <Pagination
           pageSize={table.getState().pagination.pageSize ?? 10}
-          setPageSize={table.setPageSize}
+          setPageSize={(size) => {
+            table.setPageSize(size);
+            onPaginationChange?.(
+              table.getState().pagination.pageIndex + 1,
+              size,
+            );
+          }}
           pageNumber={table.getState().pagination.pageIndex + 1}
           setPageNumber={(pageNumber) => {
             table.setPageIndex(pageNumber - 1);
+            onPaginationChange?.(
+              pageNumber,
+              table.getState().pagination.pageSize,
+            );
           }}
           searchPageNumber={searchPageNumber}
           setSearchPageNumber={setSearchPageNumber}

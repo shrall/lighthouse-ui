@@ -36,6 +36,66 @@ const data: Payment[] = [
     status: "pending",
     email: "q@example.com",
   },
+  {
+    id: "728ed52g",
+    amount: 550,
+    status: "success",
+    email: "r@example.com",
+  },
+  {
+    id: "728ed52h",
+    amount: 299,
+    status: "pending",
+    email: "s@example.com",
+  },
+  {
+    id: "728ed52i",
+    amount: 799,
+    status: "failed",
+    email: "t@example.com",
+  },
+  {
+    id: "728ed52j",
+    amount: 1299,
+    status: "success",
+    email: "u@example.com",
+  },
+  {
+    id: "728ed52k",
+    amount: 449,
+    status: "pending",
+    email: "v@example.com",
+  },
+  {
+    id: "728ed52l",
+    amount: 899,
+    status: "success",
+    email: "y@example.com",
+  },
+  {
+    id: "728ed52m",
+    amount: 649,
+    status: "failed",
+    email: "z@example.com",
+  },
+  {
+    id: "728ed52n",
+    amount: 1499,
+    status: "success",
+    email: "a@example.com",
+  },
+  {
+    id: "728ed52o",
+    amount: 349,
+    status: "pending",
+    email: "b@example.com",
+  },
+  {
+    id: "728ed52p",
+    amount: 749,
+    status: "success",
+    email: "c@example.com",
+  },
 ];
 
 function Tables() {
@@ -97,9 +157,6 @@ function Tables() {
             globalFilter={search}
             setGlobalFilter={setSearch}
             withPagination
-            paginationProps={{
-              pageSizes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            }}
           />
         </div>
       </div>
