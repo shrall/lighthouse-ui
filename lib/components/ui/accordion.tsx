@@ -36,7 +36,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "lui-group lui-flex lui-flex-1 lui-items-center lui-justify-between",
+        "lui-group lui-flex lui-flex-1 lui-items-center lui-justify-between lui-text-start",
         "lui-font-semibold",
         "lui-transition-all",
         style === "underline" &&
@@ -54,7 +54,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <div className="lui-relative lui-size-6 lui-text-ocean-primary-10">
+      <div className="lui-relative lui-size-6 lui-shrink-0 lui-text-ocean-primary-10">
         {style === "underline" && (
           <>
             <MinusOutline className="lui-absolute lui-shrink-0 lui-transition-transform lui-duration-200" />
