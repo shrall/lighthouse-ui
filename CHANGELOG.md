@@ -1,5 +1,12 @@
 
 
+## [0.5.31](https://github.com/shrall/lighthouse-ui/compare/v0.5.30...v0.5.31) (2024-12-02)
+
+
+### Features
+
+* **accordion:** fix toggle icon shrinking when title is too long ([8965cc9](https://github.com/shrall/lighthouse-ui/commit/8965cc943beb9e7a92c9d503dbafcc08898d5d54))
+
 ## [0.5.30](https://github.com/shrall/lighthouse-ui/compare/v0.5.29...v0.5.30) (2024-11-29)
 
 
