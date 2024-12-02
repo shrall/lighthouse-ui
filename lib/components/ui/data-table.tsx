@@ -68,6 +68,7 @@ interface DataTableProps<TData, TValue> {
   tableRowProps?: React.ComponentPropsWithoutRef<typeof TableRow>;
   withPagination?: boolean;
   paginationProps?: Partial<React.ComponentPropsWithoutRef<typeof Pagination>>;
+  serverPagination?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -95,6 +96,7 @@ export function DataTable<TData, TValue>({
   tableRowProps,
   withPagination,
   paginationProps,
+  serverPagination,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
   const [defaultSorting, setDefaultSorting] = useState<SortingState>([]);
@@ -119,6 +121,7 @@ export function DataTable<TData, TValue>({
       globalFilter: globalFilter ?? defaultGlobalFilter,
     },
     getPaginationRowModel: getPaginationRowModel(),
+    manualPagination: serverPagination,
     ...tableOptions,
   });
 

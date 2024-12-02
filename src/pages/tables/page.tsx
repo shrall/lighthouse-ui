@@ -157,6 +157,8 @@ function Tables() {
             setSorting={setSorting}
             globalFilter={search}
             setGlobalFilter={setSearch}
+            withPagination
+            serverPagination
             paginationProps={{
               pageSize,
               setPageSize,
