@@ -1,5 +1,12 @@
 
 
+## [0.5.34](https://github.com/shrall/lighthouse-ui/compare/v0.5.33...v0.5.34) (2024-12-02)
+
+
+### Features
+
+* **data-table:** add serverPagination prop ([9705940](https://github.com/shrall/lighthouse-ui/commit/97059401afb84b6f56bc8a28dd3e1791528a9c67))
+
 ## [0.5.33](https://github.com/shrall/lighthouse-ui/compare/v0.5.32...v0.5.33) (2024-12-02)
 
 
