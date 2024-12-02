@@ -1,5 +1,12 @@
 
 
+## [0.5.32](https://github.com/shrall/lighthouse-ui/compare/v0.5.31...v0.5.32) (2024-12-02)
+
+
+### Features
+
+* **data-table:** add onPaginationChange prop ([babe0ed](https://github.com/shrall/lighthouse-ui/commit/babe0ed291d3f4b047e27e81f1290dfc90bdab94))
+
 ## [0.5.31](https://github.com/shrall/lighthouse-ui/compare/v0.5.30...v0.5.31) (2024-12-02)
 
 
