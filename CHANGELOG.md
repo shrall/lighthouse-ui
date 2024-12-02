@@ -1,5 +1,12 @@
 
 
+## [0.5.33](https://github.com/shrall/lighthouse-ui/compare/v0.5.32...v0.5.33) (2024-12-02)
+
+
+### Bug Fixes
+
+* **pagination:** pagination detailed page number resetting to 1 ([9e9d300](https://github.com/shrall/lighthouse-ui/commit/9e9d3000847f7afe624d352ccb8bcfe27f7da7bf))
+
 ## [0.5.32](https://github.com/shrall/lighthouse-ui/compare/v0.5.31...v0.5.32) (2024-12-02)
 
 
