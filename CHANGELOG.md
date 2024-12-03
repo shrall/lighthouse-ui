@@ -1,5 +1,12 @@
 
 
+## [0.5.35](https://github.com/shrall/lighthouse-ui/compare/v0.5.34...v0.5.35) (2024-12-03)
+
+
+### Features
+
+* **calendar:** add calendarType prop ([f5e4d41](https://github.com/shrall/lighthouse-ui/commit/f5e4d412e191cd20d5754df097de07b5cf498e47))
+
 ## [0.5.34](https://github.com/shrall/lighthouse-ui/compare/v0.5.33...v0.5.34) (2024-12-02)
 
 
