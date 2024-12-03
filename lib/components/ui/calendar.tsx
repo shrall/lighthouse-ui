@@ -29,6 +29,7 @@ export type CalendarProps = DayPickerProps & {
   size?: "medium" | "large";
   alert?: AlertProps;
   shortcuts?: Shortcut[];
+  calendarType?: "daily" | "monthly";
   showMonthRangeToggle?: boolean;
 } & (
     | { shortcuts?: Shortcut[]; showMonthRangeToggle?: never }
@@ -44,10 +45,13 @@ function Calendar({
   size = "large",
   alert,
   showMonthRangeToggle = false,
+  calendarType = "daily",
   ...calendarProps
 }: CalendarProps) {
-  const [rangeType, setRangeType] = useState<"daily" | "monthly">("daily");
-  const [content, setContent] = useState<"date" | "month" | "year">("date");
+  const [rangeType, setRangeType] = useState<"daily" | "monthly">(calendarType);
+  const [content, setContent] = useState<"date" | "month" | "year">(
+    calendarType === "monthly" ? "month" : "date",
+  );
   const [shortcutButtonPosition, setShortcutButtonPosition] =
     useState<number>(0);
   const shortcutContainerRef = useRef<HTMLDivElement>(null);

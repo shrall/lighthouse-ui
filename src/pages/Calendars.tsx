@@ -26,6 +26,7 @@ function Calendars() {
             selected: date,
             onSelect: setDate,
             locale: id,
+            calendarType: "monthly",
           }}
         >
           <Button
