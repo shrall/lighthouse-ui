@@ -1,8 +1,11 @@
 import { Textarea } from "@/components/ui/textarea";
 import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
 import { TooltipText } from "@/index";
+import { useState } from "react";
 
 function Textareas() {
+  const [value, setValue] = useState("");
+
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Textareas</h3>
@@ -13,6 +16,8 @@ function Textareas() {
           placeholder="Type your message here."
           maxLength={10}
           showCharacterCount
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
         <Textarea
           inputStyle="underline"

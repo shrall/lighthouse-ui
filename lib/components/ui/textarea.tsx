@@ -192,7 +192,9 @@ export const Textarea = React.forwardRef<
             />
             {showCharacterCount && maxLength && (
               <span className="lui-self-end lui-text-xs lui-text-ocean-dark-10">
-                {textAreaRef.current?.value.length} / {maxLength}
+                {textAreaRef.current?.value.length ??
+                  (typeof value !== "number" ? value?.length : 0)}
+                / {maxLength}
               </span>
             )}
           </div>
