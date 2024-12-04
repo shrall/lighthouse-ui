@@ -1,5 +1,12 @@
 
 
+## [0.5.36](https://github.com/shrall/lighthouse-ui/compare/v0.5.35...v0.5.36) (2024-12-04)
+
+
+### Bug Fixes
+
+* **textarea:** character count not showing ([c457472](https://github.com/shrall/lighthouse-ui/commit/c457472b1cac80f053e9604d1346c23a989da353))
+
 ## [0.5.35](https://github.com/shrall/lighthouse-ui/compare/v0.5.34...v0.5.35) (2024-12-03)
 
 
