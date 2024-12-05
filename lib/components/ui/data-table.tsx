@@ -173,9 +173,9 @@ export function DataTable<TData, TValue>({
               <TableRow className="lui-border-none hover:lui-bg-transparent">
                 <TableCell
                   colSpan={columns.length}
-                  className="lui-h-full lui-min-h-36 lui-text-center lui-align-middle"
+                  className="lui-h-full lui-min-h-36 lui-py-9 lui-text-center lui-align-middle"
                 >
-                  <div className="lui-flex lui-flex-col">
+                  <div className="lui-flex lui-flex-col lui-gap-y-3">
                     <span>
                       {locale === "en"
                         ? "Failed to load data"
@@ -187,7 +187,7 @@ export function DataTable<TData, TValue>({
                       }}
                       className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
                     >
-                      {locale === "en" ? "Reload Data" : "Muat Ulang"}
+                      {locale === "en" ? "Reload" : "Muat Ulang"}
                     </span>
                   </div>
                 </TableCell>
