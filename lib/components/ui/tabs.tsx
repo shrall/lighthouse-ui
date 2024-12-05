@@ -114,7 +114,7 @@ const TabsTrigger = React.forwardRef<
   >
     <span
       className={cn(
-        "lui-my-auto lui-line-clamp-2 lui-px-6",
+        "lui-my-auto lui-line-clamp-2 lui-min-w-24",
         tabsStyle === "underline" && "lui-my-3",
       )}
     >

@@ -4,9 +4,9 @@ import { useState } from "react";
 function Tabs() {
   const [selectedTab, setSelectedTab] = useState<string>("account");
   const tabMenus: TabMenu[] = [
-    { name: "Account", value: "account" },
-    { name: "Password", value: "password" },
-    { name: "Email", value: "email", disabled: true },
+    { name: "Lihat Transaksi", value: "account" },
+    { name: "Download Laporan", value: "password" },
+    // { name: "Email", value: "email", disabled: true },
   ];
 
   return (
@@ -15,7 +15,8 @@ function Tabs() {
       <div className="lui-flex lui-flex-col lui-gap-2">
         <TabsComponent
           defaultValue="account"
-          className="lui-max-w-[400px]"
+          className="lui-w-full lui-max-w-[288px]"
+          listProps={{ className: "lui-w-full" }}
           tabMenus={tabMenus}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
