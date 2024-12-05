@@ -72,7 +72,7 @@ const TabsList = React.forwardRef<
     className={cn(
       "lui-inline-flex lui-font-semibold",
       size === "medium" && "lui-text-sm",
-      size === "large" && "lui-text-base",
+      size === "large" && "lui-text-sm md:lui-text-base",
       tabsStyle === "filled" && size === "medium" && "lui-px-1 lui-py-[5px]",
       tabsStyle === "filled" && size === "large" && "lui-p-1.5",
       tabsStyle === "filled" &&
