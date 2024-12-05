@@ -1,5 +1,12 @@
 
 
+## [0.5.38](https://github.com/shrall/lighthouse-ui/compare/v0.5.37...v0.5.38) (2024-12-05)
+
+
+### Styles
+
+* **tabs:** adjust large size font size ([b8384dc](https://github.com/shrall/lighthouse-ui/commit/b8384dc5a1dd77be6a8d9d6f1ac0c0ed0f28d6e0))
+
 ## [0.5.37](https://github.com/shrall/lighthouse-ui/compare/v0.5.36...v0.5.37) (2024-12-05)
 
 
