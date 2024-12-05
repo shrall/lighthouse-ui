@@ -179,7 +179,7 @@ function Tables() {
           />
           <DataTable
             columns={columns}
-            data={data}
+            data={[]}
             rowSelection={rowSelection}
             setRowSelection={setRowSelection}
             sorting={sorting}

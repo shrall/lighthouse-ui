@@ -215,7 +215,7 @@ export function DataTable<TData, TValue>({
               <TableRow>
                 <TableCell
                   colSpan={columns.length}
-                  className="h-24 text-center"
+                  className="text-center lui-py-36"
                 >
                   {locale === "en"
                     ? "No results found"
