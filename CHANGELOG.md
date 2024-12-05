@@ -1,5 +1,13 @@
 
 
+## [0.5.39](https://github.com/shrall/lighthouse-ui/compare/v0.5.38...v0.5.39) (2024-12-05)
+
+
+### Styles
+
+* **data-table:** update empty cell size ([ed4f0f1](https://github.com/shrall/lighthouse-ui/commit/ed4f0f1f34fd0df8405853a0b8737f4dc70c7632))
+* **data-table:** update error cell size ([a48d16a](https://github.com/shrall/lighthouse-ui/commit/a48d16a2977e92e522d00b481adfa84a910b9750))
+
 ## [0.5.38](https://github.com/shrall/lighthouse-ui/compare/v0.5.37...v0.5.38) (2024-12-05)
 
 
