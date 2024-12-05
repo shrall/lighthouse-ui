@@ -1,5 +1,12 @@
 
 
+## [0.5.37](https://github.com/shrall/lighthouse-ui/compare/v0.5.36...v0.5.37) (2024-12-05)
+
+
+### Styles
+
+* **tabs:** adjust trigger size ([3176651](https://github.com/shrall/lighthouse-ui/commit/3176651d6e80cf6d12f56a72d887715f0eae9778))
+
 ## [0.5.36](https://github.com/shrall/lighthouse-ui/compare/v0.5.35...v0.5.36) (2024-12-04)
 
 
