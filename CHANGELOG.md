@@ -1,5 +1,12 @@
 
 
+## [0.5.40](https://github.com/shrall/lighthouse-ui/compare/v0.5.39...v0.5.40) (2024-12-10)
+
+
+### Features
+
+* add example button two component ([5267a92](https://github.com/shrall/lighthouse-ui/commit/5267a928643f8cdc146426c0506af761a9138f6b))
+
 ## [0.5.39](https://github.com/shrall/lighthouse-ui/compare/v0.5.38...v0.5.39) (2024-12-05)
 
 
