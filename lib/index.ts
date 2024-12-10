@@ -196,3 +196,5 @@ export { Drawer, DrawerContent, DrawerTrigger } from "./components/ui/drawer";
 export { Spinner } from "./components/ui/spinner";
 export { BCALoader } from "./components/ui/bca-loader";
 export type { ColumnDef } from "@tanstack/react-table";
+
+export { ButtonTwo } from "./components/ui/button-two";

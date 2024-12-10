@@ -23,6 +23,7 @@ import RadioButtons from "./RadioButtons";
 import Drawers from "./Drawers";
 import Spinners from "./Spinners";
 import BCALoaders from "./BCALoaders";
+import ButtonTwosPage from "./ButtonTwos";
 
 interface IndexPageProps {}
 
@@ -32,6 +33,7 @@ const IndexPage: React.FC<IndexPageProps> = () => {
       <Accordions />
       <Alerts />
       <Buttons />
+      <ButtonTwosPage />
       <Badges />
       <BCALoaders />
       <Calendars />
