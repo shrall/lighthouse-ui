@@ -1,5 +1,12 @@
 
 
+## [0.5.41](https://github.com/shrall/lighthouse-ui/compare/v0.5.40...v0.5.41) (2024-12-10)
+
+
+### Styles
+
+* adjust input underline padding ([c0ad14b](https://github.com/shrall/lighthouse-ui/commit/c0ad14b6a27808d79bb1480a32e6965a1eea1257))
+
 ## [0.5.40](https://github.com/shrall/lighthouse-ui/compare/v0.5.39...v0.5.40) (2024-12-10)
 
 
