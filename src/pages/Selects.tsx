@@ -3,7 +3,7 @@ import { Select } from "@/components/ui/select";
 
 import { useState } from "react";
 import { QuestionFilled } from "@/components/ui/icon/QuestionFilled";
-import { TooltipText } from "@/index";
+import { Input, TooltipText } from "@/index";
 
 function Selects() {
   const [frameworksList, setFrameworksList] = useState([
@@ -41,7 +41,8 @@ function Selects() {
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
       <h3>Selects</h3>
-      <div className="lui-flex lui-flex-wrap lui-items-center lui-justify-center lui-gap-2 lui-text-center">
+      <div className="lui-grid lui-grid-cols-3 lui-items-center lui-gap-2">
+        <Input placeholder="Placeholder" />
         <Select
           options={frameworksList}
           value={selectedValue}

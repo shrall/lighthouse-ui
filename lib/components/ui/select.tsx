@@ -172,7 +172,10 @@ export const Select = React.forwardRef<HTMLButtonElement, SelectProps>(
               <button
                 ref={ref}
                 className={cn(
-                  "lui-group lui-flex lui-w-full lui-items-center lui-justify-between lui-border-b lui-border-ocean-dark-10 lui-bg-white lui-pb-2 lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
+                  "lui-group lui-flex lui-w-full lui-items-center lui-justify-between",
+                  "lui-border-b lui-border-ocean-dark-10",
+                  "lui-text-start lui-font-bca lui-text-sm placeholder:lui-text-ocean-dark-10",
+                  "lui-bg-white lui-pb-2 focus:lui-outline-none data-[state=open]:lui-border-ocean-primary-10",
                   errorMessage && "lui-border-ocean-danger-20",
                   className,
                 )}

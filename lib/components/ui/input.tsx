@@ -101,7 +101,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               inputStyle === "outline" &&
                 "lui-rounded-lg lui-bg-ocean-light-20 lui-px-3 lui-py-2",
               inputStyle === "underline" &&
-                "lui-border-b lui-border-ocean-dark-10 lui-pb-1.5",
+                "lui-border-b lui-border-ocean-dark-10 lui-py-2",
               inputStyle === "underline" &&
                 type === "password" &&
                 value &&
