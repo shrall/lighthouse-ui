@@ -50,6 +50,8 @@ interface DataTableProps<TData, TValue> {
   data: TData[];
   isLoading?: boolean;
   loadingRow?: React.ReactNode;
+  errorRow?: React.ReactNode;
+  emptyRow?: React.ReactNode;
   isError?: boolean;
   refetch?: () => void;
   rowSelection?: Record<number, boolean>;
@@ -79,6 +81,8 @@ export function DataTable<TData, TValue>({
   data,
   isLoading,
   loadingRow,
+  errorRow,
+  emptyRow,
   isError,
   refetch = () => {},
   rowSelection,
@@ -208,7 +212,14 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
 
-        {isError && (
+        {isError && errorRow && errorRow}
+
+        {!isError &&
+          table.getRowModel().rows?.length === 0 &&
+          emptyRow &&
+          emptyRow}
+
+        {isError && !errorRow && (
           <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
             <span className="lui-text-ocean-dark-30">
               {locale === "en" ? "Failed to load data" : "Gagal memuat data"}
@@ -224,7 +235,7 @@ export function DataTable<TData, TValue>({
           </div>
         )}
 
-        {!isError && table.getRowModel().rows?.length === 0 && (
+        {!isError && table.getRowModel().rows?.length === 0 && !emptyRow && (
           <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
             <span className="lui-text-ocean-dark-30">
               {locale === "en" ? "No results found" : "Data tidak ditemukan"}
