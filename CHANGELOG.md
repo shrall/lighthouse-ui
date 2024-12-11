@@ -1,5 +1,17 @@
 
 
+## [0.5.44](https://github.com/shrall/lighthouse-ui/compare/v0.5.43...v0.5.44) (2024-12-11)
+
+
+### Features
+
+* **data-table:** add empty & error row override props ([4772658](https://github.com/shrall/lighthouse-ui/commit/4772658e47655b6d44b70ff9fcb9d74804e34725))
+
+
+### Bug Fixes
+
+* **data-table:** disabling fuzzy filter doesn't work ([ff3346d](https://github.com/shrall/lighthouse-ui/commit/ff3346de38a6d91b21cc827d3e1f5f6abdaa0997))
+
 ## [0.5.43](https://github.com/shrall/lighthouse-ui/compare/v0.5.42...v0.5.43) (2024-12-11)
 
 
