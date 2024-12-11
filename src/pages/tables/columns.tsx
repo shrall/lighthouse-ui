@@ -7,22 +7,12 @@ export type Payment = {
   amount: number;
   status: "pending" | "processing" | "success" | "failed";
   email: string;
+  createdAt: string;
+  updatedAt: string;
+  pic_name: string;
+  pic_email: string;
+  pic_phone: string;
 };
-
-export const payments: Payment[] = [
-  {
-    id: "728ed52f",
-    amount: 100,
-    status: "pending",
-    email: "m@example.com",
-  },
-  {
-    id: "489e1d42",
-    amount: 125,
-    status: "processing",
-    email: "example@gmail.com",
-  },
-];
 
 export const columns: ColumnDef<Payment>[] = [
   {
@@ -78,6 +68,22 @@ export const columns: ColumnDef<Payment>[] = [
   {
     accessorKey: "amount",
     header: "Amount",
+  },
+  {
+    accessorKey: "createdAt",
+    header: "Created At",
+  },
+  {
+    accessorKey: "updatedAt",
+    header: "Updated At",
+  },
+  {
+    accessorKey: "pic_name",
+    header: "PIC Name",
+  },
+  {
+    accessorKey: "pic_email",
+    header: "PIC Email",
   },
 ];
 

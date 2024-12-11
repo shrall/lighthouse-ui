@@ -131,7 +131,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className={cn("lui-rounded-md lui-border", className)}>
+      <div className={cn("lui-relative lui-rounded-md lui-border", className)}>
         <Table {...tableProps}>
           <TableHeader
             {...tableHeaderProps}
@@ -168,30 +168,6 @@ export function DataTable<TData, TValue>({
               Array.from({ length: 5 }).map((_, index) => (
                 <TableRow key={index}>{loadingRow}</TableRow>
               ))
-            ) : isError ? (
-              //NOTE - Error State
-              <TableRow className="lui-border-none hover:lui-bg-transparent">
-                <TableCell
-                  colSpan={columns.length}
-                  className="lui-h-full lui-min-h-36 lui-py-9 lui-text-center lui-align-middle"
-                >
-                  <div className="lui-flex lui-flex-col lui-gap-y-3">
-                    <span>
-                      {locale === "en"
-                        ? "Failed to load data"
-                        : "Gagal memuat data"}
-                    </span>
-                    <span
-                      onClick={() => {
-                        refetch();
-                      }}
-                      className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
-                    >
-                      {locale === "en" ? "Reload" : "Muat Ulang"}
-                    </span>
-                  </div>
-                </TableCell>
-              </TableRow>
             ) : table.getRowModel().rows?.length ? (
               //NOTE - Data State
               table.getRowModel().rows.map((row) => (
@@ -211,20 +187,40 @@ export function DataTable<TData, TValue>({
                 </TableRow>
               ))
             ) : (
-              //NOTE - Empty State
-              <TableRow>
+              //NOTE - Empty/Error State
+              <TableRow className="lui-border-none hover:lui-bg-transparent">
                 <TableCell
                   colSpan={columns.length}
-                  className="text-center lui-py-36"
-                >
-                  {locale === "en"
-                    ? "No results found"
-                    : "Data tidak ditemukan"}
-                </TableCell>
+                  className="text-center lui-h-[304px]"
+                />
               </TableRow>
             )}
           </TableBody>
         </Table>
+
+        {isError && (
+          <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
+            <span className="lui-text-ocean-dark-30">
+              {locale === "en" ? "Failed to load data" : "Gagal memuat data"}
+            </span>
+            <span
+              onClick={() => {
+                refetch();
+              }}
+              className="lui-mx-auto lui-w-fit lui-cursor-pointer lui-font-semibold lui-text-ocean-primary-10 hover:lui-text-ocean-primary-30"
+            >
+              {locale === "en" ? "Reload" : "Muat Ulang"}
+            </span>
+          </div>
+        )}
+
+        {!isError && table.getRowModel().rows?.length === 0 && (
+          <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
+            <span className="lui-text-ocean-dark-30">
+              {locale === "en" ? "No results found" : "Data tidak ditemukan"}
+            </span>
+          </div>
+        )}
       </div>
       {withPagination && (
         <Pagination
