@@ -69,6 +69,7 @@ interface DataTableProps<TData, TValue> {
   withPagination?: boolean;
   paginationProps?: Partial<React.ComponentPropsWithoutRef<typeof Pagination>>;
   serverPagination?: boolean;
+  enableFuzzyFilter?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -97,6 +98,7 @@ export function DataTable<TData, TValue>({
   withPagination,
   paginationProps,
   serverPagination,
+  enableFuzzyFilter = true,
 }: DataTableProps<TData, TValue>) {
   const [defaultRowSelection, setDefaultRowSelection] = useState({});
   const [defaultSorting, setDefaultSorting] = useState<SortingState>([]);
@@ -113,7 +115,7 @@ export function DataTable<TData, TValue>({
     onRowSelectionChange: setRowSelection ?? setDefaultRowSelection,
     onSortingChange: setSorting ?? setDefaultSorting,
     getSortedRowModel: getSortedRowModel(),
-    globalFilterFn: fuzzyFilter,
+    globalFilterFn: enableFuzzyFilter ? fuzzyFilter : undefined,
     onGlobalFilterChange: setGlobalFilter ?? setDefaultGlobalFilter,
     state: {
       sorting: sorting ?? defaultSorting,
