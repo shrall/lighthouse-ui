@@ -1,5 +1,12 @@
 
 
+## [0.5.42](https://github.com/shrall/lighthouse-ui/compare/v0.5.41...v0.5.42) (2024-12-11)
+
+
+### Styles
+
+* **table:** update error & empty state ([5418bca](https://github.com/shrall/lighthouse-ui/commit/5418bca31631393cc5a0f0291f1d0aaf581a1226))
+
 ## [0.5.41](https://github.com/shrall/lighthouse-ui/compare/v0.5.40...v0.5.41) (2024-12-10)
 
 
