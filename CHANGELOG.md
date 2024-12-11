@@ -1,5 +1,12 @@
 
 
+## [0.5.43](https://github.com/shrall/lighthouse-ui/compare/v0.5.42...v0.5.43) (2024-12-11)
+
+
+### Features
+
+* **data-table:** add enableFuzzyFilter prop ([f43bd76](https://github.com/shrall/lighthouse-ui/commit/f43bd765030959a2756e7bebe4cf27b1dda66d9a))
+
 ## [0.5.42](https://github.com/shrall/lighthouse-ui/compare/v0.5.41...v0.5.42) (2024-12-11)
 
 
