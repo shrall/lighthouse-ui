@@ -74,6 +74,25 @@ interface DataTableProps<TData, TValue> {
   enableFuzzyFilter?: boolean;
 }
 
+const customSortingFn = (
+  sortingState: SortingState,
+  columnId: string,
+): SortingState => {
+  // Find if this column is currently being sorted
+  const currentSort = sortingState.find((s) => s.id === columnId);
+
+  if (!currentSort) {
+    // If not sorted, start with desc
+    return [{ id: columnId, desc: true }];
+  } else if (currentSort.desc) {
+    // If desc, switch to asc
+    return [{ id: columnId, desc: false }];
+  } else {
+    // If asc, remove sorting
+    return [];
+  }
+};
+
 export function DataTable<TData, TValue>({
   locale = "en",
   className,
@@ -117,7 +136,20 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     onRowSelectionChange: setRowSelection ?? setDefaultRowSelection,
-    onSortingChange: setSorting ?? setDefaultSorting,
+    onSortingChange: (updater) => {
+      const nextState =
+        typeof updater === "function"
+          ? updater(sorting ?? defaultSorting)
+          : updater;
+
+      // Get the column that's being sorted (if any)
+      const columnId = nextState[0]?.id;
+
+      if (columnId) {
+        const newSorting = customSortingFn(sorting ?? defaultSorting, columnId);
+        (setSorting ?? setDefaultSorting)(newSorting);
+      }
+    },
     getSortedRowModel: getSortedRowModel(),
     globalFilterFn: enableFuzzyFilter
       ? fuzzyFilter
@@ -136,6 +168,8 @@ export function DataTable<TData, TValue>({
     },
     getPaginationRowModel: getPaginationRowModel(),
     manualPagination: serverPagination,
+    enableSortingRemoval: true,
+    sortDescFirst: true,
     ...tableOptions,
   });
 
