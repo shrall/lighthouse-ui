@@ -115,7 +115,15 @@ export function DataTable<TData, TValue>({
     onRowSelectionChange: setRowSelection ?? setDefaultRowSelection,
     onSortingChange: setSorting ?? setDefaultSorting,
     getSortedRowModel: getSortedRowModel(),
-    globalFilterFn: enableFuzzyFilter ? fuzzyFilter : undefined,
+    globalFilterFn: enableFuzzyFilter
+      ? fuzzyFilter
+      : (row, columnId, value) => {
+          const searchValue = String(row.getValue(columnId)).toLowerCase();
+          return String(value)
+            .toLowerCase()
+            .split(" ")
+            .every((val) => searchValue.includes(val));
+        },
     onGlobalFilterChange: setGlobalFilter ?? setDefaultGlobalFilter,
     state: {
       sorting: sorting ?? defaultSorting,

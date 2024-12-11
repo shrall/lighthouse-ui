@@ -239,6 +239,7 @@ function Tables() {
               totalData: data.length,
               totalPage: Math.ceil(data.length / pageSize),
             }}
+            enableFuzzyFilter={false}
           />
         </div>
         <div className="lui-flex lui-w-full lui-flex-col lui-gap-y-2">
