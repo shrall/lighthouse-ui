@@ -1,5 +1,12 @@
 
 
+## [0.5.45](https://github.com/shrall/lighthouse-ui/compare/v0.5.44...v0.5.45) (2024-12-11)
+
+
+### Features
+
+* **data-table:** enable sorting removal ([244d927](https://github.com/shrall/lighthouse-ui/commit/244d927732f164459644fdff0542ba753035047f))
+
 ## [0.5.44](https://github.com/shrall/lighthouse-ui/compare/v0.5.43...v0.5.44) (2024-12-11)
 
 
