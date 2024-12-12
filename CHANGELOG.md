@@ -1,5 +1,12 @@
 
 
+## [0.5.47](https://github.com/shrall/lighthouse-ui/compare/v0.5.46...v0.5.47) (2024-12-12)
+
+
+### Features
+
+* **calendar:** enable single mode month picker ([2e0f095](https://github.com/shrall/lighthouse-ui/commit/2e0f095593719fcd56146a2c9151c6f4372f2b4b))
+
 ## [0.5.46](https://github.com/shrall/lighthouse-ui/compare/v0.5.45...v0.5.46) (2024-12-12)
 
 
