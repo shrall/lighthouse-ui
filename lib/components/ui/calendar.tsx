@@ -287,6 +287,13 @@ function Calendar({
                           calendarProps.selected.from.getFullYear() ===
                             months[0].date.getFullYear() &&
                           buttonVariants({ variant: "primary" }),
+                        // NOTE - Set month button as selected if the single date is in the same month & year
+                        calendarProps.mode === "single" &&
+                          calendarProps.selected &&
+                          calendarProps.selected.getMonth() === month &&
+                          calendarProps.selected.getFullYear() ===
+                            months[0].date.getFullYear() &&
+                          buttonVariants({ variant: "primary" }),
                         //NOTE - Set month button as selected in the mid range when the month is in the range of the selected dates
                         rangeType === "monthly" &&
                           calendarProps.mode === "range" &&
@@ -325,6 +332,15 @@ function Calendar({
                           setContent("date");
                         } else {
                           //NOTE - MONTHLY MODE
+                          if (calendarProps.mode === "single") {
+                            console.log("single");
+                            calendarProps.onSelect?.(
+                              new Date(months[0].date.getFullYear(), month, 1),
+                              new Date(months[0].date.getFullYear(), month, 1),
+                              {},
+                              e,
+                            );
+                          }
                           if (calendarProps.mode === "range") {
                             //NOTE - If the from and to are not the same but it's already selected
                             //NOTE - Select the first day of the month and the last day of the month

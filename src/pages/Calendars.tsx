@@ -9,10 +9,13 @@ import { enUS, id } from "date-fns/locale";
 import { DatePicker } from "@/components/ui/date-picker";
 
 function Calendars() {
+  const [singleDate, setSingleDate] = useState<Date | undefined>(new Date());
   const [date, setDate] = useState<DateRange | undefined>({
     from: new Date(),
     to: addDays(new Date(), 5),
   });
+
+  console.log(singleDate);
 
   return (
     <div className="lui-flex lui-flex-col lui-gap-y-4 lui-px-4 lui-py-2">
@@ -41,11 +44,10 @@ function Calendars() {
             {date?.from ? (
               date.to ? (
                 <>
-                  {format(date.from, "LLL dd, y")} -{" "}
-                  {format(date.to, "LLL dd, y")}
+                  {format(date.from, "LLL, y")} - {format(date.to, "LLL, y")}
                 </>
               ) : (
-                format(date.from, "LLL dd, y")
+                format(date.from, "LLL, y")
               )
             ) : (
               <span>Pick a date</span>
@@ -53,11 +55,11 @@ function Calendars() {
           </Button>
         </DatePicker>
         <Calendar
-          mode="range"
+          mode="single"
           showMonthRangeToggle
-          defaultMonth={date?.from}
-          selected={date}
-          onSelect={setDate}
+          defaultMonth={singleDate}
+          selected={singleDate}
+          onSelect={setSingleDate}
           locale={id}
           alert={{
             variant: "success",
