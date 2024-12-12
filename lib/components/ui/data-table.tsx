@@ -246,14 +246,15 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
 
-        {isError && errorRow && errorRow}
+        {!isLoading && isError && errorRow && errorRow}
 
-        {!isError &&
+        {!isLoading &&
+          !isError &&
           table.getRowModel().rows?.length === 0 &&
           emptyRow &&
           emptyRow}
 
-        {isError && !errorRow && (
+        {!isLoading && isError && !errorRow && (
           <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
             <span className="lui-text-ocean-dark-30">
               {locale === "en" ? "Failed to load data" : "Gagal memuat data"}
@@ -269,13 +270,16 @@ export function DataTable<TData, TValue>({
           </div>
         )}
 
-        {!isError && table.getRowModel().rows?.length === 0 && !emptyRow && (
-          <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
-            <span className="lui-text-ocean-dark-30">
-              {locale === "en" ? "No results found" : "Data tidak ditemukan"}
-            </span>
-          </div>
-        )}
+        {!isLoading &&
+          !isError &&
+          table.getRowModel().rows?.length === 0 &&
+          !emptyRow && (
+            <div className="lui-absolute lui-inset-x-0 lui-top-1/2 lui-z-10 lui-flex lui--translate-y-1/2 lui-flex-col lui-items-center lui-gap-y-2 lui-text-sm">
+              <span className="lui-text-ocean-dark-30">
+                {locale === "en" ? "No results found" : "Data tidak ditemukan"}
+              </span>
+            </div>
+          )}
       </div>
       {withPagination && (
         <Pagination
