@@ -17,17 +17,20 @@ export const isMonthDisabled = (
     disabled.forEach((matcher) => {
         if (isDateInterval(matcher)) {
             isDisabled =
-                (matcher.before.getMonth() > month &&
+                (matcher.after.getMonth() <= month && matcher.after.getFullYear() <= year) ||
+                matcher.after.getFullYear() < year ||
+                (matcher.before.getMonth() > month + 1 &&
                     matcher.before.getFullYear() >= year) ||
-                (matcher.after.getMonth() < month &&
-                    matcher.after.getFullYear() <= year);
+                matcher.before.getFullYear() > year;
         } else if (isDateAfterType(matcher)) {
             isDisabled =
-                matcher.after.getMonth() < month && matcher.after.getFullYear() <= year;
+                (matcher.after.getMonth() <= month && matcher.after.getFullYear() <= year) ||
+                matcher.after.getFullYear() < year;
         } else if (isDateBeforeType(matcher)) {
             isDisabled =
-                matcher.before.getMonth() > month &&
-                matcher.before.getFullYear() >= year;
+                (matcher.before.getMonth() > month + 1 &&
+                    matcher.before.getFullYear() >= year) ||
+                matcher.before.getFullYear() > year;
         } else if (isDateRange(matcher)) {
             isDisabled =
                 rangeIncludesDate(matcher, new Date(year, month, 1)) &&

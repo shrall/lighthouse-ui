@@ -56,17 +56,12 @@ function Calendars() {
         </DatePicker>
         <Calendar
           mode="single"
-          showMonthRangeToggle
-          defaultMonth={singleDate}
+          calendarType="monthly"
           selected={singleDate}
           onSelect={setSingleDate}
-          locale={id}
-          alert={{
-            variant: "success",
-            title: "Success",
-            description:
-              "Lorem Ipsum is simply dummy text of the printing and typesetting",
-          }}
+          disabled={[
+            { before: new Date(2024, 3, 1), after: new Date(2024, 11, 1) },
+          ]}
         />
         <Calendar
           mode="range"
