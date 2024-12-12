@@ -1,5 +1,12 @@
 
 
+## [0.5.46](https://github.com/shrall/lighthouse-ui/compare/v0.5.45...v0.5.46) (2024-12-12)
+
+
+### Bug Fixes
+
+* **data-table:** empty state is showing while loading ([9c73972](https://github.com/shrall/lighthouse-ui/commit/9c73972034d1633a450b428f48d77d54f257dea2))
+
 ## [0.5.45](https://github.com/shrall/lighthouse-ui/compare/v0.5.44...v0.5.45) (2024-12-11)
 
 
