@@ -1,5 +1,12 @@
 
 
+## [0.5.48](https://github.com/shrall/lighthouse-ui/compare/v0.5.47...v0.5.48) (2024-12-12)
+
+
+### Bug Fixes
+
+* **calendar:** disabled range prop is broken ([004804b](https://github.com/shrall/lighthouse-ui/commit/004804b575cb46eab2b899c7cdb45e41c010047c))
+
 ## [0.5.47](https://github.com/shrall/lighthouse-ui/compare/v0.5.46...v0.5.47) (2024-12-12)
 
 
