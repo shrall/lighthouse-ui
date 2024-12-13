@@ -179,7 +179,12 @@ export function DataTable<TData, TValue>({
 
   return (
     <>
-      <div className={cn("lui-relative lui-rounded-md lui-border", className)}>
+      <div
+        className={cn(
+          "lui-relative lui-grid lui-rounded-md lui-border",
+          className,
+        )}
+      >
         <Table {...tableProps}>
           <TableHeader
             {...tableHeaderProps}
