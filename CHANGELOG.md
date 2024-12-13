@@ -1,5 +1,12 @@
 
 
+## [0.5.49](https://github.com/shrall/lighthouse-ui/compare/v0.5.48...v0.5.49) (2024-12-13)
+
+
+### Styles
+
+* **data-table:** set container display to grid ([455cc40](https://github.com/shrall/lighthouse-ui/commit/455cc40800061a5d5dd2be965fd55c3edcdaceef))
+
 ## [0.5.48](https://github.com/shrall/lighthouse-ui/compare/v0.5.47...v0.5.48) (2024-12-12)
 
 
